@@ -2,17 +2,21 @@ default_platform(:ios)
 
 platform :ios do
 
-  before_all do
-    carthage(platform: 'ios', cache_builds: true)
-  end
-
   desc "setup library"
   lane :setup_library do 
     carthage
   end
-
+  
+  desc "exec swiftlint"
+  lane :lint do
+    swiftlint()
+  end
+  
   desc "exec test"
   lane :test do
+    carthage(platform: 'ios', cache_builds: true)
     run_tests
-  end
+  end 
+  
+  
 end

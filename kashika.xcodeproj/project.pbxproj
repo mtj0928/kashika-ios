@@ -14,8 +14,8 @@
 		9096005B2249B295002F1DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909600592249B295002F1DE6 /* Main.storyboard */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
-		9096006B2249B295002F1DE6 /* kashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* kashikaTests.swift */; };
-		909600762249B295002F1DE6 /* kashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* kashikaUITests.swift */; };
+		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
+		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		9096005F2249B295002F1DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		909600612249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909600662249B295002F1DE6 /* kashikaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9096006A2249B295002F1DE6 /* kashikaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kashikaTests.swift; sourceTree = "<group>"; };
+		9096006A2249B295002F1DE6 /* KashikaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaTests.swift; sourceTree = "<group>"; };
 		9096006C2249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		909600752249B295002F1DE6 /* kashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kashikaUITests.swift; sourceTree = "<group>"; };
+		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 		909600692249B295002F1DE6 /* kashikaTests */ = {
 			isa = PBXGroup;
 			children = (
-				9096006A2249B295002F1DE6 /* kashikaTests.swift */,
+				9096006A2249B295002F1DE6 /* KashikaTests.swift */,
 				9096006C2249B295002F1DE6 /* Info.plist */,
 			);
 			path = kashikaTests;
@@ -135,7 +135,7 @@
 		909600742249B295002F1DE6 /* kashikaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				909600752249B295002F1DE6 /* kashikaUITests.swift */,
+				909600752249B295002F1DE6 /* KashikaUITests.swift */,
 				909600772249B295002F1DE6 /* Info.plist */,
 			);
 			path = kashikaUITests;
@@ -152,6 +152,7 @@
 				9096004F2249B295002F1DE6 /* Frameworks */,
 				909600502249B295002F1DE6 /* Resources */,
 				5870126B2249F8E5003888E8 /* ShellScript */,
+				903B7670224A48E9009B9007 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -288,6 +289,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		903B7670224A48E9009B9007 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9096006B2249B295002F1DE6 /* kashikaTests.swift in Sources */,
+				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				909600762249B295002F1DE6 /* kashikaUITests.swift in Sources */,
+				909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
