@@ -1,4 +1,6 @@
 language: objective-c
 osx_image: xcode10.1
 
+install:
+  - gem update fastlane --no-ri --no-rdoc --no-document
 script: fastlane test
