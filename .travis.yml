@@ -7,7 +7,6 @@ cache:
   - vendor/bundle
   
 install:
-  - brew install swiftlint
   - gem update bundler --no-ri --no-rdoc --no-document
   - bundle install --without production --deployment
   
