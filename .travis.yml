@@ -4,8 +4,10 @@ osx_image: xcode10.1
 cache:
   directories:
   - Carthage
+  - vendor/bundle
   
 install:
-  - gem update fastlane --no-ri --no-rdoc --no-document
+  - gem update bundler --no-ri --no-rdoc --no-document
+  - bundle install --without production --deployment
   
-script: fastlane test
+script: bundle exec fastlane test
