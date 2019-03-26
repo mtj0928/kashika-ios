@@ -16,8 +16,9 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "setup library"
+  lane :setup_library do 
+    carthage
   end
+
 end
