@@ -10,7 +10,12 @@ platform :ios do
   lane :setup_library do 
     carthage
   end
-
+  
+  desc "exec swiftlint"
+  lane :lint do
+    swiftlint()
+  end
+  
   desc "exec test"
   lane :test do
     run_tests
