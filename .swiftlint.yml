@@ -1,5 +1,6 @@
 disabled_rules:
 - trailing_whitespace
+- overridden_super_call
 
 opt_in_rules:
 - attributes
@@ -25,6 +26,6 @@ opt_in_rules:
 excluded:
 - Pods/
 - Carthage/
-- vendor/bundle
+- vendor/
 
 line_length: 300
