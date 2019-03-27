@@ -1,4 +1,4 @@
-# Kashika iOS
+# Kashika iOS [![Build Status](https://travis-ci.org/mtj0928/kashika-ios.svg?branch=master)](https://travis-ci.org/mtj0928/kashika-ios)
 
 ## 環境構築スクリプト
 ```
