@@ -10,6 +10,6 @@ install:
   - gem update bundler --no-ri --no-rdoc --no-document
   - bundle install --without production --deployment
   
-script: 
-  - bundle exec fastlane lint
+script:
+  - bundle exec fastlane check_code
   - bundle exec fastlane test

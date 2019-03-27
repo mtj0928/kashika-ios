@@ -21,11 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios setup_library
 ```
 setup library
-### ios lint
+### ios check_code
 ```
-fastlane ios lint
+fastlane ios check_code
 ```
-exec swiftlint
+check code format
 ### ios test
 ```
 fastlane ios test
