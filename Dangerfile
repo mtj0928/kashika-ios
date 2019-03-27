@@ -1,0 +1,3 @@
+# PRで修正した範囲だけswiftlintでチェックしてコメントする
+github.dismiss_out_of_range_messages
+swiftlint.lint_files inline_mode: true
