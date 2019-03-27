@@ -9,13 +9,11 @@ platform :ios do
   
   desc "check code format"
   lane :check_code do
-    swiftlint
     danger
   end
   
   desc "exec test"
   lane :test do
-    danger
     carthage(platform: 'ios', cache_builds: true)
     run_tests
   end
