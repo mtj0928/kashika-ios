@@ -120,6 +120,43 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		58701279224C6342003888E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				909600572249B295002F1DE6 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5870127A224C638A003888E8 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		5870127B224C6396003888E8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		5870127C224C63A7003888E8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5870127D224C63B8003888E8 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				905E4876224B940300BDC321 /* AppRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
 		72569B303FB5BB3E19DC816C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +204,12 @@
 			isa = PBXGroup;
 			children = (
 				909600552249B295002F1DE6 /* AppDelegate.swift */,
-				905E4876224B940300BDC321 /* AppRouter.swift */,
+				58701279224C6342003888E8 /* Views */,
+				5870127A224C638A003888E8 /* Interactors */,
+				5870127B224C6396003888E8 /* Presenters */,
+				5870127C224C63A7003888E8 /* Entities */,
+				5870127D224C63B8003888E8 /* Routers */,
 				905E487F224C400E00BDC321 /* Commons */,
-				909600572249B295002F1DE6 /* ViewController.swift */,
 				9096005C2249B295002F1DE6 /* Assets.xcassets */,
 				9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */,
 				909600612249B295002F1DE6 /* Info.plist */,
