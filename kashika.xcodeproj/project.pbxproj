@@ -10,6 +10,8 @@
 		587012692249F819003888E8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
+		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
+		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		909600582249B295002F1DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600572249B295002F1DE6 /* ViewController.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
@@ -39,6 +41,7 @@
 		587012672249F819003888E8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909600572249B295002F1DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +92,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		905E487F224C400E00BDC321 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		909600492249B295002F1DE6 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				909600552249B295002F1DE6 /* AppDelegate.swift */,
+				905E487F224C400E00BDC321 /* Commons */,
 				909600572249B295002F1DE6 /* ViewController.swift */,
 				905E4876224B940300BDC321 /* AppRouter.swift */,
 				9096005C2249B295002F1DE6 /* Assets.xcassets */,
@@ -312,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
@@ -322,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
