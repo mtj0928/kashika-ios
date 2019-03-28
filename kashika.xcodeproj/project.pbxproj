@@ -92,10 +92,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		905E487F224C400E00BDC321 /* Commons */ = {
+		5870126C224C5373003888E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		905E487F224C400E00BDC321 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				5870126C224C5373003888E8 /* Extensions */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -125,9 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				909600552249B295002F1DE6 /* AppDelegate.swift */,
+				905E4876224B940300BDC321 /* AppRouter.swift */,
 				905E487F224C400E00BDC321 /* Commons */,
 				909600572249B295002F1DE6 /* ViewController.swift */,
-				905E4876224B940300BDC321 /* AppRouter.swift */,
 				9096005C2249B295002F1DE6 /* Assets.xcassets */,
 				9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */,
 				909600612249B295002F1DE6 /* Info.plist */,
