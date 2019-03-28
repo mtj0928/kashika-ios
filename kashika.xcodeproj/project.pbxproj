@@ -133,6 +133,7 @@
 		5870127A224C638A003888E8 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				90BBBFF7224CE9C000B50056 /* DataStore */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -237,6 +238,13 @@
 				909600772249B295002F1DE6 /* Info.plist */,
 			);
 			path = kashikaUITests;
+			sourceTree = "<group>";
+		};
+		90BBBFF7224CE9C000B50056 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
