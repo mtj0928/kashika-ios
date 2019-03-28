@@ -424,7 +424,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -455,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5870126B2249F8E5003888E8 /* ShellScript */ = {

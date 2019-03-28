@@ -3,7 +3,8 @@ default_platform(:ios)
 platform :ios do
 
   desc "setup library"
-  lane :setup_library do 
+  lane :setup_library do
+    cocoapods
     carthage
   end
   
@@ -14,6 +15,7 @@ platform :ios do
   
   desc "exec test"
   lane :test do
+    cocoapods
     carthage(platform: 'ios', cache_builds: true)
     run_tests
   end
