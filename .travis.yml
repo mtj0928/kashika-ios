@@ -10,11 +10,14 @@ cache:
   directories:
   - Carthage
   - vendor/bundle
-  
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_8fcacf7c918a_key -iv $encrypted_8fcacf7c918a_iv -in .enc/GoogleService-Info.plist.enc -out kashika/GoogleService-Info.plist -d
+    
 install:
   - gem update bundler --no-ri --no-rdoc --no-document
   - bundle install --without production --deployment
-  
+
 script:
   - bundle exec fastlane check_code
   - bundle exec fastlane test

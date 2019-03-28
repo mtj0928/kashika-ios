@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		587012692249F819003888E8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
+		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		587012672249F819003888E8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		58701270224C5A61003888E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 				9096005C2249B295002F1DE6 /* Assets.xcassets */,
 				9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */,
 				909600612249B295002F1DE6 /* Info.plist */,
+				58701270224C5A61003888E8 /* GoogleService-Info.plist */,
 			);
 			path = kashika;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
+				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
