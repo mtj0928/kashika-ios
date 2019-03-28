@@ -133,7 +133,6 @@
 		5870127A224C638A003888E8 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				90BBBFF7224CE9C000B50056 /* DataStore */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -208,11 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				909600552249B295002F1DE6 /* AppDelegate.swift */,
-				58701279224C6342003888E8 /* Views */,
-				5870127A224C638A003888E8 /* Interactors */,
-				5870127B224C6396003888E8 /* Presenters */,
-				5870127C224C63A7003888E8 /* Entities */,
-				5870127D224C63B8003888E8 /* Routers */,
+				90BBBFF8224CED6F00B50056 /* VIPER */,
 				905E487F224C400E00BDC321 /* Commons */,
 				9096005C2249B295002F1DE6 /* Assets.xcassets */,
 				9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */,
@@ -240,11 +235,32 @@
 			path = kashikaUITests;
 			sourceTree = "<group>";
 		};
-		90BBBFF7224CE9C000B50056 /* DataStore */ = {
+		90BBBFF8224CED6F00B50056 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				58701279224C6342003888E8 /* Views */,
+				5870127A224C638A003888E8 /* Interactors */,
+				5870127B224C6396003888E8 /* Presenters */,
+				5870127C224C63A7003888E8 /* Entities */,
+				5870127D224C63B8003888E8 /* Routers */,
+				90BBBFF9224CEDB600B50056 /* Others */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		90BBBFF9224CEDB600B50056 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				90BBBFFA224CEDCA00B50056 /* Contracts */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		90BBBFFA224CEDCA00B50056 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = DataStore;
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
