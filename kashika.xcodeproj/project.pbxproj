@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21E158BAC472599B8A37454B /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F4A6EC9C97C711A53C1829 /* Pods_kashika.framework */; };
+		22941155C31FB8734CB41B41 /* Pods_kashikaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC22A0DA75881E42271F5892 /* Pods_kashikaUITests.framework */; };
 		587012692249F819003888E8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
@@ -19,6 +21,7 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
+		9BB2A0F29D0A5C6598982224 /* Pods_kashikaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDEA8C9DE1D2D3246245F5A9 /* Pods_kashikaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E44F4CAA7F1C4E43FA5AE9 /* Pods-kashikaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaTests/Pods-kashikaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1E3A7394E9A11BA6B520A967 /* Pods-kashika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.release.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.release.xcconfig"; sourceTree = "<group>"; };
+		37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3BE67E3740BE4FF3839F1C99 /* Pods-kashikaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaTests/Pods-kashikaTests.release.xcconfig"; sourceTree = "<group>"; };
 		587012672249F819003888E8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		58701270224C5A61003888E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
+		71F4A6EC9C97C711A53C1829 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +65,9 @@
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC22A0DA75881E42271F5892 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDEA8C9DE1D2D3246245F5A9 /* Pods_kashikaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,7 @@
 			files = (
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
+				21E158BAC472599B8A37454B /* Pods_kashika.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB2A0F29D0A5C6598982224 /* Pods_kashikaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22941155C31FB8734CB41B41 /* Pods_kashikaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +105,9 @@
 			children = (
 				587012672249F819003888E8 /* RxCocoa.framework */,
 				587012682249F819003888E8 /* RxSwift.framework */,
+				71F4A6EC9C97C711A53C1829 /* Pods_kashika.framework */,
+				FDEA8C9DE1D2D3246245F5A9 /* Pods_kashikaTests.framework */,
+				CC22A0DA75881E42271F5892 /* Pods_kashikaUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,6 +118,19 @@
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		72569B303FB5BB3E19DC816C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */,
+				1E3A7394E9A11BA6B520A967 /* Pods-kashika.release.xcconfig */,
+				02E44F4CAA7F1C4E43FA5AE9 /* Pods-kashikaTests.debug.xcconfig */,
+				3BE67E3740BE4FF3839F1C99 /* Pods-kashikaTests.release.xcconfig */,
+				D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */,
+				37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		905E487F224C400E00BDC321 /* Commons */ = {
@@ -118,6 +149,7 @@
 				909600742249B295002F1DE6 /* kashikaUITests */,
 				909600532249B295002F1DE6 /* Products */,
 				587012662249F818003888E8 /* Frameworks */,
+				72569B303FB5BB3E19DC816C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,11 +203,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9096007A2249B295002F1DE6 /* Build configuration list for PBXNativeTarget "kashika" */;
 			buildPhases = (
+				02E17D0A727756ED8D5042D0 /* [CP] Check Pods Manifest.lock */,
 				9096004E2249B295002F1DE6 /* Sources */,
 				9096004F2249B295002F1DE6 /* Frameworks */,
 				909600502249B295002F1DE6 /* Resources */,
 				5870126B2249F8E5003888E8 /* ShellScript */,
 				903B7670224A48E9009B9007 /* ShellScript */,
+				2638662B9CCAB553E0DABDCB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9096007D2249B295002F1DE6 /* Build configuration list for PBXNativeTarget "kashikaTests" */;
 			buildPhases = (
+				0EB9123F7D7B28549E15BBA2 /* [CP] Check Pods Manifest.lock */,
 				909600622249B295002F1DE6 /* Sources */,
 				909600632249B295002F1DE6 /* Frameworks */,
 				909600642249B295002F1DE6 /* Resources */,
@@ -208,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 909600802249B295002F1DE6 /* Build configuration list for PBXNativeTarget "kashikaUITests" */;
 			buildPhases = (
+				B64822E181BBA0FC241BD04A /* [CP] Check Pods Manifest.lock */,
 				9096006D2249B295002F1DE6 /* Sources */,
 				9096006E2249B295002F1DE6 /* Frameworks */,
 				9096006F2249B295002F1DE6 /* Resources */,
@@ -293,6 +329,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02E17D0A727756ED8D5042D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kashika-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EB9123F7D7B28549E15BBA2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kashikaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2638662B9CCAB553E0DABDCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5870126B2249F8E5003888E8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +432,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		B64822E181BBA0FC241BD04A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kashikaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -505,6 +631,7 @@
 		};
 		9096007B2249B295002F1DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +654,7 @@
 		};
 		9096007C2249B295002F1DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E3A7394E9A11BA6B520A967 /* Pods-kashika.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,6 +677,7 @@
 		};
 		9096007E2249B295002F1DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E44F4CAA7F1C4E43FA5AE9 /* Pods-kashikaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,6 +699,7 @@
 		};
 		9096007F2249B295002F1DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE67E3740BE4FF3839F1C99 /* Pods-kashikaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -591,6 +721,7 @@
 		};
 		909600812249B295002F1DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -611,6 +742,7 @@
 		};
 		909600822249B295002F1DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,6 +8,7 @@ branches:
     
 cache:
   directories:
+  - Pods
   - Carthage
   - vendor/bundle
 
