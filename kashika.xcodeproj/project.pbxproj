@@ -243,24 +243,8 @@
 				5870127B224C6396003888E8 /* Presenters */,
 				5870127C224C63A7003888E8 /* Entities */,
 				5870127D224C63B8003888E8 /* Routers */,
-				90BBBFF9224CEDB600B50056 /* Others */,
 			);
 			path = VIPER;
-			sourceTree = "<group>";
-		};
-		90BBBFF9224CEDB600B50056 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				90BBBFFA224CEDCA00B50056 /* Contracts */,
-			);
-			path = Others;
-			sourceTree = "<group>";
-		};
-		90BBBFFA224CEDCA00B50056 /* Contracts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
