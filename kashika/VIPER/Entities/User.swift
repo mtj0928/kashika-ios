@@ -11,6 +11,7 @@ import Pring
 
 @objcMembers
 final class User: Object {
+    dynamic var authId: Int = 0
     dynamic var name: String = ""
     dynamic var photo: UIImage?
 

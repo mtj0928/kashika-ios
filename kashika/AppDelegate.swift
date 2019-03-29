@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var router: AppRouter = AppRouter()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
+        setupFirebase()
         setupWindow()
 
         return true
@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Configure
 
 extension AppDelegate {
+
+    private func setupFirebase() {
+        FirebaseApp.configure()
+    }
 
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
