@@ -4,6 +4,7 @@ target 'kashika' do
   inhibit_all_warnings!
 
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   pod 'Pring'
   
 
@@ -11,6 +12,7 @@ target 'kashika' do
     inherit! :search_paths
 
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
     pod 'Pring'
   end
 
@@ -18,6 +20,7 @@ target 'kashika' do
     inherit! :search_paths
 
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
     pod 'Pring'
   end
 

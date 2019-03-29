@@ -22,6 +22,20 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
+		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
+		909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAC224E0C3000FE7218 /* RootInteractor.swift */; };
+		909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAF224E0CC800FE7218 /* RootContracts.swift */; };
+		909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */; };
+		909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AB6224E1E3100FE7218 /* UserUseCase.swift */; };
+		909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ABB224E36BB00FE7218 /* RootInteractorTest.swift */; };
+		909D6AC1224E3B2800FE7218 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ABF224E397700FE7218 /* RxBlocking.framework */; };
+		909D6AC3224E3B2800FE7218 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6AC2224E3B2800FE7218 /* RxTest.framework */; };
+		909D6AC7224E3B7100FE7218 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909D6AC2224E3B2800FE7218 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		909D6AC8224E3B7100FE7218 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 909D6ABF224E397700FE7218 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		909D6AC9224E3C3C00FE7218 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		909D6ACA224E3C3C00FE7218 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		909D6ACB224E3C6400FE7218 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
+		909D6ACC224E3C6400FE7218 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +55,22 @@
 			remoteInfo = kashika;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		909D6AC6224E3B5100FE7218 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				909D6AC9224E3C3C00FE7218 /* RxCocoa.framework in CopyFiles */,
+				909D6ACA224E3C3C00FE7218 /* RxSwift.framework in CopyFiles */,
+				909D6AC7224E3B7100FE7218 /* RxTest.framework in CopyFiles */,
+				909D6AC8224E3B7100FE7218 /* RxBlocking.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02E44F4CAA7F1C4E43FA5AE9 /* Pods-kashikaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaTests/Pods-kashikaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +98,15 @@
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		909D6AAC224E0C3000FE7218 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		909D6AAF224E0CC800FE7218 /* RootContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContracts.swift; sourceTree = "<group>"; };
+		909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthStore.swift; sourceTree = "<group>"; };
+		909D6AB6224E1E3100FE7218 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		909D6ABB224E36BB00FE7218 /* RootInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractorTest.swift; sourceTree = "<group>"; };
+		909D6ABD224E396900FE7218 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		909D6ABF224E397700FE7218 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		909D6AC2224E3B2800FE7218 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +126,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909D6ACB224E3C6400FE7218 /* RxCocoa.framework in Frameworks */,
+				909D6ACC224E3C6400FE7218 /* RxSwift.framework in Frameworks */,
+				909D6AC1224E3B2800FE7218 /* RxBlocking.framework in Frameworks */,
+				909D6AC3224E3B2800FE7218 /* RxTest.framework in Frameworks */,
 				274A62BF22E26562EB64C1DA /* Pods_kashikaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +148,9 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909D6AC2224E3B2800FE7218 /* RxTest.framework */,
+				909D6ABF224E397700FE7218 /* RxBlocking.framework */,
+				909D6ABD224E396900FE7218 /* RxBlocking.framework.dSYM */,
 				587012672249F819003888E8 /* RxCocoa.framework */,
 				587012682249F819003888E8 /* RxSwift.framework */,
 				7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */,
@@ -128,20 +174,6 @@
 				909600572249B295002F1DE6 /* ViewController.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		5870127A224C638A003888E8 /* Interactors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactors;
-			sourceTree = "<group>";
-		};
-		5870127B224C6396003888E8 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
 			sourceTree = "<group>";
 		};
 		5870127C224C63A7003888E8 /* Entities */ = {
@@ -221,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				9096006A2249B295002F1DE6 /* KashikaTests.swift */,
+				909D6AB8224E366A00FE7218 /* VIPER */,
 				9096006C2249B295002F1DE6 /* Info.plist */,
 			);
 			path = kashikaTests;
@@ -235,14 +268,66 @@
 			path = kashikaUITests;
 			sourceTree = "<group>";
 		};
+		909D6AA5224DE9EC00FE7218 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AB3224E12EB00FE7218 /* UseCase */,
+				909D6AA8224DEA4E00FE7218 /* DataStores */,
+				909D6AAC224E0C3000FE7218 /* RootInteractor.swift */,
+			);
+			name = Interactors;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		909D6AA8224DEA4E00FE7218 /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
+				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
+		909D6AAE224E0CA100FE7218 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		909D6AB3224E12EB00FE7218 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		909D6AB8224E366A00FE7218 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AB9224E367B00FE7218 /* Interactors */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		909D6AB9224E367B00FE7218 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				909D6ABB224E36BB00FE7218 /* RootInteractorTest.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		90BBBFF8224CED6F00B50056 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
 				58701279224C6342003888E8 /* Views */,
-				5870127A224C638A003888E8 /* Interactors */,
-				5870127B224C6396003888E8 /* Presenters */,
+				909D6AA5224DE9EC00FE7218 /* Interactors */,
 				5870127C224C63A7003888E8 /* Entities */,
 				5870127D224C63B8003888E8 /* Routers */,
+				909D6AAE224E0CA100FE7218 /* Others */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -280,6 +365,7 @@
 				909600632249B295002F1DE6 /* Frameworks */,
 				909600642249B295002F1DE6 /* Resources */,
 				E8DFD609D6B329A59FBC2DC5 /* [CP] Embed Pods Frameworks */,
+				909D6AC6224E3B5100FE7218 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -617,10 +703,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
+				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
+				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
+				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +722,7 @@
 			files = (
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
+				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +931,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = kashikaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -861,6 +957,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = kashikaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
