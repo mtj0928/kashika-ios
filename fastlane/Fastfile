@@ -17,6 +17,6 @@ platform :ios do
   lane :test do
     cocoapods
     carthage(platform: 'ios', cache_builds: true)
-    run_tests
+    run_tests(device: 'iPhone X')
   end
 end
