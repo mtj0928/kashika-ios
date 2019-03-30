@@ -9,6 +9,11 @@
 import Foundation
 import RxSwift
 
+protocol RootPresenterProtocol {
+
+    func createDebt()
+}
+
 protocol RootInteractorProtocol {
 
     func fetchOrCreateCurrentUser() -> Single<User>

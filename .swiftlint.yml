@@ -1,6 +1,5 @@
 disabled_rules:
 - trailing_whitespace
-- overridden_super_call
 
 opt_in_rules:
 - attributes
@@ -12,11 +11,8 @@ opt_in_rules:
 - fatal_error_message
 - first_where
 - force_unwrapping
-- implicitly_unwrapped_optional
-- number_separator
 - object_literal
 - operator_usage_whitespace
-- overridden_super_call
 - private_outlet
 - prohibited_super_call
 - redundant_nil_coalescing

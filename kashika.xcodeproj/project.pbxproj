@@ -36,6 +36,8 @@
 		909D6ACA224E3C3C00FE7218 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		909D6ACB224E3C6400FE7218 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
 		909D6ACC224E3C6400FE7218 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
+		909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AD6224E465400FE7218 /* RootPresenter.swift */; };
+		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +109,8 @@
 		909D6ABD224E396900FE7218 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
 		909D6ABF224E397700FE7218 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		909D6AC2224E3B2800FE7218 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		909D6AD6224E465400FE7218 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,7 @@
 		58701279224C6342003888E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				909D6AD9224E48B100FE7218 /* ViewControllers */,
 				909600572249B295002F1DE6 /* ViewController.swift */,
 			);
 			path = Views;
@@ -320,11 +325,36 @@
 			path = Interactors;
 			sourceTree = "<group>";
 		};
+		909D6AD5224E462B00FE7218 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		909D6AD9224E48B100FE7218 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				909D6ADA224E48BC00FE7218 /* Root */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		909D6ADA224E48BC00FE7218 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				909D6ADC224E48C800FE7218 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		90BBBFF8224CED6F00B50056 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
 				58701279224C6342003888E8 /* Views */,
 				909D6AA5224DE9EC00FE7218 /* Interactors */,
+				909D6AD5224E462B00FE7218 /* Presenters */,
 				5870127C224C63A7003888E8 /* Entities */,
 				5870127D224C63B8003888E8 /* Routers */,
 				909D6AAE224E0CA100FE7218 /* Others */,
@@ -705,10 +735,12 @@
 			files = (
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
+				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
