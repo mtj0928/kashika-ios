@@ -5,7 +5,7 @@ platform :ios do
   desc "setup library"
   lane :setup_library do
     cocoapods
-    carthage
+    carthage(platform: 'ios', cache_builds: true)
   end
   
   desc "check code format"
