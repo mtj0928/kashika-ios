@@ -23,5 +23,6 @@ excluded:
 - Pods/
 - Carthage/
 - vendor/
+- R.generated.swift
 
 line_length: 300

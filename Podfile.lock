@@ -128,11 +128,15 @@ PODS:
     - Firebase/Firestore
     - Firebase/Storage
   - Protobuf (3.6.1)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Pring
+  - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -157,6 +161,8 @@ SPEC REPOS:
     - nanopb
     - Pring
     - Protobuf
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
@@ -180,7 +186,9 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Pring: 95723ccc7ca32384e4271ccc90e984d1672bce45
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: 51ec2dc779293abe1484eb99957b04a637cfc2fb
+PODFILE CHECKSUM: f5d37e3c66f975e5ab7317ebe28451b461f902e4
 
 COCOAPODS: 1.6.1
