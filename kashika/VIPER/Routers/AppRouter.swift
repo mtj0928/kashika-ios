@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ESTabBarController
 
 struct AppRouter {
 
@@ -16,12 +17,14 @@ struct AppRouter {
         let viewController = RootViewController()
         viewController.setup(presenter: presenter)
 
-        let viewControllers = (0..<4).map { index -> UIViewController in
+        let viewControllers = (0..<5).map { index -> UIViewController in
             let plainVC = UIViewController()
             plainVC.tabBarItem = UITabBarItem(title: index.description, image: nil, tag: index)
             plainVC.view.backgroundColor = UIColor.white
             return plainVC
         }
+        let view = TabbarButton() // TODO: - これを継承したクラスを作る
+        viewControllers[2].tabBarItem = ESTabBarItem(view, title: "2", image: UIImage(), selectedImage: nil, tag: 2)
         viewController.setViewControllers(viewControllers, animated: true)
         return viewController
     }

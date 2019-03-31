@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import ESTabBarController
 
-final class RootViewController: UITabBarController {
+final class RootViewController: ESTabBarController {
 
     typealias Presenter = RootPresenterProtocol
 
