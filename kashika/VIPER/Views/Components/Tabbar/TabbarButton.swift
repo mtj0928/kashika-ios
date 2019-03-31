@@ -14,7 +14,7 @@ class TabbarButton: ESTabBarItemContentView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        imageView.backgroundColor = UIColor.red
+        imageView.backgroundColor = UIColor.app.themaColor
 
         superview?.bringSubviewToFront(self)
 
