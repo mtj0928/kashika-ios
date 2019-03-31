@@ -26,6 +26,7 @@ struct AppRouter {
         let button = TabbarButton()
         viewControllers[2].tabBarItem = ESTabBarItem(button, title: nil, image: R.image.plusWhite())
         viewController.setViewControllers(viewControllers, animated: true)
+
         return viewController
     }
 }

@@ -15,13 +15,11 @@ final class RootViewController: ESTabBarController {
 
     private var presenter: Presenter!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // viewDidLoad() of UITabbarController is started when it is made.
     func setup(presenter: Presenter) {
         self.presenter = presenter
+
+        setupTabbar()
     }
 }
 
@@ -29,4 +27,13 @@ final class RootViewController: ESTabBarController {
 
 extension RootViewController {
 
+    private func setupTabbar() {
+        shouldHijackHandler = { tabbarController, viewController, index in
+            return index == 2
+        }
+
+        didHijackHandler = { tabbarController, viewController, index in
+            // タップされたらここに入る
+        }
+    }
 }
