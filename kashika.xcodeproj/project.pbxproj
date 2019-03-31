@@ -222,9 +222,17 @@
 		905D830B22504C0100EB20AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				905D830C22504CD800EB20AC /* TabbarButton.swift */,
+				905D83112250C3C700EB20AC /* Tabbar */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		905D83112250C3C700EB20AC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				905D830C22504CD800EB20AC /* TabbarButton.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		905E487F224C400E00BDC321 /* Commons */ = {

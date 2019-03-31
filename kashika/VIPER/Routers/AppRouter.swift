@@ -23,8 +23,8 @@ struct AppRouter {
             plainVC.view.backgroundColor = UIColor.white
             return plainVC
         }
-        let view = TabbarButton() // TODO: - これを継承したクラスを作る
-        viewControllers[2].tabBarItem = ESTabBarItem(view, title: "2", image: UIImage(), selectedImage: nil, tag: 2)
+        let button = TabbarButton()
+        viewControllers[2].tabBarItem = ESTabBarItem(button, title: nil, image: R.image.plusWhite())
         viewController.setViewControllers(viewControllers, animated: true)
         return viewController
     }
