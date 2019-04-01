@@ -6,7 +6,7 @@ target 'kashika' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Pring'
-  
+  pod 'R.swift'
 
   target 'kashikaTests' do
     inherit! :search_paths
@@ -14,6 +14,7 @@ target 'kashika' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Pring'
+    pod 'R.swift'
   end
 
   target 'kashikaUITests' do
@@ -22,6 +23,7 @@ target 'kashika' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Pring'
+    pod 'R.swift'
   end
 
   post_install do |installer|

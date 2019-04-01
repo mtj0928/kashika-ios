@@ -18,6 +18,7 @@ before_install:
 install:
   - gem update bundler --no-ri --no-rdoc --no-document
   - bundle install --without production --deployment
+  - bundle exec pod repo update
 
 script:
   - bundle exec fastlane check_code

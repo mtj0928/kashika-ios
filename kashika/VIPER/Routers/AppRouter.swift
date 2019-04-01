@@ -8,10 +8,25 @@
 
 import Foundation
 import UIKit
+import ESTabBarController
 
 struct AppRouter {
 
     func createRootViewController() -> UIViewController {
-        return ViewController()
+        let presenter = RootPresenter()
+        let viewController = RootViewController()
+        viewController.setup(presenter: presenter)
+
+        let viewControllers = (0..<5).map { index -> UIViewController in
+            let plainVC = UIViewController()
+            plainVC.tabBarItem = UITabBarItem(title: index.description, image: nil, tag: index)
+            plainVC.view.backgroundColor = UIColor.white
+            return plainVC
+        }
+        let button = TabbarButton()
+        viewControllers[2].tabBarItem = ESTabBarItem(button, title: nil, image: R.image.plusWhite())
+        viewController.setViewControllers(viewControllers, animated: true)
+
+        return viewController
     }
 }

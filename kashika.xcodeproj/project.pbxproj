@@ -13,6 +13,10 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D830C22504CD800EB20AC /* TabbarButton.swift */; };
+		905D83142250CF1700EB20AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83132250CF1700EB20AC /* Color.swift */; };
+		905D83182250D44300EB20AC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83172250D44300EB20AC /* R.generated.swift */; };
+		905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83192250F46300EB20AC /* UIColor+extension.swift */; };
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
@@ -36,6 +40,9 @@
 		909D6ACA224E3C3C00FE7218 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		909D6ACB224E3C6400FE7218 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012672249F819003888E8 /* RxCocoa.framework */; };
 		909D6ACC224E3C6400FE7218 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
+		909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AD6224E465400FE7218 /* RootPresenter.swift */; };
+		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
+		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +91,10 @@
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		905D830C22504CD800EB20AC /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
+		905D83132250CF1700EB20AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		905D83172250D44300EB20AC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		905D83192250F46300EB20AC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +118,9 @@
 		909D6ABD224E396900FE7218 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
 		909D6ABF224E397700FE7218 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		909D6AC2224E3B2800FE7218 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		909D6AD6224E465400FE7218 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
@@ -148,6 +163,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */,
 				909D6AC2224E3B2800FE7218 /* RxTest.framework */,
 				909D6ABF224E397700FE7218 /* RxBlocking.framework */,
 				909D6ABD224E396900FE7218 /* RxBlocking.framework.dSYM */,
@@ -164,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,6 +188,8 @@
 		58701279224C6342003888E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				905D830B22504C0100EB20AC /* Components */,
+				909D6AD9224E48B100FE7218 /* ViewControllers */,
 				909600572249B295002F1DE6 /* ViewController.swift */,
 			);
 			path = Views;
@@ -205,9 +224,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		905D830B22504C0100EB20AC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				905D83112250C3C700EB20AC /* Tabbar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		905D83112250C3C700EB20AC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				905D830C22504CD800EB20AC /* TabbarButton.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		905D83122250CF0900EB20AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				905D83172250D44300EB20AC /* R.generated.swift */,
+				905D83132250CF1700EB20AC /* Color.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				905D83122250CF0900EB20AC /* Resources */,
 				5870126C224C5373003888E8 /* Extensions */,
 			);
 			path = Commons;
@@ -320,11 +365,36 @@
 			path = Interactors;
 			sourceTree = "<group>";
 		};
+		909D6AD5224E462B00FE7218 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		909D6AD9224E48B100FE7218 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				909D6ADA224E48BC00FE7218 /* Root */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		909D6ADA224E48BC00FE7218 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				909D6ADC224E48C800FE7218 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		90BBBFF8224CED6F00B50056 /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
 				58701279224C6342003888E8 /* Views */,
 				909D6AA5224DE9EC00FE7218 /* Interactors */,
+				909D6AD5224E462B00FE7218 /* Presenters */,
 				5870127C224C63A7003888E8 /* Entities */,
 				5870127D224C63B8003888E8 /* Routers */,
 				909D6AAE224E0CA100FE7218 /* Others */,
@@ -340,11 +410,12 @@
 			buildConfigurationList = 9096007A2249B295002F1DE6 /* Build configuration list for PBXNativeTarget "kashika" */;
 			buildPhases = (
 				02E17D0A727756ED8D5042D0 /* [CP] Check Pods Manifest.lock */,
+				905D830E2250562700EB20AC /* [Run Script] R.swift */,
 				9096004E2249B295002F1DE6 /* Sources */,
 				9096004F2249B295002F1DE6 /* Frameworks */,
 				909600502249B295002F1DE6 /* Resources */,
-				5870126B2249F8E5003888E8 /* ShellScript */,
-				903B7670224A48E9009B9007 /* ShellScript */,
+				5870126B2249F8E5003888E8 /* [Run Script] carthage */,
+				903B7670224A48E9009B9007 /* [Run Script] swiftlint */,
 				377E7D8A10E789472121B853 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -525,6 +596,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -541,6 +613,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -554,7 +627,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kashika/Pods-kashika-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5870126B2249F8E5003888E8 /* ShellScript */ = {
+		5870126B2249F8E5003888E8 /* [Run Script] carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -564,7 +637,9 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ESTabBarController.framework",
 			);
+			name = "[Run Script] carthage";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -573,7 +648,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		903B7670224A48E9009B9007 /* ShellScript */ = {
+		903B7670224A48E9009B9007 /* [Run Script] swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -582,6 +657,7 @@
 			);
 			inputPaths = (
 			);
+			name = "[Run Script] swiftlint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -589,6 +665,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		905D830E2250562700EB20AC /* [Run Script] R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "[Run Script] R.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		B64822E181BBA0FC241BD04A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -625,6 +721,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -641,6 +738,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -667,6 +765,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -683,6 +782,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -705,11 +805,17 @@
 			files = (
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
+				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
+				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
+				905D83142250CF1700EB20AC /* Color.swift in Sources */,
+				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
+				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
