@@ -20,6 +20,8 @@
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
+		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
+		906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		909600582249B295002F1DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600572249B295002F1DE6 /* ViewController.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
@@ -97,6 +99,8 @@
 		905D83192250F46300EB20AC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
+		906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDebtLayout.swift; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909600572249B295002F1DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
@@ -163,6 +168,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				906CA7E7225215580092E796 /* FloatingPanel.framework */,
 				909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */,
 				909D6AC2224E3B2800FE7218 /* RxTest.framework */,
 				909D6ABF224E397700FE7218 /* RxBlocking.framework */,
@@ -227,6 +233,7 @@
 		905D830B22504C0100EB20AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				906CA7EA2252D0A50092E796 /* FloatingPanelLayout */,
 				905D83112250C3C700EB20AC /* Tabbar */,
 			);
 			path = Components;
@@ -256,6 +263,14 @@
 				5870126C224C5373003888E8 /* Extensions */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		906CA7EA2252D0A50092E796 /* FloatingPanelLayout */ = {
+			isa = PBXGroup;
+			children = (
+				906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */,
+			);
+			path = FloatingPanelLayout;
 			sourceTree = "<group>";
 		};
 		909600492249B295002F1DE6 = {
@@ -638,6 +653,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ESTabBarController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -811,6 +827,7 @@
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
+				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
