@@ -18,11 +18,11 @@ class TabbarButton: ESTabBarItemContentView {
         superview?.bringSubviewToFront(self)
 
         textColor = .clear
-        highlightTextColor = .clear
-        iconColor = .white
-        highlightIconColor = .white
         backdropColor = .clear
-        highlightBackdropColor = .clear
+        highlightTextColor = .clear
+        iconColor = UIColor.app.white
+        highlightIconColor = UIColor.app.white
+        highlightBackdropColor = UIColor.app.white
     }
 
     public required init?(coder aDecoder: NSCoder) {
