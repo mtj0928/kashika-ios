@@ -52,7 +52,7 @@ extension RootViewController {
     private func setupFloatingPanel() {
         floatingPanelController = FloatingPanelController()
 
-        let contentViewController = ViewController()
+        let contentViewController = AddDebtViewController.createFromStoryboard()
         floatingPanelController?.set(contentViewController: contentViewController)
 
         floatingPanelController?.surfaceView.cornerRadius = 24.0

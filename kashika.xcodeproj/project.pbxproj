@@ -13,6 +13,8 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
+		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
 		905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D830C22504CD800EB20AC /* TabbarButton.swift */; };
 		905D83142250CF1700EB20AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83132250CF1700EB20AC /* Color.swift */; };
 		905D83182250D44300EB20AC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83172250D44300EB20AC /* R.generated.swift */; };
@@ -23,7 +25,6 @@
 		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
 		906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
-		909600582249B295002F1DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600572249B295002F1DE6 /* ViewController.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
@@ -93,6 +94,8 @@
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
+		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
 		905D830C22504CD800EB20AC /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
 		905D83132250CF1700EB20AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		905D83172250D44300EB20AC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -103,7 +106,6 @@
 		906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDebtLayout.swift; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		909600572249B295002F1DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9096005F2249B295002F1DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		909600612249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,7 +198,6 @@
 			children = (
 				905D830B22504C0100EB20AC /* Components */,
 				909D6AD9224E48B100FE7218 /* ViewControllers */,
-				909600572249B295002F1DE6 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +229,15 @@
 				37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		905C75FC2255F07D0011580B /* AddDebt */ = {
+			isa = PBXGroup;
+			children = (
+				905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */,
+				905C75FE2255F09D0011580B /* AddDebtViewController.swift */,
+			);
+			path = AddDebt;
 			sourceTree = "<group>";
 		};
 		905D830B22504C0100EB20AC /* Components */ = {
@@ -391,6 +401,7 @@
 		909D6AD9224E48B100FE7218 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				905C75FC2255F07D0011580B /* AddDebt */,
 				909D6ADA224E48BC00FE7218 /* Root */,
 			);
 			path = ViewControllers;
@@ -531,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
@@ -823,9 +835,9 @@
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
-				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
+				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
