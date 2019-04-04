@@ -10,8 +10,15 @@ import UIKit
 
 final class AddDebtViewController: UIViewController {
 
+    @IBOutlet private weak var closeButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction private func tapedCloseButton(_ sender: UIButton) {
+        // TODO: - 本来は view -> presenter -> router と流れるべき
+        dismiss(animated: true, completion: nil)
     }
 }
 

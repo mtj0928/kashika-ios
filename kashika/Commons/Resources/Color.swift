@@ -16,5 +16,6 @@ extension UIColor {
 
     class AppColor {
         let themaColor = UIColor(hex: "00528E")
+        let white = UIColor.white
     }
 }
