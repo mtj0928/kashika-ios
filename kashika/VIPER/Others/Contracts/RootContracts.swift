@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import UIKit
 import RxSwift
+import RxCocoa
 
 protocol RootPresenterProtocol {
 
-    func createDebt()
+    var floatingPanelContentViewController: BehaviorRelay<UIViewController?> { get }
 }
 
 protocol RootInteractorProtocol {
-
     func fetchOrCreateCurrentUser() -> Single<User>
+}
+
+protocol RootRouterProtocol {
 }

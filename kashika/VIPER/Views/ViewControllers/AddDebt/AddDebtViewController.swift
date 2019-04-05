@@ -12,13 +12,20 @@ final class AddDebtViewController: UIViewController {
 
     @IBOutlet private weak var closeButton: UIButton!
 
+    private var presenter: AddDebtPresenterProtocol!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
-    @IBAction private func tapedCloseButton(_ sender: UIButton) {
-        // TODO: - 本来は view -> presenter -> router と流れるべき
-        dismiss(animated: true, completion: nil)
+    @IBAction private func tappedCloseButton(_ sender: UIButton) {
+        presenter.tappedCloseButton()
+    }
+
+    class func createFromStoryboard(presenter: AddDebtPresenterProtocol) -> AddDebtViewController {
+        let viewController = createFromStoryboard()
+        viewController.presenter = presenter
+        return viewController
     }
 }
 

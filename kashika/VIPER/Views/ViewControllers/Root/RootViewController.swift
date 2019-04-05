@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import ESTabBarController
 import FloatingPanel
 
 final class RootViewController: ESTabBarController {
 
-    typealias Presenter = RootPresenterProtocol
-
-    private var presenter: Presenter!
+    private var presenter: RootPresenterProtocol!
     private var floatingPanelController: FloatingPanelController?
+    private let disposeBag = DisposeBag()
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,7 +25,7 @@ final class RootViewController: ESTabBarController {
     }
 
     // viewDidLoad() of UITabbarController is started when it is made.
-    func setup(presenter: Presenter) {
+    func setup(presenter: RootPresenterProtocol) {
         self.presenter = presenter
 
         setupTabbar()
@@ -52,12 +53,13 @@ extension RootViewController {
     private func setupFloatingPanel() {
         floatingPanelController = FloatingPanelController()
 
-        let contentViewController = AddDebtViewController.createFromStoryboard()
-        floatingPanelController?.set(contentViewController: contentViewController)
-
         floatingPanelController?.surfaceView.cornerRadius = 24.0
         floatingPanelController?.delegate = self
         floatingPanelController?.isRemovalInteractionEnabled = true
+
+        presenter.floatingPanelContentViewController.asDriver().drive(onNext: { [weak self] viewController in
+            self?.floatingPanelController?.set(contentViewController: viewController)
+        }).disposed(by: disposeBag)
     }
 }
 

@@ -16,6 +16,10 @@
 		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
 		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
 		905C76032255F20F0011580B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76022255F20F0011580B /* CloseButton.swift */; };
+		905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76062256CCC50011580B /* AddDebtContracts.swift */; };
+		905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76082256CE6C0011580B /* AddDebtPresenter.swift */; };
+		905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C760A2256CFDD0011580B /* AddDebtRouter.swift */; };
+		905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */; };
 		905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D830C22504CD800EB20AC /* TabbarButton.swift */; };
 		905D83142250CF1700EB20AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83132250CF1700EB20AC /* Color.swift */; };
 		905D83182250D44300EB20AC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83172250D44300EB20AC /* R.generated.swift */; };
@@ -98,6 +102,10 @@
 		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
 		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
 		905C76022255F20F0011580B /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		905C76062256CCC50011580B /* AddDebtContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtContracts.swift; sourceTree = "<group>"; };
+		905C76082256CE6C0011580B /* AddDebtPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtPresenter.swift; sourceTree = "<group>"; };
+		905C760A2256CFDD0011580B /* AddDebtRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtRouter.swift; sourceTree = "<group>"; };
+		905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewBuilder.swift; sourceTree = "<group>"; };
 		905D830C22504CD800EB20AC /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
 		905D83132250CF1700EB20AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		905D83172250D44300EB20AC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				905E4876224B940300BDC321 /* AppRouter.swift */,
+				905C760A2256CFDD0011580B /* AddDebtRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -248,6 +257,23 @@
 				905C76022255F20F0011580B /* CloseButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		905C760C2256D08F0011580B /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				905C76062256CCC50011580B /* AddDebtContracts.swift */,
+				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		905C760D2256D0A00011580B /* ViewBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
+			);
+			path = ViewBuilders;
 			sourceTree = "<group>";
 		};
 		905D830B22504C0100EB20AC /* Components */ = {
@@ -372,7 +398,8 @@
 		909D6AAE224E0CA100FE7218 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+				905C760D2256D0A00011580B /* ViewBuilders */,
+				905C760C2256D08F0011580B /* Contracts */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -405,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
+				905C76082256CE6C0011580B /* AddDebtPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -848,16 +876,20 @@
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
+				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
+				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
+				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
 			);

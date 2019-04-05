@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
 
 struct RootPresenter: RootPresenterProtocol {
+    let floatingPanelContentViewController = BehaviorRelay<UIViewController?>(value: nil)
 
-    func createDebt() {
+    init() {
+        floatingPanelContentViewController.accept(AddDebtViewBuilder.build())
     }
 }
