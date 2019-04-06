@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 final class AddDebtPresenter: AddDebtPresenterProtocol {
+
+    let friends = BehaviorRelay<[User]>(value: [])
+    let money = BehaviorRelay<Int>(value: 1080)
 
     private let router: AddDebtRouterProtocol
 

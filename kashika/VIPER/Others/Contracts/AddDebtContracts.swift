@@ -8,8 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 protocol AddDebtPresenterProtocol {
+    var friends: BehaviorRelay<[User]> { get }
+    var money: BehaviorRelay<Int> { get }
+
     func createDebt()
     func tappedCloseButton()
 }

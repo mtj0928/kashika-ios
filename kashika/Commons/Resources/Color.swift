@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
 
     static var app: AppColor {
         return AppColor()
@@ -17,5 +17,8 @@ extension UIColor {
     class AppColor {
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
+        let positiveColor = UIColor(hex: "027AFF")
+        let negativeColor = UIColor(hex: "D21350")
     }
+
 }

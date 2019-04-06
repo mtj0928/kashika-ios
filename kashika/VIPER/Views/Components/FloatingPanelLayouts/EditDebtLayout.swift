@@ -24,7 +24,7 @@ public class EditDebtLayout: FloatingPanelLayout {
         case .full:
             return 18.0
         case .half:
-            return 342.0
+            return 370.0
         default:
             return nil
         }
