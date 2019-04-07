@@ -18,11 +18,11 @@ class TabbarButton: ESTabBarItemContentView {
         superview?.bringSubviewToFront(self)
 
         textColor = .clear
-        highlightTextColor = .clear
-        iconColor = .white
-        highlightIconColor = .white
         backdropColor = .clear
-        highlightBackdropColor = .clear
+        highlightTextColor = .clear
+        iconColor = UIColor.app.white
+        highlightIconColor = UIColor.app.white
+        highlightBackdropColor = UIColor.app.white
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -31,7 +31,7 @@ class TabbarButton: ESTabBarItemContentView {
 
     override func updateLayout() {
         super.updateLayout()
-        let minSide = min(frame.height, frame.width) + 20
+        let minSide = min(frame.height, frame.width) + 15
         imageView.frame.size = CGSize(width: minSide, height: minSide)
         imageView.center = center
         imageView.layer.cornerRadius = minSide / 2

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Debt View Controller-->
+        <scene sceneID="k1K-3D-0Xn">
+            <objects>
+                <viewController id="hZu-Tc-lJh" customClass="AddDebtViewController" customModule="kashika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8X-UT-ubS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-ZB-MrA" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="315" y="54" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EOC-ZB-MrA" secondAttribute="height" multiplier="1:1" id="YvP-yg-XTR"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZQE-e0-SNy"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedCloseButton:" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Ece-cl-idG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お金を...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-4P-PyH">
+                                <rect key="frame" x="28" y="63" width="115" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="に" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-rN-k5N">
+                                <rect key="frame" x="28" y="222" width="27.666666666666671" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-aD-q7t">
+                                <rect key="frame" x="0.0" y="112" width="375" height="102"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="vvq-mq-TZu"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sfB-bS-fIr">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
+                                <rect key="frame" x="84.666666666666671" y="254.33333333333334" width="205.66666666666663" height="76.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
+                                        <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="76.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
+                                        <rect key="frame" x="181.33333333333331" y="37.999999999999972" width="24.333333333333343" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-H1-cRx" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="191.66666666666663" y="347" width="175.33333333333337" height="50"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="8" y="347" width="175.66666666666666" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zNQ-2i-fnn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x5l-H1-cRx" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="CKQ-sH-Xmn"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="EOC-ZB-MrA" secondAttribute="trailing" constant="10" id="DYu-Gr-wd5"/>
+                            <constraint firstItem="EOC-ZB-MrA" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="10" id="GbH-ht-VlD"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="u7F-aD-q7t" secondAttribute="trailing" id="HVq-Vh-nDR"/>
+                            <constraint firstItem="x5l-H1-cRx" firstAttribute="height" secondItem="v1O-b2-IZp" secondAttribute="height" id="JQT-WH-ba1"/>
+                            <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="Q8m-zE-aew"/>
+                            <constraint firstItem="v1O-b2-IZp" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="8" id="Rzi-8h-1Gu"/>
+                            <constraint firstItem="x5l-H1-cRx" firstAttribute="leading" secondItem="v1O-b2-IZp" secondAttribute="trailing" constant="8" id="U59-2M-M6w"/>
+                            <constraint firstItem="u7F-aD-q7t" firstAttribute="top" secondItem="EOC-ZB-MrA" secondAttribute="bottom" constant="8" id="c9V-XK-Mjb"/>
+                            <constraint firstItem="x5l-H1-cRx" firstAttribute="centerY" secondItem="v1O-b2-IZp" secondAttribute="centerY" id="da3-fs-fsp"/>
+                            <constraint firstItem="EOC-ZB-MrA" firstAttribute="centerY" secondItem="l9I-4P-PyH" secondAttribute="centerY" id="eQO-PP-EIK"/>
+                            <constraint firstItem="x5l-H1-cRx" firstAttribute="width" secondItem="v1O-b2-IZp" secondAttribute="width" id="eU6-ZF-kYi"/>
+                            <constraint firstItem="GXX-rN-k5N" firstAttribute="top" secondItem="u7F-aD-q7t" secondAttribute="bottom" constant="8" id="goj-G5-y5t"/>
+                            <constraint firstItem="olN-2K-M7j" firstAttribute="top" secondItem="GXX-rN-k5N" secondAttribute="bottom" id="kvr-tK-pA5"/>
+                            <constraint firstItem="u7F-aD-q7t" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="oXi-B2-AXi"/>
+                            <constraint firstItem="v1O-b2-IZp" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="sDY-FA-kyq"/>
+                            <constraint firstItem="GXX-rN-k5N" firstAttribute="leading" secondItem="l9I-4P-PyH" secondAttribute="leading" id="tg8-OI-oud"/>
+                            <constraint firstItem="l9I-4P-PyH" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="28" id="vg1-bM-Rg9"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="x5l-H1-cRx" secondAttribute="trailing" constant="8" id="yQe-dS-Wcr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8d-UG-YEN"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="EOC-ZB-MrA" id="nQP-dJ-sdl"/>
+                        <outlet property="collectionView" destination="u7F-aD-q7t" id="to9-RQ-Grr"/>
+                        <outlet property="karitaButton" destination="v1O-b2-IZp" id="d68-5x-CcJ"/>
+                        <outlet property="kashitaButton" destination="x5l-H1-cRx" id="OaM-jW-g9Y"/>
+                        <outlet property="okanewoLabel" destination="l9I-4P-PyH" id="hGY-KN-rWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="-288.17733990147786"/>
+        </scene>
+    </scenes>
+</document>

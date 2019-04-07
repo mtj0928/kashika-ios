@@ -13,6 +13,13 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
+		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
+		905C76032255F20F0011580B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76022255F20F0011580B /* CloseButton.swift */; };
+		905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76062256CCC50011580B /* AddDebtContracts.swift */; };
+		905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76082256CE6C0011580B /* AddDebtPresenter.swift */; };
+		905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C760A2256CFDD0011580B /* AddDebtRouter.swift */; };
+		905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */; };
 		905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D830C22504CD800EB20AC /* TabbarButton.swift */; };
 		905D83142250CF1700EB20AC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83132250CF1700EB20AC /* Color.swift */; };
 		905D83182250D44300EB20AC /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D83172250D44300EB20AC /* R.generated.swift */; };
@@ -20,8 +27,9 @@
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
+		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
+		906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
-		909600582249B295002F1DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600572249B295002F1DE6 /* ViewController.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
@@ -43,6 +51,10 @@
 		909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AD6224E465400FE7218 /* RootPresenter.swift */; };
 		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
+		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
+		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
+		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
+		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,15 +103,23 @@
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
+		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
+		905C76022255F20F0011580B /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		905C76062256CCC50011580B /* AddDebtContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtContracts.swift; sourceTree = "<group>"; };
+		905C76082256CE6C0011580B /* AddDebtPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtPresenter.swift; sourceTree = "<group>"; };
+		905C760A2256CFDD0011580B /* AddDebtRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtRouter.swift; sourceTree = "<group>"; };
+		905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewBuilder.swift; sourceTree = "<group>"; };
 		905D830C22504CD800EB20AC /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
 		905D83132250CF1700EB20AC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		905D83172250D44300EB20AC /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		905D83192250F46300EB20AC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
+		906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDebtLayout.swift; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		909600572249B295002F1DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9096005F2249B295002F1DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		909600612249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +141,10 @@
 		909D6AD6224E465400FE7218 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
+		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
+		90D1610822587CED00AF7934 /* SimpleFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendCell.swift; sourceTree = "<group>"; };
+		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
+		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
@@ -163,6 +188,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				906CA7E7225215580092E796 /* FloatingPanel.framework */,
 				909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */,
 				909D6AC2224E3B2800FE7218 /* RxTest.framework */,
 				909D6ABF224E397700FE7218 /* RxBlocking.framework */,
@@ -181,6 +207,7 @@
 			children = (
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
+				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,7 +217,6 @@
 			children = (
 				905D830B22504C0100EB20AC /* Components */,
 				909D6AD9224E48B100FE7218 /* ViewControllers */,
-				909600572249B295002F1DE6 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				905E4876224B940300BDC321 /* AppRouter.swift */,
+				905C760A2256CFDD0011580B /* AddDebtRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -224,20 +251,58 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		905C75FC2255F07D0011580B /* AddDebt */ = {
+			isa = PBXGroup;
+			children = (
+				905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */,
+				905C75FE2255F09D0011580B /* AddDebtViewController.swift */,
+			);
+			path = AddDebt;
+			sourceTree = "<group>";
+		};
+		905C76012255F1EB0011580B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				905C76022255F20F0011580B /* CloseButton.swift */,
+				90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		905C760C2256D08F0011580B /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				905C76062256CCC50011580B /* AddDebtContracts.swift */,
+				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+			);
+			path = Contracts;
+			sourceTree = "<group>";
+		};
+		905C760D2256D0A00011580B /* ViewBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
+			);
+			path = ViewBuilders;
+			sourceTree = "<group>";
+		};
 		905D830B22504C0100EB20AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				905D83112250C3C700EB20AC /* Tabbar */,
+				90D1610622587CCD00AF7934 /* Cells */,
+				905C76012255F1EB0011580B /* Buttons */,
+				906CA7EA2252D0A50092E796 /* FloatingPanelLayouts */,
+				905D83112250C3C700EB20AC /* Tabbars */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		905D83112250C3C700EB20AC /* Tabbar */ = {
+		905D83112250C3C700EB20AC /* Tabbars */ = {
 			isa = PBXGroup;
 			children = (
 				905D830C22504CD800EB20AC /* TabbarButton.swift */,
 			);
-			path = Tabbar;
+			path = Tabbars;
 			sourceTree = "<group>";
 		};
 		905D83122250CF0900EB20AC /* Resources */ = {
@@ -256,6 +321,14 @@
 				5870126C224C5373003888E8 /* Extensions */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		906CA7EA2252D0A50092E796 /* FloatingPanelLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */,
+			);
+			path = FloatingPanelLayouts;
 			sourceTree = "<group>";
 		};
 		909600492249B295002F1DE6 = {
@@ -336,7 +409,8 @@
 		909D6AAE224E0CA100FE7218 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+				905C760D2256D0A00011580B /* ViewBuilders */,
+				905C760C2256D08F0011580B /* Contracts */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -369,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
+				905C76082256CE6C0011580B /* AddDebtPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -376,6 +451,7 @@
 		909D6AD9224E48B100FE7218 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				905C75FC2255F07D0011580B /* AddDebt */,
 				909D6ADA224E48BC00FE7218 /* Root */,
 			);
 			path = ViewControllers;
@@ -400,6 +476,23 @@
 				909D6AAE224E0CA100FE7218 /* Others */,
 			);
 			path = VIPER;
+			sourceTree = "<group>";
+		};
+		90D1610622587CCD00AF7934 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				90D1610722587CD900AF7934 /* CollectionView */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		90D1610722587CD900AF7934 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				90D1610822587CED00AF7934 /* SimpleFriendCell.swift */,
+				90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +609,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
+				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
@@ -638,6 +733,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ESTabBarController.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -805,18 +901,27 @@
 			files = (
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
-				909600582249B295002F1DE6 /* ViewController.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
+				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
+				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
+				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
+				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
+				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
+				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
+				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
+				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
 			);
@@ -925,6 +1030,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -979,6 +1085,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1001,7 +1108,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashika;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1024,7 +1131,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashika;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1049,7 +1156,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashikaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kashika.app/kashika";
 			};
@@ -1075,7 +1182,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashikaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kashika.app/kashika";
 			};
@@ -1096,7 +1203,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashikaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = kashika;
 			};
@@ -1117,7 +1224,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JunnosukeMatsumoto.kashikaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = kashika;
 			};
