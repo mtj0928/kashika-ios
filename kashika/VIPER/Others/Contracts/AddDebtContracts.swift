@@ -11,11 +11,15 @@ import RxSwift
 import RxCocoa
 
 protocol AddDebtPresenterProtocol {
+    var selectedIndexes: BehaviorRelay<Set<Int>> { get }
+    var isSelected: BehaviorRelay<Bool> { get }
     var friends: BehaviorRelay<[User]> { get }
     var money: BehaviorRelay<Int> { get }
 
     func createDebt()
     func tappedCloseButton()
+    func getStatus(at index: Int) -> CellStatus
+    func selectFriend(at index: Int)
 }
 
 protocol AddDebtInteractorProtocol {

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class AddDebtViewController: UIViewController {
 
@@ -17,6 +19,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var kashitaButton: UIButton!
 
     private var presenter: AddDebtPresenterProtocol!
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +60,10 @@ extension AddDebtViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: okanewoLabel.frame.minX, bottom: 0.0, right: okanewoLabel.frame.minX)
 
         collectionView.register(R.nib.simpleFriendCell)
+
+        presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
+            self?.collectionView.reloadData()
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -70,7 +77,8 @@ extension AddDebtViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
-        cell.setFriend()
+        let status = presenter.getStatus(at: indexPath.item)
+        cell.setFriend(status: status)
         cell.backgroundColor = UIColor.lightGray
         return cell
     }
@@ -79,6 +87,10 @@ extension AddDebtViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension AddDebtViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.selectFriend(at: indexPath.item)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

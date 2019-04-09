@@ -12,13 +12,20 @@ import RxCocoa
 
 final class AddDebtPresenter: AddDebtPresenterProtocol {
 
+    let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
+    let isSelected = BehaviorRelay<Bool>(value: false)
     let friends = BehaviorRelay<[User]>(value: [])
     let money = BehaviorRelay<Int>(value: 1080)
 
     private let router: AddDebtRouterProtocol
+    private let disposeBag = DisposeBag()
 
     init(router: AddDebtRouterProtocol) {
         self.router = router
+
+        selectedIndexes.subscribe(onNext: { [weak self] indexes in
+            self?.isSelected.accept(!indexes.isEmpty)
+        }).disposed(by: disposeBag)
     }
 
     func createDebt() {
@@ -26,5 +33,25 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
 
     func tappedCloseButton() {
         router.dismiss()
+    }
+
+    func getStatus(at index: Int) -> CellStatus {
+        if !isSelected.value {
+            return CellStatus.none
+        }
+        if selectedIndexes.value.contains(index) {
+            return CellStatus.selected
+        }
+        return CellStatus.notSelected
+    }
+
+    func selectFriend(at index: Int) {
+        var selected = selectedIndexes.value
+        if selected.contains(index) {
+            selected.remove(index)
+        } else {
+            selected.insert(index)
+        }
+        selectedIndexes.accept(selected)
     }
 }

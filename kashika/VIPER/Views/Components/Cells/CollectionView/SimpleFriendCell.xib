@@ -31,20 +31,28 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHy-bb-EaW">
                                 <rect key="frame" x="0.0" y="106" width="106" height="49"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyq-xc-d2u">
+                                <rect key="frame" x="0.0" y="0.0" width="106" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="0.79083588957055218" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uyq-xc-d2u" firstAttribute="top" secondItem="YrV-Cx-q3j" secondAttribute="top" id="3sq-F1-Cf9"/>
                             <constraint firstItem="YrV-Cx-q3j" firstAttribute="bottom" secondItem="mHy-bb-EaW" secondAttribute="bottom" id="8pm-Fp-5D8"/>
                             <constraint firstItem="mHy-bb-EaW" firstAttribute="leading" secondItem="YrV-Cx-q3j" secondAttribute="leading" id="FNR-Ew-Oo0"/>
                             <constraint firstItem="tRG-0q-Atg" firstAttribute="leading" secondItem="YrV-Cx-q3j" secondAttribute="leading" id="Lr9-Eh-LEN"/>
+                            <constraint firstItem="uyq-xc-d2u" firstAttribute="bottom" secondItem="YrV-Cx-q3j" secondAttribute="bottom" id="NKJ-Ab-oTe"/>
                             <constraint firstItem="mHy-bb-EaW" firstAttribute="top" secondItem="tRG-0q-Atg" secondAttribute="bottom" id="RUd-Q3-Z1N"/>
                             <constraint firstItem="tRG-0q-Atg" firstAttribute="top" secondItem="YrV-Cx-q3j" secondAttribute="top" id="Zfm-cX-qGG"/>
                             <constraint firstItem="tRG-0q-Atg" firstAttribute="trailing" secondItem="YrV-Cx-q3j" secondAttribute="trailing" id="bwG-cB-yiz"/>
                             <constraint firstItem="YrV-Cx-q3j" firstAttribute="trailing" secondItem="mHy-bb-EaW" secondAttribute="trailing" id="cfq-mR-8Hh"/>
+                            <constraint firstAttribute="trailing" secondItem="uyq-xc-d2u" secondAttribute="trailing" id="tSe-WT-CcY"/>
+                            <constraint firstItem="uyq-xc-d2u" firstAttribute="leading" secondItem="sJn-k2-BfN" secondAttribute="leading" id="vnO-aI-LOF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YrV-Cx-q3j"/>
                     </view>
@@ -59,10 +67,11 @@
             <viewLayoutGuide key="safeArea" id="Clq-3q-GSM"/>
             <size key="customSize" width="106" height="155"/>
             <connections>
+                <outlet property="fadeView" destination="uyq-xc-d2u" id="eph-e2-JLq"/>
                 <outlet property="iconImageView" destination="tRG-0q-Atg" id="dBG-pN-caz"/>
                 <outlet property="nameLable" destination="mHy-bb-EaW" id="N11-3i-wz7"/>
             </connections>
-            <point key="canvasLocation" x="353.60000000000002" y="443.02848575712147"/>
+            <point key="canvasLocation" x="352" y="455.62218890554726"/>
         </collectionViewCell>
     </objects>
 </document>
