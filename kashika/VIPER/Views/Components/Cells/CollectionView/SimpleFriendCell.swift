@@ -12,15 +12,37 @@ class SimnpleFriendCell: UICollectionViewCell {
 
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var nameLable: UILabel!
+    @IBOutlet private weak var fadeView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
         iconImageView.layer.masksToBounds = true
+        fadeView.isHidden = true
     }
 
-    func setFriend() {
+    func setFriend(status: CellStatus) {
+        switch status {
+        case .selected:
+            addBorder()
+            fadeView.isHidden = true
+        case .notSelected:
+            removeBorder()
+            fadeView.isHidden = false
+        case .none:
+            removeBorder()
+            fadeView.isHidden = true
+        }
         updateLayout()
+    }
+
+    private func addBorder() {
+        iconImageView.layer.borderColor = UIColor.app.positiveColor.cgColor
+        iconImageView.layer.borderWidth = 3.0
+    }
+
+    private func removeBorder() {
+        iconImageView.layer.borderWidth = 0.0
     }
 
     private func updateLayout() {
