@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddUserCell" id="Rd0-oS-F46" customClass="AddUserCell" customModule="kashika" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tb4-aA-RO1">
+                        <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKf-hk-gm1">
+                                <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus-white" translatesAutoresizingMaskIntoConstraints="NO" id="EEv-lz-wAt">
+                                        <rect key="frame" x="16" y="16" width="91" height="91"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EEv-lz-wAt" secondAttribute="height" multiplier="1:1" id="87k-SR-Efc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EEv-lz-wAt" firstAttribute="leading" secondItem="sKf-hk-gm1" secondAttribute="leading" constant="16" id="UpE-0j-bR7"/>
+                                    <constraint firstItem="EEv-lz-wAt" firstAttribute="centerY" secondItem="sKf-hk-gm1" secondAttribute="centerY" id="n2d-hq-hvd"/>
+                                    <constraint firstAttribute="width" secondItem="sKf-hk-gm1" secondAttribute="height" multiplier="1:1" id="r8o-v4-G2S"/>
+                                    <constraint firstItem="EEv-lz-wAt" firstAttribute="centerX" secondItem="sKf-hk-gm1" secondAttribute="centerX" id="ytt-Oe-l00"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sKf-hk-gm1" firstAttribute="top" secondItem="Tb4-aA-RO1" secondAttribute="top" id="Bno-DF-WAh"/>
+                            <constraint firstItem="sKf-hk-gm1" firstAttribute="leading" secondItem="Tb4-aA-RO1" secondAttribute="leading" id="Qep-Ej-uVI"/>
+                            <constraint firstAttribute="trailing" secondItem="sKf-hk-gm1" secondAttribute="trailing" id="e8K-fG-B7O"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Tb4-aA-RO1" secondAttribute="bottom" id="UPQ-UE-2iJ"/>
+                <constraint firstItem="Tb4-aA-RO1" firstAttribute="top" secondItem="Rd0-oS-F46" secondAttribute="top" id="Uup-bu-YV1"/>
+                <constraint firstItem="Tb4-aA-RO1" firstAttribute="leading" secondItem="Rd0-oS-F46" secondAttribute="leading" id="jRg-6o-N9f"/>
+                <constraint firstAttribute="trailing" secondItem="Tb4-aA-RO1" secondAttribute="trailing" id="zmZ-wm-bjI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="PEd-nO-XAG"/>
+            <size key="customSize" width="123" height="166"/>
+            <connections>
+                <outlet property="imageView" destination="EEv-lz-wAt" id="9Ec-Fz-4gg"/>
+                <outlet property="mainView" destination="sKf-hk-gm1" id="l6U-gI-kAH"/>
+            </connections>
+            <point key="canvasLocation" x="-54.347826086956523" y="-28.794642857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus-white" width="1024" height="1024"/>
+    </resources>
+</document>

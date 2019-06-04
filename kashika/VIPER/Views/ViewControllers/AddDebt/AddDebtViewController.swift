@@ -60,6 +60,7 @@ extension AddDebtViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: okanewoLabel.frame.minX, bottom: 0.0, right: okanewoLabel.frame.minX)
 
         collectionView.register(R.nib.simpleFriendCell)
+        collectionView.register(R.nib.addUserCell)
 
         presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
@@ -71,15 +72,49 @@ extension AddDebtViewController {
 
 extension AddDebtViewController: UICollectionViewDataSource {
 
+    private enum Section: Int, CaseIterable {
+        case friend, add
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return Section.allCases.count
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.friends.value.count + 10
+        guard let section = Section(rawValue: section) else {
+            return 0
+        }
+
+        switch section {
+        case .friend:
+            return presenter.friends.value.count + 10
+        case .add:
+            return 1
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let section = Section(rawValue: indexPath.section) else {
+            return UICollectionViewCell()
+        }
+
+        switch section {
+        case .friend:
+            return friendCell(collectionView, cellForItemAt: indexPath)
+        case .add:
+            return addCell(collectionView, cellForItemAt: indexPath)
+        }
+    }
+
+    private func friendCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
         let status = presenter.getStatus(at: indexPath.item)
         cell.setFriend(status: status)
-        cell.backgroundColor = UIColor.lightGray
+        return cell
+    }
+
+    private func addCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.addUserCell, for: indexPath)
         return cell
     }
 }
@@ -89,7 +124,49 @@ extension AddDebtViewController: UICollectionViewDataSource {
 extension AddDebtViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.selectFriend(at: indexPath.item)
+        guard let section = Section(rawValue: indexPath.section) else {
+            return
+        }
+
+        switch section {
+        case .friend:
+            presenter.selectFriend(at: indexPath.item)
+        case .add:
+
+            break
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else {
+            return
+        }
+
+        switch section {
+        case .friend:
+            break
+        case .add:
+            let cells = collectionView.visibleCells.compactMap({ $0 as? AddUserCell })
+            if let cell = cells.first {
+                cell.select()
+            }
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else {
+            return
+        }
+
+        switch section {
+        case .friend:
+            break
+        case .add:
+            let cells = collectionView.visibleCells.compactMap({ $0 as? AddUserCell })
+            if let cell = cells.first {
+                cell.unselect()
+            }
+        }
     }
 }
 
@@ -101,6 +178,18 @@ extension AddDebtViewController: UICollectionViewDelegateFlowLayout {
         let height = collectionView.frame.height
         let width = height * 7 / 10
         return CGSize(width: width, height: height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        guard let section = Section(rawValue: section) else {
+            return UIEdgeInsets.zero
+        }
+        switch section {
+        case .add:
+            return UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 0.0)
+        default:
+            return UIEdgeInsets.zero
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
