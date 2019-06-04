@@ -19,6 +19,7 @@ public extension UIColor {
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")
         let negativeColor = UIColor(hex: "D21350")
+        let backgroundInImageView = UIColor.lightGray
     }
 
 }
