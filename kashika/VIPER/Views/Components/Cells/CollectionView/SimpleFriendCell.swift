@@ -13,11 +13,18 @@ class SimnpleFriendCell: UICollectionViewCell {
     @IBOutlet private weak var nameLable: UILabel!
     @IBOutlet private weak var fadeView: UIView!
 
+    var isSecondary = false {
+        didSet {
+            fadeView.backgroundColor = UIColor.app.systemBackground(isSecondary: isSecondary)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
         iconImageView.layer.masksToBounds = true
         fadeView.isHidden = true
+        fadeView.alpha = 0.8
     }
 
     func setFriend(status: CellStatus) {

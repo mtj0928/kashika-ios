@@ -32,8 +32,6 @@ class CloseButton: UIButton {
     }
 
     private func sharedInit() {
-        backgroundColor = UIColor.app.lightGrayInBackground
-
         imageView?.contentMode = .scaleAspectFill
         setImage(R.image.crossWhite(), for: .normal)
         tintColor = UIColor.app.grayInButton
