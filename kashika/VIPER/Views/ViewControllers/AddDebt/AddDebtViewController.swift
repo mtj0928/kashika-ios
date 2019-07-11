@@ -110,6 +110,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
         let status = presenter.getStatus(at: indexPath.item)
         cell.setFriend(status: status)
+        cell.isSecondary = true
         return cell
     }
 

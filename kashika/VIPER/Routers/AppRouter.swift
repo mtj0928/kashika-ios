@@ -20,7 +20,6 @@ struct AppRouter {
         let viewControllers = (0..<5).map { index -> UIViewController in
             let plainVC = UIViewController()
             plainVC.tabBarItem = UITabBarItem(title: index.description, image: nil, tag: index)
-            plainVC.view.backgroundColor = UIColor.white
             return plainVC
         }
         let button = TabbarButton()

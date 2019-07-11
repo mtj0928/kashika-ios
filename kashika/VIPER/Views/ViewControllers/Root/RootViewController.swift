@@ -52,6 +52,7 @@ extension RootViewController {
 
     private func setupFloatingPanel() {
         floatingPanelController = FloatingPanelController()
+        floatingPanelController?.backdropView.backgroundColor = UIColor.app.secondarySystemBackground
 
         floatingPanelController?.surfaceView.cornerRadius = 24.0
         floatingPanelController?.delegate = self
