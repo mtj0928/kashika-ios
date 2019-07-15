@@ -35,6 +35,10 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
         router.dismiss()
     }
 
+    func tappedMoneyButton() {
+        router.toEditManeyView()
+    }
+
     func getStatus(at index: Int) -> CellStatus {
         if !isSelected.value {
             return CellStatus.none

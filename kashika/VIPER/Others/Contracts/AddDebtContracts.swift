@@ -18,6 +18,7 @@ protocol AddDebtPresenterProtocol {
 
     func createDebt()
     func tappedCloseButton()
+    func tappedMoneyButton()
     func getStatus(at index: Int) -> CellStatus
     func selectFriend(at index: Int)
 }
@@ -27,4 +28,5 @@ protocol AddDebtInteractorProtocol {
 
 protocol AddDebtRouterProtocol {
     func dismiss()
+    func toEditManeyView()
 }

@@ -31,6 +31,10 @@ final class AddDebtViewController: UIViewController {
     @IBAction private func tappedCloseButton(_ sender: UIButton) {
         presenter.tappedCloseButton()
     }
+    
+    @IBAction func tappedMoneyButton() {
+        presenter.tappedMoneyButton()
+    }
 
     class func createFromStoryboard(presenter: AddDebtPresenterProtocol) -> AddDebtViewController {
         let viewController = createFromStoryboard()

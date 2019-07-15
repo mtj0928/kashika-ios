@@ -82,18 +82,28 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-lh-MF5">
+                                <rect key="frame" x="0.0" y="254.33333333333334" width="375" height="76.666666666666657"/>
+                                <connections>
+                                    <action selector="tappedMoneyButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="58t-NB-Aun"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="PSw-lh-MF5" secondAttribute="trailing" id="3C7-2f-4bP"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="CKQ-sH-Xmn"/>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="EOC-ZB-MrA" secondAttribute="trailing" constant="10" id="DYu-Gr-wd5"/>
                             <constraint firstItem="EOC-ZB-MrA" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="10" id="GbH-ht-VlD"/>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="u7F-aD-q7t" secondAttribute="trailing" id="HVq-Vh-nDR"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="height" secondItem="v1O-b2-IZp" secondAttribute="height" id="JQT-WH-ba1"/>
+                            <constraint firstItem="PSw-lh-MF5" firstAttribute="bottom" secondItem="olN-2K-M7j" secondAttribute="bottom" id="JUb-xW-ZwA"/>
+                            <constraint firstItem="PSw-lh-MF5" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="Mde-al-7dw"/>
                             <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="Q8m-zE-aew"/>
                             <constraint firstItem="v1O-b2-IZp" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="8" id="Rzi-8h-1Gu"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="leading" secondItem="v1O-b2-IZp" secondAttribute="trailing" constant="8" id="U59-2M-M6w"/>
                             <constraint firstItem="u7F-aD-q7t" firstAttribute="top" secondItem="EOC-ZB-MrA" secondAttribute="bottom" constant="8" id="c9V-XK-Mjb"/>
+                            <constraint firstItem="PSw-lh-MF5" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="dV4-Hq-bYv"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="centerY" secondItem="v1O-b2-IZp" secondAttribute="centerY" id="da3-fs-fsp"/>
                             <constraint firstItem="EOC-ZB-MrA" firstAttribute="centerY" secondItem="l9I-4P-PyH" secondAttribute="centerY" id="eQO-PP-EIK"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="width" secondItem="v1O-b2-IZp" secondAttribute="width" id="eU6-ZF-kYi"/>
