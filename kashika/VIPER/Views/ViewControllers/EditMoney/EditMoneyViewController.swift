@@ -15,8 +15,8 @@ final class EditMoneyViewController: UIViewController {
     @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var moneyTextField: UnitTextField!
-    @IBOutlet private weak var okButton: UIButton!
-    @IBOutlet private weak var cancelButton: UIButton!
+    @IBOutlet private weak var okButton: EmphasisButton!
+    @IBOutlet private weak var cancelButton: EmphasisButton!
     @IBOutlet private weak var bottomLayout: NSLayoutConstraint!
     
     var backgroundAlpha: CGFloat {
@@ -76,9 +76,11 @@ extension EditMoneyViewController {
     private func setupButton() {
         okButton.backgroundColor = UIColor.app.positiveColor
         cancelButton.backgroundColor = UIColor.app.negativeColor
-        
-        okButton.layer.cornerRadius = 0.0
-        cancelButton.layer.cornerRadius = 0.0
+
+        [okButton, cancelButton].forEach { button in
+            button?.layer.cornerRadius = 0.0
+            button?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        }
     }
 }
 
