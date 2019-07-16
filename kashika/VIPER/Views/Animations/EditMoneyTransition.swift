@@ -12,7 +12,7 @@ class EditMoneyTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
     var isPresent = true
 
-    private let duration = 0.5
+    private let duration = 0.3
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
@@ -28,6 +28,8 @@ class EditMoneyTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let containerView = transitionContext.containerView
         containerView.insertSubview(editMoneyViewController.view, aboveSubview: callViewController.view)
 
+        editMoneyViewController.backgroundAlpha = isPresent ? 0.0 : EditMoneyViewController.backgroundAlpha
+        
         let toAlpha = isPresent ? EditMoneyViewController.backgroundAlpha : 0.0
         UIView.animate(withDuration: duration, animations: {
             editMoneyViewController.backgroundAlpha = toAlpha
