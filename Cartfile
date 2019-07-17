@@ -1,3 +1,4 @@
 github "ReactiveX/RxSwift" ~> 4.0
 github "eggswift/ESTabBarController"
 github "scenee/FloatingPanel"
+github "WorldDownTown/TapticEngine"
