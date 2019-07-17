@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class EditMoneyViewController: UIViewController {
     
@@ -27,11 +29,15 @@ final class EditMoneyViewController: UIViewController {
             backgroundView.alpha = newValue
         }
     }
+
+    private var presenter: EditMoneyPresenterProtocol!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButton()
+        setupTextField()
         setupBackground()
         
         moneyTextField.becomeFirstResponder()
@@ -56,16 +62,31 @@ final class EditMoneyViewController: UIViewController {
         notification.removeObserver(self, name: UITextField.textDidChangeNotification, object: moneyTextField)
     }
     
-    @IBAction func tappedCancelButton() {
+    @IBAction private func tappedOkButton() {
         moneyTextField.resignFirstResponder()
-        dismiss(animated: true)
+        presenter.tappedOkButton()
+    }
+
+    @IBAction private func tappedCancelButton() {
+        moneyTextField.resignFirstResponder()
+        presenter.tappedCancelButton()
+    }
+
+    class func createFromStoryboard(presenter: EditMoneyPresenterProtocol) -> EditMoneyViewController {
+        let viewController = createFromStoryboard()
+        viewController.presenter = presenter
+        return viewController
     }
 }
 
 // MARK: - Set Up
 
 extension EditMoneyViewController {
-    
+
+    private func setupTextField() {
+        moneyTextField.text = String.convertWithComma(from: presenter.money.value)
+    }
+
     private func setupBackground() {
         backgroundView.backgroundColor = UIColor.black
         backgroundView.alpha = EditMoneyViewController.backgroundAlpha
@@ -128,17 +149,17 @@ extension EditMoneyViewController {
             self?.view.layoutIfNeeded()
         }
     }
-    
+
+    // TODO: - Rxを使う
     @objc
     private func textFieldDidChange() {
         guard let text = moneyTextField.text else {
             return
         }
         let numberText = text.filter({ Int($0.description) != nil })
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        let commaString = formatter.string(from: NSNumber(value: Int(numberText) ?? 0))
-        moneyTextField.text = commaString
+        let money = Int(numberText) ?? 0
+
+        moneyTextField.text = String.convertWithComma(from: money)
+        presenter.money.accept(money)
     }
 }

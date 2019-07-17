@@ -17,6 +17,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var karitaButton: UIButton!
     @IBOutlet private weak var kashitaButton: UIButton!
+    @IBOutlet private weak var moneylabel: UILabel!
 
     private var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
@@ -25,6 +26,7 @@ final class AddDebtViewController: UIViewController {
         super.viewDidLoad()
 
         setupButton()
+        setupMoneyLabel()
         setupCollectionView()
     }
 
@@ -46,6 +48,12 @@ final class AddDebtViewController: UIViewController {
 // MARK: - Set Up
 
 extension AddDebtViewController {
+
+    private func setupMoneyLabel() {
+        presenter.money.subscribe(onNext: { [weak self] value in
+            self?.moneylabel.text = String.convertWithComma(from: value)
+        }).disposed(by: disposeBag)
+    }
 
     private func setupButton() {
         karitaButton.backgroundColor = UIColor.app.negativeColor
