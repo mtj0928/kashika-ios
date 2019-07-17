@@ -6,8 +6,8 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import RxCocoa
 
 final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
 
@@ -17,8 +17,8 @@ final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
         viewController?.dismiss(animated: true, completion: nil)
     }
 
-    func toEditManeyView() {
-        let editMoneyViewController = EditMoneyViewController.createFromStoryboard()
+    func toEditMoneyView(money: BehaviorRelay<Int>) {
+        let editMoneyViewController = EditMoneyViewBuilder.build(money: money)
         editMoneyViewController.modalPresentationStyle = .overFullScreen
         editMoneyViewController.transitioningDelegate = self
         viewController?.present(editMoneyViewController, animated: true)
@@ -38,8 +38,4 @@ extension AddDebtRouter: UIViewControllerTransitioningDelegate {
         trasition.isPresent = false
         return trasition
     }
-//
-//    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        return EditMoneyTransition()
-//    }
 }

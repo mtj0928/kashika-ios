@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class EditMoneyViewController: UIViewController {
     
@@ -27,11 +29,15 @@ final class EditMoneyViewController: UIViewController {
             backgroundView.alpha = newValue
         }
     }
+
+    private var presenter: EditMoneyPresenterProtocol!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButton()
+        setupTextField()
         setupBackground()
         
         moneyTextField.becomeFirstResponder()
@@ -43,7 +49,6 @@ final class EditMoneyViewController: UIViewController {
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        notification.addObserver(self, selector: #selector(self.textFieldDidChange), name: UITextField.textDidChangeNotification, object: moneyTextField)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,19 +58,44 @@ final class EditMoneyViewController: UIViewController {
         notification.removeObserver(self)
         notification.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        notification.removeObserver(self, name: UITextField.textDidChangeNotification, object: moneyTextField)
     }
     
-    @IBAction func tappedCancelButton() {
+    @IBAction private func tappedOkButton() {
         moneyTextField.resignFirstResponder()
-        dismiss(animated: true)
+        presenter.tappedOkButton()
+    }
+
+    @IBAction private func tappedCancelButton() {
+        moneyTextField.resignFirstResponder()
+        presenter.tappedCancelButton()
+    }
+
+    class func createFromStoryboard(presenter: EditMoneyPresenterProtocol) -> EditMoneyViewController {
+        let viewController = createFromStoryboard()
+        viewController.presenter = presenter
+        return viewController
     }
 }
 
 // MARK: - Set Up
 
 extension EditMoneyViewController {
-    
+
+    private func setupTextField() {
+        moneyTextField.text = String.convertWithComma(from: presenter.money.value)
+
+        moneyTextField.rx.text
+            .filter({ $0 != nil })
+            .map({ text -> String in
+                return text?.filter({ Int($0.description) != nil }) ?? "0"
+            })
+            .map({ Int($0) ?? 0 })
+            .subscribe(onNext: { [weak self] money in
+                self?.moneyTextField.text = String.convertWithComma(from: money)
+                self?.presenter.money.accept(money)
+            }).disposed(by: disposeBag)
+    }
+
     private func setupBackground() {
         backgroundView.backgroundColor = UIColor.black
         backgroundView.alpha = EditMoneyViewController.backgroundAlpha
@@ -88,7 +118,7 @@ extension EditMoneyViewController {
 
 extension EditMoneyViewController {
     
-    func hideMainView() {
+    private func hideMainView() {
         bottomLayout.constant = -mainView.frame.height - view.safeAreaInsets.bottom
     }
 }
@@ -127,18 +157,5 @@ extension EditMoneyViewController {
         UIView.animate(withDuration: duration) { [weak self] in
             self?.view.layoutIfNeeded()
         }
-    }
-    
-    @objc
-    private func textFieldDidChange() {
-        guard let text = moneyTextField.text else {
-            return
-        }
-        let numberText = text.filter({ Int($0.description) != nil })
-        
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        let commaString = formatter.string(from: NSNumber(value: Int(numberText) ?? 0))
-        moneyTextField.text = commaString
     }
 }

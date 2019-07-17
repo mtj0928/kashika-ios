@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
@@ -57,13 +57,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
                                 <rect key="frame" x="84.666666666666671" y="254.33333333333334" width="205.66666666666663" height="76.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
                                         <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="76.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
                                         <rect key="frame" x="181.33333333333331" y="37.999999999999972" width="24.333333333333343" height="28.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -94,6 +94,7 @@
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="PSw-lh-MF5" secondAttribute="trailing" id="3C7-2f-4bP"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="CKQ-sH-Xmn"/>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="EOC-ZB-MrA" secondAttribute="trailing" constant="10" id="DYu-Gr-wd5"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="olN-2K-M7j" secondAttribute="trailing" id="ETg-xs-mdA"/>
                             <constraint firstItem="EOC-ZB-MrA" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="10" id="GbH-ht-VlD"/>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="u7F-aD-q7t" secondAttribute="trailing" id="HVq-Vh-nDR"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="height" secondItem="v1O-b2-IZp" secondAttribute="height" id="JQT-WH-ba1"/>
@@ -101,6 +102,7 @@
                             <constraint firstItem="PSw-lh-MF5" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="Mde-al-7dw"/>
                             <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="Q8m-zE-aew"/>
                             <constraint firstItem="v1O-b2-IZp" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="8" id="Rzi-8h-1Gu"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="olN-2K-M7j" secondAttribute="leading" id="SdG-PK-7Re"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="leading" secondItem="v1O-b2-IZp" secondAttribute="trailing" constant="8" id="U59-2M-M6w"/>
                             <constraint firstItem="u7F-aD-q7t" firstAttribute="top" secondItem="EOC-ZB-MrA" secondAttribute="bottom" constant="8" id="c9V-XK-Mjb"/>
                             <constraint firstItem="PSw-lh-MF5" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="dV4-Hq-bYv"/>
@@ -122,6 +124,7 @@
                         <outlet property="collectionView" destination="u7F-aD-q7t" id="to9-RQ-Grr"/>
                         <outlet property="karitaButton" destination="v1O-b2-IZp" id="d68-5x-CcJ"/>
                         <outlet property="kashitaButton" destination="x5l-H1-cRx" id="OaM-jW-g9Y"/>
+                        <outlet property="moneylabel" destination="iU0-tn-q9B" id="VRF-1m-NQV"/>
                         <outlet property="okanewoLabel" destination="l9I-4P-PyH" id="hGY-KN-rWK"/>
                     </connections>
                 </viewController>

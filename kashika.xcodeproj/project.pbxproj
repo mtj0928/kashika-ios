@@ -19,6 +19,8 @@
 		901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */; };
 		901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */; };
 		901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC76222D9B803002B3C17 /* UnitTextField.swift */; };
+		9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */; };
+		9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */; };
 		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
 		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
 		905C76032255F20F0011580B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C76022255F20F0011580B /* CloseButton.swift */; };
@@ -63,6 +65,9 @@
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 		90EC144122DC6460007188F2 /* EditMoneyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC144022DC6460007188F2 /* EditMoneyTransition.swift */; };
+		90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */; };
+		90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */; };
+		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +121,8 @@
 		901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMoneyViewController.storyboard; sourceTree = "<group>"; };
 		901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewController.swift; sourceTree = "<group>"; };
 		901AC76222D9B803002B3C17 /* UnitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTextField.swift; sourceTree = "<group>"; };
+		9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyContracts.swift; sourceTree = "<group>"; };
+		9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyPresenter.swift; sourceTree = "<group>"; };
 		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
 		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
 		905C76022255F20F0011580B /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
@@ -159,6 +166,9 @@
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
 		90EC144022DC6460007188F2 /* EditMoneyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyTransition.swift; sourceTree = "<group>"; };
+		90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewBuilder.swift; sourceTree = "<group>"; };
+		90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyRouter.swift; sourceTree = "<group>"; };
+		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +232,7 @@
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
+				90FB187822DEE37100092BB3 /* String+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 			children = (
 				905E4876224B940300BDC321 /* AppRouter.swift */,
 				905C760A2256CFDD0011580B /* AddDebtRouter.swift */,
+				90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -305,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
+				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
 			);
 			path = Contracts;
@@ -314,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
+				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 			);
 			path = ViewBuilders;
 			sourceTree = "<group>";
@@ -475,8 +489,9 @@
 		909D6AD5224E462B00FE7218 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 				905C76082256CE6C0011580B /* AddDebtPresenter.swift */,
+				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
+				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -946,6 +961,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
@@ -966,14 +982,18 @@
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
+				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
+				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
+				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
+				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
 			);

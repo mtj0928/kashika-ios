@@ -36,7 +36,7 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     }
 
     func tappedMoneyButton() {
-        router.toEditManeyView()
+        router.toEditMoneyView(money: money)
     }
 
     func getStatus(at index: Int) -> CellStatus {
