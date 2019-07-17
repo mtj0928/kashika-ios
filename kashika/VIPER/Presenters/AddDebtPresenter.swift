@@ -15,7 +15,7 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
     let isSelected = BehaviorRelay<Bool>(value: false)
     let friends = BehaviorRelay<[User]>(value: [])
-    let money = BehaviorRelay<Int>(value: 1080)
+    let money = BehaviorRelay<Int>(value: 0)
 
     private let router: AddDebtRouterProtocol
     private let disposeBag = DisposeBag()

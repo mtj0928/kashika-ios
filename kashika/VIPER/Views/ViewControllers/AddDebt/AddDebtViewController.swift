@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import TapticEngine
 
 final class AddDebtViewController: UIViewController {
 
@@ -30,7 +31,14 @@ final class AddDebtViewController: UIViewController {
         setupCollectionView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        TapticEngine.impact.prepare(.light)
+    }
+
     @IBAction private func tappedCloseButton(_ sender: UIButton) {
+        TapticEngine.impact.feedback(.light)
         presenter.tappedCloseButton()
     }
     
@@ -53,6 +61,9 @@ extension AddDebtViewController {
         presenter.money.subscribe(onNext: { [weak self] value in
             self?.moneylabel.text = String.convertWithComma(from: value)
         }).disposed(by: disposeBag)
+    }
+
+    private func setupTaptic() {
     }
 
     private func setupButton() {

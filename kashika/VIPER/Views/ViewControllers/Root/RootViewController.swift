@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import ESTabBarController
 import FloatingPanel
+import TapticEngine
 
 final class RootViewController: ESTabBarController {
 
@@ -46,6 +47,7 @@ extension RootViewController {
             guard let `self` = self, let floatingPanelController = self.floatingPanelController else {
                 return
             }
+            TapticEngine.impact.feedback(.medium)
             self.present(floatingPanelController, animated: true, completion: nil)
         }
     }
