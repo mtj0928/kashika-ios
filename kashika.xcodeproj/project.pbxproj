@@ -70,6 +70,7 @@
 		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
 		90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
 		90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		90FB188022DF05FF00092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90FB188022DF05FF00092BB3 /* TapticEngine.framework in Frameworks */,
 				909D6ACB224E3C6400FE7218 /* RxCocoa.framework in Frameworks */,
 				909D6ACC224E3C6400FE7218 /* RxSwift.framework in Frameworks */,
 				909D6AC1224E3B2800FE7218 /* RxBlocking.framework in Frameworks */,
