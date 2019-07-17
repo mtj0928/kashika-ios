@@ -49,7 +49,6 @@ final class EditMoneyViewController: UIViewController {
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        notification.addObserver(self, selector: #selector(self.textFieldDidChange), name: UITextField.textDidChangeNotification, object: moneyTextField)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -59,7 +58,6 @@ final class EditMoneyViewController: UIViewController {
         notification.removeObserver(self)
         notification.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-        notification.removeObserver(self, name: UITextField.textDidChangeNotification, object: moneyTextField)
     }
     
     @IBAction private func tappedOkButton() {
@@ -85,6 +83,17 @@ extension EditMoneyViewController {
 
     private func setupTextField() {
         moneyTextField.text = String.convertWithComma(from: presenter.money.value)
+
+        moneyTextField.rx.text
+            .filter({ $0 != nil })
+            .map({ text -> String in
+                return text?.filter({ Int($0.description) != nil }) ?? "0"
+            })
+            .map({ Int($0) ?? 0 })
+            .subscribe(onNext: { [weak self] money in
+                self?.moneyTextField.text = String.convertWithComma(from: money)
+                self?.presenter.money.accept(money)
+            }).disposed(by: disposeBag)
     }
 
     private func setupBackground() {
@@ -109,7 +118,7 @@ extension EditMoneyViewController {
 
 extension EditMoneyViewController {
     
-    func hideMainView() {
+    private func hideMainView() {
         bottomLayout.constant = -mainView.frame.height - view.safeAreaInsets.bottom
     }
 }
@@ -148,18 +157,5 @@ extension EditMoneyViewController {
         UIView.animate(withDuration: duration) { [weak self] in
             self?.view.layoutIfNeeded()
         }
-    }
-
-    // TODO: - Rxを使う
-    @objc
-    private func textFieldDidChange() {
-        guard let text = moneyTextField.text else {
-            return
-        }
-        let numberText = text.filter({ Int($0.description) != nil })
-        let money = Int(numberText) ?? 0
-
-        moneyTextField.text = String.convertWithComma(from: money)
-        presenter.money.accept(money)
     }
 }

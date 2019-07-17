@@ -57,7 +57,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
                                 <rect key="frame" x="84.666666666666671" y="254.33333333333334" width="205.66666666666663" height="76.666666666666657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
                                         <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="76.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                         <nil key="textColor"/>
