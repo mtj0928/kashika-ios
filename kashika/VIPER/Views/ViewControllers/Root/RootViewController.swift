@@ -44,12 +44,28 @@ extension RootViewController {
         }
 
         didHijackHandler = { [weak self] tabbarController, viewController, index in
-            guard let `self` = self, let floatingPanelController = self.floatingPanelController else {
+            guard let `self` = self else {
                 return
             }
-            TapticEngine.impact.feedback(.medium)
-            self.present(floatingPanelController, animated: true, completion: nil)
+            if !self.presenter.isDecelerating.value {
+                self.presentFloatingPanel()
+                return
+            }
+            self.presenter.isDecelerating
+                .filter({ !$0 })
+                .take(1)
+                .subscribe(onNext: { _ in
+                    self.presentFloatingPanel()
+                }).disposed(by: self.disposeBag)
         }
+    }
+
+    private func presentFloatingPanel() {
+        guard let floatingPanelController = floatingPanelController else {
+            return
+        }
+        TapticEngine.impact.feedback(.medium)
+        present(floatingPanelController, animated: true, completion: nil)
     }
 
     private func setupFloatingPanel() {
@@ -72,5 +88,16 @@ extension RootViewController: FloatingPanelControllerDelegate {
 
     func floatingPanel(_ viewController: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
         return EditDebtLayout()
+    }
+
+    func floatingPanelWillBeginDecelerating(_ viewController: FloatingPanelController) {
+        presenter.isDecelerating.accept(true)
+    }
+
+    func floatingPanelDidEndDecelerating(_ viewController: FloatingPanelController) {
+        if viewController.position == .hidden {
+            viewController.contentViewController?.dismiss(animated: false)
+        }
+        presenter.isDecelerating.accept(false)
     }
 }

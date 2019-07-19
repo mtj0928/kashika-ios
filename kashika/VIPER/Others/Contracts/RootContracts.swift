@@ -14,6 +14,7 @@ import RxCocoa
 protocol RootPresenterProtocol {
 
     var floatingPanelContentViewController: BehaviorRelay<UIViewController?> { get }
+    var isDecelerating: BehaviorRelay<Bool> { get }
 }
 
 protocol RootInteractorProtocol {

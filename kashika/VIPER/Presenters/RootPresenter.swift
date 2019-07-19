@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 struct RootPresenter: RootPresenterProtocol {
+    let isDecelerating = BehaviorRelay<Bool>(value: false)
     let floatingPanelContentViewController = BehaviorRelay<UIViewController?>(value: nil)
 
     init() {
