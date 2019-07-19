@@ -83,7 +83,7 @@ extension AddDebtViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: okanewoLabel.frame.minX, bottom: 0.0, right: okanewoLabel.frame.minX)
 
         collectionView.register(R.nib.simpleFriendCell)
-        collectionView.register(R.nib.addUserCell)
+        collectionView.register(R.nib.usersListCell)
 
         presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
@@ -96,7 +96,7 @@ extension AddDebtViewController {
 extension AddDebtViewController: UICollectionViewDataSource {
 
     private enum Section: Int, CaseIterable {
-        case friend, add
+        case friend, users
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -111,7 +111,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
         switch section {
         case .friend:
             return presenter.friends.value.count + 10
-        case .add:
+        case .users:
             return 1
         }
     }
@@ -124,21 +124,21 @@ extension AddDebtViewController: UICollectionViewDataSource {
         switch section {
         case .friend:
             return friendCell(collectionView, cellForItemAt: indexPath)
-        case .add:
-            return addCell(collectionView, cellForItemAt: indexPath)
+        case .users:
+            return usersCell(collectionView, cellForItemAt: indexPath)
         }
     }
 
     private func friendCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
         let status = presenter.getStatus(at: indexPath.item)
-        cell.setFriend(status: status)
+        cell.set(status: status)
         cell.isSecondary = true
         return cell
     }
 
-    private func addCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.addUserCell, for: indexPath)
+    private func usersCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.usersListCell, for: indexPath)
         return cell
     }
 }
@@ -155,8 +155,7 @@ extension AddDebtViewController: UICollectionViewDelegate {
         switch section {
         case .friend:
             presenter.selectFriend(at: indexPath.item)
-        case .add:
-
+        case .users:
             break
         }
     }
@@ -169,8 +168,8 @@ extension AddDebtViewController: UICollectionViewDelegate {
         switch section {
         case .friend:
             break
-        case .add:
-            let cells = collectionView.visibleCells.compactMap({ $0 as? AddUserCell })
+        case .users:
+            let cells = collectionView.visibleCells.compactMap({ $0 as? UsersListCell })
             if let cell = cells.first {
                 cell.select()
             }
@@ -185,8 +184,8 @@ extension AddDebtViewController: UICollectionViewDelegate {
         switch section {
         case .friend:
             break
-        case .add:
-            let cells = collectionView.visibleCells.compactMap({ $0 as? AddUserCell })
+        case .users:
+            let cells = collectionView.visibleCells.compactMap({ $0 as? UsersListCell })
             if let cell = cells.first {
                 cell.unselect()
             }
@@ -209,7 +208,7 @@ extension AddDebtViewController: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets.zero
         }
         switch section {
-        case .add:
+        case .users:
             return UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 0.0)
         default:
             return UIEdgeInsets.zero

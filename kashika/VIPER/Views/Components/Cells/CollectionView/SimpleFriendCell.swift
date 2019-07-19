@@ -27,7 +27,7 @@ class SimnpleFriendCell: UICollectionViewCell {
         fadeView.alpha = 0.8
     }
 
-    func setFriend(status: CellStatus) {
+    func set(status: CellStatus) {
         switch status {
         case .selected:
             addBorder()
