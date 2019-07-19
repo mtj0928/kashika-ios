@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-extension UIColor.AppColor {
+fileprivate extension UIColor.AppColor {
     var tintColor: UIColor {
         return UIColor.gray
     }
