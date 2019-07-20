@@ -37,14 +37,16 @@ class TabbarButton: ESTabBarItemContentView {
         super.updateLayout()
 
         let minSide = min(frame.height, frame.width) - 5
-        imageView.frame.size = CGSize(width: minSide, height: minSide)
-        imageView.center = center
-        imageView.layer.cornerRadius = minSide / 2
-
         let side = minSide + 20
+        let center = CGPoint(x: self.center.x, y: self.center.y - (side - frame.height) / 2)
+
         buttonView.frame.size = CGSize(width: side, height: side)
         buttonView.center = center
         buttonView.layer.cornerRadius = side / 2
+
+        imageView.frame.size = CGSize(width: minSide, height: minSide)
+        imageView.center = center
+        imageView.layer.cornerRadius = minSide / 2
     }
 
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
