@@ -54,36 +54,72 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
-                                <rect key="frame" x="84.666666666666671" y="254.33333333333334" width="205.66666666666663" height="76.666666666666657"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
+                                <rect key="frame" x="3" y="254.33333333333337" width="369" height="98"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5g-7S-5U1">
+                                        <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額を入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFz-2M-lB1">
+                                                <rect key="frame" x="0.0" y="34.666666666666657" width="121.66666666666667" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="placeholderTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SFz-2M-lB1" firstAttribute="leading" secondItem="r5g-7S-5U1" secondAttribute="leading" id="ghJ-he-WGB"/>
+                                            <constraint firstAttribute="trailing" secondItem="SFz-2M-lB1" secondAttribute="trailing" constant="8" id="tJF-tA-pur" userLabel="trailing = 金額を入力.trailing "/>
+                                            <constraint firstItem="SFz-2M-lB1" firstAttribute="centerY" secondItem="r5g-7S-5U1" secondAttribute="centerY" id="vm3-8s-wHy"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
-                                        <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="76.666666666666671"/>
+                                        <rect key="frame" x="137.66666666666663" y="10.666666666666657" width="173.33333333333337" height="76.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
-                                        <rect key="frame" x="181.33333333333331" y="37.999999999999972" width="24.333333333333343" height="28.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-eg-m84">
+                                        <rect key="frame" x="319" y="0.0" width="50" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
+                                                <rect key="frame" x="0.0" y="48.666666666666657" width="50" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="EJS-8v-d5U" firstAttribute="leading" secondItem="0DW-eg-m84" secondAttribute="leading" id="4aB-jL-i7i"/>
+                                            <constraint firstAttribute="trailing" secondItem="EJS-8v-d5U" secondAttribute="trailing" id="g7R-3t-G39"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r5g-7S-5U1" secondAttribute="trailing" id="22w-yl-whG"/>
+                                    <constraint firstItem="r5g-7S-5U1" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="7VU-8H-lbJ"/>
+                                    <constraint firstAttribute="height" constant="98" id="Ec0-cv-USm"/>
+                                    <constraint firstAttribute="bottom" secondItem="0DW-eg-m84" secondAttribute="bottom" id="Qs0-2J-lmc"/>
+                                    <constraint firstItem="iU0-tn-q9B" firstAttribute="centerY" secondItem="olN-2K-M7j" secondAttribute="centerY" id="XNH-3J-tLl"/>
+                                    <constraint firstAttribute="bottom" secondItem="r5g-7S-5U1" secondAttribute="bottom" id="YiP-tC-s4d"/>
+                                    <constraint firstItem="0DW-eg-m84" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="bvK-Kf-Yhe"/>
+                                    <constraint firstAttribute="trailing" secondItem="0DW-eg-m84" secondAttribute="trailing" id="mat-SL-sok"/>
+                                    <constraint firstItem="EJS-8v-d5U" firstAttribute="firstBaseline" secondItem="iU0-tn-q9B" secondAttribute="firstBaseline" id="nrG-q0-iR7"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-H1-cRx" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="191.66666666666663" y="347" width="175.33333333333337" height="50"/>
+                                <rect key="frame" x="191.66666666666663" y="368.33333333333331" width="175.33333333333337" height="50"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="8" y="347" width="175.66666666666666" height="50"/>
+                                <rect key="frame" x="8" y="368.33333333333331" width="175.66666666666666" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="zNQ-2i-fnn"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-lh-MF5">
-                                <rect key="frame" x="0.0" y="254.33333333333334" width="375" height="76.666666666666657"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-lh-MF5" userLabel="Money Button">
+                                <rect key="frame" x="0.0" y="254.33333333333337" width="375" height="98"/>
                                 <connections>
                                     <action selector="tappedMoneyButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="58t-NB-Aun"/>
                                 </connections>
@@ -112,6 +148,7 @@
                             <constraint firstItem="GXX-rN-k5N" firstAttribute="top" secondItem="u7F-aD-q7t" secondAttribute="bottom" constant="8" id="goj-G5-y5t"/>
                             <constraint firstItem="olN-2K-M7j" firstAttribute="top" secondItem="GXX-rN-k5N" secondAttribute="bottom" id="kvr-tK-pA5"/>
                             <constraint firstItem="u7F-aD-q7t" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="oXi-B2-AXi"/>
+                            <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="qPR-IA-hkw"/>
                             <constraint firstItem="v1O-b2-IZp" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="sDY-FA-kyq"/>
                             <constraint firstItem="GXX-rN-k5N" firstAttribute="leading" secondItem="l9I-4P-PyH" secondAttribute="leading" id="tg8-OI-oud"/>
                             <constraint firstItem="l9I-4P-PyH" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="28" id="vg1-bM-Rg9"/>
@@ -126,6 +163,8 @@
                         <outlet property="kashitaButton" destination="x5l-H1-cRx" id="OaM-jW-g9Y"/>
                         <outlet property="moneylabel" destination="iU0-tn-q9B" id="VRF-1m-NQV"/>
                         <outlet property="okanewoLabel" destination="l9I-4P-PyH" id="hGY-KN-rWK"/>
+                        <outlet property="placeHolderView" destination="r5g-7S-5U1" id="Zpg-Tu-Ldr"/>
+                        <outlet property="unitLabel" destination="EJS-8v-d5U" id="PG3-lx-L0R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
