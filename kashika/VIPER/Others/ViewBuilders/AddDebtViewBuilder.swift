@@ -6,15 +6,25 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import Foundation
+import RxCocoa
+import FloatingPanel
 
 final class AddDebtViewBuilder {
 
-    static func build() -> AddDebtViewController {
+    static func build(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> UIViewController {
         let router = AddDebtRouter()
-        let presenter = AddDebtPresenter(router: router)
+        let presenter = AddDebtPresenter(canShowFloatingPannel, router: router)
         let viewController = AddDebtViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
-        return viewController
+
+        let floatingPanelController = FloatingPanelController()
+        floatingPanelController.backdropView.backgroundColor = UIColor.app.secondarySystemBackground
+
+        floatingPanelController.delegate = viewController
+        floatingPanelController.surfaceView.cornerRadius = 24.0
+        floatingPanelController.isRemovalInteractionEnabled = true
+        floatingPanelController.set(contentViewController: viewController)
+
+        return floatingPanelController
     }
 }

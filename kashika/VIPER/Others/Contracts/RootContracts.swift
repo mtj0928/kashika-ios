@@ -14,7 +14,9 @@ import RxCocoa
 protocol RootPresenterProtocol {
 
     var floatingPanelContentViewController: BehaviorRelay<UIViewController?> { get }
-    var isDecelerating: BehaviorRelay<Bool> { get }
+    var canShowFloatingPannel: BehaviorRelay<Bool> { get }
+
+    func showFloatingPannel()
 }
 
 protocol RootInteractorProtocol {
@@ -22,4 +24,5 @@ protocol RootInteractorProtocol {
 }
 
 protocol RootRouterProtocol {
+    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>)
 }
