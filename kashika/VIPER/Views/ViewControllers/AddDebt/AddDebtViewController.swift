@@ -16,9 +16,11 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var moneylabel: UILabel!
+    @IBOutlet private weak var placeHolderView: UIView!
     @IBOutlet private weak var karitaButton: UIButton!
     @IBOutlet private weak var kashitaButton: UIButton!
-    @IBOutlet private weak var moneylabel: UILabel!
+    @IBOutlet private weak var unitLabel: UILabel!
 
     private var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
@@ -58,6 +60,11 @@ final class AddDebtViewController: UIViewController {
 extension AddDebtViewController {
 
     private func setupMoneyLabel() {
+        presenter.shouldShowPlaceHolder.subscribe(onNext: { [weak self] shouldShowPlaceHolder in
+            self?.placeHolderView.isHidden = !shouldShowPlaceHolder
+            self?.moneylabel.isHidden = shouldShowPlaceHolder
+        }).disposed(by: disposeBag)
+
         presenter.money.subscribe(onNext: { [weak self] value in
             self?.moneylabel.text = String.convertWithComma(from: value)
         }).disposed(by: disposeBag)

@@ -15,6 +15,7 @@ protocol AddDebtPresenterProtocol {
     var isSelected: BehaviorRelay<Bool> { get }
     var friends: BehaviorRelay<[User]> { get }
     var money: BehaviorRelay<Int> { get }
+    var shouldShowPlaceHolder: Observable<Bool> { get }
 
     func createDebt()
     func tappedCloseButton()
