@@ -35,11 +35,12 @@ final class EditMoneyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupButton()
         setupTextField()
         setupBackground()
-        
+
+        self.view.layoutIfNeeded()
         moneyTextField.becomeFirstResponder()
     }
     

@@ -12,6 +12,7 @@ import RxCocoa
 
 final class AddDebtPresenter: AddDebtPresenterProtocol {
 
+    let isDecelerating: BehaviorRelay<Bool>
     let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
     let isSelected = BehaviorRelay<Bool>(value: false)
     let friends = BehaviorRelay<[User]>(value: [])
@@ -23,7 +24,8 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     private let router: AddDebtRouterProtocol
     private let disposeBag = DisposeBag()
 
-    init(router: AddDebtRouterProtocol) {
+    init(_ isDecelerating: BehaviorRelay<Bool>, router: AddDebtRouterProtocol) {
+        self.isDecelerating = isDecelerating
         self.router = router
 
         selectedIndexes.subscribe(onNext: { [weak self] indexes in

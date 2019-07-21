@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FloatingPanel
 import TapticEngine
 
 final class AddDebtViewController: UIViewController {
@@ -68,9 +69,6 @@ extension AddDebtViewController {
         presenter.money.subscribe(onNext: { [weak self] value in
             self?.moneylabel.text = String.convertWithComma(from: value)
         }).disposed(by: disposeBag)
-    }
-
-    private func setupTaptic() {
     }
 
     private func setupButton() {
@@ -228,5 +226,25 @@ extension AddDebtViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16.0
+    }
+}
+
+// MARK: - FloatingPanelDelegate
+
+extension AddDebtViewController: FloatingPanelControllerDelegate {
+
+    func floatingPanel(_ viewController: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
+        return EditDebtLayout()
+    }
+
+    func floatingPanelWillBeginDecelerating(_ viewController: FloatingPanelController) {
+        presenter.isDecelerating.accept(true)
+    }
+
+    func floatingPanelDidEndDecelerating(_ viewController: FloatingPanelController) {
+        if viewController.position == .hidden {
+            viewController.contentViewController?.dismiss(animated: false)
+        }
+        presenter.isDecelerating.accept(false)
     }
 }

@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol AddDebtPresenterProtocol {
+    var isDecelerating: BehaviorRelay<Bool> { get }
     var selectedIndexes: BehaviorRelay<Set<Int>> { get }
     var isSelected: BehaviorRelay<Bool> { get }
     var friends: BehaviorRelay<[User]> { get }

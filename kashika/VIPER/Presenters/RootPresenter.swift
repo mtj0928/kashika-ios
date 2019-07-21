@@ -12,10 +12,17 @@ import RxSwift
 import RxCocoa
 
 struct RootPresenter: RootPresenterProtocol {
-    let isDecelerating = BehaviorRelay<Bool>(value: false)
+    let canShowFloatingPannel = BehaviorRelay<Bool>(value: false)
     let floatingPanelContentViewController = BehaviorRelay<UIViewController?>(value: nil)
 
-    init() {
-        floatingPanelContentViewController.accept(AddDebtViewBuilder.build())
+    private let router: RootRouterProtocol
+
+    init(router: RootRouterProtocol) {
+        self.router = router
+        floatingPanelContentViewController.accept(AddDebtViewBuilder.build(canShowFloatingPannel))
+    }
+
+    func showFloatingPannel() {
+        router.showFloatingPannel(canShowFloatingPannel)
     }
 }

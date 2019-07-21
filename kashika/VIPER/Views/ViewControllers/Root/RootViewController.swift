@@ -16,21 +16,13 @@ import TapticEngine
 final class RootViewController: ESTabBarController {
 
     private var presenter: RootPresenterProtocol!
-    private var floatingPanelController: FloatingPanelController?
     private let disposeBag = DisposeBag()
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        floatingPanelController?.removePanelFromParent(animated: true)
-    }
 
     // viewDidLoad() of UITabbarController is started when it is made.
     func setup(presenter: RootPresenterProtocol) {
         self.presenter = presenter
 
         setupTabbar()
-        setupFloatingPanel()
     }
 }
 
@@ -47,11 +39,11 @@ extension RootViewController {
             guard let `self` = self else {
                 return
             }
-            if !self.presenter.isDecelerating.value {
+            if !self.presenter.canShowFloatingPannel.value {
                 self.presentFloatingPanel()
                 return
             }
-            self.presenter.isDecelerating
+            self.presenter.canShowFloatingPannel
                 .filter({ !$0 })
                 .take(1)
                 .subscribe(onNext: { _ in
@@ -61,43 +53,7 @@ extension RootViewController {
     }
 
     private func presentFloatingPanel() {
-        guard let floatingPanelController = floatingPanelController else {
-            return
-        }
         TapticEngine.impact.feedback(.medium)
-        present(floatingPanelController, animated: true, completion: nil)
-    }
-
-    private func setupFloatingPanel() {
-        floatingPanelController = FloatingPanelController()
-        floatingPanelController?.backdropView.backgroundColor = UIColor.app.secondarySystemBackground
-
-        floatingPanelController?.surfaceView.cornerRadius = 24.0
-        floatingPanelController?.delegate = self
-        floatingPanelController?.isRemovalInteractionEnabled = true
-
-        presenter.floatingPanelContentViewController.asDriver().drive(onNext: { [weak self] viewController in
-            self?.floatingPanelController?.set(contentViewController: viewController)
-        }).disposed(by: disposeBag)
-    }
-}
-
-// MARK: - FloatingPanelDelegate
-
-extension RootViewController: FloatingPanelControllerDelegate {
-
-    func floatingPanel(_ viewController: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
-        return EditDebtLayout()
-    }
-
-    func floatingPanelWillBeginDecelerating(_ viewController: FloatingPanelController) {
-        presenter.isDecelerating.accept(true)
-    }
-
-    func floatingPanelDidEndDecelerating(_ viewController: FloatingPanelController) {
-        if viewController.position == .hidden {
-            viewController.contentViewController?.dismiss(animated: false)
-        }
-        presenter.isDecelerating.accept(false)
+        presenter.showFloatingPannel()
     }
 }

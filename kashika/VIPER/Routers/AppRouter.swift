@@ -13,9 +13,11 @@ import ESTabBarController
 struct AppRouter {
 
     func createRootViewController() -> UIViewController {
-        let presenter = RootPresenter()
+        let router = RootRouter()
+        let presenter = RootPresenter(router: router)
         let viewController = RootViewController()
         viewController.setup(presenter: presenter)
+        router.viewController = viewController
 
         let viewControllers = (0..<5).map { index -> UIViewController in
             let plainVC = UIViewController()
