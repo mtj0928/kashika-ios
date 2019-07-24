@@ -16,6 +16,8 @@
 		900AD3EC22E08CA2004500BE /* UsersListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900AD3EB22E08CA2004500BE /* UsersListCell.swift */; };
 		900AD3EE22E08CCA004500BE /* UsersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900AD3ED22E08CCA004500BE /* UsersListCell.xib */; };
 		900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1A0A22E42EEC00576AEC /* RootRouter.swift */; };
+		900C1A0F22E5CFEC00576AEC /* FriendListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900C1A0D22E5CFEC00576AEC /* FriendListViewController.storyboard */; };
+		900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1A0E22E5CFEC00576AEC /* FriendListViewController.swift */; };
 		900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E4D58225C1855003C59B1 /* CellStatus.swift */; };
 		900E4D5B225CAB07003C59B1 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E4D5A225CAB07003C59B1 /* AddUserCell.swift */; };
 		900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900E4D5C225CAB19003C59B1 /* AddUserCell.xib */; };
@@ -135,6 +137,8 @@
 		900AD3EB22E08CA2004500BE /* UsersListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCell.swift; sourceTree = "<group>"; };
 		900AD3ED22E08CCA004500BE /* UsersListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListCell.xib; sourceTree = "<group>"; };
 		900C1A0A22E42EEC00576AEC /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		900C1A0D22E5CFEC00576AEC /* FriendListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendListViewController.storyboard; sourceTree = "<group>"; };
+		900C1A0E22E5CFEC00576AEC /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		900E4D58225C1855003C59B1 /* CellStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStatus.swift; sourceTree = "<group>"; };
 		900E4D5A225CAB07003C59B1 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
 		900E4D5C225CAB19003C59B1 /* AddUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserCell.xib; sourceTree = "<group>"; };
@@ -303,6 +307,15 @@
 				37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		900C1A0C22E5CFC600576AEC /* FriendList */ = {
+			isa = PBXGroup;
+			children = (
+				900C1A0D22E5CFEC00576AEC /* FriendListViewController.storyboard */,
+				900C1A0E22E5CFEC00576AEC /* FriendListViewController.swift */,
+			);
+			path = FriendList;
 			sourceTree = "<group>";
 		};
 		901AC75C22D9B118002B3C17 /* EditMoney */ = {
@@ -528,6 +541,7 @@
 			children = (
 				905C75FC2255F07D0011580B /* AddDebt */,
 				901AC75C22D9B118002B3C17 /* EditMoney */,
+				900C1A0C22E5CFC600576AEC /* FriendList */,
 				909D6ADA224E48BC00FE7218 /* Root */,
 			);
 			path = ViewControllers;
@@ -705,6 +719,7 @@
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
+				900C1A0F22E5CFEC00576AEC /* FriendListViewController.storyboard in Resources */,
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -932,6 +947,7 @@
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
+				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,

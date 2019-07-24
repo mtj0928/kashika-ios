@@ -20,7 +20,7 @@ struct AppRouter {
         router.viewController = viewController
 
         let viewControllers = (0..<5).map { index -> UIViewController in
-            let plainVC = UIViewController()
+            let plainVC = index != 3 ? UIViewController() : createFriendListViewController()
             plainVC.tabBarItem = UITabBarItem(title: index.description, image: nil, tag: index)
             return plainVC
         }
@@ -29,5 +29,11 @@ struct AppRouter {
         viewController.setViewControllers(viewControllers, animated: true)
 
         return viewController
+    }
+
+    private func createFriendListViewController() -> UIViewController {
+        let viewController = FriendListViewController.createFromStoryboard()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        return navigationController
     }
 }
