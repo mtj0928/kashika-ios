@@ -88,7 +88,7 @@ extension AddDebtViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: okanewoLabel.frame.minX, bottom: 0.0, right: okanewoLabel.frame.minX)
 
         collectionView.register(R.nib.simpleFriendCell)
-        collectionView.register(R.nib.usersListCell)
+        collectionView.register(R.nib.userIconCollectionViewCell)
 
         presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
@@ -143,7 +143,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
     }
 
     private func usersCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.usersListCell, for: indexPath)
+        let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.userIconCollectionViewCell, for: indexPath)
         return cell
     }
 }
@@ -174,7 +174,7 @@ extension AddDebtViewController: UICollectionViewDelegate {
         case .friend:
             break
         case .users:
-            let cells = collectionView.visibleCells.compactMap({ $0 as? UsersListCell })
+            let cells = collectionView.visibleCells.compactMap({ $0 as? UserIconCollectionViewCell })
             if let cell = cells.first {
                 cell.select()
             }
@@ -190,7 +190,7 @@ extension AddDebtViewController: UICollectionViewDelegate {
         case .friend:
             break
         case .users:
-            let cells = collectionView.visibleCells.compactMap({ $0 as? UsersListCell })
+            let cells = collectionView.visibleCells.compactMap({ $0 as? UserIconCollectionViewCell })
             if let cell = cells.first {
                 cell.unselect()
             }

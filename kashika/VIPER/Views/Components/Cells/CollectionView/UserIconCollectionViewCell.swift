@@ -1,5 +1,5 @@
 //
-//  UsersListCell.swift
+//  UserIconCollectionViewCell.swift
 //  kashika
 //
 //  Created by 松本淳之介 on 2019/07/18.
@@ -14,7 +14,7 @@ fileprivate extension UIColor.AppColor {
     }
 }
 
-class UsersListCell: UICollectionViewCell {
+class UserIconCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet private weak var iconBackgrounfView: UIView!
     @IBOutlet private weak var iconImageView: UIImageView!
