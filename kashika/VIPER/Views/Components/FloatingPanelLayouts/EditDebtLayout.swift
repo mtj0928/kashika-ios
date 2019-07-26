@@ -29,4 +29,15 @@ public class EditDebtLayout: FloatingPanelLayout {
             return nil
         }
     }
+
+    public func backdropAlphaFor(position: FloatingPanelPosition) -> CGFloat {
+        switch position {
+        case .full:
+            return 0.8
+        case .half:
+            return 0.7
+        default:
+            return CGFloat.zero
+        }
+    }
 }

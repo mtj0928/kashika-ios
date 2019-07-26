@@ -18,7 +18,7 @@ final class AddDebtViewBuilder {
         router.viewController = viewController
 
         let floatingPanelController = FloatingPanelController()
-        floatingPanelController.backdropView.backgroundColor = UIColor.app.secondarySystemBackground
+        floatingPanelController.backdropView.backgroundColor = UIColor.black
 
         floatingPanelController.delegate = viewController
         floatingPanelController.surfaceView.cornerRadius = 24.0
