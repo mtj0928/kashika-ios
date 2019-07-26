@@ -20,11 +20,28 @@ final class FriendListViewController: UIViewController {
     @IBOutlet private weak var addUserButton: EmphasisButton!
     @IBOutlet private weak var addUseromSNSButton: EmphasisButton!
 
+    private var presenter: FriendListPresenterProtocol!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupNavigationBar()
         setupButton()
+        setupNavigationBar()
+        setupTableView()
+    }
+
+    @IBAction func tappedAddUserButton() {
+        presenter.tappedAddUserButton(with: .manual)
+    }
+
+    @IBAction func tappedAddUserFromSNSButton() {
+        presenter.tappedAddUserButton(with: .sns)
+    }
+
+    static func createFromStoryboard(with presenter: FriendListPresenterProtocol) -> Self {
+        let viewController = createFromStoryboard()
+        viewController.presenter = presenter
+        return viewController
     }
 }
 
@@ -45,5 +62,35 @@ extension FriendListViewController {
         addUseromSNSButton.setTitle("SNSから追加", for: .normal)
         addUseromSNSButton.backgroundColor = UIColor.app.positiveColor
         addUseromSNSButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+    }
+
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        tableView.tableFooterView = UIView()
+    }
+}
+
+// MARK: - UITableViewDataSource
+
+extension FriendListViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.friends.value.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension FriendListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = presenter.friends.value[indexPath.row]
+        presenter.tapped(user: user)
     }
 }

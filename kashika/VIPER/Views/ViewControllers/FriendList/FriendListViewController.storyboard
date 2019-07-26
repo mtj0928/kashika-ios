@@ -29,10 +29,16 @@
                                             <constraint firstAttribute="height" constant="46" id="hGk-L7-rx5"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tappedAddUserButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="sHP-Ym-DmQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9r-cp-74a" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
                                         <rect key="frame" x="183.5" y="0.0" width="175.5" height="46"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="tappedAddUserFromSNSButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="p4L-xM-2DT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>

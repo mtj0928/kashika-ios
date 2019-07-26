@@ -32,7 +32,7 @@ struct AppRouter {
     }
 
     private func createFriendListViewController() -> UIViewController {
-        let viewController = FriendListViewController.createFromStoryboard()
+        let viewController = FriendListViewBuilder.build()
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }

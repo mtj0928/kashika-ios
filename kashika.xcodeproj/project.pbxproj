@@ -70,6 +70,10 @@
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 		90EC144122DC6460007188F2 /* EditMoneyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC144022DC6460007188F2 /* EditMoneyTransition.swift */; };
+		90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6B22E88E400029990C /* FriendListContracts.swift */; };
+		90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */; };
+		90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */; };
+		90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */; };
 		90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */; };
 		90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */; };
 		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
@@ -190,6 +194,10 @@
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
 		90EC144022DC6460007188F2 /* EditMoneyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyTransition.swift; sourceTree = "<group>"; };
+		90F4FF6B22E88E400029990C /* FriendListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListContracts.swift; sourceTree = "<group>"; };
+		90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
+		90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewBuilder.swift; sourceTree = "<group>"; };
+		90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
 		90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewBuilder.swift; sourceTree = "<group>"; };
 		90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyRouter.swift; sourceTree = "<group>"; };
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 				905E4876224B940300BDC321 /* AppRouter.swift */,
 				905C760A2256CFDD0011580B /* AddDebtRouter.swift */,
 				90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */,
+				90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */,
 				900C1A0A22E42EEC00576AEC /* RootRouter.swift */,
 			);
 			path = Routers;
@@ -358,6 +367,7 @@
 			children = (
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
+				90F4FF6B22E88E400029990C /* FriendListContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
 			);
 			path = Contracts;
@@ -367,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
+				90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */,
 				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 			);
 			path = ViewBuilders;
@@ -531,6 +542,7 @@
 			children = (
 				905C76082256CE6C0011580B /* AddDebtPresenter.swift */,
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
+				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 			);
 			path = Presenters;
@@ -929,8 +941,10 @@
 			files = (
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
+				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
@@ -939,6 +953,7 @@
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */,
 				90EC144122DC6460007188F2 /* EditMoneyTransition.swift in Sources */,
+				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
@@ -958,6 +973,7 @@
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
+				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
