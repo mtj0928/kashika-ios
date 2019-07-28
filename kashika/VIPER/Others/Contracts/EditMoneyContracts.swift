@@ -6,13 +6,10 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 
-protocol EditMoneyPresenterProtocol {
-    var money: BehaviorRelay<Int> { get }
-
-    func tappedOkButton()
-    func tappedCancelButton()
+protocol EditMoneyPresenterProtocol: ModalTextFieldPresenterProtocol {
 }
 
 protocol EditMoneyRouterProtocol {

@@ -14,6 +14,7 @@ struct FriendListViewBuilder {
         let router = FriendListRouter()
         let presenter = FriendListPresenter(router: router)
         let viewController = FriendListViewController.createFromStoryboard(with: presenter)
+        router.viewController = viewController
         return viewController
     }
 }

@@ -17,12 +17,9 @@ final class AddDebtViewBuilder {
         let viewController = AddDebtViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
 
-        let floatingPanelController = FloatingPanelController()
-        floatingPanelController.backdropView.backgroundColor = UIColor.black
+        let floatingPanelController = FloatingPanelBuilder.build()
 
         floatingPanelController.delegate = viewController
-        floatingPanelController.surfaceView.cornerRadius = 24.0
-        floatingPanelController.isRemovalInteractionEnabled = true
         floatingPanelController.set(contentViewController: viewController)
 
         return floatingPanelController

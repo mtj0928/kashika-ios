@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class EmphasisButton: UIButton {
 
     override init(frame: CGRect) {

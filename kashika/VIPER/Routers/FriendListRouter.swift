@@ -15,6 +15,17 @@ class FriendListRouter: FriendListRouterProtocol {
     func shoUserDetailView() {
     }
 
-    func showUserAddView(with: UserAdditionType) {
+    func showUserAddView(with type: UserAdditionType) {
+        switch type {
+        case .manual:
+            showAddUserManualyView()
+        case .sns:
+            break
+        }
+    }
+
+    private func showAddUserManualyView() {
+        let viewController = AddUserManualyViewBuilder.build()
+        self.viewController?.present(viewController, animated: true)
     }
 }

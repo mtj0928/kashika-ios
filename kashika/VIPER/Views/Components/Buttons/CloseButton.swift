@@ -17,6 +17,7 @@ private extension UIColor.AppColor {
     }
 }
 
+@IBDesignable
 class CloseButton: UIButton {
 
     override init(frame: CGRect) {

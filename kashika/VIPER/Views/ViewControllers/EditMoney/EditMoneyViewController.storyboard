@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Edit Money View Controller-->
@@ -21,122 +20,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-2J-0Kn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-2J-0Kn" customClass="ModalTextField" customModule="kashika" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="494" width="375" height="173"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-m5-Vd0" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="126" width="187.5" height="47"/>
-                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <state key="normal" title="キャンセル"/>
-                                        <connections>
-                                            <action selector="tappedCancelButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Apy-7K-HMH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-qT-aIM" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                        <rect key="frame" x="187.5" y="126" width="187.5" height="47"/>
-                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="47" id="f7t-SF-mVf"/>
-                                        </constraints>
-                                        <state key="normal" title="OK"/>
-                                        <connections>
-                                            <action selector="tappedOkButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="mYe-tm-Dzv"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEc-io-kyD" userLabel="Value View">
-                                        <rect key="frame" x="0.0" y="46" width="375" height="80"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-2L-UjL">
-                                                <rect key="frame" x="69" y="0.0" width="237.5" height="80"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1,000,000" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xsk-Nj-X8u" customClass="UnitTextField" customModule="kashika" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="210" height="80"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                    </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhB-rK-Oba">
-                                                        <rect key="frame" x="218" y="0.0" width="19.5" height="80"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-fR-aFu">
-                                                                <rect key="frame" x="0.0" y="31.5" width="19.5" height="23"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="aOK-fR-aFu" firstAttribute="leading" secondItem="RhB-rK-Oba" secondAttribute="leading" id="OaB-LY-bKI"/>
-                                                            <constraint firstAttribute="trailing" secondItem="aOK-fR-aFu" secondAttribute="trailing" id="nn9-16-Cns"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="aOK-fR-aFu" firstAttribute="bottom" secondItem="Xsk-Nj-X8u" secondAttribute="firstBaseline" id="jGR-sd-qJP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Xsk-Nj-X8u" secondAttribute="bottom" id="tq0-Gm-yAs"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemGroupedBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="wOt-2L-UjL" firstAttribute="centerX" secondItem="kEc-io-kyD" secondAttribute="centerX" id="0KU-lj-1Tu"/>
-                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="wOt-2L-UjL" secondAttribute="trailing" id="0bE-gi-fxU"/>
-                                            <constraint firstAttribute="bottom" secondItem="wOt-2L-UjL" secondAttribute="bottom" id="1Ek-Mh-jv7"/>
-                                            <constraint firstItem="wOt-2L-UjL" firstAttribute="top" secondItem="kEc-io-kyD" secondAttribute="top" id="BNZ-lz-w80"/>
-                                            <constraint firstItem="wOt-2L-UjL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kEc-io-kyD" secondAttribute="leading" id="Xkw-tI-cQU"/>
-                                            <constraint firstItem="wOt-2L-UjL" firstAttribute="centerY" secondItem="kEc-io-kyD" secondAttribute="centerY" id="fcf-ah-qJg"/>
-                                            <constraint firstAttribute="height" constant="80" id="iHP-fN-HxA"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDI-vI-9mg" userLabel="Separate View">
-                                        <rect key="frame" x="0.0" y="45" width="375" height="1"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="opaqueSeparatorColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="0o8-9v-DAZ"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-M3-fyl" userLabel="Title View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額を入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H01-Y5-lIU">
-                                                <rect key="frame" x="126.5" y="8" width="122" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemGroupedBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="H01-Y5-lIU" firstAttribute="centerX" secondItem="T1S-M3-fyl" secondAttribute="centerX" id="Duy-ut-kPT"/>
-                                            <constraint firstAttribute="height" constant="45" id="afh-r2-Izr"/>
-                                            <constraint firstItem="H01-Y5-lIU" firstAttribute="centerY" secondItem="T1S-M3-fyl" secondAttribute="centerY" id="eFQ-on-8My"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="fDI-vI-9mg" firstAttribute="leading" secondItem="fcB-2J-0Kn" secondAttribute="leading" id="0Xv-Xf-QHo"/>
-                                    <constraint firstItem="EbY-qT-aIM" firstAttribute="width" secondItem="GbI-m5-Vd0" secondAttribute="width" id="82b-DY-lHe"/>
-                                    <constraint firstItem="EbY-qT-aIM" firstAttribute="bottom" secondItem="GbI-m5-Vd0" secondAttribute="bottom" id="CHT-Xh-rjY"/>
-                                    <constraint firstItem="EbY-qT-aIM" firstAttribute="leading" secondItem="GbI-m5-Vd0" secondAttribute="trailing" id="GQF-Bs-HiX"/>
-                                    <constraint firstItem="EbY-qT-aIM" firstAttribute="leading" secondItem="GbI-m5-Vd0" secondAttribute="trailing" id="Gfo-Hb-Pj5"/>
-                                    <constraint firstItem="GbI-m5-Vd0" firstAttribute="leading" secondItem="fcB-2J-0Kn" secondAttribute="leading" id="L3z-r7-hOY"/>
-                                    <constraint firstAttribute="trailing" secondItem="EbY-qT-aIM" secondAttribute="trailing" id="TMV-fM-F7C"/>
-                                    <constraint firstItem="T1S-M3-fyl" firstAttribute="leading" secondItem="fcB-2J-0Kn" secondAttribute="leading" id="YFn-UI-ryI"/>
-                                    <constraint firstItem="GbI-m5-Vd0" firstAttribute="top" secondItem="kEc-io-kyD" secondAttribute="bottom" id="bBE-uA-4Bc"/>
-                                    <constraint firstAttribute="trailing" secondItem="fDI-vI-9mg" secondAttribute="trailing" id="baX-2c-OLO"/>
-                                    <constraint firstAttribute="bottom" secondItem="EbY-qT-aIM" secondAttribute="bottom" id="cfh-0b-Nbt"/>
-                                    <constraint firstAttribute="trailing" secondItem="T1S-M3-fyl" secondAttribute="trailing" id="fif-tB-STs"/>
-                                    <constraint firstItem="kEc-io-kyD" firstAttribute="top" secondItem="fDI-vI-9mg" secondAttribute="bottom" id="hB7-8K-4dI"/>
-                                    <constraint firstItem="fDI-vI-9mg" firstAttribute="top" secondItem="T1S-M3-fyl" secondAttribute="bottom" id="haC-hj-Xab"/>
-                                    <constraint firstItem="kEc-io-kyD" firstAttribute="top" secondItem="fDI-vI-9mg" secondAttribute="bottom" id="j3J-sZ-9CX"/>
-                                    <constraint firstItem="GbI-m5-Vd0" firstAttribute="top" secondItem="kEc-io-kyD" secondAttribute="bottom" id="mi2-d4-GX4"/>
-                                    <constraint firstItem="T1S-M3-fyl" firstAttribute="top" secondItem="fcB-2J-0Kn" secondAttribute="top" id="rAk-xk-yIc"/>
-                                    <constraint firstItem="fDI-vI-9mg" firstAttribute="top" secondItem="T1S-M3-fyl" secondAttribute="bottom" id="wZI-FW-3Xf"/>
-                                    <constraint firstAttribute="trailing" secondItem="kEc-io-kyD" secondAttribute="trailing" id="xDK-9g-6wY"/>
-                                    <constraint firstItem="EbY-qT-aIM" firstAttribute="height" secondItem="GbI-m5-Vd0" secondAttribute="height" id="y08-qb-ktR"/>
-                                    <constraint firstItem="kEc-io-kyD" firstAttribute="top" secondItem="fDI-vI-9mg" secondAttribute="bottom" id="y2a-hk-YW4"/>
-                                    <constraint firstItem="kEc-io-kyD" firstAttribute="leading" secondItem="fcB-2J-0Kn" secondAttribute="leading" id="zPS-eQ-wVj"/>
+                                    <constraint firstAttribute="height" constant="173" id="dFt-DX-K64"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -155,10 +43,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="u9H-f0-c3K" id="dPA-Zd-Je9"/>
                         <outlet property="bottomLayout" destination="USy-5M-K4h" id="8Pj-OH-FWQ"/>
-                        <outlet property="cancelButton" destination="GbI-m5-Vd0" id="2Tt-lw-gCM"/>
-                        <outlet property="mainView" destination="fcB-2J-0Kn" id="CDa-2O-iIv"/>
-                        <outlet property="moneyTextField" destination="Xsk-Nj-X8u" id="1fD-FO-nFX"/>
-                        <outlet property="okButton" destination="EbY-qT-aIM" id="Gfc-2N-FhC"/>
+                        <outlet property="modalTextField" destination="fcB-2J-0Kn" id="CDa-2O-iIv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>

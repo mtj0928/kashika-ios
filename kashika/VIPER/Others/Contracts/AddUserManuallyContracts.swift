@@ -1,0 +1,27 @@
+//
+//  AddUserManuallyContracts.swift
+//  kashika
+//
+//  Created by 松本淳之介 on 2019/07/28.
+//  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+
+protocol AddUserManuallyPresenterProtocol {
+    var icon: Observable<UIImage?> { get }
+    var name: Observable<String?> { get }
+    var isEnableToAdd: Observable<Bool>? { get }
+
+    func showAlbum()
+    func showModalTextField()
+    func add()
+    func tappedCloseButton()
+}
+
+protocol AddUserManuallyRouterProtocol {
+    func showAlbum()
+    func showModalTextField()
+    func dismiss()
+}

@@ -9,33 +9,29 @@
 import UIKit
 import FloatingPanel
 
-public class EditDebtLayout: FloatingPanelLayout {
+class EditDebtLayout: FloatingPanelLayout {
 
-    public var initialPosition: FloatingPanelPosition {
-        return .half
-    }
+    let initialPosition: FloatingPanelPosition = .half
+    let supportedPositions: Set<FloatingPanelPosition> = Set([.full, .half, .hidden])
+    let topInteractionBuffer: CGFloat = 0.0
 
-    public var supportedPositions: Set<FloatingPanelPosition> {
-        return Set([.full, .half, .hidden])
-    }
-
-    public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
+    func insetFor(position: FloatingPanelPosition) -> CGFloat? {
         switch position {
         case .full:
-            return 18.0
+            return FloatingPanelConfiguration.insetForFull
         case .half:
-            return 384.0
+            return FloatingPanelConfiguration.insetForHalf
         default:
             return nil
         }
     }
 
-    public func backdropAlphaFor(position: FloatingPanelPosition) -> CGFloat {
+    func backdropAlphaFor(position: FloatingPanelPosition) -> CGFloat {
         switch position {
         case .full:
-            return 0.8
+            return FloatingPanelConfiguration.backgroundAlphaForFull
         case .half:
-            return 0.7
+            return FloatingPanelConfiguration.backgroundAlphaForHalf
         default:
             return CGFloat.zero
         }

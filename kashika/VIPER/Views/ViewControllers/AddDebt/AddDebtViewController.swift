@@ -229,7 +229,7 @@ extension AddDebtViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - FloatingPanelDelegate
+// MARK: - FloatingPanelControllerDelegate
 
 extension AddDebtViewController: FloatingPanelControllerDelegate {
 
@@ -243,7 +243,7 @@ extension AddDebtViewController: FloatingPanelControllerDelegate {
 
     func floatingPanelDidEndDecelerating(_ viewController: FloatingPanelController) {
         if viewController.position == .hidden {
-            viewController.contentViewController?.dismiss(animated: false)
+            presenter.dismissedFloatingPanel()
         }
         presenter.isDecelerating.accept(false)
     }

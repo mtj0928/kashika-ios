@@ -21,6 +21,7 @@ protocol AddDebtPresenterProtocol {
     func createDebt()
     func tappedCloseButton()
     func tappedMoneyButton()
+    func dismissedFloatingPanel()
     func getStatus(at index: Int) -> CellStatus
     func selectFriend(at index: Int)
 }

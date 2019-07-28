@@ -63,4 +63,8 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
         }
         selectedIndexes.accept(selected)
     }
+
+    func dismissedFloatingPanel() {
+        router.dismiss()
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TapticEngine
 
 fileprivate extension UIColor.AppColor {
     var greenColor: UIColor {
@@ -31,10 +32,12 @@ final class FriendListViewController: UIViewController {
     }
 
     @IBAction func tappedAddUserButton() {
+        TapticEngine.impact.feedback(.light)
         presenter.tappedAddUserButton(with: .manual)
     }
 
     @IBAction func tappedAddUserFromSNSButton() {
+        TapticEngine.impact.feedback(.light)
         presenter.tappedAddUserButton(with: .sns)
     }
 
