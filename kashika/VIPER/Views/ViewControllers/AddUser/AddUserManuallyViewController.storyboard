@@ -92,30 +92,31 @@
                                             <action selector="tappedSetUserNameButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="aKQ-5c-4P8"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-R1-gJs" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-Tf-JyD" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
                                         <rect key="frame" x="354" y="10" width="50" height="50"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemFillColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="Ibc-XP-Dco"/>
-                                            <constraint firstAttribute="width" secondItem="5gJ-R1-gJs" secondAttribute="height" multiplier="1:1" id="usi-JY-xqt"/>
+                                            <constraint firstAttribute="width" secondItem="9sP-Tf-JyD" secondAttribute="height" multiplier="1:1" id="jEG-j0-MlG"/>
+                                            <constraint firstAttribute="width" constant="50" id="kaP-HX-G1B"/>
                                         </constraints>
+                                        <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="tappedCloseButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="rp1-Cb-XvQ"/>
+                                            <action selector="tappedCloseButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="i9P-RV-63q"/>
                                         </connections>
-                                    </view>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9sP-Tf-JyD" secondAttribute="trailing" constant="10" id="7Um-uf-Myc"/>
                                     <constraint firstItem="6a9-r7-CMs" firstAttribute="top" secondItem="WAX-n4-zdI" secondAttribute="top" constant="32" id="950-40-LDj"/>
                                     <constraint firstItem="rAG-w5-YmI" firstAttribute="bottom" secondItem="3ix-MC-McO" secondAttribute="bottom" id="OcB-qA-ORt"/>
-                                    <constraint firstItem="5gJ-R1-gJs" firstAttribute="top" secondItem="WAX-n4-zdI" secondAttribute="top" constant="10" id="PUp-kI-Wzb"/>
                                     <constraint firstAttribute="bottom" secondItem="6a9-r7-CMs" secondAttribute="bottom" id="XsM-bR-cOZ"/>
                                     <constraint firstItem="6a9-r7-CMs" firstAttribute="centerX" secondItem="WAX-n4-zdI" secondAttribute="centerX" id="Xu5-Vc-Dau"/>
-                                    <constraint firstAttribute="trailing" secondItem="5gJ-R1-gJs" secondAttribute="trailing" constant="10" id="df3-ZA-ER4"/>
                                     <constraint firstItem="3ix-MC-McO" firstAttribute="trailing" secondItem="6a9-r7-CMs" secondAttribute="trailing" id="evr-Ty-KzO"/>
                                     <constraint firstItem="6a9-r7-CMs" firstAttribute="leading" secondItem="WAX-n4-zdI" secondAttribute="leading" constant="16" id="f8B-Ke-1fm"/>
                                     <constraint firstItem="3ix-MC-McO" firstAttribute="leading" secondItem="6a9-r7-CMs" secondAttribute="leading" id="f9w-qX-5y8"/>
                                     <constraint firstAttribute="height" constant="384" id="jN5-dS-ALE"/>
                                     <constraint firstItem="rAG-w5-YmI" firstAttribute="top" secondItem="3ix-MC-McO" secondAttribute="top" id="qr8-Vs-rMN"/>
+                                    <constraint firstItem="9sP-Tf-JyD" firstAttribute="top" secondItem="WAX-n4-zdI" secondAttribute="top" constant="10" id="tdI-ie-ayj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -135,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="-288.30584707646182"/>
+            <point key="canvasLocation" x="413.04347826086962" y="-288.61607142857139"/>
         </scene>
     </scenes>
 </document>
