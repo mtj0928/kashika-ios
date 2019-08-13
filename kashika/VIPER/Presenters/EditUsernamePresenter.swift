@@ -14,7 +14,7 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     var image: Observable<UIImage?> {
         return imageSubject
     }
-    var text: Observable<String?> = BehaviorSubject(value: "")
+    let text: Observable<String?>
     let title: Observable<String?> = BehaviorSubject(value: "名前を入力")
     let unit: Observable<String?> = BehaviorSubject(value: "")
     let keyboardType: Observable<UIKeyboardType> = BehaviorSubject(value: .default)
@@ -28,6 +28,7 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     init(router: EditUsernameRouter, output: EditUsernameOutputProtocol) {
         self.router = router
         self.output = output
+        self.text = BehaviorSubject(value: output.username.value)
     }
 
     func inputed(text: String?) {

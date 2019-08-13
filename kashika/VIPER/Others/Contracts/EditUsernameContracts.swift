@@ -23,5 +23,9 @@ protocol EditUsernameOutputProtocol {
 }
 
 struct EditUsernameOutput: EditUsernameOutputProtocol {
-    let username = BehaviorRelay<String?>(value: nil)
+    let username: BehaviorRelay<String?>
+
+    init(name: String?) {
+        username = BehaviorRelay(value: name)
+    }
 }
