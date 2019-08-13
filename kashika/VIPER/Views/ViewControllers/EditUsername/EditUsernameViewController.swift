@@ -1,55 +1,50 @@
 //
-//  EditMoneyViewController.swift
+//  EditUsernameViewController.swift
 //  kashika
 //
-//  Created by 松本淳之介 on 2019/07/13.
+//  Created by 松本淳之介 on 2019/07/28.
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
-final class EditMoneyViewController: UIViewController {
-    
-    static let backgroundAlpha: CGFloat = 0.8
-    
-    @IBOutlet private weak var backgroundView: UIView!
+final class EditUsernameViewController: UIViewController {
+
     @IBOutlet private weak var modalTextField: ModalTextField!
     @IBOutlet private weak var bottomLayout: NSLayoutConstraint!
+    @IBOutlet private weak var backgroundView: UIView!
 
-    private var presenter: EditMoneyPresenterProtocol!
-    private let disposeBag = DisposeBag()
-    
+    private var presenter: EditUsernamePresenterProtocol!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupBackground()
+        setupBackgroundView()
         setupModalTextField()
 
         self.view.layoutIfNeeded()
         modalTextField.becomeFirstResponder()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         let notification = NotificationCenter.default
         notification.removeObserver(self)
         notification.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         notification.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    class func createFromStoryboard(presenter: EditMoneyPresenterProtocol) -> EditMoneyViewController {
-        let viewController = createFromStoryboard()
+    static func createFromStoryboard(with presenter: EditUsernamePresenterProtocol) -> EditUsernameViewController {
+        let viewController = EditUsernameViewController.createFromStoryboard()
         viewController.presenter = presenter
         return viewController
     }
@@ -57,13 +52,11 @@ final class EditMoneyViewController: UIViewController {
 
 // MARK: - Set Up
 
-extension EditMoneyViewController {
+extension EditUsernameViewController {
 
-    private func setupBackground() {
+    private func setupBackgroundView() {
         backgroundView.backgroundColor = UIColor.black
-        backgroundView.alpha = EditMoneyViewController.backgroundAlpha
-        
-        view.backgroundColor = UIColor.clear
+        backgroundView.alpha = 0.8
     }
 
     private func setupModalTextField() {
@@ -73,8 +66,8 @@ extension EditMoneyViewController {
 
 // MARK: - View
 
-extension EditMoneyViewController {
-    
+extension EditUsernameViewController {
+
     private func hideMainView() {
         bottomLayout.constant = -modalTextField.frame.height - view.safeAreaInsets.bottom
     }
@@ -82,8 +75,8 @@ extension EditMoneyViewController {
 
 // MARK: - Observer
 
-extension EditMoneyViewController {
-    
+extension EditUsernameViewController {
+
     @objc
     private func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo as? [String: Any] else {
@@ -100,7 +93,7 @@ extension EditMoneyViewController {
             self?.view.layoutIfNeeded()
         }
     }
-    
+
     @objc
     private func keyboardWillHide(_ notification: Notification) {
         guard let userInfo = notification.userInfo as? [String: Any] else {
@@ -119,7 +112,7 @@ extension EditMoneyViewController {
 
 // MARK: - ModalTextFieldTransitionProtocol
 
-extension EditMoneyViewController: ModalTextFieldTransitionProtocol {
+extension EditUsernameViewController: ModalTextFieldTransitionProtocol {
 
     var backgroundAlpha: CGFloat {
         get {

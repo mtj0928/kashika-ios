@@ -10,15 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol ModalTextFieldPresenterProtocol {
-    var text: Observable<String?> { get }
-    var title: Observable<String?> { get }
-
-    func inputed(text: String?)
-    func tappedOkButton()
-    func tappedCancelButton()
-}
-
 @IBDesignable
 class ModalTextField: UIView {
 
@@ -62,6 +53,8 @@ class ModalTextField: UIView {
         view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
+        self.heightAnchor.constraint(equalToConstant: ModalTextField.height).isActive = true
+
         okButton.backgroundColor = UIColor.app.positiveColor
         cancelButton.backgroundColor = UIColor.app.negativeColor
 
@@ -104,6 +97,14 @@ class ModalTextField: UIView {
 
         presenter?.title.subscribe(onNext: { [weak self] text in
             self?.titleLabel.text = text
+        }).disposed(by: disposeBag)
+
+        presenter?.unit.subscribe(onNext: { [weak self] unit in
+            self?.unitLabel.text = unit
+        }).disposed(by: disposeBag)
+
+        presenter?.keyboardType.subscribe(onNext: { [weak self] type in
+            self?.textField.keyboardType = type
         }).disposed(by: disposeBag)
     }
 }

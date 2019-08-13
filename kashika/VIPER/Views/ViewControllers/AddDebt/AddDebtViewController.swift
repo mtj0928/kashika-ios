@@ -234,6 +234,7 @@ extension AddDebtViewController: UICollectionViewDelegateFlowLayout {
 extension AddDebtViewController: FloatingPanelControllerDelegate {
 
     func floatingPanel(_ viewController: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
+        viewController.surfaceView.backgroundColor = view.backgroundColor
         return EditDebtLayout()
     }
 

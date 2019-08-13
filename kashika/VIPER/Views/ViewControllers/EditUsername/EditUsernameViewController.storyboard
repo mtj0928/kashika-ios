@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Username View Controller-->
+        <scene sceneID="k1K-3D-0Xn">
+            <objects>
+                <viewController id="hZu-Tc-lJh" customClass="EditUsernameViewController" customModule="kashika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8X-UT-ubS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV4-Ka-NA4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-qT-wdT" customClass="ModalTextField" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="494" width="375" height="173"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MV4-Ka-NA4" secondAttribute="bottom" id="41P-8x-yYM"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="bottom" secondItem="DaT-qT-wdT" secondAttribute="bottom" id="7dl-cV-yMe"/>
+                            <constraint firstItem="MV4-Ka-NA4" firstAttribute="top" secondItem="n8X-UT-ubS" secondAttribute="top" id="9Eb-r6-afs"/>
+                            <constraint firstAttribute="trailing" secondItem="MV4-Ka-NA4" secondAttribute="trailing" id="BDQ-bA-3mX"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="DaT-qT-wdT" secondAttribute="trailing" id="dgk-bN-o2F"/>
+                            <constraint firstItem="MV4-Ka-NA4" firstAttribute="leading" secondItem="n8X-UT-ubS" secondAttribute="leading" id="nQx-B1-Wqb"/>
+                            <constraint firstItem="DaT-qT-wdT" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="yAB-bM-0vA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8d-UG-YEN"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="MV4-Ka-NA4" id="gMe-DL-I9d"/>
+                        <outlet property="bottomLayout" destination="7dl-cV-yMe" id="Kea-NL-Ecc"/>
+                        <outlet property="modalTextField" destination="DaT-qT-wdT" id="1iY-lx-lE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="-288.30584707646182"/>
+        </scene>
+    </scenes>
+</document>

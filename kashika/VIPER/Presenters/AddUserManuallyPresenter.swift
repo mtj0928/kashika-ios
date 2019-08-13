@@ -8,10 +8,16 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     private(set) var icon: Observable<UIImage?> = BehaviorSubject(value: nil)
-    private(set) var name: Observable<String?> = BehaviorSubject(value: nil)
+    var name: Observable<String?> {
+        return nameSubject
+    }
+
+    private let nameSubject = BehaviorSubject<String?>(value: nil)
+    private let disposeBag = DisposeBag()
 
     private(set) lazy var isEnableToAdd: Observable<Bool>? = { [weak self] in
         guard let `self` = self else {
@@ -33,13 +39,20 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     }
 
     func showModalTextField() {
-        router.showModalTextField()
+        let output = router.showModalTextField()
+        output.text.subscribe(onNext: { [weak self] text in
+            self?.nameSubject.onNext(text)
+        }).disposed(by: disposeBag)
     }
 
     func add() {
     }
 
     func tappedCloseButton() {
+        router.dismiss()
+    }
+
+    func dismiss() {
         router.dismiss()
     }
 }

@@ -30,11 +30,11 @@ final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
 extension AddDebtRouter: UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return EditMoneyTransition()
+        return ModalTextFieldTransition<EditMoneyViewController>()
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let trasition = EditMoneyTransition()
+        let trasition = ModalTextFieldTransition<EditMoneyViewController>()
         trasition.isPresent = false
         return trasition
     }

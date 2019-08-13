@@ -16,7 +16,6 @@ class FloatingPanelBuilder {
 
         floatingPanelController.surfaceView.cornerRadius = 24.0
         floatingPanelController.isRemovalInteractionEnabled = true
-        floatingPanelController.surfaceView.backgroundColor = UIColor.app.systemBackground
 
         return floatingPanelController
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 protocol AddUserManuallyPresenterProtocol {
     var icon: Observable<UIImage?> { get }
@@ -18,10 +19,11 @@ protocol AddUserManuallyPresenterProtocol {
     func showModalTextField()
     func add()
     func tappedCloseButton()
+    func dismiss()
 }
 
 protocol AddUserManuallyRouterProtocol {
     func showAlbum()
-    func showModalTextField()
+    func showModalTextField() -> ModalTextFieldOutputProtocol
     func dismiss()
 }

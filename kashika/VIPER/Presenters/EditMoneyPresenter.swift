@@ -6,6 +6,7 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import UIKit
 import RxSwift
 import RxCocoa
 
@@ -14,6 +15,8 @@ final class EditMoneyPresenter: EditMoneyPresenterProtocol {
         return textSubject
     }
     let title: Observable<String?> = BehaviorSubject(value: "金額を入力")
+    let unit: Observable<String?> = BehaviorSubject(value: "円")
+    let keyboardType: Observable<UIKeyboardType> = BehaviorSubject(value: .numberPad)
 
     private var money = 0
     private let textSubject: BehaviorSubject<String?>

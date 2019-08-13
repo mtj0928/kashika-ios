@@ -1,5 +1,5 @@
 //
-//  EditMoneyTransition.swift
+//   ModalTextFieldTransition.swift
 //  kashika
 //
 //  Created by 松本淳之介 on 2019/07/15.
@@ -8,7 +8,13 @@
 
 import UIKit
 
-class EditMoneyTransition: NSObject, UIViewControllerAnimatedTransitioning {
+protocol ModalTextFieldTransitionProtocol: UIViewController {
+    var backgroundAlpha: CGFloat { get set }
+}
+
+//extension ModalTextFieldTransitionProtocol 
+
+class ModalTextFieldTransition<T: UIViewController>: NSObject, UIViewControllerAnimatedTransitioning {
 
     var isPresent = true
 
@@ -19,29 +25,29 @@ class EditMoneyTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let editMoneyViewController = extractEditMoneyViewController(using: transitionContext),
+        guard let modalTextFieldTransitionView = extractModalTextFieldTransitionProtocol(using: transitionContext),
         let callViewController = extractCallerViewController(using: transitionContext) else {
                 transitionContext.completeTransition(false)
                 return
         }
 
         let containerView = transitionContext.containerView
-        containerView.insertSubview(editMoneyViewController.view, aboveSubview: callViewController.view)
+        containerView.insertSubview(modalTextFieldTransitionView.view, aboveSubview: callViewController.view)
 
-        editMoneyViewController.backgroundAlpha = isPresent ? 0.0 : EditMoneyViewController.backgroundAlpha
+        modalTextFieldTransitionView.backgroundAlpha = isPresent ? 0.0 : EditMoneyViewController.backgroundAlpha
         
         let toAlpha = isPresent ? EditMoneyViewController.backgroundAlpha : 0.0
         UIView.animate(withDuration: duration, animations: {
-            editMoneyViewController.backgroundAlpha = toAlpha
+            modalTextFieldTransitionView.backgroundAlpha = toAlpha
         }, completion: { didCompleted in
-            editMoneyViewController.backgroundAlpha = toAlpha
+            modalTextFieldTransitionView.backgroundAlpha = toAlpha
             transitionContext.completeTransition(didCompleted)
         })
     }
 
-    private func extractEditMoneyViewController(using transitionContext: UIViewControllerContextTransitioning) -> EditMoneyViewController? {
+    private func extractModalTextFieldTransitionProtocol(using transitionContext: UIViewControllerContextTransitioning) -> ModalTextFieldTransitionProtocol? {
         let key = isPresent ? UITransitionContextViewControllerKey.to : UITransitionContextViewControllerKey.from
-        return transitionContext.viewController(forKey: key) as? EditMoneyViewController
+        return transitionContext.viewController(forKey: key) as? ModalTextFieldTransitionProtocol
     }
 
     private func extractCallerViewController(using transitionContext: UIViewControllerContextTransitioning) -> UIViewController? {
