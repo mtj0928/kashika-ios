@@ -17,3 +17,11 @@ protocol EditUsernamePresenterProtocol: ModalTextFieldPresenterProtocol {
 protocol EditUsernameRouterProtocol {
     func dismiss()
 }
+
+protocol EditUsernameOutputProtocol {
+    var username: BehaviorRelay<String?> { get }
+}
+
+struct EditUsernameOutput: EditUsernameOutputProtocol {
+    let username = BehaviorRelay<String?>(value: nil)
+}

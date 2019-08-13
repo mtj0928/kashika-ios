@@ -22,10 +22,10 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     private let imageSubject = BehaviorSubject<UIImage?>(value: nil)
     private let router: EditUsernameRouter
 
-    private let output: ModalTextFieldOutputProtocol
+    private let output: EditUsernameOutputProtocol
     private var inputtedText: String?
 
-    init(router: EditUsernameRouter, output: ModalTextFieldOutputProtocol) {
+    init(router: EditUsernameRouter, output: EditUsernameOutputProtocol) {
         self.router = router
         self.output = output
     }
@@ -35,7 +35,7 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     }
 
     func tappedOkButton() {
-        output.text.accept(inputtedText)
+        output.username.accept(inputtedText)
         router.dismiss()
     }
 

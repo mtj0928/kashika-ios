@@ -20,12 +20,12 @@ final class EditMoneyPresenter: EditMoneyPresenterProtocol {
 
     private var money = 0
     private let textSubject: BehaviorSubject<String?>
-    private let beforeViewMoney: BehaviorRelay<Int>
+    private let output: EditMoneyOutputProtocol
     private let router: EditMoneyRouterProtocol
 
-    init(money beforeViewMoney: BehaviorRelay<Int>, router: EditMoneyRouterProtocol) {
-        self.beforeViewMoney = beforeViewMoney
-        money = beforeViewMoney.value
+    init(router: EditMoneyRouterProtocol, output: EditMoneyOutputProtocol) {
+        self.output = output
+        money = output.money.value
         self.textSubject = BehaviorSubject(value: String.convertWithComma(from: money))
         self.router = router
     }
@@ -37,7 +37,7 @@ final class EditMoneyPresenter: EditMoneyPresenterProtocol {
     }
 
     func tappedOkButton() {
-        beforeViewMoney.accept(money)
+        output.money.accept(money)
         router.dismiss()
     }
 

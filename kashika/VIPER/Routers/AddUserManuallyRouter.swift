@@ -16,8 +16,8 @@ class AddUserManuallyRouter: NSObject, AddUserManuallyRouterProtocol {
     func showAlbum() {
     }
 
-    func showModalTextField() -> ModalTextFieldOutputProtocol {
-        let output = ModalTextFieldOutput()
+    func showModalTextField() -> EditUsernameOutputProtocol {
+        let output = EditUsernameOutput()
         let editUsernameViewController = EditUsernameViewBuilder.build(output: output)
         editUsernameViewController.modalPresentationStyle = .overFullScreen
         editUsernameViewController.transitioningDelegate = self

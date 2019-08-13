@@ -11,9 +11,9 @@ import RxCocoa
 
 struct EditMoneyViewBuilder {
     
-    static func build(money: BehaviorRelay<Int>) -> UIViewController {
+    static func build(output: EditMoneyOutputProtocol) -> UIViewController {
         let router = EditMoneyRouter()
-        let presenter = EditMoneyPresenter(money: money, router: router)
+        let presenter = EditMoneyPresenter(router: router, output: output)
         let viewController = EditMoneyViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
         return viewController

@@ -15,3 +15,16 @@ protocol EditMoneyPresenterProtocol: ModalTextFieldPresenterProtocol {
 protocol EditMoneyRouterProtocol {
     func dismiss()
 }
+
+protocol EditMoneyOutputProtocol {
+    var money: BehaviorRelay<Int> { get }
+}
+
+struct EditMoneyOutput: EditMoneyOutputProtocol {
+    let money: BehaviorRelay<Int>
+
+    init(money: Int = 0) {
+        self.money = BehaviorRelay(value: money)
+    }
+}
+

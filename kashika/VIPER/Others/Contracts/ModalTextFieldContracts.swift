@@ -20,11 +20,3 @@ protocol ModalTextFieldPresenterProtocol {
     func tappedOkButton()
     func tappedCancelButton()
 }
-
-protocol ModalTextFieldOutputProtocol {
-    var text: BehaviorRelay<String?> { get }
-}
-
-struct ModalTextFieldOutput: ModalTextFieldOutputProtocol {
-    let text = BehaviorRelay<String?>(value: nil)
-}

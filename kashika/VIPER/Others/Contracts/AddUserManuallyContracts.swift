@@ -24,6 +24,7 @@ protocol AddUserManuallyPresenterProtocol {
 
 protocol AddUserManuallyRouterProtocol {
     func showAlbum()
-    func showModalTextField() -> ModalTextFieldOutputProtocol
+    func showModalTextField() -> EditUsernameOutputProtocol
     func dismiss()
 }
+

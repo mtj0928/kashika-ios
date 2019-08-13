@@ -11,7 +11,7 @@ import RxCocoa
 
 struct EditUsernameViewBuilder {
 
-    static func build(output: ModalTextFieldOutputProtocol) -> UIViewController {
+    static func build(output: EditUsernameOutputProtocol) -> UIViewController {
         let router = EditUsernameRouter()
         let presenter = EditUsernamePresenter(router: router, output: output)
         let viewController = EditUsernameViewController.createFromStoryboard(with: presenter)
