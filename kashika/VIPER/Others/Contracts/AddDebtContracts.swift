@@ -31,5 +31,5 @@ protocol AddDebtInteractorProtocol {
 
 protocol AddDebtRouterProtocol {
     func dismiss()
-    func toEditMoneyView(money: Int) -> EditMoneyOutputProtocol
+    func toEditMoneyView(input: EditMoneyInputProtocol) -> EditMoneyOutputProtocol
 }

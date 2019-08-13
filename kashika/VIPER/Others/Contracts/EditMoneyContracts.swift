@@ -7,24 +7,23 @@
 //
 
 import RxSwift
-import RxCocoa
 
 protocol EditMoneyPresenterProtocol: ModalTextFieldPresenterProtocol {
+    var output: EditMoneyOutputProtocol { get }
 }
 
 protocol EditMoneyRouterProtocol {
     func dismiss()
 }
 
+protocol EditMoneyInputProtocol {
+    var money: Int { get }
+}
+
+struct EditMoneyInput: EditMoneyInputProtocol {
+    let money: Int
+}
+
 protocol EditMoneyOutputProtocol {
-    var money: BehaviorRelay<Int> { get }
+    var money: Observable<Int> { get }
 }
-
-struct EditMoneyOutput: EditMoneyOutputProtocol {
-    let money: BehaviorRelay<Int>
-
-    init(money: Int = 0) {
-        self.money = BehaviorRelay(value: money)
-    }
-}
-

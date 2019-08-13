@@ -10,6 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+struct EditMoneyOutput: EditMoneyOutputProtocol {
+    var money: Observable<Int> {
+        return moneySubject
+    }
+    let moneySubject = PublishSubject<Int>()
+}
+
 final class EditMoneyPresenter: EditMoneyPresenterProtocol {
     var text: Observable<String?> {
         return textSubject
@@ -17,15 +24,17 @@ final class EditMoneyPresenter: EditMoneyPresenterProtocol {
     let title: Observable<String?> = BehaviorSubject(value: "金額を入力")
     let unit: Observable<String?> = BehaviorSubject(value: "円")
     let keyboardType: Observable<UIKeyboardType> = BehaviorSubject(value: .numberPad)
+    var output: EditMoneyOutputProtocol {
+        return _output
+    }
 
     private var money = 0
     private let textSubject: BehaviorSubject<String?>
-    private let output: EditMoneyOutputProtocol
+    private let _output = EditMoneyOutput()
     private let router: EditMoneyRouterProtocol
 
-    init(router: EditMoneyRouterProtocol, output: EditMoneyOutputProtocol) {
-        self.output = output
-        money = output.money.value
+    init(router: EditMoneyRouterProtocol, input: EditMoneyInputProtocol) {
+        money = input.money
         self.textSubject = BehaviorSubject(value: String.convertWithComma(from: money))
         self.router = router
     }
@@ -37,7 +46,7 @@ final class EditMoneyPresenter: EditMoneyPresenterProtocol {
     }
 
     func tappedOkButton() {
-        output.money.accept(money)
+        _output.moneySubject.onNext(money)
         router.dismiss()
     }
 

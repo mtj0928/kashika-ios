@@ -12,20 +12,21 @@ import RxCocoa
 
 protocol EditUsernamePresenterProtocol: ModalTextFieldPresenterProtocol {
     var image: Observable<UIImage?> { get }
+    var output: EditUsernameOutputProtocol { get }
 }
 
 protocol EditUsernameRouterProtocol {
     func dismiss()
 }
 
-protocol EditUsernameOutputProtocol {
-    var username: BehaviorRelay<String?> { get }
+protocol EditUsernameInputProtocol {
+    var username: String? { get }
 }
 
-struct EditUsernameOutput: EditUsernameOutputProtocol {
-    let username: BehaviorRelay<String?>
+struct EditUsernameInput: EditUsernameInputProtocol {
+    let username: String?
+}
 
-    init(name: String?) {
-        username = BehaviorRelay(value: name)
-    }
+protocol EditUsernameOutputProtocol {
+    var username: Observable<String?> { get }
 }

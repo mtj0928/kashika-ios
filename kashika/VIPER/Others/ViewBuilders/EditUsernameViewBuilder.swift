@@ -11,11 +11,11 @@ import RxCocoa
 
 struct EditUsernameViewBuilder {
 
-    static func build(output: EditUsernameOutputProtocol) -> UIViewController {
+    static func build(input: EditUsernameInputProtocol) -> (viewController: UIViewController, output: EditUsernameOutputProtocol) {
         let router = EditUsernameRouter()
-        let presenter = EditUsernamePresenter(router: router, output: output)
+        let presenter = EditUsernamePresenter(router: router, input: input)
         let viewController = EditUsernameViewController.createFromStoryboard(with: presenter)
         router.viewController = viewController
-        return viewController
+        return (viewController, presenter.output)
     }
 }

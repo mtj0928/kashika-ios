@@ -41,7 +41,10 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     }
 
     func tappedMoneyButton() {
-        router.toEditMoneyView(money: money.value).money.subscribe(onNext: { [weak self] money in
+        let input = EditMoneyInput(money: money.value)
+        let output = router.toEditMoneyView(input: input)
+        
+        output.money.subscribe(onNext: { [weak self] money in
             self?.money.accept(money)
         }).disposed(by: disposeBag)
     }

@@ -10,6 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+struct EditUsernameOutput: EditUsernameOutputProtocol {
+    var username: Observable<String?> {
+        return usernameSubject
+    }
+    let usernameSubject = PublishSubject<String?>()
+}
+
 class EditUsernamePresenter: EditUsernamePresenterProtocol {
     var image: Observable<UIImage?> {
         return imageSubject
@@ -18,17 +25,18 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     let title: Observable<String?> = BehaviorSubject(value: "名前を入力")
     let unit: Observable<String?> = BehaviorSubject(value: "")
     let keyboardType: Observable<UIKeyboardType> = BehaviorSubject(value: .default)
+    var output: EditUsernameOutputProtocol {
+        return rawOutput
+    }
 
     private let imageSubject = BehaviorSubject<UIImage?>(value: nil)
+    private let rawOutput = EditUsernameOutput()
     private let router: EditUsernameRouter
-
-    private let output: EditUsernameOutputProtocol
     private var inputtedText: String?
 
-    init(router: EditUsernameRouter, output: EditUsernameOutputProtocol) {
+    init(router: EditUsernameRouter, input: EditUsernameInputProtocol) {
         self.router = router
-        self.output = output
-        self.text = BehaviorSubject(value: output.username.value)
+        self.text = BehaviorSubject(value: input.username)
     }
 
     func inputed(text: String?) {
@@ -36,7 +44,7 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     }
 
     func tappedOkButton() {
-        output.username.accept(inputtedText)
+        rawOutput.usernameSubject.onNext(inputtedText)
         router.dismiss()
     }
 

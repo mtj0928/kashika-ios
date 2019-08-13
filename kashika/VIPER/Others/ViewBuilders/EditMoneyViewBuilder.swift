@@ -11,11 +11,11 @@ import RxCocoa
 
 struct EditMoneyViewBuilder {
     
-    static func build(output: EditMoneyOutputProtocol) -> UIViewController {
+    static func build(input: EditMoneyInputProtocol) -> (viewController: UIViewController, output: EditMoneyOutputProtocol) {
         let router = EditMoneyRouter()
-        let presenter = EditMoneyPresenter(router: router, output: output)
+        let presenter = EditMoneyPresenter(router: router, input: input)
         let viewController = EditMoneyViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
-        return viewController
+        return (viewController, presenter.output)
     }
 }

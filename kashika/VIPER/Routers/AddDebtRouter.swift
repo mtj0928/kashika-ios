@@ -17,13 +17,13 @@ final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
         viewController?.dismiss(animated: true, completion: nil)
     }
 
-    func toEditMoneyView(money: Int) -> EditMoneyOutputProtocol {
-        let output = EditMoneyOutput(money: money)
-        let editMoneyViewController = EditMoneyViewBuilder.build(output: output)
+    func toEditMoneyView(input: EditMoneyInputProtocol) -> EditMoneyOutputProtocol {
+        let build = EditMoneyViewBuilder.build(input: input)
+        let editMoneyViewController = build.viewController
         editMoneyViewController.modalPresentationStyle = .overFullScreen
         editMoneyViewController.transitioningDelegate = self
         viewController?.present(editMoneyViewController, animated: true)
-        return output
+        return build.output
     }
 }
 

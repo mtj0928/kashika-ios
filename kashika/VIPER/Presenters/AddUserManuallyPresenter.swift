@@ -39,7 +39,9 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     }
 
     func showModalTextField() {
-        let output = router.showModalTextField(name: try? nameSubject.value())
+        let input = EditUsernameInput(username: try? nameSubject.value())
+        let output = router.showModalTextField(input: input)
+
         output.username.subscribe(onNext: { [weak self] username in
             self?.nameSubject.onNext(username)
         }).disposed(by: disposeBag)
