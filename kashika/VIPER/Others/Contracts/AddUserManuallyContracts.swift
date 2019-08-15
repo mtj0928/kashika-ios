@@ -27,3 +27,7 @@ protocol AddUserManuallyRouterProtocol {
     func showModalTextField(input: EditUsernameInputProtocol) -> EditUsernameOutputProtocol
     func dismiss()
 }
+
+protocol AddUserManuallyInteractorProtocol {
+    func addUser(name: String, icon: UIImage?) -> Single<Friend>
+}

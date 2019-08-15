@@ -35,6 +35,10 @@
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
+		90427821230521A8009480CA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90427820230521A8009480CA /* Friend.swift */; };
+		9042782323052240009480CA /* FriendDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782223052240009480CA /* FriendDataStore.swift */; };
+		9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782623052B10009480CA /* AddUserManuallyInteractor.swift */; };
+		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
 		9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */; };
@@ -182,6 +186,10 @@
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
+		90427820230521A8009480CA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		9042782223052240009480CA /* FriendDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataStore.swift; sourceTree = "<group>"; };
+		9042782623052B10009480CA /* AddUserManuallyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractor.swift; sourceTree = "<group>"; };
+		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
 		9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldContracts.swift; sourceTree = "<group>"; };
@@ -335,6 +343,7 @@
 				904278182304EEAD009480CA /* Inputes */,
 				904278192304EEB4009480CA /* Outputs */,
 				5870127E224C644A003888E8 /* User.swift */,
+				90427820230521A8009480CA /* Friend.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -575,6 +584,7 @@
 				909D6AB3224E12EB00FE7218 /* UseCase */,
 				909D6AA8224DEA4E00FE7218 /* DataStores */,
 				909D6AAC224E0C3000FE7218 /* RootInteractor.swift */,
+				9042782623052B10009480CA /* AddUserManuallyInteractor.swift */,
 			);
 			name = Interactors;
 			path = Interactor;
@@ -584,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
+				9042782223052240009480CA /* FriendDataStore.swift */,
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
 			);
 			path = DataStores;
@@ -618,6 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				909D6ABB224E36BB00FE7218 /* RootInteractorTest.swift */,
+				9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -1040,6 +1052,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
@@ -1080,6 +1093,7 @@
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
+				9042782323052240009480CA /* FriendDataStore.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
@@ -1097,6 +1111,7 @@
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
 				90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */,
 				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
+				90427821230521A8009480CA /* Friend.swift in Sources */,
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
@@ -1108,6 +1123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */,
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
 				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,

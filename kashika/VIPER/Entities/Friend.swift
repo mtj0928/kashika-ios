@@ -1,8 +1,8 @@
 //
-//  User.swift
+//  Friend.swift
 //  kashika
 //
-//  Created by 松本淳之介 on 2019/03/28.
+//  Created by 松本淳之介 on 2019/08/15.
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
@@ -10,10 +10,9 @@ import UIKit
 import Pring
 
 @objcMembers
-final class User: Object {
-    dynamic var name: String = ""
+final class Friend: Object {
+    dynamic var name = ""
     dynamic var icon: UIImage?
-    dynamic var friends: ReferenceCollection<Friend> = []
 
     override func encode(_ key: String, value: Any?) -> Any? {
         if key == "icon", let data = icon?.pngData() {
