@@ -23,7 +23,7 @@ protocol AddUserManuallyPresenterProtocol {
 }
 
 protocol AddUserManuallyRouterProtocol {
-    func showAlbum()
+    func showAlbum() -> PhotoLibraryPickerOutputProtocol
     func showModalTextField(input: EditUsernameInputProtocol) -> EditUsernameOutputProtocol
     func dismiss()
 }

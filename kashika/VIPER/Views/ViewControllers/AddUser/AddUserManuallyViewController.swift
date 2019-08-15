@@ -58,6 +58,10 @@ extension AddUserManuallyViewController {
     private func setupImageView() {
         imageView.layer.cornerRadius = imageView.frame.height / 2
         imageView.backgroundColor = UIColor.lightGray
+
+        presenter.icon.subscribe(onNext: { [weak self] image in
+            self?.imageView.image = image
+        }).disposed(by: disposeBag)
     }
 
     private func setupTextLabel() {

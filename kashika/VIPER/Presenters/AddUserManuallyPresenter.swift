@@ -11,11 +11,14 @@ import RxSwift
 import RxCocoa
 
 class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
-    private(set) var icon: Observable<UIImage?> = BehaviorSubject(value: nil)
+    var icon: Observable<UIImage?> {
+        return iconSubject
+    }
     var name: Observable<String?> {
         return nameSubject
     }
 
+    private let iconSubject = BehaviorSubject<UIImage?>(value: nil)
     private let nameSubject = BehaviorSubject<String?>(value: nil)
     private let disposeBag = DisposeBag()
 
@@ -30,12 +33,17 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     }()
 
     private let router: AddUserManuallyRouterProtocol
+    private var output: PhotoLibraryPickerOutputProtocol? // 参照カウンタを一つ上げたるため
 
     init(router: AddUserManuallyRouterProtocol) {
         self.router = router
     }
 
     func showAlbum() {
+        output = router.showAlbum()
+        output?.image.subscribe(onNext: { [weak self] image in
+            self?.iconSubject.onNext(image)
+        }).disposed(by: disposeBag)
     }
 
     func showModalTextField() {

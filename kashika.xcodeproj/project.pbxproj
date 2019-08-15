@@ -32,6 +32,9 @@
 		90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */; };
 		90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */; };
 		90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */; };
+		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
+		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
+		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
 		9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */; };
@@ -83,6 +86,7 @@
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
+		90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */; };
 		90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */; };
 		90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */; };
 		90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361922ED202E000EDF8A /* AddUserManualyLayout.swift */; };
@@ -175,6 +179,9 @@
 		90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUsernameViewController.storyboard; sourceTree = "<group>"; };
 		90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewController.swift; sourceTree = "<group>"; };
 		90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameContracts.swift; sourceTree = "<group>"; };
+		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
+		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
+		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
 		9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldContracts.swift; sourceTree = "<group>"; };
@@ -225,6 +232,7 @@
 		90D1610822587CED00AF7934 /* SimpleFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendCell.swift; sourceTree = "<group>"; };
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerContracts.swift; sourceTree = "<group>"; };
 		90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUserManuallyViewController.storyboard; sourceTree = "<group>"; };
 		90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyViewController.swift; sourceTree = "<group>"; };
 		90EA361922ED202E000EDF8A /* AddUserManualyLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyLayout.swift; sourceTree = "<group>"; };
@@ -324,6 +332,8 @@
 		5870127C224C63A7003888E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				904278182304EEAD009480CA /* Inputes */,
+				904278192304EEB4009480CA /* Outputs */,
 				5870127E224C644A003888E8 /* User.swift */,
 			);
 			path = Entities;
@@ -393,6 +403,23 @@
 			path = EditUsername;
 			sourceTree = "<group>";
 		};
+		904278182304EEAD009480CA /* Inputes */ = {
+			isa = PBXGroup;
+			children = (
+				9042781C2304EFF6009480CA /* EditUsernameInput.swift */,
+			);
+			path = Inputes;
+			sourceTree = "<group>";
+		};
+		904278192304EEB4009480CA /* Outputs */ = {
+			isa = PBXGroup;
+			children = (
+				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
+				9042781E2304F037009480CA /* EditUsernameOutput.swift */,
+			);
+			path = Outputs;
+			sourceTree = "<group>";
+		};
 		905C75FC2255F07D0011580B /* AddDebt */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +447,7 @@
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F4FF6B22E88E400029990C /* FriendListContracts.swift */,
 				9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */,
+				90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
 			);
 			path = Contracts;
@@ -1024,9 +1052,11 @@
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
+				9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */,
 				900E4D5B225CAB07003C59B1 /* AddUserCell.swift in Sources */,
+				9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */,
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
@@ -1044,6 +1074,7 @@
 				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,
 				9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */,
 				90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */,
+				9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */,
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
@@ -1054,6 +1085,7 @@
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */,
 				90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */,
+				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,

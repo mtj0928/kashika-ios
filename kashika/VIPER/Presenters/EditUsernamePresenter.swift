@@ -10,13 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct EditUsernameOutput: EditUsernameOutputProtocol {
-    var username: Observable<String?> {
-        return usernameSubject
-    }
-    let usernameSubject = PublishSubject<String?>()
-}
-
 class EditUsernamePresenter: EditUsernamePresenterProtocol {
     var image: Observable<UIImage?> {
         return imageSubject

@@ -23,10 +23,6 @@ protocol EditUsernameInputProtocol {
     var username: String? { get }
 }
 
-struct EditUsernameInput: EditUsernameInputProtocol {
-    let username: String?
-}
-
 protocol EditUsernameOutputProtocol {
     var username: Observable<String?> { get }
 }

@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6a9-r7-CMs">
                                         <rect key="frame" x="16" y="32" width="382" height="352"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IoW-uj-zDX">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IoW-uj-zDX">
                                                 <rect key="frame" x="123.5" y="0.0" width="135" height="135"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="135" id="iTp-JS-kHd"/>

@@ -13,7 +13,15 @@ class AddUserManuallyRouter: NSObject, AddUserManuallyRouterProtocol {
 
     weak var viewController: UIViewController?
 
-    func showAlbum() {
+    func showAlbum() -> PhotoLibraryPickerOutputProtocol {
+        let output = PhotoLibraryPickerOutput()
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.delegate = output
+            viewController?.present(imagePickerController, animated: true)
+        }
+        return output
     }
 
     func showModalTextField(input: EditUsernameInputProtocol) -> EditUsernameOutputProtocol {
@@ -43,4 +51,10 @@ extension AddUserManuallyRouter: UIViewControllerTransitioningDelegate {
         trasition.isPresent = false
         return trasition
     }
+}
+
+// MARK: -  UIImagePickerControllerDelegate, UINavigationControllerDelegate
+
+extension AddUserManuallyRouter: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
 }
