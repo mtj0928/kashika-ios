@@ -18,6 +18,8 @@ class AddUserManuallyInteractorTest: XCTestCase {
         let friend = try single.toBlocking().first()
 
         XCTAssertNotNil(friend)
+        // swiftlint:disable force_unwrapping
         XCTAssertEqual(friend!.name, "名前")
+        // swiftlint:enable force_unwrapping
     }
 }

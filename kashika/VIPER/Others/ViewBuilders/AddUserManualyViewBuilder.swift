@@ -12,8 +12,9 @@ import FloatingPanel
 struct AddUserManualyViewBuilder {
 
     static func build() -> UIViewController {
+        let interactor = AddUserManuallyInteractor()
         let router = AddUserManuallyRouter()
-        let presenter = AddUserManuallyPresenter(router: router)
+        let presenter = AddUserManuallyPresenter(interactor: interactor, router: router)
         let viewController = AddUserManuallyViewController.createFromStoryboard(with: presenter)
         router.viewController = viewController
 
