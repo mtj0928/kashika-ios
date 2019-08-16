@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import Pring
 
 struct FriendDataStore {
 
@@ -18,7 +19,16 @@ struct FriendDataStore {
             friend.icon = icon
             user.friends.insert(friend)
             user.update()
+            friend.save()
             observer(.success(friend))
+            return Disposables.create()
+        }
+    }
+
+    func fetch(user: User) -> Single<DataSource<Friend>> {
+        return Single.create { observer -> Disposable in
+            let dataSource = user.friends.order(by: \Friend.createdAt).dataSource()
+            observer(.success(dataSource))
             return Disposables.create()
         }
     }

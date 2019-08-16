@@ -14,14 +14,14 @@ enum UserAdditionType {
 }
 
 protocol FriendListPresenterProtocol {
-    var friends: BehaviorRelay<[User]> { get }
+    var friends: BehaviorRelay<[Friend]> { get }
 
     func tappedAddUserButton(with: UserAdditionType)
-    func tapped(user: User)
+    func tapped(friend: Friend)
 }
 
 protocol FriendListInteractorProtocol {
-    var friends: BehaviorRelay<[User]> { get }
+    var friends: BehaviorRelay<[Friend]> { get }
 }
 
 protocol FriendListRouterProtocol {

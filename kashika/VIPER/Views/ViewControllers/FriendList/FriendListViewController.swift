@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 import TapticEngine
 
 fileprivate extension UIColor.AppColor {
@@ -22,6 +23,7 @@ final class FriendListViewController: UIViewController {
     @IBOutlet private weak var addUseromSNSButton: EmphasisButton!
 
     private var presenter: FriendListPresenterProtocol!
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,14 @@ extension FriendListViewController {
         tableView.dataSource = self
 
         tableView.tableFooterView = UIView()
+
+        tableView.register(R.nib.friendTableViewCell)
+
+        tableView.rowHeight = 100.0
+
+        presenter.friends.asDriver().drive(onNext: { [weak self] _ in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -84,7 +94,10 @@ extension FriendListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendTableViewCell, for: indexPath)
+        let friend = presenter.friends.value[indexPath.row]
+        cell.set(friend: friend)
+        return cell
     }
 }
 
@@ -93,7 +106,7 @@ extension FriendListViewController: UITableViewDataSource {
 extension FriendListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = presenter.friends.value[indexPath.row]
-        presenter.tapped(user: user)
+        let friend = presenter.friends.value[indexPath.row]
+        presenter.tapped(friend: friend)
     }
 }

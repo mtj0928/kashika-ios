@@ -11,8 +11,9 @@ import UIKit
 struct FriendListViewBuilder {
 
     static func build() -> UIViewController {
+        let interactor = FriendListInteractor()
         let router = FriendListRouter()
-        let presenter = FriendListPresenter(router: router)
+        let presenter = FriendListPresenter(interactor: interactor, router: router)
         let viewController = FriendListViewController.createFromStoryboard(with: presenter)
         router.viewController = viewController
         return viewController

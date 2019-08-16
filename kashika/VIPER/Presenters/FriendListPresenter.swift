@@ -10,11 +10,15 @@ import RxCocoa
 
 class FriendListPresenter: FriendListPresenterProtocol {
 
-    var friends: BehaviorRelay<[User]> = BehaviorRelay(value: [])
+    var friends: BehaviorRelay<[Friend]> {
+        return interactor.friends
+    }
 
-    private let router: FriendListRouterProtocol!
+    private let interactor: FriendListInteractorProtocol
+    private let router: FriendListRouterProtocol
 
-    init(router: FriendListRouterProtocol) {
+    init(interactor: FriendListInteractorProtocol, router: FriendListRouterProtocol) {
+        self.interactor = interactor
         self.router = router
     }
 
@@ -22,6 +26,6 @@ class FriendListPresenter: FriendListPresenterProtocol {
         router.showUserAddView(with: type)
     }
 
-    func tapped(user: User) {
+    func tapped(friend: Friend) {
     }
 }
