@@ -12,14 +12,20 @@ import RxBlocking
 @testable import kashika
 
 class AddUserManuallyInteractorTest: XCTestCase {
-    
+
+    override func tearDown() {
+        do {
+            try Auth.auth().signOut()
+        } catch { }
+    }
+
     func testCreatFriend() throws {
         let single = AddUserManuallyInteractor().addUser(name: "名前", icon: nil)
         let friend = try single.toBlocking().first()
 
-        XCTAssertNotNil(friend)
+        XCTAssertNotNil(friend as Any?)
         // swiftlint:disable force_unwrapping
-        XCTAssertEqual(friend!.name, "名前")
+        XCTAssertEqual(friend!!.name, "名前")
         // swiftlint:enable force_unwrapping
     }
 }
