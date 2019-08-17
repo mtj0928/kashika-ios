@@ -356,8 +356,6 @@
 		5870127C224C63A7003888E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				904278182304EEAD009480CA /* Inputes */,
-				904278192304EEB4009480CA /* Outputs */,
 				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
 			);
@@ -628,9 +626,9 @@
 		909D6AA8224DEA4E00FE7218 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
-				9042782223052240009480CA /* FriendDataStore.swift */,
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
+				9042782223052240009480CA /* FriendDataStore.swift */,
+				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 			);
 			path = DataStores;
 			sourceTree = "<group>";
@@ -638,8 +636,10 @@
 		909D6AAE224E0CA100FE7218 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				905C760D2256D0A00011580B /* ViewBuilders */,
 				905C760C2256D08F0011580B /* Contracts */,
+				904278182304EEAD009480CA /* Inputes */,
+				904278192304EEB4009480CA /* Outputs */,
+				905C760D2256D0A00011580B /* ViewBuilders */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -647,8 +647,8 @@
 		909D6AB3224E12EB00FE7218 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 				906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */,
+				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
