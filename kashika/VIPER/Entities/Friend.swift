@@ -7,25 +7,9 @@
 //
 
 import UIKit
-import Pring
+import Ballcap
 
-@objcMembers
-final class Friend: Object {
-    dynamic var name = ""
-    dynamic var icon: UIImage?
-
-    override func encode(_ key: String, value: Any?) -> Any? {
-        if key == "icon", let data = icon?.pngData() {
-            return File(data: data, mimeType: .png)
-        }
-        return nil
-    }
-
-    override func decode(_ key: String, value: Any?) -> Bool {
-        if key == "icon", let file = value as? File, let data = file.data {
-            icon = UIImage(data: data)
-            return true
-        }
-        return false
-    }
+struct Friend: Codable, Equatable, Modelable {
+    var name = ""
+    var icon: File?
 }

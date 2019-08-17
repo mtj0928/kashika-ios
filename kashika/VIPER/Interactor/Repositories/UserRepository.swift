@@ -7,17 +7,17 @@
 //
 
 import RxSwift
+import Ballcap
 
 struct UserRepository {
 
-    func fetchOrCreateUser() -> Single<User> {
+    func fetchOrCreateUser() -> Single<Document<User>> {
             let dataStore = UserDataStore()
             let firebaseAuthDataStore = FirebaseAuthStore()
             if let firebasaeUser = firebaseAuthDataStore.fetchCurrentUser() {
                 return dataStore.fetch(authId: firebasaeUser.uid)
             }
-            return firebaseAuthDataStore.createUser().flatMap({ firebaseUser -> PrimitiveSequence<SingleTrait, User> in
-                return dataStore.create(authId: firebaseUser.uid)
-            })
+            return firebaseAuthDataStore.createUser()
+                .flatMap { dataStore.create(authId: $0.uid) }
         }
 }

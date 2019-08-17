@@ -8,7 +8,6 @@
 
 import RxSwift
 import RxCocoa
-import Pring
 
 class FriendListInteractor: FriendListInteractorProtocol {
     var friends: BehaviorRelay<[Friend]> {

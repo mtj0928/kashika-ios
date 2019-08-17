@@ -11,8 +11,9 @@ import RxSwift
 
 struct AddUserManuallyInteractor: AddUserManuallyInteractorProtocol {
 
-    func addUser(name: String, icon: UIImage?) -> Single<Friend> {
+    func addUser(name: String, icon: UIImage?) -> Single<Friend?> {
         return UserUseCase().fetchOrCreateUser()
-            .flatMap({ FriendDataStore().create(user: $0, name: name, icon: icon) })
+            .flatMap { FriendDataStore().create(user: $0, name: name, icon: icon) }
+            .map { $0.data }
     }
 }

@@ -7,10 +7,11 @@
 //
 
 import RxSwift
+import Ballcap
 
 struct UserUseCase {
 
-    func fetchOrCreateUser() -> Single<User> {
+    func fetchOrCreateUser() -> Single<Document<User>> {
         return UserRepository().fetchOrCreateUser()
     }
 }

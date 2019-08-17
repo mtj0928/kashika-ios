@@ -6,27 +6,31 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import RxCocoa
 import RxSwift
-import Pring
+import RxCocoa
+import Ballcap
 
 class FriendListUseCase {
     let friends = BehaviorRelay<[Friend]>(value: [])
 
-    private var dataSource: DataSource<Friend>?
-    private let disposeBag = DisposeBag()
+    private var documents: [Document<Friend>]? {
+        didSet {
+            if let documents = self.documents {
+                let friends = documents.compactMap { $0.data }
+                self.friends.accept(friends)
+            }
+        }
+    }
+
+    private let disposeBag = RxSwift.DisposeBag()
 
     init() {
-        let userRepository = UserRepository()
-        let userSingle = userRepository.fetchOrCreateUser()
-
-        userSingle
-            .flatMap({ FriendDataStore().fetch(user: $0) })
-            .subscribe(onSuccess: { [weak self] dataSource in
-                self?.dataSource = dataSource
-                dataSource.onCompleted { (_, friends) in
-                    self?.friends.accept(friends)
-                }.listen()
+        UserRepository()
+            .fetchOrCreateUser()
+            .asObservable()
+            .flatMap { FriendDataStore().listen(user: $0) }
+            .subscribe(onNext: { [weak self] documents in
+                self?.documents = documents
             }).disposed(by: disposeBag)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseUI
 
 final class FriendTableViewCell: UITableViewCell {
 
@@ -40,7 +41,6 @@ final class FriendTableViewCell: UITableViewCell {
         updateLayout()
 
         nameLabel.text = friend.name
-        iconView.image = friend.icon
     }
 
     private func updateLayout() {

@@ -20,7 +20,7 @@ protocol RootPresenterProtocol {
 }
 
 protocol RootInteractorProtocol {
-    func fetchOrCreateCurrentUser() -> Single<User>
+    func fetchOrCreateCurrentUser() -> Single<User?>
 }
 
 protocol RootRouterProtocol {

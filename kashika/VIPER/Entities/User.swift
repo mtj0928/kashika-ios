@@ -7,26 +7,10 @@
 //
 
 import UIKit
-import Pring
+import FirebaseFirestore
+import Ballcap
 
-@objcMembers
-final class User: Object {
-    dynamic var name: String = ""
-    dynamic var icon: UIImage?
-    dynamic var friends: ReferenceCollection<Friend> = []
-
-    override func encode(_ key: String, value: Any?) -> Any? {
-        if key == "icon", let data = icon?.pngData() {
-            return File(data: data, mimeType: .png)
-        }
-        return nil
-    }
-
-    override func decode(_ key: String, value: Any?) -> Bool {
-        if key == "icon", let file = value as? File, let data = file.data {
-            icon = UIImage(data: data)
-            return true
-        }
-        return false
-    }
+struct User: Codable, Equatable, Modelable {
+    var name: String = ""
+    var icon: File?
 }

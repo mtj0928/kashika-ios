@@ -29,5 +29,5 @@ protocol AddUserManuallyRouterProtocol {
 }
 
 protocol AddUserManuallyInteractorProtocol {
-    func addUser(name: String, icon: UIImage?) -> Single<Friend>
+    func addUser(name: String, icon: UIImage?) -> Single<Friend?>
 }

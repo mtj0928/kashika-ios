@@ -8,28 +8,49 @@
 
 import UIKit
 import RxSwift
-import Pring
+import Ballcap
+import Firebase
 
 struct FriendDataStore {
 
-    func create(user: User, name: String, icon: UIImage?) -> Single<Friend> {
+    static let key = "friends"
+
+    func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> Single<Document<Friend>> {
         return Single.create { observer -> Disposable in
-            let friend = Friend()
-            friend.name = name
-            friend.icon = icon
-            user.friends.insert(friend)
-            user.update()
-            friend.save()
-            observer(.success(friend))
+            let collectionReference = userDocument.documentReference.collection(FriendDataStore.key)
+            let friendDocument = Document<Friend>(collectionReference: collectionReference)
+
+            friendDocument.data?.name = name
+
+            let batch: Batch = Batch()
+            batch.save(friendDocument)
+            batch.commit()
+            observer(.success(friendDocument))
+
             return Disposables.create()
         }
     }
 
-    func fetch(user: User) -> Single<DataSource<Friend>> {
-        return Single.create { observer -> Disposable in
-            let dataSource = user.friends.order(by: \Friend.createdAt).dataSource()
-            observer(.success(dataSource))
-            return Disposables.create()
+    func listen(user userDocument: Document<User>) -> Observable<[Document<Friend>]> {
+        return Observable.create { observer -> Disposable in
+            let reference = userDocument.documentReference.collection(FriendDataStore.key)
+            let listner = reference.addSnapshotListener { (querySnapshot, error) in
+                if let error = error {
+                    observer.onError(error)
+                    return
+                }
+                guard let snapshot = querySnapshot else {
+                    observer.onCompleted()
+                    return
+                }
+                let documents = snapshot.documents
+                    .map { Document<Friend>(snapshot: $0) }
+                    .compactMap { $0 }
+                observer.onNext(documents)
+            }
+            return Disposables.create {
+                listner.remove()
+            }
         }
     }
 }
