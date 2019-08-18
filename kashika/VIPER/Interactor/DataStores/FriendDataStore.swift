@@ -21,13 +21,16 @@ struct FriendDataStore {
             let friendDocument = Document<Friend>(collectionReference: collectionReference)
 
             friendDocument.data?.name = name
+            let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
+            let data = icon?.pngData()
+            let file = File(reference, data: data, mimeType: .png)
+            let disposable = file.save().subscribe(onSuccess: { _ in
+                friendDocument.data?.iconFile = file
+                friendDocument.save()
+                observer(.success(friendDocument))
+            }, onError: { observer(.error($0)) })
 
-            let batch: Batch = Batch()
-            batch.save(friendDocument)
-            batch.commit()
-            observer(.success(friendDocument))
-
-            return Disposables.create()
+            return disposable
         }
     }
 

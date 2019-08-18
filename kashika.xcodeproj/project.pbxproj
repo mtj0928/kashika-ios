@@ -89,6 +89,8 @@
 		909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AD6224E465400FE7218 /* RootPresenter.swift */; };
 		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
+		909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64A92308D18000B0ACCB /* File+extension.swift */; };
+		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
@@ -247,6 +249,8 @@
 		909D6AD6224E465400FE7218 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
+		909E64A92308D18000B0ACCB /* File+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "File+extension.swift"; path = "kashika/Commons/Extensions/File+extension.swift"; sourceTree = SOURCE_ROOT; };
+		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
@@ -333,6 +337,7 @@
 		5870126C224C5373003888E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
@@ -677,6 +682,7 @@
 				90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */,
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
+				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
 				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 			);
@@ -1148,7 +1154,9 @@
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
+				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,

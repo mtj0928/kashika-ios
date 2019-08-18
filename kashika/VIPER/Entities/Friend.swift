@@ -6,10 +6,10 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import UIKit
 import Ballcap
 
 struct Friend: Codable, Equatable, Modelable {
     var name = ""
-    var icon: File?
+    var iconFile: File?
+    var totalDebt = 0
 }
