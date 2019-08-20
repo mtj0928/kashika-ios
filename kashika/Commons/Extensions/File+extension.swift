@@ -12,19 +12,21 @@ import RxSwift
 
 extension File {
 
-    func save() -> MonitorObservable<StorageMetadata> {
+    func save() -> MonitorObservable<StorageMetadata?> {
         return Observable.create { [weak self] observer -> Disposable in
+            if self?.data == nil {
+                observer.onNext(Monitor(nil))
+                observer.onCompleted()
+                return Disposables.create()
+            }
             let task = self?.save { (metadata, error) in
                 if let error = error {
+                    print(error.localizedDescription)
                     observer.onError(error)
                     return
                 }
-                if let metadata = metadata {
-                    observer.onNext(Monitor(metadata))
-                    return
-                }
-
-                observer.onError(NSError(domain: "[mtj0928] cannot save file", code: -1, userInfo: nil))
+                observer.onNext(Monitor(metadata))
+                observer.onCompleted()
             }
             let handler = task?.observe(.progress, handler: { snapshot in
                 guard let progress = snapshot.progress else {

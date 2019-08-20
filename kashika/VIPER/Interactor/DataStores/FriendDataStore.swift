@@ -21,11 +21,6 @@ struct FriendDataStore {
             let friendDocument = Document<Friend>(collectionReference: collectionReference)
 
             friendDocument.data?.name = name
-            if icon == nil {
-                friendDocument.save()
-                observer.onNext(Monitor(friendDocument))
-                return Disposables.create()
-            }
 
             let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
             let data = icon?.pngData()
@@ -38,7 +33,7 @@ struct FriendDataStore {
             }
 
             return file.save()
-                .map({ $0.map { _ -> (Document<Friend>) in saveHandler() } })
+                .map({ $0.map { _ in saveHandler() } })
                 .subscribe(onNext: observer.onNext, onError: observer.onError, onCompleted: observer.onCompleted)
         }
     }
