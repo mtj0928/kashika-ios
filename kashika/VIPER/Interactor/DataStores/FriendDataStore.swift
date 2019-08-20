@@ -15,8 +15,8 @@ struct FriendDataStore {
 
     static let key = "friends"
 
-    func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> Single<Document<Friend>> {
-        return Single.create { observer -> Disposable in
+    func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
+        return Observable.create { observer -> Disposable in
             let collectionReference = userDocument.documentReference.collection(FriendDataStore.key)
             let friendDocument = Document<Friend>(collectionReference: collectionReference)
 
@@ -24,13 +24,16 @@ struct FriendDataStore {
             let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
             let data = icon?.pngData()
             let file = File(reference, data: data, mimeType: .png)
-            let disposable = file.save().subscribe(onSuccess: { _ in
+            
+            let saveHandler = { () -> (Document<Friend>) in
                 friendDocument.data?.iconFile = file
                 friendDocument.save()
-                observer(.success(friendDocument))
-            }, onError: { observer(.error($0)) })
+                return friendDocument
+            }
 
-            return disposable
+            return file.save()
+                .map({ $0.map { _ -> (Document<Friend>) in saveHandler() } })
+                .subscribe(onNext: observer.onNext, onError: observer.onError, onCompleted: observer.onCompleted)
         }
     }
 

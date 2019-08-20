@@ -60,6 +60,7 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     func add() {
         let name = nameSubject.value ?? "名前"
         interactor.addUser(name: name, icon: iconSubject.value)
+            .asSingle()
             .asCompletable()
             .subscribe({ [weak self] _ in
                 self?.router.dismiss()

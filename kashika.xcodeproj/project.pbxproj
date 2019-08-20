@@ -72,6 +72,7 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
+		909BDA6F230ABFC800689573 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BDA6E230ABFC800689573 /* Monitor.swift */; };
 		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
 		909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAC224E0C3000FE7218 /* RootInteractor.swift */; };
 		909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAF224E0CC800FE7218 /* RootContracts.swift */; };
@@ -237,6 +238,7 @@
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909BDA6E230ABFC800689573 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		909D6AAC224E0C3000FE7218 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		909D6AAF224E0CC800FE7218 /* RootContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContracts.swift; sourceTree = "<group>"; };
@@ -526,8 +528,9 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				905D83122250CF0900EB20AC /* Resources */,
+				909BDA72230AC26400689573 /* Entities */,
 				5870126C224C5373003888E8 /* Extensions */,
+				905D83122250CF0900EB20AC /* Resources */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -612,6 +615,14 @@
 				909600772249B295002F1DE6 /* Info.plist */,
 			);
 			path = kashikaUITests;
+			sourceTree = "<group>";
+		};
+		909BDA72230AC26400689573 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				909BDA6E230ABFC800689573 /* Monitor.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		909D6AA5224DE9EC00FE7218 /* Interactors */ = {
@@ -1103,6 +1114,7 @@
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
