@@ -93,6 +93,7 @@
 		909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64A92308D18000B0ACCB /* File+extension.swift */; };
 		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
+		90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57823230BF55400BBADDA /* UIImage+extension.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
@@ -254,6 +255,7 @@
 		909E64A92308D18000B0ACCB /* File+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "File+extension.swift"; path = "kashika/Commons/Extensions/File+extension.swift"; sourceTree = SOURCE_ROOT; };
 		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
+		90A57823230BF55400BBADDA /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -340,12 +342,13 @@
 			isa = PBXGroup;
 			children = (
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
-				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
-				905D83192250F46300EB20AC /* UIColor+extension.swift */,
-				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
-				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
-				90FB187822DEE37100092BB3 /* String+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
+				90FB187822DEE37100092BB3 /* String+extension.swift */,
+				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
+				905D83192250F46300EB20AC /* UIColor+extension.swift */,
+				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
+				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
+				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1168,6 +1171,7 @@
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
+				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
 				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,

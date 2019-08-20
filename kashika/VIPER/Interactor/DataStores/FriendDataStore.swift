@@ -23,7 +23,7 @@ struct FriendDataStore {
             friendDocument.data?.name = name
 
             let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
-            let data = icon?.pngData()
+            let data = icon?.resize(minLength: 200)?.pngData()
             let file = File(reference, data: data, mimeType: .png)
 
             let saveHandler = { () -> (Document<Friend>) in

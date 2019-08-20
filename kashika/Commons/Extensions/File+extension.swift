@@ -21,7 +21,6 @@ extension File {
             }
             let task = self?.save { (metadata, error) in
                 if let error = error {
-                    print(error.localizedDescription)
                     observer.onError(error)
                     return
                 }
