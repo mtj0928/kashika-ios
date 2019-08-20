@@ -21,10 +21,16 @@ struct FriendDataStore {
             let friendDocument = Document<Friend>(collectionReference: collectionReference)
 
             friendDocument.data?.name = name
+            if icon == nil {
+                friendDocument.save()
+                observer.onNext(Monitor(friendDocument))
+                return Disposables.create()
+            }
+
             let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
             let data = icon?.pngData()
             let file = File(reference, data: data, mimeType: .png)
-            
+
             let saveHandler = { () -> (Document<Friend>) in
                 friendDocument.data?.iconFile = file
                 friendDocument.save()
