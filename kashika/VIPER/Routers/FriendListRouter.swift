@@ -14,6 +14,11 @@ class FriendListRouter: FriendListRouterProtocol {
 
     func shoUserDetailView() {
     }
+}
+
+// MARK: - SNSFooterRouterProtocol
+
+extension FriendListRouter: SNSFooterRouterProtocol {
 
     func showUserAddView(with type: UserAdditionType) {
         switch type {

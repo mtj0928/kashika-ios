@@ -10,42 +10,28 @@ import UIKit
 import RxSwift
 import TapticEngine
 
-fileprivate extension UIColor.AppColor {
-    var greenColor: UIColor {
-        return UIColor(hex: "01A564")
-    }
-}
-
 final class FriendListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var addUserButton: EmphasisButton!
-    @IBOutlet private weak var addUseromSNSButton: EmphasisButton!
+    @IBOutlet private weak var footerButtons: SNSFooterButtons!
 
     private var presenter: FriendListPresenterProtocol!
+    private var footerPresenter: SNSFooterPresenterProtocol!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupButton()
+        setupFooter()
         setupNavigationBar()
         setupTableView()
     }
 
-    @IBAction func tappedAddUserButton() {
-        TapticEngine.impact.feedback(.light)
-        presenter.tappedAddUserButton(with: .manual)
-    }
-
-    @IBAction func tappedAddUserFromSNSButton() {
-        TapticEngine.impact.feedback(.light)
-        presenter.tappedAddUserButton(with: .sns)
-    }
-
-    static func createFromStoryboard(with presenter: FriendListPresenterProtocol) -> Self {
+    static func createFromStoryboard(friendListpresenter: FriendListPresenterProtocol,
+                                     footerPresenter: SNSFooterPresenterProtocol) -> Self {
         let viewController = createFromStoryboard()
-        viewController.presenter = presenter
+        viewController.presenter = friendListpresenter
+        viewController.footerPresenter = footerPresenter
         return viewController
     }
 }
@@ -59,14 +45,8 @@ extension FriendListViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    private func setupButton() {
-        addUserButton.setTitle("手動で追加", for: .normal)
-        addUserButton.backgroundColor = UIColor.app.greenColor
-        addUserButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
-
-        addUseromSNSButton.setTitle("SNSから追加", for: .normal)
-        addUseromSNSButton.backgroundColor = UIColor.app.positiveColor
-        addUseromSNSButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+    private func setupFooter() {
+        footerButtons.presenter = footerPresenter
     }
 
     private func setupTableView() {

@@ -42,16 +42,7 @@ class ModalTextField: UIView {
     }
 
     func loadNib() {
-        guard let view = R.nib.modalTextField.firstView(owner: self) else {
-            return
-        }
-        self.addSubview(view)
-
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        addViewWithFilling(R.nib.modalTextField(owner: self))
 
         self.heightAnchor.constraint(equalToConstant: ModalTextField.height).isActive = true
 

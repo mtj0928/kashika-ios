@@ -9,14 +9,9 @@
 import Foundation
 import RxCocoa
 
-enum UserAdditionType {
-    case manual, sns
-}
-
 protocol FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
 
-    func tappedAddUserButton(with: UserAdditionType)
     func tapped(friend: Friend)
 }
 
@@ -26,5 +21,4 @@ protocol FriendListInteractorProtocol {
 
 protocol FriendListRouterProtocol {
     func shoUserDetailView()
-    func showUserAddView(with: UserAdditionType)
 }

@@ -64,6 +64,7 @@
 		906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */; };
 		906FE6AD230643FA00EBC043 /* FriendListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */; };
 		906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
+		90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714ADE230C12C400610109 /* SNSFooterContracts.swift */; };
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
@@ -94,6 +95,9 @@
 		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
 		90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57823230BF55400BBADDA /* UIImage+extension.swift */; };
+		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
+		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
+		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
@@ -225,6 +229,7 @@
 		906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListInteractor.swift; sourceTree = "<group>"; };
 		906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListUseCase.swift; sourceTree = "<group>"; };
 		906FE6AF230644E800EBC043 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		90714ADE230C12C400610109 /* SNSFooterContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterContracts.swift; sourceTree = "<group>"; };
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
@@ -256,6 +261,9 @@
 		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
 		90A57823230BF55400BBADDA /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
+		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -349,6 +357,7 @@
 				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
 				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +476,8 @@
 			children = (
 				905C76022255F20F0011580B /* CloseButton.swift */,
 				90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */,
+				90A57825230C093B00BBADDA /* SNSFooterButtons.swift */,
+				90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -476,6 +487,7 @@
 			children = (
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
+				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F4FF6B22E88E400029990C /* FriendListContracts.swift */,
@@ -655,9 +667,9 @@
 		909D6AAE224E0CA100FE7218 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				905C760C2256D08F0011580B /* Contracts */,
 				904278182304EEAD009480CA /* Inputes */,
 				904278192304EEB4009480CA /* Outputs */,
+				905C760C2256D08F0011580B /* Contracts */,
 				905C760D2256D0A00011580B /* ViewBuilders */,
 			);
 			path = Others;
@@ -895,6 +907,7 @@
 				900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */,
 				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
 				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
+				90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */,
 				906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */,
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
@@ -1120,6 +1133,7 @@
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
+				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
@@ -1167,6 +1181,8 @@
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
+				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
+				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
