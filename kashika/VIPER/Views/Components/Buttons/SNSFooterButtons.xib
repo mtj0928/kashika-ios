@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,28 +19,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="em9-YD-bii">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Edd-gh-BQm">
                     <rect key="frame" x="8" y="0.0" width="398" height="46"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lo-gl-1vJ" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="195" height="46"/>
-                            <state key="normal" title="手動で追加"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-NO-x6x" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                            <rect key="frame" x="203" y="0.0" width="195" height="46"/>
-                            <state key="normal" title="SNSから追加"/>
-                        </button>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="em9-YD-bii">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="46"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lo-gl-1vJ" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="195" height="46"/>
+                                    <state key="normal" title="手動で追加"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1r-NO-x6x" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="203" y="0.0" width="195" height="46"/>
+                                    <state key="normal" title="SNSから追加"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="e1r-NO-x6x" firstAttribute="width" secondItem="0Lo-gl-1vJ" secondAttribute="width" id="6sU-0l-zVI"/>
+                            </constraints>
+                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="e1r-NO-x6x" firstAttribute="width" secondItem="0Lo-gl-1vJ" secondAttribute="width" id="6sU-0l-zVI"/>
+                        <constraint firstAttribute="trailing" secondItem="em9-YD-bii" secondAttribute="trailing" id="dS8-zT-6qE"/>
+                        <constraint firstItem="em9-YD-bii" firstAttribute="leading" secondItem="Edd-gh-BQm" secondAttribute="leading" id="fZF-48-CSc"/>
+                        <constraint firstAttribute="bottom" secondItem="em9-YD-bii" secondAttribute="bottom" id="hC2-gR-DV9"/>
+                        <constraint firstItem="em9-YD-bii" firstAttribute="top" secondItem="Edd-gh-BQm" secondAttribute="top" id="mOo-ON-tAq"/>
                     </constraints>
-                </stackView>
+                </view>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="em9-YD-bii" secondAttribute="bottom" id="YyJ-w0-fVR"/>
-                <constraint firstItem="em9-YD-bii" firstAttribute="leading" secondItem="osz-DQ-wgj" secondAttribute="leading" constant="8" id="b1H-Pq-Jyr"/>
-                <constraint firstItem="em9-YD-bii" firstAttribute="top" secondItem="osz-DQ-wgj" secondAttribute="top" id="dCT-W4-1hR"/>
-                <constraint firstAttribute="trailing" secondItem="em9-YD-bii" secondAttribute="trailing" constant="8" id="hX4-Q1-Gn1"/>
+                <constraint firstAttribute="trailing" secondItem="Edd-gh-BQm" secondAttribute="trailing" constant="8" id="2Rh-2t-aJQ"/>
+                <constraint firstItem="Edd-gh-BQm" firstAttribute="top" secondItem="osz-DQ-wgj" secondAttribute="top" id="5uZ-GL-22B"/>
+                <constraint firstAttribute="bottom" secondItem="Edd-gh-BQm" secondAttribute="bottom" id="VWf-uf-vS5"/>
+                <constraint firstItem="Edd-gh-BQm" firstAttribute="leading" secondItem="osz-DQ-wgj" secondAttribute="leading" constant="8" id="Ztj-ex-lxi"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

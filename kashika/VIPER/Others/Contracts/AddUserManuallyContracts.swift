@@ -14,7 +14,7 @@ protocol AddUserManuallyPresenterProtocol {
     var icon: Observable<UIImage?> { get }
     var name: Observable<String?> { get }
     var isEnableToAdd: Observable<Bool>? { get }
-    var output: AddUserOutputProtocol { get }
+    var output: Observable<AddUserOutputProtocol> { get }
 
     func showAlbum()
     func showModalTextField()
@@ -34,6 +34,5 @@ protocol AddUserManuallyInteractorProtocol {
 }
 
 protocol AddUserOutputProtocol {
-    var isSendingData: Observable<Bool> { get }
-    var progress: Observable<Progress?> { get }
+    var monitor: MonitorObservable<Friend?> { get }
 }

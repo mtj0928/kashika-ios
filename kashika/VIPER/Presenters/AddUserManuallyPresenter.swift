@@ -17,10 +17,13 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     var name: Observable<String?> {
         return nameSubject.asObservable()
     }
-    let output: AddUserOutputProtocol = AddUserManuallyOutput()
+    var output: Observable<AddUserOutputProtocol> {
+        return outputSubject
+    }
 
     private let iconSubject = BehaviorRelay<UIImage?>(value: nil)
     private let nameSubject = BehaviorRelay<String?>(value: nil)
+    private let outputSubject = PublishSubject<AddUserOutputProtocol>()
     private let disposeBag = DisposeBag()
 
     private(set) lazy var isEnableToAdd: Observable<Bool>? = { [weak self] in
@@ -60,13 +63,9 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
 
     func add() {
         let name = nameSubject.value ?? "名前"
-        interactor.addUser(name: name, icon: iconSubject.value)
-            .filter({ $0.progress == nil })
-            .asSingle()
-            .asCompletable()
-            .subscribe({ [weak self] _ in
-                self?.router.dismiss()
-            }).disposed(by: disposeBag)
+        let monitor = interactor.addUser(name: name, icon: iconSubject.value)
+        outputSubject.onNext(AddUserManuallyOutput(monitor: monitor))
+        router.dismiss()
     }
 
     func tappedCloseButton() {

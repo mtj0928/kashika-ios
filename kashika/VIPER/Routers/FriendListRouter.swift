@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class FriendListRouter: FriendListRouterProtocol {
 
@@ -20,7 +21,7 @@ class FriendListRouter: FriendListRouterProtocol {
 
 extension FriendListRouter: SNSFooterRouterProtocol {
 
-    func showUserAddView(with type: UserAdditionType) -> AddUserOutputProtocol? {
+    func showUserAddView(with type: UserAdditionType) -> Observable<AddUserOutputProtocol>? {
         switch type {
         case .manual:
             return showAddUserManualyView()
@@ -29,7 +30,7 @@ extension FriendListRouter: SNSFooterRouterProtocol {
         }
     }
 
-    private func showAddUserManualyView() -> AddUserOutputProtocol {
+    private func showAddUserManualyView() -> Observable<AddUserOutputProtocol> {
         let build = AddUserManualyViewBuilder.build()
         self.viewController?.present(build.viewController, animated: true)
         return build.output

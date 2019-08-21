@@ -49,7 +49,6 @@ class SNSFooterButtons: UIView {
         addViewWithFilling(R.nib.snsFooterButtons(owner: self))
         self.heightAnchor.constraint(equalToConstant: SNSFooterButtons.height).isActive = true
 
-        addUserButton.setTitle("手動で追加", for: .normal)
         addUserButton.backgroundColor = UIColor.app.greenColor
         addUserButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
 
@@ -70,5 +69,21 @@ class SNSFooterButtons: UIView {
             TapticEngine.impact.feedback(.light)
             self?.presenter?.tappedAddUserButton(with: .sns)
         }).disposed(by: disposeBag)
+
+        presenter?.isSendingData.map({ $0 ? "送信中" : "手動で追加" })
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] title in
+                self?.addUserButton.setTitle(title, for: .normal)
+            }).disposed(by: disposeBag)
+
+        presenter?.isSendingData
+            .distinctUntilChanged()
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] isSendingData in
+                UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                    self?.addUseromSNSButton.isHidden = isSendingData
+                    self?.layoutIfNeeded()
+                }, completion: nil)
+            }).disposed(by: disposeBag)
     }
 }

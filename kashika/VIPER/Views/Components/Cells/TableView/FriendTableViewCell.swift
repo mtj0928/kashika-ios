@@ -37,6 +37,10 @@ final class FriendTableViewCell: UITableViewCell {
     private func setup() {
         iconView.layer.masksToBounds = true
 
+        if #available(iOS 13.0, *) {
+            moDebtLabel.textColor = UIColor.placeholderText
+        }
+
         kariLabel.backgroundColor = UIColor.app.negativeColor
         kashiLabel.backgroundColor = UIColor.app.positiveColor
 

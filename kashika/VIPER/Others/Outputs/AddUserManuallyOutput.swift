@@ -10,12 +10,5 @@ import Foundation
 import RxSwift
 
 struct AddUserManuallyOutput: AddUserOutputProtocol {
-    let isSendingData: Observable<Bool>
-    let progress: Observable<Progress?>
-    let monitor: MonitorObservable<Friend> = Observable.empty()
-
-    init() {
-        progress = monitor.map({ $0.progress }).share()
-        isSendingData = progress.map({ $0 != nil })
-    }
+    let monitor: MonitorObservable<Friend?>
 }

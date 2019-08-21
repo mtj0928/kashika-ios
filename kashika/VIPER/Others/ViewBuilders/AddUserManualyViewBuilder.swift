@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 import FloatingPanel
 
 struct AddUserManualyViewBuilder {
 
-    static func build() -> (viewController: UIViewController, output: AddUserOutputProtocol) {
+    static func build() -> (viewController: UIViewController, output: Observable<AddUserOutputProtocol>) {
         let interactor = AddUserManuallyInteractor()
         let router = AddUserManuallyRouter()
         let presenter = AddUserManuallyPresenter(interactor: interactor, router: router)
