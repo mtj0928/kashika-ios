@@ -11,7 +11,7 @@ import FloatingPanel
 
 struct AddUserManualyViewBuilder {
 
-    static func build() -> UIViewController {
+    static func build() -> (viewController: UIViewController, output: AddUserOutputProtocol) {
         let interactor = AddUserManuallyInteractor()
         let router = AddUserManuallyRouter()
         let presenter = AddUserManuallyPresenter(interactor: interactor, router: router)
@@ -22,6 +22,6 @@ struct AddUserManualyViewBuilder {
         floatingPanelConoller.delegate = viewController
         floatingPanelConoller.set(contentViewController: viewController)
 
-        return floatingPanelConoller
+        return (floatingPanelConoller, presenter.output)
     }
 }

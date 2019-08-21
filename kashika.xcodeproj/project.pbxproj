@@ -65,6 +65,7 @@
 		906FE6AD230643FA00EBC043 /* FriendListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */; };
 		906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
 		90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714ADE230C12C400610109 /* SNSFooterContracts.swift */; };
+		90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */; };
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
@@ -230,6 +231,7 @@
 		906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListUseCase.swift; sourceTree = "<group>"; };
 		906FE6AF230644E800EBC043 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		90714ADE230C12C400610109 /* SNSFooterContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterContracts.swift; sourceTree = "<group>"; };
+		90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyOutput.swift; sourceTree = "<group>"; };
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
@@ -456,8 +458,9 @@
 		904278192304EEB4009480CA /* Outputs */ = {
 			isa = PBXGroup;
 			children = (
-				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
 				9042781E2304F037009480CA /* EditUsernameOutput.swift */,
+				90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */,
+				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
 			);
 			path = Outputs;
 			sourceTree = "<group>";
@@ -1137,6 +1140,7 @@
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
+				90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */,

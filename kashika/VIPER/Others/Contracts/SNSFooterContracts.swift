@@ -17,5 +17,5 @@ protocol SNSFooterPresenterProtocol {
 }
 
 protocol SNSFooterRouterProtocol {
-    func showUserAddView(with: UserAdditionType)
+    func showUserAddView(with: UserAdditionType) -> AddUserOutputProtocol?
 }

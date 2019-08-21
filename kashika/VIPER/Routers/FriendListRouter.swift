@@ -20,17 +20,18 @@ class FriendListRouter: FriendListRouterProtocol {
 
 extension FriendListRouter: SNSFooterRouterProtocol {
 
-    func showUserAddView(with type: UserAdditionType) {
+    func showUserAddView(with type: UserAdditionType) -> AddUserOutputProtocol? {
         switch type {
         case .manual:
-            showAddUserManualyView()
+            return showAddUserManualyView()
         case .sns:
-            break
+            return nil
         }
     }
 
-    private func showAddUserManualyView() {
-        let viewController = AddUserManualyViewBuilder.build()
-        self.viewController?.present(viewController, animated: true)
+    private func showAddUserManualyView() -> AddUserOutputProtocol {
+        let build = AddUserManualyViewBuilder.build()
+        self.viewController?.present(build.viewController, animated: true)
+        return build.output
     }
 }

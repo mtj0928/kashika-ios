@@ -17,6 +17,7 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     var name: Observable<String?> {
         return nameSubject.asObservable()
     }
+    let output: AddUserOutputProtocol = AddUserManuallyOutput()
 
     private let iconSubject = BehaviorRelay<UIImage?>(value: nil)
     private let nameSubject = BehaviorRelay<String?>(value: nil)
@@ -34,7 +35,7 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
 
     private let interactor: AddUserManuallyInteractorProtocol
     private let router: AddUserManuallyRouterProtocol
-    private var output: PhotoLibraryPickerOutputProtocol? // 参照カウンタを一つ上げたるため
+    private var outputRef: PhotoLibraryPickerOutputProtocol? // 参照カウンタを一つ上げたるため
 
     init(interactor: AddUserManuallyInteractorProtocol, router: AddUserManuallyRouterProtocol) {
         self.interactor = interactor
@@ -42,8 +43,8 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     }
 
     func showAlbum() {
-        output = router.showAlbum()
-        output?.image.subscribe(onNext: { [weak self] image in
+        outputRef = router.showAlbum()
+        outputRef?.image.subscribe(onNext: { [weak self] image in
             self?.iconSubject.accept(image)
         }).disposed(by: disposeBag)
     }
