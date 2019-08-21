@@ -22,6 +22,7 @@ class ModalTextField: UIView {
     }
 
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var separateView: UIView!
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var unitLabel: UILabel!
     @IBOutlet private weak var okButton: UIButton!
@@ -42,7 +43,9 @@ class ModalTextField: UIView {
     }
 
     func loadNib() {
-        addViewWithFilling(R.nib.modalTextField(owner: self))
+        backgroundColor = UIColor.clear
+        let view = R.nib.modalTextField.firstView(owner: self)
+        addViewWithFilling(view)
 
         self.heightAnchor.constraint(equalToConstant: ModalTextField.height).isActive = true
 
@@ -52,6 +55,11 @@ class ModalTextField: UIView {
         [okButton, cancelButton].forEach { button in
             button?.layer.cornerRadius = 0.0
             button?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        }
+        if #available(iOS 13.0, *) {
+            view?.backgroundColor = UIColor.secondarySystemBackground
+            textField.textColor = UIColor.label
+            separateView.backgroundColor = UIColor.separator
         }
     }
 
