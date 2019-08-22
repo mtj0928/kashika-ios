@@ -490,13 +490,13 @@
 			children = (
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
-				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F4FF6B22E88E400029990C /* FriendListContracts.swift */,
 				9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */,
 				90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";

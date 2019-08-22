@@ -13,7 +13,7 @@ import RxCocoa
 protocol AddUserManuallyPresenterProtocol {
     var icon: Observable<UIImage?> { get }
     var name: Observable<String?> { get }
-    var isEnableToAdd: Observable<Bool>? { get }
+    var isEnableToAdd: Observable<Bool> { get }
     var output: Observable<AddUserOutputProtocol> { get }
 
     func showAlbum()

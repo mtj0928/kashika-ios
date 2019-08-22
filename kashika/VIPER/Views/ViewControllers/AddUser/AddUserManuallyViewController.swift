@@ -16,6 +16,7 @@ final class AddUserManuallyViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var placeHolder: UILabel!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var addButton: EmphasisButton!
 
     private var presenter: AddUserManuallyPresenterProtocol!
     private let disposeBag = DisposeBag()
@@ -25,6 +26,7 @@ final class AddUserManuallyViewController: UIViewController {
 
         setupImageView()
         setupTextLabel()
+        setupAddButton()
     }
 
     @IBAction func tappedSetImageButton() {
@@ -62,6 +64,21 @@ extension AddUserManuallyViewController {
         presenter.icon.subscribe(onNext: { [weak self] image in
             self?.imageView.image = image
         }).disposed(by: disposeBag)
+    }
+
+    private func setupAddButton() {
+        presenter.isEnableToAdd
+            .map({ $0 ? UIColor.app.saveButtonColor : UIColor.app.nonActiveButtonColor })
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] color in
+                self?.addButton.backgroundColor = color
+            }).disposed(by: disposeBag)
+
+        presenter.isEnableToAdd
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] isEnableToAdd in
+                self?.addButton.isUserInteractionEnabled = isEnableToAdd
+            }).disposed(by: disposeBag)
     }
 
     private func setupTextLabel() {

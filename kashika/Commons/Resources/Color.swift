@@ -30,6 +30,8 @@ public extension UIColor {
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")
+        let saveButtonColor = UIColor(hex: "007AFF")
+        let nonActiveButtonColor = UIColor(hex: "BABEC4")
         let negativeColor = UIColor(hex: "D21350")
         let backgroundInImageView = UIColor.lightGray
 

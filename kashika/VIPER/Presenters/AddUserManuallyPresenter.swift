@@ -26,15 +26,9 @@ class AddUserManuallyPresenter: AddUserManuallyPresenterProtocol {
     private let outputSubject = PublishSubject<AddUserOutputProtocol>()
     private let disposeBag = DisposeBag()
 
-    private(set) lazy var isEnableToAdd: Observable<Bool>? = { [weak self] in
-        guard let `self` = self else {
-            return nil
-        }
-
-        return Observable.zip(self.icon, self.name).map {
-            $0 != nil && $1 != nil
-        }
-    }()
+    var isEnableToAdd: Observable<Bool> {
+        return name.map({ !($0 ?? "").isEmpty }).share()
+    }
 
     private let interactor: AddUserManuallyInteractorProtocol
     private let router: AddUserManuallyRouterProtocol
