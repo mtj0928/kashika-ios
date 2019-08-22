@@ -20,7 +20,7 @@ fileprivate extension UIColor.AppColor {
 @IBDesignable
 class SNSFooterButtons: UIView {
 
-    private static let height: CGFloat = 46
+    static let height: CGFloat = 46
 
     @IBOutlet private weak var addUserButton: EmphasisButton!
     @IBOutlet private weak var addUseromSNSButton: EmphasisButton!

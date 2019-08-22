@@ -40,6 +40,7 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bottomConstaraintOfFooter" destination="mzA-hh-ind" id="8Os-ss-Rz6"/>
                         <outlet property="footerButtons" destination="H5x-Ri-FyR" id="Dli-Ij-lvG"/>
                         <outlet property="tableView" destination="5dl-NV-5WU" id="jlj-P8-S2J"/>
                     </connections>

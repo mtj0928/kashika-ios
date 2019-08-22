@@ -14,6 +14,7 @@ final class FriendListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var footerButtons: SNSFooterButtons!
+    @IBOutlet private weak var bottomConstaraintOfFooter: NSLayoutConstraint!
 
     private var presenter: FriendListPresenterProtocol!
     private var footerPresenter: SNSFooterPresenterProtocol!
@@ -58,6 +59,8 @@ extension FriendListViewController {
         tableView.register(R.nib.friendTableViewCell)
 
         tableView.rowHeight = 100.0
+
+        tableView.contentInset.bottom += SNSFooterButtons.height + bottomConstaraintOfFooter.constant + 8
 
         presenter.friends.asDriver().drive(onNext: { [weak self] _ in
             self?.tableView.reloadData()
