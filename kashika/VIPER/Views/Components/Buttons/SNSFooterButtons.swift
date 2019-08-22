@@ -22,12 +22,15 @@ class SNSFooterButtons: UIView {
 
     static let height: CGFloat = 46
 
+    @IBOutlet private weak var leftSpacer: UIView!
     @IBOutlet private weak var addUserButton: EmphasisButton!
+    @IBOutlet private weak var centerSapcer: UIView!
     @IBOutlet private weak var addUseromSNSButton: EmphasisButton!
+    @IBOutlet private weak var rightSpacer: UIView!
 
     var presenter: SNSFooterPresenterProtocol? {
         didSet {
-            update()
+            updatePresenter()
         }
     }
 
@@ -55,9 +58,36 @@ class SNSFooterButtons: UIView {
         addUseromSNSButton.setTitle("SNSから追加", for: .normal)
         addUseromSNSButton.backgroundColor = UIColor.app.positiveColor
         addUseromSNSButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+
+        updateUserInterfaceStyle()
     }
 
-    private func update() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        updateUserInterfaceStyle()
+    }
+
+    private func updateUserInterfaceStyle() {
+        let buttons = [addUserButton, addUseromSNSButton]
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+            buttons.forEach { button in
+                button?.layer.shadowColor = UIColor.clear.cgColor
+            }
+        case .light:
+            buttons.forEach { button in
+                button?.layer.shadowColor = UIColor.black.cgColor
+                button?.layer.shadowOpacity = 0.2
+                button?.layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
+                button?.layer.shadowRadius = 4.0
+            }
+        default:
+            return
+        }
+    }
+
+    private func updatePresenter() {
         disposeBag = DisposeBag()
 
         addUserButton.rx.tap.asDriver().drive(onNext: { [weak self] in
@@ -80,10 +110,15 @@ class SNSFooterButtons: UIView {
             .distinctUntilChanged()
             .asDriver(onErrorDriveWith: Driver.empty())
             .drive(onNext: { [weak self] isSendingData in
-                UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.5, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                    self?.addUseromSNSButton.isHidden = isSendingData
-                    self?.layoutIfNeeded()
-                }, completion: nil)
+                self?.animateButton(isSendingData)
             }).disposed(by: disposeBag)
+    }
+
+    private func animateButton(_ isSendingData: Bool) {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.5, options: UIView.AnimationOptions.curveEaseOut, animations: { [weak self] in
+            self?.addUseromSNSButton.isHidden = isSendingData
+            self?.rightSpacer.isHidden = isSendingData
+            self?.layoutIfNeeded()
+        }, completion: nil)
     }
 }

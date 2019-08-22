@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5x-Ri-FyR" customClass="SNSFooterButtons" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="548" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="556" width="375" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="n9R-Ha-zdP"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                         <constraints>
                             <constraint firstItem="5dl-NV-5WU" firstAttribute="leading" secondItem="n8X-UT-ubS" secondAttribute="leading" id="dHN-Z2-fqe"/>
                             <constraint firstItem="5dl-NV-5WU" firstAttribute="top" secondItem="n8X-UT-ubS" secondAttribute="top" id="jxt-OP-vK3"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="bottom" secondItem="H5x-Ri-FyR" secondAttribute="bottom" constant="24" id="mzA-hh-ind"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="bottom" secondItem="H5x-Ri-FyR" secondAttribute="bottom" constant="16" id="mzA-hh-ind"/>
                             <constraint firstAttribute="trailing" secondItem="H5x-Ri-FyR" secondAttribute="trailing" id="nqD-i1-XYv"/>
                             <constraint firstAttribute="bottom" secondItem="5dl-NV-5WU" secondAttribute="bottom" id="ohE-Eg-kK6"/>
                             <constraint firstItem="H5x-Ri-FyR" firstAttribute="leading" secondItem="n8X-UT-ubS" secondAttribute="leading" id="qUb-u5-CTS"/>

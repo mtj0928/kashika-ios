@@ -24,7 +24,6 @@ class EmphasisButton: UIButton {
     }
 
     private func sharedInit() {
-        layer.masksToBounds = true
         layer.cornerRadius = 5.0
 
         setTitleColor(UIColor.app.white, for: .normal)
