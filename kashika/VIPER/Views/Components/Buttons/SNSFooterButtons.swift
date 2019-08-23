@@ -100,6 +100,11 @@ class SNSFooterButtons: UIView {
             self?.presenter?.tappedAddUserButton(with: .sns)
         }).disposed(by: disposeBag)
 
+        presenter?.isSendingData.asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] sending in
+                self?.addUserButton.isUserInteractionEnabled = !sending
+            }).disposed(by: disposeBag)
+
         presenter?.isSendingData.map({ $0 ? "送信中" : "手動で追加" })
             .asDriver(onErrorDriveWith: Driver.empty())
             .drive(onNext: { [weak self] title in
