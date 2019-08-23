@@ -20,12 +20,10 @@ class AddUserManuallyInteractorTest: XCTestCase {
     }
 
     func testCreatFriend() throws {
-        let single = AddUserManuallyInteractor().addUser(name: "名前", icon: nil)
-        let friend = try single.toBlocking().first()
+        let monitor = AddUserManuallyInteractor().addUser(name: "名前", icon: nil)
+        let friend = try monitor.filter({ $0.value != nil }).toBlocking().first()?.value
 
         XCTAssertNotNil(friend as Any?)
-        // swiftlint:disable force_unwrapping
-        XCTAssertEqual(friend!!.name, "名前")
-        // swiftlint:enable force_unwrapping
+        XCTAssertEqual(friend??.name, "名前")
     }
 }
