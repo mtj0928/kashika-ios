@@ -5,7 +5,8 @@ target 'kashika' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Pring'
+  pod 'FirebaseUI/Storage'
+  pod 'Ballcap' 
   pod 'R.swift'
 
   target 'kashikaTests' do
@@ -13,7 +14,8 @@ target 'kashika' do
 
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
-    pod 'Pring'
+    pod 'FirebaseUI/Storage'
+    pod 'Ballcap' 
     pod 'R.swift'
   end
 
@@ -22,7 +24,8 @@ target 'kashika' do
 
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
-    pod 'Pring'
+    pod 'FirebaseUI/Storage'
+    pod 'Ballcap' 
     pod 'R.swift'
   end
 

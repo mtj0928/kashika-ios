@@ -52,9 +52,3 @@ extension AddUserManuallyRouter: UIViewControllerTransitioningDelegate {
         return trasition
     }
 }
-
-// MARK: -  UIImagePickerControllerDelegate, UINavigationControllerDelegate
-
-extension AddUserManuallyRouter: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-}

@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 import FloatingPanel
 
 struct AddUserManualyViewBuilder {
 
-    static func build() -> UIViewController {
+    static func build() -> (viewController: UIViewController, output: Observable<AddUserOutputProtocol>) {
+        let interactor = AddUserManuallyInteractor()
         let router = AddUserManuallyRouter()
-        let presenter = AddUserManuallyPresenter(router: router)
+        let presenter = AddUserManuallyPresenter(interactor: interactor, router: router)
         let viewController = AddUserManuallyViewController.createFromStoryboard(with: presenter)
         router.viewController = viewController
 
@@ -21,6 +23,6 @@ struct AddUserManualyViewBuilder {
         floatingPanelConoller.delegate = viewController
         floatingPanelConoller.set(contentViewController: viewController)
 
-        return floatingPanelConoller
+        return (floatingPanelConoller, presenter.output)
     }
 }

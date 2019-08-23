@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Add User Manually View Controller-->
@@ -49,7 +48,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="未入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lo-v7-Zmc">
                                                         <rect key="frame" x="103" y="29.5" width="112" height="29"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="placeholderTextColor"/>
+                                                        <color key="textColor" systemColor="placeholderTextColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="松本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-V4-Jo9">
@@ -68,7 +67,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVW-Qi-O7W" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="301" width="382" height="51"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.72941176470588232" green="0.74509803921568629" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="51" id="3md-Aq-WIs"/>
                                                 </constraints>
@@ -94,7 +93,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sP-Tf-JyD" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
                                         <rect key="frame" x="354" y="10" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemFillColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9sP-Tf-JyD" secondAttribute="height" multiplier="1:1" id="jEG-j0-MlG"/>
                                             <constraint firstAttribute="width" constant="50" id="kaP-HX-G1B"/>
@@ -120,7 +119,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WAX-n4-zdI" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="BB2-Xs-xPg"/>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="WAX-n4-zdI" secondAttribute="trailing" id="KAM-cj-GrO"/>
@@ -129,6 +128,7 @@
                         <viewLayoutGuide key="safeArea" id="P8d-UG-YEN"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="NVW-Qi-O7W" id="8NE-Ea-hko"/>
                         <outlet property="imageView" destination="IoW-uj-zDX" id="pnX-GO-Jxu"/>
                         <outlet property="nameLabel" destination="h7g-V4-Jo9" id="V0J-yX-7ev"/>
                         <outlet property="placeHolder" destination="0Lo-v7-Zmc" id="F0M-71-tmj"/>

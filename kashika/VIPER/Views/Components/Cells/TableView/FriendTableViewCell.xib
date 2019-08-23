@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="97" id="0xd-3J-Y2R" customClass="FriendTableViewCell" customModule="kashika" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xd-3J-Y2R" id="cT8-10-HQd">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rOA-Qe-vDT">
+                        <rect key="frame" x="18" y="18" width="378" height="61"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-9B-C5i">
+                                <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bmB-9B-C5i" secondAttribute="height" multiplier="1:1" id="iEi-1a-12c"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="071-rW-Pfz">
+                                <rect key="frame" x="69" y="0.0" width="309" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="田中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-p0-VI4">
+                                        <rect key="frame" x="0.0" y="0.0" width="309" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AVJ-5q-QP2">
+                                        <rect key="frame" x="0.0" y="39.5" width="309" height="21.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貸し" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cS-bY-Bjt">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="rq1-R0-93A"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="借り" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJA-fr-SZ5">
+                                                <rect key="frame" x="50" y="0.0" width="45" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1,764円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kf-u7-9Ek">
+                                                <rect key="frame" x="100" y="0.0" width="93.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貸し借りなし" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK1-sq-P2v">
+                                                <rect key="frame" x="198.5" y="0.0" width="110.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <color key="textColor" cocoaTouchSystemColor="placeholderTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FJA-fr-SZ5" firstAttribute="width" secondItem="6cS-bY-Bjt" secondAttribute="width" id="aLf-ev-5CX"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rOA-Qe-vDT" firstAttribute="leading" secondItem="cT8-10-HQd" secondAttribute="leading" constant="18" id="LKg-03-804"/>
+                    <constraint firstAttribute="trailing" secondItem="rOA-Qe-vDT" secondAttribute="trailing" constant="18" id="k1g-bk-Pwf"/>
+                    <constraint firstItem="rOA-Qe-vDT" firstAttribute="centerY" secondItem="cT8-10-HQd" secondAttribute="centerY" id="qyQ-yU-Xtv"/>
+                    <constraint firstItem="rOA-Qe-vDT" firstAttribute="top" secondItem="cT8-10-HQd" secondAttribute="top" constant="18" id="z5A-3Q-abK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="bmB-9B-C5i" id="2Sp-Ch-eZQ"/>
+                <outlet property="kariLabel" destination="FJA-fr-SZ5" id="6P2-og-FnO"/>
+                <outlet property="kashiLabel" destination="6cS-bY-Bjt" id="bin-rg-cZH"/>
+                <outlet property="moDebtLabel" destination="MK1-sq-P2v" id="dlC-Ct-KPX"/>
+                <outlet property="moneyLabel" destination="7kf-u7-9Ek" id="bX6-cc-6ue"/>
+                <outlet property="nameLabel" destination="IlE-p0-VI4" id="LbD-WQ-CrY"/>
+            </connections>
+            <point key="canvasLocation" x="-600" y="-92.075892857142847"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -15,11 +15,16 @@ struct RootPresenter: RootPresenterProtocol {
     let canShowFloatingPannel = BehaviorRelay<Bool>(value: false)
     let floatingPanelContentViewController = BehaviorRelay<UIViewController?>(value: nil)
 
+    private let interactor: RootInteractorProtocol
     private let router: RootRouterProtocol
+    private let disposeBag = DisposeBag()
 
-    init(router: RootRouterProtocol) {
+    init(interactor: RootInteractorProtocol, router: RootRouterProtocol) {
+        self.interactor = interactor
         self.router = router
         floatingPanelContentViewController.accept(AddDebtViewBuilder.build(canShowFloatingPannel))
+
+        interactor.fetchOrCreateCurrentUser().subscribe().disposed(by: disposeBag)
     }
 
     func showFloatingPannel() {

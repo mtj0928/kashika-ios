@@ -35,6 +35,10 @@
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
+		90427821230521A8009480CA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90427820230521A8009480CA /* Friend.swift */; };
+		9042782323052240009480CA /* FriendDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782223052240009480CA /* FriendDataStore.swift */; };
+		9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782623052B10009480CA /* AddUserManuallyInteractor.swift */; };
+		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
 		9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */; };
@@ -54,6 +58,14 @@
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
 		906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */; };
+		906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */; };
+		906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 906FE6A623053E5100EBC043 /* FriendTableViewCell.xib */; };
+		906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6A823054CDA00EBC043 /* UITableView+extension.swift */; };
+		906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */; };
+		906FE6AD230643FA00EBC043 /* FriendListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */; };
+		906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
+		90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714ADE230C12C400610109 /* SNSFooterContracts.swift */; };
+		90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */; };
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
@@ -62,6 +74,7 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
+		909BDA6F230ABFC800689573 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BDA6E230ABFC800689573 /* Monitor.swift */; };
 		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
 		909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAC224E0C3000FE7218 /* RootInteractor.swift */; };
 		909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAF224E0CC800FE7218 /* RootContracts.swift */; };
@@ -79,6 +92,13 @@
 		909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AD6224E465400FE7218 /* RootPresenter.swift */; };
 		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
+		909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64A92308D18000B0ACCB /* File+extension.swift */; };
+		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
+		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
+		90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57823230BF55400BBADDA /* UIImage+extension.swift */; };
+		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
+		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
+		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
@@ -182,6 +202,10 @@
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
+		90427820230521A8009480CA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		9042782223052240009480CA /* FriendDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataStore.swift; sourceTree = "<group>"; };
+		9042782623052B10009480CA /* AddUserManuallyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractor.swift; sourceTree = "<group>"; };
+		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
 		9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldContracts.swift; sourceTree = "<group>"; };
@@ -200,6 +224,14 @@
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
 		906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDebtLayout.swift; sourceTree = "<group>"; };
+		906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		906FE6A623053E5100EBC043 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		906FE6A823054CDA00EBC043 /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListInteractor.swift; sourceTree = "<group>"; };
+		906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListUseCase.swift; sourceTree = "<group>"; };
+		906FE6AF230644E800EBC043 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		90714ADE230C12C400610109 /* SNSFooterContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterContracts.swift; sourceTree = "<group>"; };
+		90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyOutput.swift; sourceTree = "<group>"; };
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
@@ -214,6 +246,7 @@
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909BDA6E230ABFC800689573 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		909D6AAC224E0C3000FE7218 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		909D6AAF224E0CC800FE7218 /* RootContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContracts.swift; sourceTree = "<group>"; };
@@ -226,6 +259,13 @@
 		909D6AD6224E465400FE7218 /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
+		909E64A92308D18000B0ACCB /* File+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "File+extension.swift"; path = "kashika/Commons/Extensions/File+extension.swift"; sourceTree = SOURCE_ROOT; };
+		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
+		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
+		90A57823230BF55400BBADDA /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
+		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -311,10 +351,15 @@
 		5870126C224C5373003888E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
-				905D83192250F46300EB20AC /* UIColor+extension.swift */,
-				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
+				909E64A92308D18000B0ACCB /* File+extension.swift */,
+				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
 				90FB187822DEE37100092BB3 /* String+extension.swift */,
+				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
+				905D83192250F46300EB20AC /* UIColor+extension.swift */,
+				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
+				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
+				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,8 +377,7 @@
 		5870127C224C63A7003888E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				904278182304EEAD009480CA /* Inputes */,
-				904278192304EEB4009480CA /* Outputs */,
+				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
 			);
 			path = Entities;
@@ -414,8 +458,9 @@
 		904278192304EEB4009480CA /* Outputs */ = {
 			isa = PBXGroup;
 			children = (
-				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
 				9042781E2304F037009480CA /* EditUsernameOutput.swift */,
+				90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */,
+				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
 			);
 			path = Outputs;
 			sourceTree = "<group>";
@@ -434,6 +479,8 @@
 			children = (
 				905C76022255F20F0011580B /* CloseButton.swift */,
 				90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */,
+				90A57825230C093B00BBADDA /* SNSFooterButtons.swift */,
+				90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -449,6 +496,7 @@
 				9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */,
 				90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
+				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -498,8 +546,9 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				905D83122250CF0900EB20AC /* Resources */,
+				909BDA72230AC26400689573 /* Entities */,
 				5870126C224C5373003888E8 /* Extensions */,
+				905D83122250CF0900EB20AC /* Resources */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -512,6 +561,23 @@
 				90EA361B22ED20B2000EDF8A /* FloatingPanelConfiguration.swift */,
 			);
 			path = FloatingPanelLayouts;
+			sourceTree = "<group>";
+		};
+		906FE6A323053DF000EBC043 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
+				906FE6A623053E5100EBC043 /* FriendTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		906FE6AE230644D600EBC043 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				906FE6AF230644E800EBC043 /* UserRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		909600492249B295002F1DE6 = {
@@ -569,11 +635,22 @@
 			path = kashikaUITests;
 			sourceTree = "<group>";
 		};
+		909BDA72230AC26400689573 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				909BDA6E230ABFC800689573 /* Monitor.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		909D6AA5224DE9EC00FE7218 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AB3224E12EB00FE7218 /* UseCase */,
+				909D6AB3224E12EB00FE7218 /* UseCases */,
+				906FE6AE230644D600EBC043 /* Repositories */,
 				909D6AA8224DEA4E00FE7218 /* DataStores */,
+				9042782623052B10009480CA /* AddUserManuallyInteractor.swift */,
+				906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */,
 				909D6AAC224E0C3000FE7218 /* RootInteractor.swift */,
 			);
 			name = Interactors;
@@ -583,8 +660,9 @@
 		909D6AA8224DEA4E00FE7218 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
+				9042782223052240009480CA /* FriendDataStore.swift */,
+				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 			);
 			path = DataStores;
 			sourceTree = "<group>";
@@ -592,18 +670,21 @@
 		909D6AAE224E0CA100FE7218 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				905C760D2256D0A00011580B /* ViewBuilders */,
+				904278182304EEAD009480CA /* Inputes */,
+				904278192304EEB4009480CA /* Outputs */,
 				905C760C2256D08F0011580B /* Contracts */,
+				905C760D2256D0A00011580B /* ViewBuilders */,
 			);
 			path = Others;
 			sourceTree = "<group>";
 		};
-		909D6AB3224E12EB00FE7218 /* UseCase */ = {
+		909D6AB3224E12EB00FE7218 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */,
 				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 			);
-			path = UseCase;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		909D6AB8224E366A00FE7218 /* VIPER */ = {
@@ -618,6 +699,7 @@
 			isa = PBXGroup;
 			children = (
 				909D6ABB224E36BB00FE7218 /* RootInteractorTest.swift */,
+				9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -629,6 +711,7 @@
 				90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */,
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
+				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
 				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 			);
@@ -673,6 +756,7 @@
 			isa = PBXGroup;
 			children = (
 				90D1610722587CD900AF7934 /* CollectionView */,
+				906FE6A323053DF000EBC043 /* TableView */,
 				900E4D58225C1855003C59B1 /* CellStatus.swift */,
 			);
 			path = Cells;
@@ -826,6 +910,8 @@
 				900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */,
 				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
 				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
+				90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */,
+				906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */,
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
@@ -1040,16 +1126,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
+				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
+				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
+				90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */,
@@ -1072,6 +1163,7 @@
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
 				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,
+				906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */,
 				9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */,
 				90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */,
 				9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */,
@@ -1080,6 +1172,7 @@
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
+				9042782323052240009480CA /* FriendDataStore.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
@@ -1087,16 +1180,26 @@
 				90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */,
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
+				906FE6AD230643FA00EBC043 /* FriendListUseCase.swift in Sources */,
 				90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
+				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
+				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
+				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
+				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
+				906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */,
+				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
+				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
 				90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */,
 				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
+				90427821230521A8009480CA /* Friend.swift in Sources */,
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
@@ -1108,6 +1211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */,
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
 				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,

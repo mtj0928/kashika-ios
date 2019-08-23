@@ -6,12 +6,12 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
 struct RootInteractor: RootInteractorProtocol {
 
-    func fetchOrCreateCurrentUser() -> Single<User> {
+    func fetchOrCreateCurrentUser() -> Single<User?> {
         return UserUseCase().fetchOrCreateUser()
+            .map { $0.data }
     }
 }

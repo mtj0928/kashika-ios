@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Ballcap
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,7 @@ extension AppDelegate {
 
     private func setupFirebase() {
         FirebaseApp.configure()
+        BallcapApp.configure(Firestore.firestore().document("version/1"))
     }
 
     private func setupWindow() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class FriendListRouter: FriendListRouterProtocol {
 
@@ -14,18 +15,24 @@ class FriendListRouter: FriendListRouterProtocol {
 
     func shoUserDetailView() {
     }
+}
 
-    func showUserAddView(with type: UserAdditionType) {
+// MARK: - SNSFooterRouterProtocol
+
+extension FriendListRouter: SNSFooterRouterProtocol {
+
+    func showUserAddView(with type: UserAdditionType) -> Observable<AddUserOutputProtocol>? {
         switch type {
         case .manual:
-            showAddUserManualyView()
+            return showAddUserManualyView()
         case .sns:
-            break
+            return nil
         }
     }
 
-    private func showAddUserManualyView() {
-        let viewController = AddUserManualyViewBuilder.build()
-        self.viewController?.present(viewController, animated: true)
+    private func showAddUserManualyView() -> Observable<AddUserOutputProtocol> {
+        let build = AddUserManualyViewBuilder.build()
+        self.viewController?.present(build.viewController, animated: true)
+        return build.output
     }
 }

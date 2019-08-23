@@ -7,43 +7,32 @@
 //
 
 import UIKit
+import RxSwift
 import TapticEngine
-
-fileprivate extension UIColor.AppColor {
-    var greenColor: UIColor {
-        return UIColor(hex: "01A564")
-    }
-}
 
 final class FriendListViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var addUserButton: EmphasisButton!
-    @IBOutlet private weak var addUseromSNSButton: EmphasisButton!
+    @IBOutlet private weak var footerButtons: SNSFooterButtons!
+    @IBOutlet private weak var bottomConstaraintOfFooter: NSLayoutConstraint!
 
     private var presenter: FriendListPresenterProtocol!
+    private var footerPresenter: SNSFooterPresenterProtocol!
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupButton()
+        setupFooter()
         setupNavigationBar()
         setupTableView()
     }
 
-    @IBAction func tappedAddUserButton() {
-        TapticEngine.impact.feedback(.light)
-        presenter.tappedAddUserButton(with: .manual)
-    }
-
-    @IBAction func tappedAddUserFromSNSButton() {
-        TapticEngine.impact.feedback(.light)
-        presenter.tappedAddUserButton(with: .sns)
-    }
-
-    static func createFromStoryboard(with presenter: FriendListPresenterProtocol) -> Self {
+    static func createFromStoryboard(friendListpresenter: FriendListPresenterProtocol,
+                                     footerPresenter: SNSFooterPresenterProtocol) -> Self {
         let viewController = createFromStoryboard()
-        viewController.presenter = presenter
+        viewController.presenter = friendListpresenter
+        viewController.footerPresenter = footerPresenter
         return viewController
     }
 }
@@ -57,14 +46,8 @@ extension FriendListViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    private func setupButton() {
-        addUserButton.setTitle("手動で追加", for: .normal)
-        addUserButton.backgroundColor = UIColor.app.greenColor
-        addUserButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
-
-        addUseromSNSButton.setTitle("SNSから追加", for: .normal)
-        addUseromSNSButton.backgroundColor = UIColor.app.positiveColor
-        addUseromSNSButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+    private func setupFooter() {
+        footerButtons.presenter = footerPresenter
     }
 
     private func setupTableView() {
@@ -72,6 +55,16 @@ extension FriendListViewController {
         tableView.dataSource = self
 
         tableView.tableFooterView = UIView()
+
+        tableView.register(R.nib.friendTableViewCell)
+
+        tableView.rowHeight = 100.0
+
+        tableView.contentInset.bottom += SNSFooterButtons.height + 2 * bottomConstaraintOfFooter.constant
+
+        presenter.friends.asDriver().drive(onNext: { [weak self] _ in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
     }
 }
 
@@ -84,7 +77,10 @@ extension FriendListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendTableViewCell, for: indexPath)
+        let friend = presenter.friends.value[indexPath.row]
+        cell.set(presenter: FriendListCellPresenter(friend))
+        return cell
     }
 }
 
@@ -93,7 +89,7 @@ extension FriendListViewController: UITableViewDataSource {
 extension FriendListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = presenter.friends.value[indexPath.row]
-        presenter.tapped(user: user)
+        let friend = presenter.friends.value[indexPath.row]
+        presenter.tapped(friend: friend)
     }
 }

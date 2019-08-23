@@ -22,7 +22,7 @@ class RootInteractorTest: XCTestCase {
     func testCreateUser() throws {
         let single = RootInteractor().fetchOrCreateCurrentUser()
         let user = try single.toBlocking().first()
-        XCTAssertNotNil(user)
+        XCTAssertNotNil(user as Any?)
     }
 
     func testFetchUser() throws {
@@ -31,6 +31,6 @@ class RootInteractorTest: XCTestCase {
 
         let single2 = RootInteractor().fetchOrCreateCurrentUser()
         let user2 = try single2.toBlocking().first()
-        XCTAssertEqual(user1?.id, user2?.id)
+        XCTAssertEqual(user1??.name, user2??.name)
     }
 }
