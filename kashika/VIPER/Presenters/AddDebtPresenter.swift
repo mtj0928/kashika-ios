@@ -15,6 +15,11 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     let isDecelerating: BehaviorRelay<Bool>
     let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
     let isSelected = BehaviorRelay<Bool>(value: false)
+    var canBeAddDebt: Observable<Bool> {
+        let moneyIsInputed = money.map({ $0 != 0 })
+        return Observable.combineLatest(isSelected.asObservable(), moneyIsInputed)
+            .map({ $0.0 && $0.1 })
+    }
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }

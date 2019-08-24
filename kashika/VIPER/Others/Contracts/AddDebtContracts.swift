@@ -14,6 +14,7 @@ protocol AddDebtPresenterProtocol {
     var isDecelerating: BehaviorRelay<Bool> { get }
     var selectedIndexes: BehaviorRelay<Set<Int>> { get }
     var isSelected: BehaviorRelay<Bool> { get }
+    var canBeAddDebt: Observable<Bool> { get }
     var friends: BehaviorRelay<[Friend]> { get }
     var money: BehaviorRelay<Int> { get }
     var shouldShowPlaceHolder: Observable<Bool> { get }

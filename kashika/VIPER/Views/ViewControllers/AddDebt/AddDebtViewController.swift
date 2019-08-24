@@ -72,10 +72,14 @@ extension AddDebtViewController {
     }
 
     private func setupButton() {
-        karitaButton.backgroundColor = UIColor.app.negativeColor
-        karitaButton.setTitle("借りた！", for: .normal)
+        presenter.canBeAddDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] canBeAdd in
+            self?.karitaButton.backgroundColor = canBeAdd ? UIColor.app.negativeColor : UIColor.app.nonActiveButtonColor
+            self?.kashitaButton.backgroundColor = canBeAdd ? UIColor.app.positiveColor : UIColor.app.nonActiveButtonColor
+            self?.karitaButton.isUserInteractionEnabled = canBeAdd
+            self?.kashitaButton.isUserInteractionEnabled = canBeAdd
+            }).disposed(by: disposeBag)
 
-        kashitaButton.backgroundColor = UIColor.app.positiveColor
+        karitaButton.setTitle("借りた！", for: .normal)
         kashitaButton.setTitle("貸した！", for: .normal)
     }
 
