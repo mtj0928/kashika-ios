@@ -15,17 +15,21 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     let isDecelerating: BehaviorRelay<Bool>
     let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
     let isSelected = BehaviorRelay<Bool>(value: false)
-    let friends = BehaviorRelay<[User]>(value: [])
+    var friends: BehaviorRelay<[Friend]> {
+        return interactor.friends
+    }
     let money = BehaviorRelay<Int>(value: 0)
     var shouldShowPlaceHolder: Observable<Bool> {
         return money.asObservable().map({ $0 == 0 })
     }
 
+    private let interactor: AddDebtInteractorProtocol
     private let router: AddDebtRouterProtocol
     private let disposeBag = DisposeBag()
 
-    init(_ isDecelerating: BehaviorRelay<Bool>, router: AddDebtRouterProtocol) {
+    init(_ isDecelerating: BehaviorRelay<Bool>, interactor: AddDebtInteractorProtocol, router: AddDebtRouterProtocol) {
         self.isDecelerating = isDecelerating
+        self.interactor = interactor
         self.router = router
 
         selectedIndexes.subscribe(onNext: { [weak self] indexes in

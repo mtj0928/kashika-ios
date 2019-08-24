@@ -63,7 +63,6 @@
 		906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6A823054CDA00EBC043 /* UITableView+extension.swift */; };
 		906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */; };
 		906FE6AD230643FA00EBC043 /* FriendListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AC230643FA00EBC043 /* FriendListUseCase.swift */; };
-		906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
 		90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714ADE230C12C400610109 /* SNSFooterContracts.swift */; };
 		90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */; };
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
@@ -122,6 +121,11 @@
 		90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
 		90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90FB188022DF05FF00092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
+		90FD9FC723112758002D214B /* FriendsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FC623112758002D214B /* FriendsPool.swift */; };
+		90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
+		90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */; };
+		90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FBC230FF771002D214B /* FriendRepository.swift */; };
+		90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FCD23114592002D214B /* AddDebtInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +291,10 @@
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		90FB187B22DEF6C400092BB3 /* TapticEngine.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TapticEngine.framework.dSYM; path = Carthage/Build/iOS/TapticEngine.framework.dSYM; sourceTree = "<group>"; };
 		90FB187C22DEF6D500092BB3 /* TapticEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TapticEngine.framework; path = Carthage/Build/iOS/TapticEngine.framework; sourceTree = "<group>"; };
+		90FD9FBC230FF771002D214B /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
+		90FD9FC623112758002D214B /* FriendsPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPool.swift; sourceTree = "<group>"; };
+		90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPoolContainer.swift; sourceTree = "<group>"; };
+		90FD9FCD23114592002D214B /* AddDebtInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtInteractor.swift; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -575,7 +583,9 @@
 		906FE6AE230644D600EBC043 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				909D6AA8224DEA4E00FE7218 /* DataStores */,
 				906FE6AF230644E800EBC043 /* UserRepository.swift */,
+				90FD9FBC230FF771002D214B /* FriendRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -648,7 +658,7 @@
 			children = (
 				909D6AB3224E12EB00FE7218 /* UseCases */,
 				906FE6AE230644D600EBC043 /* Repositories */,
-				909D6AA8224DEA4E00FE7218 /* DataStores */,
+				90FD9FCD23114592002D214B /* AddDebtInteractor.swift */,
 				9042782623052B10009480CA /* AddUserManuallyInteractor.swift */,
 				906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */,
 				909D6AAC224E0C3000FE7218 /* RootInteractor.swift */,
@@ -660,9 +670,8 @@
 		909D6AA8224DEA4E00FE7218 /* DataStores */ = {
 			isa = PBXGroup;
 			children = (
-				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
-				9042782223052240009480CA /* FriendDataStore.swift */,
-				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
+				90FD9FC823112A38002D214B /* Network */,
+				90FD9FC223112647002D214B /* OnMemory */,
 			);
 			path = DataStores;
 			sourceTree = "<group>";
@@ -790,6 +799,25 @@
 				90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		90FD9FC223112647002D214B /* OnMemory */ = {
+			isa = PBXGroup;
+			children = (
+				90FD9FC623112758002D214B /* FriendsPool.swift */,
+				90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */,
+			);
+			path = OnMemory;
+			sourceTree = "<group>";
+		};
+		90FD9FC823112A38002D214B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
+				9042782223052240009480CA /* FriendDataStore.swift */,
+				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1139,6 +1167,7 @@
 				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
+				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
 				90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
@@ -1153,11 +1182,13 @@
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
 				90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
+				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
+				90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
@@ -1184,6 +1215,7 @@
 				90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
+				90FD9FC723112758002D214B /* FriendsPool.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
 				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
 				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
@@ -1193,7 +1225,6 @@
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
 				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
-				906FE6B0230644E800EBC043 /* UserRepository.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
@@ -1203,6 +1234,7 @@
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

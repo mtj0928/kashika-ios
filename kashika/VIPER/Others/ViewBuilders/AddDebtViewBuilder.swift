@@ -12,8 +12,9 @@ import FloatingPanel
 final class AddDebtViewBuilder {
 
     static func build(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> UIViewController {
+        let interactor = AddDebtInteractor()
         let router = AddDebtRouter()
-        let presenter = AddDebtPresenter(canShowFloatingPannel, router: router)
+        let presenter = AddDebtPresenter(canShowFloatingPannel, interactor: interactor, router: router)
         let viewController = AddDebtViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
 

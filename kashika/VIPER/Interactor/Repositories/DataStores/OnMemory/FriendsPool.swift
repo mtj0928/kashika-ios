@@ -22,6 +22,7 @@ class FriendsPool {
         guard user.id != nowListeningUser?.id else {
             return
         }
+        nowListeningUser = user
 
         disposeBag = DisposeBag()
 

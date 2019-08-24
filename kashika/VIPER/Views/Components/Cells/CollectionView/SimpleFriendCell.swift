@@ -27,7 +27,7 @@ class SimnpleFriendCell: UICollectionViewCell {
         fadeView.alpha = 0.8
     }
 
-    func set(status: CellStatus) {
+    func set(friend: Friend, status: CellStatus) {
         switch status {
         case .selected:
             addBorder()
@@ -39,6 +39,9 @@ class SimnpleFriendCell: UICollectionViewCell {
             removeBorder()
             fadeView.isHidden = true
         }
+
+        iconImageView.sd_setImage(with: friend.iconFile?.url)
+        nameLable.text = friend.name
         updateLayout()
     }
 

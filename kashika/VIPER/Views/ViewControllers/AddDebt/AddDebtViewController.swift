@@ -115,7 +115,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
 
         switch section {
         case .friend:
-            return presenter.friends.value.count + 10
+            return presenter.friends.value.count 
         case .users:
             return 1
         }
@@ -137,7 +137,8 @@ extension AddDebtViewController: UICollectionViewDataSource {
     private func friendCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
         let status = presenter.getStatus(at: indexPath.item)
-        cell.set(status: status)
+        let friend = presenter.friends.value[indexPath.item]
+        cell.set(friend: friend, status: status)
         cell.isSecondary = true
         return cell
     }
