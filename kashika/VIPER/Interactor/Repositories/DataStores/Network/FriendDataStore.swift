@@ -14,6 +14,8 @@ import Firebase
 struct FriendDataStore {
 
     static let key = "friends"
+    static let imageMinLength: CGFloat = 200
+    static let fileName = "icon"
 
     func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
         return Observable.create { observer -> Disposable in
@@ -22,8 +24,8 @@ struct FriendDataStore {
 
             friendDocument.data?.name = name
 
-            let reference = Storage.storage().reference(withPath: friendDocument.path).child("icon")
-            let data = icon?.resize(minLength: 200)?.pngData()
+            let reference = Storage.storage().reference(withPath: friendDocument.path).child(FriendDataStore.fileName)
+            let data = icon?.resize(minLength: FriendDataStore.imageMinLength)?.pngData()
             let file = File(reference, data: data, mimeType: .png)
 
             let saveHandler = { () -> (Document<Friend>) in

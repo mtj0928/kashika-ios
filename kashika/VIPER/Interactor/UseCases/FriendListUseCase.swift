@@ -22,13 +22,18 @@ class FriendListUseCase {
         }
     }
 
+    private let userRepository = UserRepository()
+    private let friendRepository = FriendRepository()
     private let disposeBag = RxSwift.DisposeBag()
 
     init() {
-        UserRepository()
+        userRepository
             .fetchOrCreateUser()
-            .asObservable()
-            .flatMap { FriendDataStore().listen(user: $0) }
+            .subscribe(onSuccess: { [weak self] user in
+                self?.friendRepository.listen(user: user)
+            }).disposed(by: disposeBag)
+
+        friendRepository.friends
             .subscribe(onNext: { [weak self] documents in
                 self?.documents = documents
             }).disposed(by: disposeBag)
