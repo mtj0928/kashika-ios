@@ -77,7 +77,7 @@ extension AddDebtViewController {
             self?.kashitaButton.backgroundColor = canBeAdd ? UIColor.app.positiveColor : UIColor.app.nonActiveButtonColor
             self?.karitaButton.isUserInteractionEnabled = canBeAdd
             self?.kashitaButton.isUserInteractionEnabled = canBeAdd
-            }).disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
 
         karitaButton.setTitle("借りた！", for: .normal)
         kashitaButton.setTitle("貸した！", for: .normal)
@@ -95,6 +95,10 @@ extension AddDebtViewController {
         collectionView.register(R.nib.userIconCollectionViewCell)
 
         presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
+            self?.collectionView.reloadData()
+        }).disposed(by: disposeBag)
+
+        presenter.friends.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
         }).disposed(by: disposeBag)
     }
