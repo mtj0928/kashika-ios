@@ -18,19 +18,19 @@ struct FriendDataStore {
     static let fileName = "icon"
 
     func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
-        return Single.just(userDocument)
-            .map { $0.documentReference.collection(FriendDataStore.key) }
-            .map { Document<Friend>(collectionReference: $0) }
-            .map({ document in
+        return Observable.just(userDocument)
+            .map({ userDocument in
+                let collectionReference = userDocument.documentReference.collection(FriendDataStore.key)
+                let document = Document<Friend>(collectionReference: collectionReference)
                 let reference = document.storageReference.child(FriendDataStore.fileName)
                 let data = icon?.resize(minLength: FriendDataStore.imageMinLength)?.pngData()
                 let file = File(reference, data: data, mimeType: .png)
 
                 document.data?.name = name
                 document.data?.iconFile = file
+
                 return document
             })
-            .asObservable()
             .flatMap({ (document: Document<Friend>) -> Observable<(Document<Friend>, Monitor<StorageMetadata?>)> in
                 guard let data = document.data else {
                     return Observable.error(NSError(domain: "[mtj0928] Document.data is not exist", code: -1, userInfo: nil))

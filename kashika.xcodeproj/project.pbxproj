@@ -13,6 +13,11 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7C23165D990060E882 /* DebtRepository.swift */; };
+		58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7E23165F390060E882 /* DebtUseCase.swift */; };
+		58CA7CF12316458D001231A9 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF02316458D001231A9 /* Debt.swift */; };
+		58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF2231655FA001231A9 /* DebtDataStore.swift */; };
+		58CA7CF723165820001231A9 /* Document+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF623165820001231A9 /* Document+extension.swift */; };
 		900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */; };
 		900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */; };
 		900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1A0A22E42EEC00576AEC /* RootRouter.swift */; };
@@ -195,6 +200,11 @@
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		58701270224C5A61003888E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		58C0DB7C23165D990060E882 /* DebtRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtRepository.swift; sourceTree = "<group>"; };
+		58C0DB7E23165F390060E882 /* DebtUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtUseCase.swift; sourceTree = "<group>"; };
+		58CA7CF02316458D001231A9 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
+		58CA7CF2231655FA001231A9 /* DebtDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDataStore.swift; sourceTree = "<group>"; };
+		58CA7CF623165820001231A9 /* Document+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+extension.swift"; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -386,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				90E309E7231617350097104C /* Batch+extension.swift */,
+				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
 				90FB187822DEE37100092BB3 /* String+extension.swift */,
@@ -413,6 +424,7 @@
 		5870127C224C63A7003888E8 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				58CA7CF02316458D001231A9 /* Debt.swift */,
 				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
 			);
@@ -620,6 +632,7 @@
 			children = (
 				909D6AA8224DEA4E00FE7218 /* DataStores */,
 				906FE6AF230644E800EBC043 /* UserRepository.swift */,
+				58C0DB7C23165D990060E882 /* DebtRepository.swift */,
 				90FD9FBC230FF771002D214B /* FriendRepository.swift */,
 			);
 			path = Repositories;
@@ -728,6 +741,7 @@
 			children = (
 				906FE6AC230643FA00EBC043 /* FriendUseCase.swift */,
 				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
+				58C0DB7E23165F390060E882 /* DebtUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -854,6 +868,7 @@
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
 				9042782223052240009480CA /* FriendDataStore.swift */,
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
+				58CA7CF2231655FA001231A9 /* DebtDataStore.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1218,7 +1233,9 @@
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
+				58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
+				58CA7CF723165820001231A9 /* Document+extension.swift in Sources */,
 				90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */,
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
@@ -1235,6 +1252,7 @@
 				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
+				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
@@ -1244,6 +1262,7 @@
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
 				90FD9FD423121E89002D214B /* SettingMenuViewController.swift in Sources */,
+				58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */,
 				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,
 				906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */,
 				9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */,
@@ -1276,6 +1295,7 @@
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				90FD9FD623122588002D214B /* TitleHeaderView.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
+				58CA7CF12316458D001231A9 /* Debt.swift in Sources */,
 				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
