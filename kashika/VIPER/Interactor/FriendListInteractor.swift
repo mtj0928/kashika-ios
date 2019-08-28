@@ -12,5 +12,5 @@ class FriendListInteractor: FriendListInteractorProtocol {
     var friends: BehaviorRelay<[Friend]> {
         return friendListUseCase.friends
     }
-    private let friendListUseCase = FriendListUseCase()
+    private let friendListUseCase = FriendUseCase()
 }

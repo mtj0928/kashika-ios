@@ -10,16 +10,19 @@ import Ballcap
 import FirebaseStorage
 import RxSwift
 
-extension File {
+extension File: TargetedExtensionCompatible {
+}
+
+extension TargetedExtension where Base: File {
 
     func save() -> MonitorObservable<StorageMetadata?> {
-        return Observable.create { [weak self] observer -> Disposable in
-            if self?.data == nil {
+        return Observable.create { observer -> Disposable in
+            if self.base.data == nil {
                 observer.onNext(Monitor(nil))
                 observer.onCompleted()
                 return Disposables.create()
             }
-            let task = self?.save { (metadata, error) in
+            let task = self.base.save { (metadata, error) in
                 if let error = error {
                     observer.onError(error)
                     return

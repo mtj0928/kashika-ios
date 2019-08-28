@@ -11,7 +11,13 @@ import Ballcap
 
 struct UserUseCase {
 
+    private let userRepository = UserRepository()
+
     func fetchOrCreateUser() -> Single<Document<User>> {
-        return UserRepository().fetchOrCreateUser()
+        return userRepository.fetchOrCreateUser()
+    }
+
+    func signout() -> Completable {
+        return userRepository.signout()
     }
 }

@@ -20,4 +20,8 @@ struct UserRepository {
         return firebaseAuthDataStore.createUser()
             .flatMap { self.userDataStore.create(authId: $0.uid) }
     }
+
+    func signout() -> Completable {
+        return firebaseAuthDataStore.signout()
+    }
 }

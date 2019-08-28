@@ -1,5 +1,5 @@
 //
-//  FriendListUseCase.swift
+//  FriendUseCase.swift
 //  kashika
 //
 //  Created by 松本淳之介 on 2019/08/16.
@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Ballcap
 
-class FriendListUseCase {
+class FriendUseCase {
     let friends = BehaviorRelay<[Friend]>(value: [])
 
     private var documents: [Document<Friend>]? {
@@ -37,5 +37,12 @@ class FriendListUseCase {
             .subscribe(onNext: { [weak self] documents in
                 self?.documents = documents
             }).disposed(by: disposeBag)
+    }
+
+    func delete(friends: [Friend]) -> Completable {
+        let friendDocuments = documents?.filter({ document -> Bool in
+            return friends.contains(where: { document.data == $0 })
+        }) ?? []
+        return friendRepository.deleteFriends(friends: friendDocuments)
     }
 }

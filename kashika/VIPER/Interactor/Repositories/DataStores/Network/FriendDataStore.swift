@@ -34,7 +34,7 @@ struct FriendDataStore {
                 return friendDocument
             }
 
-            return file.save()
+            return file.ex.save()
                 .map({ $0.map { _ in saveHandler() } })
                 .subscribe(onNext: observer.onNext, onError: observer.onError, onCompleted: observer.onCompleted)
         }
@@ -61,5 +61,13 @@ struct FriendDataStore {
                 listner.remove()
             }
         }
+    }
+
+    func delete(_ friends: [Document<Friend>]) -> Completable {
+        return StorageBatch.ex.commit { batch in
+            batch.delete(friends.compactMap({ $0.data?.iconFile }))
+        }.andThen(Batch.ex.commit({ (batch) in
+            friends.forEach { batch.delete($0) }
+        }))
     }
 }

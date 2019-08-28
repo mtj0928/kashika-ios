@@ -13,5 +13,5 @@ class AddDebtInteractor: AddDebtInteractorProtocol {
         return friendsUseCase.friends
     }
 
-    let friendsUseCase = FriendListUseCase()
+    let friendsUseCase = FriendUseCase()
 }

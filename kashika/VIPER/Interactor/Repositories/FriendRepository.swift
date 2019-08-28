@@ -27,4 +27,8 @@ class FriendRepository {
         let observable = dataStore.listen(user: user)
         friendsPool.listen(user: user, observable: observable)
     }
+
+    func deleteFriends(friends: [Document<Friend>]) -> Completable {
+        return dataStore.delete(friends)
+    }
 }
