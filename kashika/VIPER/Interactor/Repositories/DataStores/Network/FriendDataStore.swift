@@ -22,7 +22,7 @@ struct FriendDataStore {
             .map { $0.documentReference.collection(FriendDataStore.key) }
             .map { Document<Friend>(collectionReference: $0) }
             .map({ document in
-                let reference = Storage.storage().reference(withPath: document.path).child(FriendDataStore.fileName)
+                let reference = document.storageReference.child(FriendDataStore.fileName)
                 let data = icon?.resize(minLength: FriendDataStore.imageMinLength)?.pngData()
                 let file = File(reference, data: data, mimeType: .png)
 
