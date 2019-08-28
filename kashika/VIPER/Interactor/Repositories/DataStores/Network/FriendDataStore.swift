@@ -18,26 +18,32 @@ struct FriendDataStore {
     static let fileName = "icon"
 
     func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
-        return Observable.create { observer -> Disposable in
-            let collectionReference = userDocument.documentReference.collection(FriendDataStore.key)
-            let friendDocument = Document<Friend>(collectionReference: collectionReference)
+        return Single.just(userDocument)
+            .map { $0.documentReference.collection(FriendDataStore.key) }
+            .map { Document<Friend>(collectionReference: $0) }
+            .map({ document in
+                let reference = Storage.storage().reference(withPath: document.path).child(FriendDataStore.fileName)
+                let data = icon?.resize(minLength: FriendDataStore.imageMinLength)?.pngData()
+                let file = File(reference, data: data, mimeType: .png)
 
-            friendDocument.data?.name = name
+                document.data?.name = name
+                document.data?.iconFile = file
+                return document
+            })
+            .asObservable()
+            .flatMap({ (document: Document<Friend>) -> Observable<(Document<Friend>, Monitor<StorageMetadata?>)> in
+                guard let data = document.data else {
+                    return Observable.error(NSError(domain: "[mtj0928] Document.data is not exist", code: -1, userInfo: nil))
 
-            let reference = Storage.storage().reference(withPath: friendDocument.path).child(FriendDataStore.fileName)
-            let data = icon?.resize(minLength: FriendDataStore.imageMinLength)?.pngData()
-            let file = File(reference, data: data, mimeType: .png)
-
-            let saveHandler = { () -> (Document<Friend>) in
-                friendDocument.data?.iconFile = file
-                friendDocument.save()
-                return friendDocument
-            }
-
-            return file.ex.save()
-                .map({ $0.map { _ in saveHandler() } })
-                .subscribe(onNext: observer.onNext, onError: observer.onError, onCompleted: observer.onCompleted)
-        }
+                }
+                return Observable.combineLatest(Observable.just(document), data.iconFile?.ex.save() ?? Observable.just(Monitor(nil)))
+            })
+            .map { (document, monitor) in monitor.map { _ in document } }
+            .do(onNext: { (monitor: Monitor<Document<Friend>>) in
+                if let value = monitor.value {
+                    value.save()
+                }
+            })
     }
 
     func listen(user userDocument: Document<User>) -> Observable<[Document<Friend>]> {

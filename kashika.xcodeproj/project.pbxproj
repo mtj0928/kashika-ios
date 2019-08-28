@@ -385,17 +385,17 @@
 		5870126C224C5373003888E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				90E309E7231617350097104C /* Batch+extension.swift */,
+				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
 				90FB187822DEE37100092BB3 /* String+extension.swift */,
+				90E309E5231606520097104C /* TargetedExtension.swift */,
 				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
 				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
-				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
-				90E309E5231606520097104C /* TargetedExtension.swift */,
+				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

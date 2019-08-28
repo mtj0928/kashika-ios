@@ -17,11 +17,12 @@ extension TargetedExtension where Base: File {
 
     func save() -> MonitorObservable<StorageMetadata?> {
         return Observable.create { observer -> Disposable in
-            if self.base.data == nil {
+            guard self.base.data != nil else {
                 observer.onNext(Monitor(nil))
                 observer.onCompleted()
                 return Disposables.create()
             }
+
             let task = self.base.save { (metadata, error) in
                 if let error = error {
                     observer.onError(error)
@@ -30,12 +31,14 @@ extension TargetedExtension where Base: File {
                 observer.onNext(Monitor(metadata))
                 observer.onCompleted()
             }
+
             let handler = task?.observe(.progress, handler: { snapshot in
                 guard let progress = snapshot.progress else {
                     return
                 }
                 observer.onNext(Monitor(progress))
             })
+
             return Disposables.create {
                 if let handler = handler {
                     task?.removeObserver(withHandle: handler)
