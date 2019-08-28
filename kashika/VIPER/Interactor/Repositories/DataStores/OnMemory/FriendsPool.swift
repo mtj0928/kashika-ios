@@ -11,7 +11,10 @@ import RxSwift
 import RxCocoa
 
 class FriendsPool {
-    var friends: Observable<[Document<Friend>]> {
+    var friends: [Document<Friend>] {
+        (try? friendsSubject.value()) ?? []
+    }
+    var friendsObservable: Observable<[Document<Friend>]> {
         friendsSubject
     }
     private let friendsSubject = BehaviorSubject<[Document<Friend>]>(value: [])

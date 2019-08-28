@@ -11,8 +11,11 @@ import RxSwift
 import Ballcap
 
 class FriendRepository {
-    var friends: Observable<[Document<Friend>]> {
+    var friends: [Document<Friend>] {
         friendsPool.friends
+    }
+    var friendsObservable: Observable<[Document<Friend>]> {
+        friendsPool.friendsObservable
     }
 
     private let dataStore = FriendDataStore()

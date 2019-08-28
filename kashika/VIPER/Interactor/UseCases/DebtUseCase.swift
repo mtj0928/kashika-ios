@@ -10,18 +10,19 @@ import RxSwift
 import Ballcap
 
 struct DebtUseCase {
-    private let userRepository = UserRepository()
+    private let friendUseCase = FriendUseCase()
     private let friendRepository = FriendRepository()
+    private let userRepository = UserRepository()
     private let debtRepository = DebtRepository()
 
     func create(money: Int, friend: Friend) -> Single<Document<Debt>> {
-        let user = userRepository.fetchOrCreateUser().asObservable()
-        let friend = friendRepository.friends.map({ friends in
-            friends.first(where: { $0.data == friend })
-        }).filter({ $0 != nil })
+        let user = userRepository.fetchOrCreateUser()
 
-        return Observable.zip(user, friend)
-            .flatMap({ (user: Document<User>, friend: Document<Friend>?) in self.debtRepository.create(money: money, friend: friend!, user: user) })
-            .asSingle()
+        let friendSingle = friendUseCase.fetchFirst({ $0.data == friend })
+
+        return Single.zip(user, friendSingle)
+            .flatMap({ (user: Document<User>, friend: Document<Friend>) in
+                self.debtRepository.create(money: money, friend: friend, user: user)
+            })
     }
 }

@@ -13,15 +13,6 @@ import Ballcap
 class FriendUseCase {
     let friends = BehaviorRelay<[Friend]>(value: [])
 
-    private var documents: [Document<Friend>]? {
-        didSet {
-            if let documents = self.documents {
-                let friends = documents.compactMap { $0.data }
-                self.friends.accept(friends)
-            }
-        }
-    }
-
     private let userRepository = UserRepository()
     private let friendRepository = FriendRepository()
     private let disposeBag = RxSwift.DisposeBag()
@@ -33,16 +24,27 @@ class FriendUseCase {
                 self?.friendRepository.listen(user: user)
             }).disposed(by: disposeBag)
 
-        friendRepository.friends
+        friendRepository.friendsObservable
             .subscribe(onNext: { [weak self] documents in
-                self?.documents = documents
+                self?.friends.accept(documents.compactMap({ $0.data }))
             }).disposed(by: disposeBag)
     }
 
+    func fetchFirst(_ filter: @escaping  (Document<Friend>) -> Bool) -> Single<Document<Friend>> {
+        return Single.create { [weak self] event -> Disposable in
+            guard let first = self?.friendRepository.friends.first(where: filter) else {
+                event(.error(NSError(domain: "[mtj0928] Friend is not exists in FriendUseCase", code: -1, userInfo: nil)))
+                return Disposables.create()
+            }
+            event(.success(first))
+            return Disposables.create()
+        }
+    }
+
     func delete(friends: [Friend]) -> Completable {
-        let friendDocuments = documents?.filter({ document -> Bool in
+        let friendDocuments = self.friendRepository.friends.filter({ document -> Bool in
             return friends.contains(where: { document.data == $0 })
-        }) ?? []
+        })
         return friendRepository.deleteFriends(friends: friendDocuments)
     }
 }
