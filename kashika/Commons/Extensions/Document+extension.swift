@@ -26,4 +26,17 @@ extension TargetedExtension {
             return Disposables.create()
         }
     }
+
+    func update<Model: Modelable & Codable>() -> Single<Document<Model>> where Base: Document<Model> {
+        return Single.create { event -> Disposable in
+            self.base.update { error in
+                if let error = error {
+                    event(.error(error))
+                } else {
+                    event(.success(self.base))
+                }
+            }
+            return Disposables.create()
+        }
+    }
 }

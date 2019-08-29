@@ -49,6 +49,14 @@ final class AddDebtViewController: UIViewController {
         presenter.tappedMoneyButton()
     }
 
+    @IBAction func tappedKashitaButton() {
+        presenter.createDebt(debtType: .kashi)
+    }
+
+    @IBAction func tappedKaritaButton() {
+        presenter.createDebt(debtType: .kari)
+    }
+
     class func createFromStoryboard(presenter: AddDebtPresenterProtocol) -> AddDebtViewController {
         let viewController = createFromStoryboard()
         viewController.presenter = presenter

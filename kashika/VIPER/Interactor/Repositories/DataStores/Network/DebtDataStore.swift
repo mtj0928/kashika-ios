@@ -17,12 +17,18 @@ struct DebtDataStore {
         return Single.just(userDocument)
             .map({ userDocument -> Document<Debt> in
                 let collectionReference = userDocument.documentReference.collection(DebtDataStore.key)
-                let document = Document<Debt>(collectionReference: collectionReference)
+                let debtDocument = Document<Debt>(collectionReference: collectionReference)
 
-                document.data?.money = money
-                document.data?.friendRef = friendDocuemnt.documentReference
+                debtDocument.data?.money = money
+                debtDocument.data?.friendRef = friendDocuemnt.documentReference
+                friendDocuemnt.data?.totalDebt = .increment(Int64(money))
 
-                return document
-        }).flatMap({ $0.ex.save() })
+                return debtDocument
+        }).flatMap({ debt in
+            Batch.ex.commit { batch in
+                batch.update(friendDocuemnt)
+                batch.save(debt)
+            }.andThen(Single.just(debt))
+        })
     }
 }

@@ -10,16 +10,20 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+enum DebtType {
+    case kashi, kari
+}
+
 protocol AddDebtPresenterProtocol {
     var isDecelerating: BehaviorRelay<Bool> { get }
-    var selectedIndexes: BehaviorRelay<Set<Int>> { get }
+    var selectedIndexes: BehaviorRelay<Set<Int>> { get } 
     var isSelected: BehaviorRelay<Bool> { get }
     var canBeAddDebt: Observable<Bool> { get }
     var friends: BehaviorRelay<[Friend]> { get }
     var money: BehaviorRelay<Int> { get }
     var shouldShowPlaceHolder: Observable<Bool> { get }
 
-    func createDebt()
+    func createDebt(debtType: DebtType)
     func tappedCloseButton()
     func tappedMoneyButton()
     func dismissedFloatingPanel()
@@ -29,6 +33,8 @@ protocol AddDebtPresenterProtocol {
 
 protocol AddDebtInteractorProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
+
+    func save(money: Int, friend: Friend, type: DebtType) -> Single<Debt>
 }
 
 protocol AddDebtRouterProtocol {
