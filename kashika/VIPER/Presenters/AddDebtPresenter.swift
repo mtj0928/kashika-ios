@@ -19,13 +19,14 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
         let moneyIsInputed = money.map({ $0 != 0 })
         return Observable.combineLatest(isSelected.asObservable(), moneyIsInputed)
             .map({ $0.0 && $0.1 })
+            .share()
     }
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }
     let money = BehaviorRelay<Int>(value: 0)
     var shouldShowPlaceHolder: Observable<Bool> {
-        return money.asObservable().map({ $0 == 0 })
+        return money.asObservable().map({ $0 == 0 }).share()
     }
 
     private let interactor: AddDebtInteractorProtocol
