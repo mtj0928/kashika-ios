@@ -15,14 +15,18 @@ struct DebtUseCase {
     private let userRepository = UserRepository()
     private let debtRepository = DebtRepository()
 
-    func create(money: Int, friend: Friend) -> Single<Document<Debt>> {
+    func create(_ debts: [UnstoredDebt]) -> Single<[Document<Debt>]> {
         let user = userRepository.fetchOrCreateUser()
 
-        let friendSingle = friendUseCase.fetchFirst({ $0.data == friend })
+        let unstoredDebtSingles = debts.map { unstoredDebt in
+            self.friendUseCase.fetchFirst({ $0.data == unstoredDebt.friend })
+                .map({ UnstoredDebt(from: unstoredDebt, document: $0) })
+        }
+        let unstoredDebts = Single.zip(unstoredDebtSingles)
 
-        return Single.zip(user, friendSingle)
-            .flatMap({ (user: Document<User>, friend: Document<Friend>) in
-                self.debtRepository.create(money: money, friend: friend, user: user)
+        return Single.zip(unstoredDebts, user)
+            .flatMap({ (debts: [UnstoredDebt], user: Document<User>) in
+                self.debtRepository.create(debts: debts, user: user)
             })
     }
 }

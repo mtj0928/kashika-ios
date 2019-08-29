@@ -34,7 +34,7 @@ protocol AddDebtPresenterProtocol {
 protocol AddDebtInteractorProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
 
-    func save(money: Int, friend: Friend, type: DebtType) -> Single<Debt>
+    func save(debts: [UnstoredDebt]) -> Single<[Debt]>
 }
 
 protocol AddDebtRouterProtocol {

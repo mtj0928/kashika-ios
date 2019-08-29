@@ -13,7 +13,7 @@ struct DebtRepository {
     private let userRepository = UserRepository()
     private let debtDataStore = DebtDataStore()
 
-    func create(money: Int, friend: Document<Friend>, user: Document<User>) -> Single<Document<Debt>> {
-        return debtDataStore.create(money: money, friendDocuemnt: friend, userDocument: user)
+    func create(debts: [UnstoredDebt], user: Document<User>) -> Single<[Document<Debt>]> {
+        return debtDataStore.create(debts: debts, userDocument: user)
     }
 }

@@ -114,6 +114,7 @@
 		90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E323153FFA0097104C /* SettingMenuRouter.swift */; };
 		90E309E6231606520097104C /* TargetedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E5231606520097104C /* TargetedExtension.swift */; };
 		90E309E8231617350097104C /* Batch+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E7231617350097104C /* Batch+extension.swift */; };
+		90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E923178C190097104C /* UnstoredDebt.swift */; };
 		90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */; };
 		90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */; };
 		90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */; };
@@ -303,6 +304,7 @@
 		90E309E323153FFA0097104C /* SettingMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuRouter.swift; sourceTree = "<group>"; };
 		90E309E5231606520097104C /* TargetedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetedExtension.swift; sourceTree = "<group>"; };
 		90E309E7231617350097104C /* Batch+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Batch+extension.swift"; sourceTree = "<group>"; };
+		90E309E923178C190097104C /* UnstoredDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnstoredDebt.swift; sourceTree = "<group>"; };
 		90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerContracts.swift; sourceTree = "<group>"; };
 		90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUserManuallyViewController.storyboard; sourceTree = "<group>"; };
 		90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				58CA7CF02316458D001231A9 /* Debt.swift */,
 				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
+				90E309E923178C190097104C /* UnstoredDebt.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -865,10 +868,10 @@
 		90FD9FC823112A38002D214B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				58CA7CF2231655FA001231A9 /* DebtDataStore.swift */,
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
 				9042782223052240009480CA /* FriendDataStore.swift */,
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
-				58CA7CF2231655FA001231A9 /* DebtDataStore.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1223,6 +1226,7 @@
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
+				90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,

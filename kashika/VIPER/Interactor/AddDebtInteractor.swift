@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 
 class AddDebtInteractor: AddDebtInteractorProtocol {
+
     var friends: BehaviorRelay<[Friend]> {
         return friendsUseCase.friends
     }
@@ -17,16 +18,10 @@ class AddDebtInteractor: AddDebtInteractorProtocol {
     private let friendsUseCase = FriendUseCase()
     private let debtUseCase = DebtUseCase()
 
-    func save(money: Int, friend: Friend, type: DebtType) -> Single<Debt> {
-        let value: Int
-        switch type {
-        case .kari:
-            value = money
-        case .kashi:
-            value = -money
-        }
-
-        // swiftlint:disable:next force_unwrapping
-        return debtUseCase.create(money: value, friend: friend).map({ $0.data! })
+    func save(debts: [UnstoredDebt]) -> Single<[Debt]> {
+        return debtUseCase.create(debts).map({ debts in
+            // swiftlint:disable:next force_unwrapping
+            return debts.map({ $0.data! })
+        })
     }
 }

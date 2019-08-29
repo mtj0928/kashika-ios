@@ -13,22 +13,31 @@ struct DebtDataStore {
 
     static let key = "debts"
 
-    func create(money: Int, friendDocuemnt: Document<Friend>, userDocument: Document<User>) -> Single<Document<Debt>> {
+    func create(debt: UnstoredDebt, userDocument: Document<User>) -> Single<Document<Debt>> {
+        return create(debts: [debt], userDocument: userDocument).map({ $0[0] })
+    }
+
+    func create(debts: [UnstoredDebt], userDocument: Document<User>) -> Single<[Document<Debt>]> {
         return Single.just(userDocument)
-            .map({ userDocument -> Document<Debt> in
-                let collectionReference = userDocument.documentReference.collection(DebtDataStore.key)
-                let debtDocument = Document<Debt>(collectionReference: collectionReference)
+            .map({ userDocument -> [(Document<Debt>, Document<Friend>)] in
+                return debts.map({ debt in
+                    let collectionReference = userDocument.documentReference.collection(DebtDataStore.key)
+                    let debtDocument = Document<Debt>(collectionReference: collectionReference)
+                    let friendDocument: Document<Friend>! = debt.document
 
-                debtDocument.data?.money = money
-                debtDocument.data?.friendRef = friendDocuemnt.documentReference
-                friendDocuemnt.data?.totalDebt = .increment(Int64(money))
+                    debtDocument.data?.money = debt.money
+                    debtDocument.data?.friendId = debt.document?.id
+                    friendDocument?.data?.totalDebt = .increment(Int64(debt.money))
 
-                return debtDocument
-        }).flatMap({ debt in
-            Batch.ex.commit { batch in
-                batch.update(friendDocuemnt)
-                batch.save(debt)
-            }.andThen(Single.just(debt))
-        })
+                    return (debtDocument, friendDocument)
+                })
+            }).flatMap({ debts in
+                Batch.ex.commit { batch in
+                    debts.forEach { debt in
+                        batch.save(debt.0)
+                        batch.update(debt.1)
+                    }
+                }.andThen(Single.just(debts.map({ $0.0 })))
+            })
     }
 }

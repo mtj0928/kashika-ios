@@ -43,19 +43,14 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     }
 
     func createDebt(debtType: DebtType) {
-        let backgroundScheduler = ConcurrentDispatchQueueScheduler(qos: .background)
-        let debtSingles = selectedIndexes.value
+        let debts = selectedIndexes.value
             .compactMap({ friends.value[$0] })
-            .map({ interactor.save(money: money.value, friend: $0, type: debtType).subscribeOn(backgroundScheduler) })
+            .map({ UnstoredDebt(money: money.value, friend: $0, type: debtType) })
 
-        Single.zip(debtSingles)
-            .asCompletable()
-            .subscribe(onCompleted: { [weak self] in
+        interactor.save(debts: debts)
+            .subscribe(onSuccess: { [weak self] _ in
                 self?.router.dismiss()
-                }, onError: { error in
-                    print(error.localizedDescription)
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 
     func tappedCloseButton() {
