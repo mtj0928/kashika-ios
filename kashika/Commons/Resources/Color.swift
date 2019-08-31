@@ -41,6 +41,8 @@ public extension UIColor {
         let negativeColor = UIColor(hex: "D21350")
         let backgroundInImageView = UIColor.lightGray
 
+        fileprivate init() {}
+
         func systemBackground(isSecondary: Bool) -> UIColor {
             return isSecondary ? secondarySystemBackground : systemBackground
         }
