@@ -17,14 +17,11 @@ struct TargetedExtension<Base> {
 
 protocol TargetedExtensionCompatible {
     associatedtype Compatible
-    // swiftlint:disable identifier_name
     static var ex: TargetedExtension<Compatible>.Type { get }
     var ex: TargetedExtension<Compatible> { get }
-    // swiftlint:enable identifier_name
 }
 
 extension TargetedExtensionCompatible {
-    // swiftlint:disable identifier_name
     static var ex: TargetedExtension<Self>.Type {
         return TargetedExtension<Self>.self
     }
@@ -32,5 +29,4 @@ extension TargetedExtensionCompatible {
     var ex: TargetedExtension<Self> {
         return TargetedExtension(self)
     }
-    // swiftlint:enable identifier_name
 }

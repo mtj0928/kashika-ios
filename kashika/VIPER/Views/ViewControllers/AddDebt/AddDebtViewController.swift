@@ -23,7 +23,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var kashitaButton: UIButton!
     @IBOutlet private weak var unitLabel: UILabel!
 
-    private var presenter: AddDebtPresenterProtocol!
+    private(set) var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -50,10 +50,12 @@ final class AddDebtViewController: UIViewController {
     }
 
     @IBAction func tappedKashitaButton() {
+        TapticEngine.impact.feedback(.light)
         presenter.createDebt(debtType: .kashi)
     }
 
     @IBAction func tappedKaritaButton() {
+        TapticEngine.impact.feedback(.light)
         presenter.createDebt(debtType: .kari)
     }
 
@@ -67,7 +69,7 @@ final class AddDebtViewController: UIViewController {
 // MARK: - Set Up
 
 extension AddDebtViewController {
-
+    
     private func setupMoneyLabel() {
         presenter.shouldShowPlaceHolder.subscribe(onNext: { [weak self] shouldShowPlaceHolder in
             self?.placeHolderView.isHidden = !shouldShowPlaceHolder

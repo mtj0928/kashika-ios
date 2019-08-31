@@ -28,6 +28,10 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     var shouldShowPlaceHolder: Observable<Bool> {
         return money.asObservable().map({ $0 == 0 }).share()
     }
+    var output: Observable<AddDebtOutputProtocol> {
+        return outputSubject
+    }
+    private let outputSubject = PublishSubject<AddDebtOutputProtocol>()
 
     private let interactor: AddDebtInteractorProtocol
     private let router: AddDebtRouterProtocol
@@ -48,10 +52,11 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
             .compactMap({ friends.value[$0] })
             .map({ UnstoredDebt(money: money.value, friend: $0, type: debtType) })
 
-        interactor.save(debts: debts)
-            .subscribe(onSuccess: { [weak self] _ in
-                self?.router.dismiss()
-            }).disposed(by: disposeBag)
+        let debtsSingle = interactor.save(debts: debts)
+        let output = AddDebtOutput(debts: debtsSingle)
+        outputSubject.onNext(output)
+
+        router.dismiss()
     }
 
     func tappedCloseButton() {

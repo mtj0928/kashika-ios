@@ -6,23 +6,21 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import Foundation
-import UIKit
 import RxSwift
 import RxCocoa
 
 protocol RootPresenterProtocol {
-
-    var floatingPanelContentViewController: BehaviorRelay<UIViewController?> { get }
     var canShowFloatingPannel: BehaviorRelay<Bool> { get }
+    var messages: Observable<MessageNotification> { get }
 
     func showFloatingPannel()
 }
 
 protocol RootInteractorProtocol {
     func fetchOrCreateCurrentUser() -> Single<User?>
+    func fetchFriend(id: String?) -> Single<Friend?>
 }
 
 protocol RootRouterProtocol {
-    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>)
+    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> Observable<AddDebtOutputProtocol>
 }

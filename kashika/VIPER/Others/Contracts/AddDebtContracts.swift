@@ -10,18 +10,27 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum DebtType {
-    case kashi, kari
+enum DebtType: String {
+    case kashi = "貸し"
+    case kari = "借り"
+
+    static func make(debt: Debt) -> DebtType {
+        return debt.money > 0 ? .kari : .kashi
+    }
+}
+
+protocol AddDebtOutputProtocol {
+    var debts: Single<[Debt]> { get }
 }
 
 protocol AddDebtPresenterProtocol {
     var isDecelerating: BehaviorRelay<Bool> { get }
-    var selectedIndexes: BehaviorRelay<Set<Int>> { get } 
-    var isSelected: BehaviorRelay<Bool> { get }
+    var selectedIndexes: BehaviorRelay<Set<Int>> { get }
     var canBeAddDebt: Observable<Bool> { get }
     var friends: BehaviorRelay<[Friend]> { get }
     var money: BehaviorRelay<Int> { get }
     var shouldShowPlaceHolder: Observable<Bool> { get }
+    var output: Observable<AddDebtOutputProtocol> { get }
 
     func createDebt(debtType: DebtType)
     func tappedCloseButton()

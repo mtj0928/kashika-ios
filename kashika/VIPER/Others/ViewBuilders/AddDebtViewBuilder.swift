@@ -6,12 +6,13 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 import FloatingPanel
 
 final class AddDebtViewBuilder {
 
-    static func build(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> UIViewController {
+    static func build(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> (viewController: UIViewController, output: Observable<AddDebtOutputProtocol>) {
         let interactor = AddDebtInteractor()
         let router = AddDebtRouter()
         let presenter = AddDebtPresenter(canShowFloatingPannel, interactor: interactor, router: router)
@@ -23,6 +24,6 @@ final class AddDebtViewBuilder {
         floatingPanelController.delegate = viewController
         floatingPanelController.set(contentViewController: viewController)
 
-        return floatingPanelController
+        return (floatingPanelController, presenter.output)
     }
 }

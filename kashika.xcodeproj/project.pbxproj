@@ -29,6 +29,8 @@
 		901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */; };
 		901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */; };
 		901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC76222D9B803002B3C17 /* UnitTextField.swift */; };
+		901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EF37923191176001BA56C /* AddDebtOutput.swift */; };
+		901EF386231938B5001BA56C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901EF3842319385B001BA56C /* CardView.xib */; };
 		9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */; };
 		9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */; };
 		90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */; };
@@ -115,6 +117,9 @@
 		90E309E6231606520097104C /* TargetedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E5231606520097104C /* TargetedExtension.swift */; };
 		90E309E8231617350097104C /* Batch+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E7231617350097104C /* Batch+extension.swift */; };
 		90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E923178C190097104C /* UnstoredDebt.swift */; };
+		90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E309ED2318A4C20097104C /* SwiftMessages.framework */; };
+		90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90E309ED2318A4C20097104C /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		90E309F12318C4100097104C /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309F02318C4100097104C /* MessageNotification.swift */; };
 		90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */; };
 		90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */; };
 		90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */; };
@@ -184,6 +189,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
 				90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -219,6 +225,8 @@
 		901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMoneyViewController.storyboard; sourceTree = "<group>"; };
 		901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewController.swift; sourceTree = "<group>"; };
 		901AC76222D9B803002B3C17 /* UnitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTextField.swift; sourceTree = "<group>"; };
+		901EF37923191176001BA56C /* AddDebtOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtOutput.swift; sourceTree = "<group>"; };
+		901EF3842319385B001BA56C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyContracts.swift; sourceTree = "<group>"; };
 		9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyPresenter.swift; sourceTree = "<group>"; };
 		90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyContracts.swift; sourceTree = "<group>"; };
@@ -305,6 +313,9 @@
 		90E309E5231606520097104C /* TargetedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetedExtension.swift; sourceTree = "<group>"; };
 		90E309E7231617350097104C /* Batch+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Batch+extension.swift"; sourceTree = "<group>"; };
 		90E309E923178C190097104C /* UnstoredDebt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnstoredDebt.swift; sourceTree = "<group>"; };
+		90E309EC2318A4AE0097104C /* SwiftMessages.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftMessages.framework.dSYM; path = Carthage/Build/iOS/SwiftMessages.framework.dSYM; sourceTree = "<group>"; };
+		90E309ED2318A4C20097104C /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
+		90E309F02318C4100097104C /* MessageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotification.swift; sourceTree = "<group>"; };
 		90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerContracts.swift; sourceTree = "<group>"; };
 		90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUserManuallyViewController.storyboard; sourceTree = "<group>"; };
 		90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyViewController.swift; sourceTree = "<group>"; };
@@ -346,6 +357,7 @@
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
+				90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
 				90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */,
 			);
@@ -378,6 +390,8 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90E309ED2318A4C20097104C /* SwiftMessages.framework */,
+				90E309EC2318A4AE0097104C /* SwiftMessages.framework.dSYM */,
 				90FB187C22DEF6D500092BB3 /* TapticEngine.framework */,
 				90FB187B22DEF6C400092BB3 /* TapticEngine.framework.dSYM */,
 				906CA7E7225215580092E796 /* FloatingPanel.framework */,
@@ -490,6 +504,14 @@
 			path = TextFields;
 			sourceTree = "<group>";
 		};
+		901EF37D23192AF8001BA56C /* MessageViews */ = {
+			isa = PBXGroup;
+			children = (
+				901EF3842319385B001BA56C /* CardView.xib */,
+			);
+			path = MessageViews;
+			sourceTree = "<group>";
+		};
 		90364D7C22ED9796000DCFA7 /* EditUsername */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,8 +533,9 @@
 		904278192304EEB4009480CA /* Outputs */ = {
 			isa = PBXGroup;
 			children = (
-				9042781E2304F037009480CA /* EditUsernameOutput.swift */,
+				901EF37923191176001BA56C /* AddDebtOutput.swift */,
 				90714AE0230CC69400610109 /* AddUserManuallyOutput.swift */,
+				9042781E2304F037009480CA /* EditUsernameOutput.swift */,
 				9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */,
 			);
 			path = Outputs;
@@ -571,11 +594,12 @@
 		905D830B22504C0100EB20AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				901AC76122D9B7EB002B3C17 /* TextFields */,
-				90D1610622587CCD00AF7934 /* Cells */,
 				905C76012255F1EB0011580B /* Buttons */,
+				90D1610622587CCD00AF7934 /* Cells */,
 				906CA7EA2252D0A50092E796 /* FloatingPanelLayouts */,
+				901EF37D23192AF8001BA56C /* MessageViews */,
 				905D83112250C3C700EB20AC /* Tabbars */,
+				901AC76122D9B7EB002B3C17 /* TextFields */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -700,6 +724,7 @@
 			isa = PBXGroup;
 			children = (
 				909BDA6E230ABFC800689573 /* Monitor.swift */,
+				90E309F02318C4100097104C /* MessageNotification.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1008,6 +1033,7 @@
 				906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */,
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
+				901EF386231938B5001BA56C /* CardView.xib in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
 				90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */,
@@ -1111,6 +1137,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ESTabBarController.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TapticEngine.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftMessages.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1229,6 +1256,7 @@
 				90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
+				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
@@ -1308,6 +1336,7 @@
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
+				90E309F12318C4100097104C /* MessageNotification.swift in Sources */,
 				90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */,
 				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
 				90FD9FE2231251AB002D214B /* SettingMenuContracts.swift in Sources */,

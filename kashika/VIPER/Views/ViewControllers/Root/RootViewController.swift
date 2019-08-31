@@ -12,6 +12,7 @@ import RxCocoa
 import ESTabBarController
 import FloatingPanel
 import TapticEngine
+import SwiftMessages
 
 final class RootViewController: ESTabBarController {
 
@@ -23,12 +24,51 @@ final class RootViewController: ESTabBarController {
         self.presenter = presenter
 
         setupTabbar()
+        setupMessageView()
     }
 }
 
 // MARK: - Set Up
 
 extension RootViewController {
+
+    var iconLength: CGFloat {
+        return 50.0
+    }
+
+    private func setupMessageView() {
+        presenter.messages
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] notification in
+                guard let `self` = self else {
+                    return
+                }
+                var config = SwiftMessages.Config()
+                config.presentationContext = .window(windowLevel: .statusBar)
+
+                let view = MessageView.viewFromNib(layout: .cardView)
+
+                view.configureTheme(backgroundColor: UIColor.app.secondarySystemBackground, foregroundColor: UIColor.app.label)
+                view.configureDropShadow()
+
+                view.titleLabel?.text = notification.title
+                view.bodyLabel?.text = notification.body
+                view.button?.isHidden = true
+
+                view.configureIcon(withSize: CGSize(width: self.iconLength, height: self.iconLength))
+                view.iconImageView?.isHidden = false
+                view.iconImageView?.layer.cornerRadius = self.iconLength / 2
+                view.iconImageView?.sd_setImage(with: notification.url)
+                view.iconImageView?.contentMode = .scaleAspectFill
+
+                if SwiftMessages.sharedInstance.current() != nil {
+                    SwiftMessages.hide()
+                }
+                TapticEngine.impact.feedback(.medium)
+                SwiftMessages.show(config: config, view: view)
+            }).disposed(by: disposeBag)
+
+    }
 
     private func setupTabbar() {
         shouldHijackHandler = { tabbarController, viewController, index in
