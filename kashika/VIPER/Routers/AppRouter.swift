@@ -21,7 +21,9 @@ struct AppRouter {
         router.viewController = viewController
 
         let viewControllers = (0..<5).map { index -> UIViewController in
-            let plainVC = index != 3 ? UIViewController() : createFriendListViewController()
+            let plainVC = index == 3 ?createFriendListViewController()
+                : index == 4 ? createSettingMenuViewController()
+                : UIViewController()
             plainVC.tabBarItem = UITabBarItem(title: index.description, image: nil, tag: index)
             return plainVC
         }
@@ -34,6 +36,16 @@ struct AppRouter {
 
     private func createFriendListViewController() -> UIViewController {
         let viewController = FriendListViewBuilder.build()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        return navigationController
+    }
+
+    private func createSettingMenuViewController() -> UIViewController {
+        let input = SettingMenuInput(sections: [.about, .debug])
+        let interactor = SettingMenuInteractor()
+        let router = SettingMenuRouter()
+        let presenter = SettingMenuPresenter(input: input, interactor: interactor, router: router)
+        let viewController = SettingMenuViewController.createFromStoryboard(with: presenter)
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }

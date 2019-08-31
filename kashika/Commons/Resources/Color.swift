@@ -27,6 +27,12 @@ public extension UIColor {
             }
             return UIColor.white
         }
+        var label: UIColor {
+            if #available(iOS 13.0, *) {
+                return UIColor.label
+            }
+            return UIColor.black
+        }
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")

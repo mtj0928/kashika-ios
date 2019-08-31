@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Add Debt View Controller-->
@@ -19,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-ZB-MrA" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
                                 <rect key="frame" x="315" y="54" width="50" height="50"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemFillColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EOC-ZB-MrA" secondAttribute="height" multiplier="1:1" id="YvP-yg-XTR"/>
                                     <constraint firstAttribute="width" constant="50" id="ZQE-e0-SNy"/>
@@ -42,7 +41,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-aD-q7t">
                                 <rect key="frame" x="0.0" y="112" width="375" height="102"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="vvq-mq-TZu"/>
                                 </constraints>
@@ -63,7 +62,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額を入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFz-2M-lB1">
                                                 <rect key="frame" x="0.0" y="34.666666666666657" width="121.66666666666667" height="28.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                                <color key="textColor" cocoaTouchSystemColor="placeholderTextColor"/>
+                                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -110,6 +109,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-H1-cRx" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
                                 <rect key="frame" x="191.66666666666663" y="368.33333333333331" width="175.33333333333337" height="50"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tappedKashitaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="H2n-9m-CzC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
                                 <rect key="frame" x="8" y="368.33333333333331" width="175.66666666666666" height="50"/>
@@ -117,6 +119,9 @@
                                     <constraint firstAttribute="height" constant="50" id="zNQ-2i-fnn"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tappedKaritaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Q8z-5e-NZP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-lh-MF5" userLabel="Money Button">
                                 <rect key="frame" x="0.0" y="254.33333333333337" width="375" height="98"/>
@@ -125,7 +130,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="PSw-lh-MF5" secondAttribute="trailing" id="3C7-2f-4bP"/>
                             <constraint firstItem="x5l-H1-cRx" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="CKQ-sH-Xmn"/>

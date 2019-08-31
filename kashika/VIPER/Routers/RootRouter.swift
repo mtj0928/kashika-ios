@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import RxSwift
 import RxCocoa
 
 class RootRouter: RootRouterProtocol {
 
     weak var viewController: UIViewController?
 
-    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>) {
-        let addDebtViewController = AddDebtViewBuilder.build(canShowFloatingPannel)
-        viewController?.present(addDebtViewController, animated: true)
+    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> Observable<AddDebtOutputProtocol> {
+        let buildResult = AddDebtViewBuilder.build(canShowFloatingPannel)
+        viewController?.present(buildResult.viewController, animated: true)
+        return buildResult.output
     }
 }

@@ -33,4 +33,16 @@ struct FirebaseAuthStore {
     func fetchCurrentUser() -> FirebaseUser? {
         return Auth.auth().currentUser
     }
+
+    func signout() -> Completable {
+        return Completable.create { observer -> Disposable in
+            do {
+                try Auth.auth().signOut()
+                observer(.completed)
+            } catch {
+                observer(.error(error))
+            }
+            return Disposables.create()
+        }
+    }
 }

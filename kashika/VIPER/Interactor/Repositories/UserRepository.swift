@@ -10,14 +10,18 @@ import RxSwift
 import Ballcap
 
 struct UserRepository {
+    private let userDataStore = UserDataStore()
+    private let firebaseAuthDataStore = FirebaseAuthStore()
 
     func fetchOrCreateUser() -> Single<Document<User>> {
-            let dataStore = UserDataStore()
-            let firebaseAuthDataStore = FirebaseAuthStore()
-            if let firebasaeUser = firebaseAuthDataStore.fetchCurrentUser() {
-                return dataStore.fetch(authId: firebasaeUser.uid)
-            }
-            return firebaseAuthDataStore.createUser()
-                .flatMap { dataStore.create(authId: $0.uid) }
+        if let firebasaeUser = firebaseAuthDataStore.fetchCurrentUser() {
+            return userDataStore.fetch(authId: firebasaeUser.uid)
         }
+        return firebaseAuthDataStore.createUser()
+            .flatMap { self.userDataStore.create(authId: $0.uid) }
+    }
+
+    func signout() -> Completable {
+        return firebaseAuthDataStore.signout()
+    }
 }

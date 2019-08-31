@@ -32,7 +32,7 @@ struct FriendListCellPresenter: FriendListCellPresenterProtocol {
     init(_ friend: Friend) {
         name = BehaviorSubject(value: friend.name)
         iconURL = BehaviorSubject(value: friend.iconFile?.url)
-        debt = BehaviorSubject(value: friend.totalDebt)
+        debt = BehaviorSubject(value: Int(friend.totalDebt.rawValue))
         isKari = debt.map { $0 > 0 }
         isKashi = debt.map { $0 < 0 }
         hasNoDebt = debt.map { $0 == 0 }

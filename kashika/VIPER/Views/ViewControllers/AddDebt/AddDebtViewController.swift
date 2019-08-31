@@ -23,7 +23,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var kashitaButton: UIButton!
     @IBOutlet private weak var unitLabel: UILabel!
 
-    private var presenter: AddDebtPresenterProtocol!
+    private(set) var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -49,6 +49,16 @@ final class AddDebtViewController: UIViewController {
         presenter.tappedMoneyButton()
     }
 
+    @IBAction func tappedKashitaButton() {
+        TapticEngine.impact.feedback(.light)
+        presenter.createDebt(debtType: .kashi)
+    }
+
+    @IBAction func tappedKaritaButton() {
+        TapticEngine.impact.feedback(.light)
+        presenter.createDebt(debtType: .kari)
+    }
+
     class func createFromStoryboard(presenter: AddDebtPresenterProtocol) -> AddDebtViewController {
         let viewController = createFromStoryboard()
         viewController.presenter = presenter
@@ -59,7 +69,7 @@ final class AddDebtViewController: UIViewController {
 // MARK: - Set Up
 
 extension AddDebtViewController {
-
+    
     private func setupMoneyLabel() {
         presenter.shouldShowPlaceHolder.subscribe(onNext: { [weak self] shouldShowPlaceHolder in
             self?.placeHolderView.isHidden = !shouldShowPlaceHolder
@@ -72,10 +82,14 @@ extension AddDebtViewController {
     }
 
     private func setupButton() {
-        karitaButton.backgroundColor = UIColor.app.negativeColor
-        karitaButton.setTitle("借りた！", for: .normal)
+        presenter.canBeAddDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] canBeAdd in
+            self?.karitaButton.backgroundColor = canBeAdd ? UIColor.app.negativeColor : UIColor.app.nonActiveButtonColor
+            self?.kashitaButton.backgroundColor = canBeAdd ? UIColor.app.positiveColor : UIColor.app.nonActiveButtonColor
+            self?.karitaButton.isUserInteractionEnabled = canBeAdd
+            self?.kashitaButton.isUserInteractionEnabled = canBeAdd
+        }).disposed(by: disposeBag)
 
-        kashitaButton.backgroundColor = UIColor.app.positiveColor
+        karitaButton.setTitle("借りた！", for: .normal)
         kashitaButton.setTitle("貸した！", for: .normal)
     }
 
@@ -91,6 +105,10 @@ extension AddDebtViewController {
         collectionView.register(R.nib.userIconCollectionViewCell)
 
         presenter.selectedIndexes.asDriver().drive(onNext: { [weak self] _ in
+            self?.collectionView.reloadData()
+        }).disposed(by: disposeBag)
+
+        presenter.friends.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
         }).disposed(by: disposeBag)
     }
@@ -115,7 +133,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
 
         switch section {
         case .friend:
-            return presenter.friends.value.count + 10
+            return presenter.friends.value.count 
         case .users:
             return 1
         }
@@ -137,7 +155,8 @@ extension AddDebtViewController: UICollectionViewDataSource {
     private func friendCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.simpleFriendCell, for: indexPath)
         let status = presenter.getStatus(at: indexPath.item)
-        cell.set(status: status)
+        let friend = presenter.friends.value[indexPath.item]
+        cell.set(friend: friend, status: status)
         cell.isSecondary = true
         return cell
     }
