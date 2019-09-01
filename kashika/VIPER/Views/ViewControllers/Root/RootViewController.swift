@@ -60,6 +60,7 @@ extension RootViewController {
                 view.iconImageView?.layer.cornerRadius = self.iconLength / 2
                 view.iconImageView?.sd_setImage(with: notification.url)
                 view.iconImageView?.contentMode = .scaleAspectFill
+                view.iconImageView?.backgroundColor = UIColor.lightGray
 
                 if SwiftMessages.sharedInstance.current() != nil {
                     SwiftMessages.hide()
