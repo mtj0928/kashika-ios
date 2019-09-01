@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="euV-2O-3Qo">
-                        <rect key="frame" x="0.0" y="8" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wpo-Jn-b9L">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,8 +29,8 @@
                 <constraints>
                     <constraint firstItem="euV-2O-3Qo" firstAttribute="leading" secondItem="K78-yB-8nZ" secondAttribute="leading" id="CXn-MH-G1T"/>
                     <constraint firstAttribute="trailing" secondItem="euV-2O-3Qo" secondAttribute="trailing" id="bb1-GK-TRK"/>
-                    <constraint firstAttribute="bottom" secondItem="euV-2O-3Qo" secondAttribute="bottom" constant="8" id="d1t-Cc-BRQ"/>
-                    <constraint firstItem="euV-2O-3Qo" firstAttribute="top" secondItem="K78-yB-8nZ" secondAttribute="top" constant="8" id="wma-Lq-ZQW"/>
+                    <constraint firstAttribute="bottom" secondItem="euV-2O-3Qo" secondAttribute="bottom" id="d1t-Cc-BRQ"/>
+                    <constraint firstItem="euV-2O-3Qo" firstAttribute="top" secondItem="K78-yB-8nZ" secondAttribute="top" id="wma-Lq-ZQW"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

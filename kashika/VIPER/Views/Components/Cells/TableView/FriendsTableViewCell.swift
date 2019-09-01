@@ -12,7 +12,7 @@ import RxCocoa
 
 class FriendsTableViewCell: UITableViewCell {
 
-    static let height: CGFloat = 124
+    static let height: CGFloat = 108
 
     @IBOutlet private weak var collectionView: UICollectionView!
     private var presenter: FriendsGridPresenterProtocol!
@@ -42,6 +42,8 @@ extension FriendsTableViewCell {
         collectionView.showsHorizontalScrollIndicator = false
 
         collectionView.backgroundColor = UIColor.clear
+        collectionView.contentInset.left = 16.0
+        collectionView.contentInset.right = 16.0
 
         collectionView.register(R.nib.simpleFriendCell)
     }
@@ -81,10 +83,6 @@ extension FriendsTableViewCell: UICollectionViewDelegateFlowLayout {
         let height = collectionView.frame.height
         let width = height * 7 / 10
         return CGSize(width: width, height: height)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 0.0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

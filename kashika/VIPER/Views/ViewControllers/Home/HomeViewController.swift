@@ -64,6 +64,9 @@ extension HomeViewController {
         tableView.register(R.nib.summeryViewCell)
         tableView.register(R.nib.friendsTableViewCell)
 
+        let headerViewNib = UINib(nibName: R.nib.homeTitleHeader.name, bundle: R.nib.homeTitleHeader.bundle)
+        tableView.register(headerViewNib, forHeaderFooterViewReuseIdentifier: R.nib.homeTitleHeader.name)
+
         presenter.sections.asDriver().drive(onNext: { [weak self] _ in
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
@@ -100,15 +103,33 @@ extension HomeViewController: UITableViewDataSource {
             return cell
         }
     }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return presenter.sections.value[section].title
-    }
 }
 
 // MARK: - UITableViewDelegate
 
 extension HomeViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let section = presenter.sections.value[section]
+        switch section {
+        case .summery:
+            return nil
+        case .schedule, .kari, .kashi:
+            let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.homeTitleHeader.name) as? HomeTitleHeader
+            if let title = section.title {
+                view?.set(title: title)
+            }
+            return view
+        }
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let section = presenter.sections.value[section]
+        if section == .summery {
+            return 0.0
+        }
+        return 60.0
+    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let section = presenter.sections.value[indexPath.section]

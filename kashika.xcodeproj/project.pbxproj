@@ -19,6 +19,8 @@
 		58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF2231655FA001231A9 /* DebtDataStore.swift */; };
 		58CA7CF723165820001231A9 /* Document+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF623165820001231A9 /* Document+extension.swift */; };
 		90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */; };
+		90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */; };
+		90037D1D231B9DC900C8C125 /* HomeTitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */; };
 		900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */; };
 		900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */; };
 		900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1A0A22E42EEC00576AEC /* RootRouter.swift */; };
@@ -229,6 +231,8 @@
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGridPresenter.swift; sourceTree = "<group>"; };
+		90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTitleHeader.swift; sourceTree = "<group>"; };
+		90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTitleHeader.xib; sourceTree = "<group>"; };
 		900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIconCollectionViewCell.xib; sourceTree = "<group>"; };
 		900C1A0A22E42EEC00576AEC /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
@@ -675,16 +679,18 @@
 		906FE6A323053DF000EBC043 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
-				906FE6A623053E5100EBC043 /* FriendTableViewCell.xib */,
-				90FD9FD523122588002D214B /* TitleHeaderView.swift */,
-				90FD9FD72312259E002D214B /* TitleHeaderView.xib */,
-				90FD9FDD2312315F002D214B /* TableViewCell.swift */,
-				90FD9FDF23123182002D214B /* TableViewCell.xib */,
-				909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */,
-				909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */,
 				904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */,
 				904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */,
+				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
+				906FE6A623053E5100EBC043 /* FriendTableViewCell.xib */,
+				90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */,
+				90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */,
+				909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */,
+				909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */,
+				90FD9FDD2312315F002D214B /* TableViewCell.swift */,
+				90FD9FDF23123182002D214B /* TableViewCell.xib */,
+				90FD9FD523122588002D214B /* TitleHeaderView.swift */,
+				90FD9FD72312259E002D214B /* TitleHeaderView.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1092,6 +1098,7 @@
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
 				901EF386231938B5001BA56C /* CardView.xib in Resources */,
+				90037D1D231B9DC900C8C125 /* HomeTitleHeader.xib in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
 				904D74CA231B73310002CDAA /* FriendsTableViewCell.xib in Resources */,
@@ -1321,6 +1328,7 @@
 				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
+				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
