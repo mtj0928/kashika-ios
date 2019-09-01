@@ -12,6 +12,8 @@ import RxCocoa
 protocol HomePresenterProtocol {
     var sections: BehaviorRelay<[HomeSection]> { get }
     var userTotalDebtMoney: BehaviorRelay<Int> { get }
+
+    func resolvePresenter(for section: HomeSection) -> FriendsGridPresenterProtocol?
 }
 
 protocol HomeInteractorProtocol {
@@ -19,4 +21,10 @@ protocol HomeInteractorProtocol {
     var scheduledFriend: BehaviorRelay<[Friend]> { get }
     var kashiFriend: BehaviorRelay<[Friend]> { get }
     var kariFriend: BehaviorRelay<[Friend]> { get }
+}
+
+protocol FriendsGridPresenterProtocol {
+    var friends: BehaviorRelay<[Friend]> { get }
+
+    func tapped(friend: Friend)
 }

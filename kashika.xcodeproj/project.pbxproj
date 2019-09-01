@@ -18,6 +18,7 @@
 		58CA7CF12316458D001231A9 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF02316458D001231A9 /* Debt.swift */; };
 		58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF2231655FA001231A9 /* DebtDataStore.swift */; };
 		58CA7CF723165820001231A9 /* Document+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF623165820001231A9 /* Document+extension.swift */; };
+		90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */; };
 		900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */; };
 		900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */; };
 		900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900C1A0A22E42EEC00576AEC /* RootRouter.swift */; };
@@ -49,6 +50,8 @@
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
 		904D74C6231B5F610002CDAA /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C5231B5F610002CDAA /* UserPool.swift */; };
+		904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */; };
+		904D74CA231B73310002CDAA /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */; };
 		9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */; };
 		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
 		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
@@ -225,6 +228,7 @@
 		58CA7CF623165820001231A9 /* Document+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+extension.swift"; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGridPresenter.swift; sourceTree = "<group>"; };
 		900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIconCollectionViewCell.xib; sourceTree = "<group>"; };
 		900C1A0A22E42EEC00576AEC /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
 		904D74C5231B5F610002CDAA /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
+		904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
 		9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldContracts.swift; sourceTree = "<group>"; };
 		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
 		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
@@ -677,6 +683,8 @@
 				90FD9FDF23123182002D214B /* TableViewCell.xib */,
 				909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */,
 				909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */,
+				904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */,
+				904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -831,6 +839,7 @@
 				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
+				90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1085,6 +1094,7 @@
 				901EF386231938B5001BA56C /* CardView.xib in Resources */,
 				909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */,
 				9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */,
+				904D74CA231B73310002CDAA /* FriendsTableViewCell.xib in Resources */,
 				90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */,
 				900C1A0F22E5CFEC00576AEC /* FriendListViewController.storyboard in Resources */,
 				90FD9FE023123182002D214B /* TableViewCell.xib in Resources */,
@@ -1305,6 +1315,7 @@
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
+				90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */,
 				90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
@@ -1369,6 +1380,7 @@
 				909EF944231A1AA100DA5F0D /* HomePresenter.swift in Sources */,
 				90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */,
 				90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */,
+				904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */,
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,

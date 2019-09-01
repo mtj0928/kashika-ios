@@ -43,4 +43,17 @@ class HomePresenter: HomePresenterProtocol {
             self?.sections.accept(sections)
         }).disposed(by: disposeBag)
     }
+
+    func resolvePresenter(for section: HomeSection) -> FriendsGridPresenterProtocol? {
+        switch section {
+        case .summery:
+            return nil
+        case .schedule:
+            return nil
+        case .kari:
+            return FriendsGridPresenter(interactor.kariFriend)
+        case .kashi:
+            return FriendsGridPresenter(interactor.kashiFriend)
+        }
+    }
 }

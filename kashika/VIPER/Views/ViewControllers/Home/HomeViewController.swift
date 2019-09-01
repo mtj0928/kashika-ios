@@ -57,10 +57,12 @@ extension HomeViewController {
 
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
 
         tableView.tableFooterView = UIView()
 
         tableView.register(R.nib.summeryViewCell)
+        tableView.register(R.nib.friendsTableViewCell)
 
         presenter.sections.asDriver().drive(onNext: { [weak self] _ in
             self?.tableView.reloadData()
@@ -82,16 +84,39 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = presenter.sections.value[indexPath.section]
-        if section == .summery {
+        switch section {
+        case .summery:
             let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.summeryViewCell, for: indexPath)
             cell.set(money: presenter.userTotalDebtMoney)
             return cell
+        case .schedule:
+            let cell = UITableViewCell()
+            return cell
+        case .kari, .kashi:
+            let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendsTableViewCell, for: indexPath)
+            if let presenter = self.presenter.resolvePresenter(for: section) {
+                cell.set(presenter: presenter)
+            }
+            return cell
         }
-        let cell = UITableViewCell()
-        return cell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return presenter.sections.value[section].title
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let section = presenter.sections.value[indexPath.section]
+        switch section {
+        case .summery:
+            return UITableView.automaticDimension
+        case .kashi, .kari, .schedule:
+            return FriendsTableViewCell.height
+        }
     }
 }
