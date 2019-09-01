@@ -48,7 +48,7 @@ extension RootViewController {
 
                 let view = MessageView.viewFromNib(layout: .cardView)
 
-                view.configureTheme(backgroundColor: UIColor.app.secondarySystemBackground, foregroundColor: UIColor.app.label)
+                view.configureTheme(backgroundColor: UIColor.app.notificationColor, foregroundColor: UIColor.app.label)
                 view.configureDropShadow()
 
                 view.titleLabel?.text = notification.title
