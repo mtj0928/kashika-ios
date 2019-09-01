@@ -12,16 +12,17 @@ import RxCocoa
 
 class FriendsPool {
     var friends: [Document<Friend>] {
-        (try? friendsSubject.value()) ?? []
+        dataSource?.documents ?? []
     }
     var friendsObservable: Observable<[Document<Friend>]> {
         friendsSubject
     }
     private let friendsSubject = BehaviorSubject<[Document<Friend>]>(value: [])
     private var nowListeningUser: Document<User>?
+    private var dataSource: DataSource<Document<Friend>>?
     private var disposeBag = RxSwift.DisposeBag()
 
-    func listen(user: Document<User>, observable: Observable<[Document<Friend>]>) {
+    func listen(user: Document<User>, dataSource: DataSource<Document<Friend>>) {
         guard user.id != nowListeningUser?.id else {
             return
         }
@@ -29,12 +30,9 @@ class FriendsPool {
 
         disposeBag = DisposeBag()
 
-        observable.subscribe(onNext: { [weak self] documents in
-            self?.friendsSubject.onNext(documents)
-            }, onError: { [weak self] error in
-                self?.friendsSubject.onError(error)
-            }, onCompleted: { [weak self] in
-                self?.friendsSubject.onCompleted()
-        }).disposed(by: disposeBag)
+        self.dataSource?.stop()
+        self.dataSource = dataSource.onChanged { [weak self] (_, _) in
+            self?.friendsSubject.onNext(dataSource.documents)
+        }.listen()
     }
 }

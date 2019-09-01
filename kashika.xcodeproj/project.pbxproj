@@ -48,6 +48,7 @@
 		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
+		904D74C6231B5F610002CDAA /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C5231B5F610002CDAA /* UserPool.swift */; };
 		9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */; };
 		905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */; };
 		905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905C75FE2255F09D0011580B /* AddDebtViewController.swift */; };
@@ -254,6 +255,7 @@
 		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
+		904D74C5231B5F610002CDAA /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		9053BAE523028A74002FD563 /* ModalTextFieldContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldContracts.swift; sourceTree = "<group>"; };
 		905C75FD2255F09D0011580B /* AddDebtViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDebtViewController.storyboard; sourceTree = "<group>"; };
 		905C75FE2255F09D0011580B /* AddDebtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtViewController.swift; sourceTree = "<group>"; };
@@ -932,6 +934,7 @@
 			children = (
 				90FD9FC623112758002D214B /* FriendsPool.swift */,
 				90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */,
+				904D74C5231B5F610002CDAA /* UserPool.swift */,
 			);
 			path = OnMemory;
 			sourceTree = "<group>";
@@ -1304,6 +1307,7 @@
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				90E309EB23178CEA0097104C /* UnstoredDebt.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
+				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,

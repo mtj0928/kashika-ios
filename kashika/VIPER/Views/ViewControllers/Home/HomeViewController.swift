@@ -84,7 +84,7 @@ extension HomeViewController: UITableViewDataSource {
         let section = presenter.sections.value[indexPath.section]
         if section == .summery {
             let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.summeryViewCell, for: indexPath)
-            cell.set(money: presenter.userTotalDebtMoney.value)
+            cell.set(money: presenter.userTotalDebtMoney)
             return cell
         }
         let cell = UITableViewCell()

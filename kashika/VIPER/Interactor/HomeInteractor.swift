@@ -10,7 +10,9 @@ import RxSwift
 import RxCocoa
 
 struct HomeInteractor: HomeInteractorProtocol {
-    let user: BehaviorRelay<User?> = BehaviorRelay(value: nil)
+    var user: BehaviorRelay<User?> {
+        return userUseCase.user
+    }
     let scheduledFriend: BehaviorRelay<[Friend]> = BehaviorRelay(value: [])
     let kashiFriend: BehaviorRelay<[Friend]> = BehaviorRelay(value: [])
     let kariFriend: BehaviorRelay<[Friend]> = BehaviorRelay(value: [])
@@ -20,6 +22,12 @@ struct HomeInteractor: HomeInteractorProtocol {
     private let disposeBag = DisposeBag()
 
     init() {
+        friendUseCase.friends.subscribe(onNext: { [self] _ in
+            self.userUseCase.fetchOrCreateUser().subscribe(onSuccess: { [self] document in
+                self.user.accept(document.data)
+            }).disposed(by: self.disposeBag)
+        }).disposed(by: disposeBag)
+
         friendUseCase.friends.map({ (friends: [Friend]) -> [Friend] in
             return friends.filter({ Int($0.totalDebt.rawValue) > 0 })
         }).subscribe(onNext: { [self] friends in

@@ -46,27 +46,17 @@ struct FriendDataStore {
             })
     }
 
-    func listen(user userDocument: Document<User>) -> Observable<[Document<Friend>]> {
-        return Observable.create { observer -> Disposable in
-            let reference = userDocument.documentReference.collection(FriendDataStore.key)
-            let listner = reference.addSnapshotListener { (querySnapshot, error) in
-                if let error = error {
-                    observer.onError(error)
-                    return
-                }
-                guard let snapshot = querySnapshot else {
-                    observer.onCompleted()
-                    return
-                }
-                let documents = snapshot.documents
-                    .map { Document<Friend>(snapshot: $0) }
-                    .compactMap { $0 }
-                observer.onNext(documents)
-            }
-            return Disposables.create {
-                listner.remove()
+    func listen(user userDocument: Document<User>) -> DataSource<Document<Friend>> {
+        let reference = userDocument.documentReference.collection(FriendDataStore.key)
+        let query = DataSource<Document<Friend>>.Query(reference)
+        let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
+            let document = Document<Friend>(documentSnapshot.reference)
+            document.get { (document, _) in
+                // swiftlint:disable:next force_unwrapping
+                done(document!)
             }
         }
+        return dataSource
     }
 
     func delete(_ friends: [Document<Friend>]) -> Completable {
