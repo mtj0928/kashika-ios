@@ -19,7 +19,7 @@ struct DebtDataStore {
 
     func create(debts: [UnstoredDebt], userDocument: Document<User>) -> Single<[Document<Debt>]> {
         return Single.just(userDocument)
-            .map({ userDocument -> [(Document<Debt>, Document<Friend>)] in
+            .map({ userDocument -> [(Document<Debt>, Document<Friend>, Document<User>)] in
                 return debts.map({ debt in
                     let collectionReference = userDocument.documentReference.collection(DebtDataStore.key)
                     let debtDocument = Document<Debt>(collectionReference: collectionReference)
@@ -28,14 +28,16 @@ struct DebtDataStore {
                     debtDocument.data?.money = debt.money
                     debtDocument.data?.friendId = debt.document?.id
                     friendDocument?.data?.totalDebt = .increment(Int64(debt.money))
+                    userDocument.data?.totalDebt = .increment(Int64(debt.money))
 
-                    return (debtDocument, friendDocument)
+                    return (debtDocument, friendDocument, userDocument)
                 })
             }).flatMap({ debts in
                 Batch.ex.commit { batch in
                     debts.forEach { debt in
                         batch.save(debt.0)
                         batch.update(debt.1)
+                        batch.update(debt.2)
                     }
                 }.andThen(Single.just(debts.map({ $0.0 })))
             })

@@ -15,7 +15,11 @@ enum DebtType: String {
     case kari = "借り"
 
     static func make(debt: Debt) -> DebtType {
-        return debt.money > 0 ? .kari : .kashi
+        return make(money: debt.money)
+    }
+
+    static func make(money: Int) -> DebtType {
+        return money > 0 ? .kari : .kashi
     }
 }
 

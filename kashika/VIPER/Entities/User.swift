@@ -13,4 +13,5 @@ import Ballcap
 struct User: Codable, Equatable, Modelable {
     var name: String = ""
     var icon: File?
+    var totalDebt: IncrementableInt = 0
 }

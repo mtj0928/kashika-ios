@@ -6,7 +6,6 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import FirebaseAuth
 

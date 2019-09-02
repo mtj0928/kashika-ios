@@ -48,7 +48,7 @@ extension RootViewController {
 
                 let view = MessageView.viewFromNib(layout: .cardView)
 
-                view.configureTheme(backgroundColor: UIColor.app.secondarySystemBackground, foregroundColor: UIColor.app.label)
+                view.configureTheme(backgroundColor: UIColor.app.notificationColor, foregroundColor: UIColor.app.label)
                 view.configureDropShadow()
 
                 view.titleLabel?.text = notification.title
@@ -60,6 +60,7 @@ extension RootViewController {
                 view.iconImageView?.layer.cornerRadius = self.iconLength / 2
                 view.iconImageView?.sd_setImage(with: notification.url)
                 view.iconImageView?.contentMode = .scaleAspectFill
+                view.iconImageView?.backgroundColor = UIColor.lightGray
 
                 if SwiftMessages.sharedInstance.current() != nil {
                     SwiftMessages.hide()

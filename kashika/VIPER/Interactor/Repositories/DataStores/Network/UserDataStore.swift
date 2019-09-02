@@ -23,7 +23,7 @@ struct UserDataStore {
 
     func fetch(authId: String) -> Single<Document<User>> {
         return Single.create(subscribe: { observer -> Disposable in
-            Document<User>.get(id: authId, completion: { (document, error) in
+            Document<User>(id: authId).get { (document, error) in
                 if let document = document {
                     observer(.success(document))
                     return
@@ -32,7 +32,7 @@ struct UserDataStore {
                     return
                 }
                 observer(.error(NSError(domain: "Cannot fetch User(id: \(authId).", code: -1, userInfo: nil)))
-            })
+            }
             return Disposables.create()
         })
     }

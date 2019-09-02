@@ -8,6 +8,16 @@
 
 import UIKit
 
+fileprivate extension UIColor {
+
+    static func create(defultColor: UIColor, dynamicProvider: @escaping (UITraitCollection) -> UIColor) -> UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor(dynamicProvider: dynamicProvider)
+        }
+        return defultColor
+    }
+}
+
 public extension UIColor {
 
     static var app: AppColor {
@@ -27,6 +37,16 @@ public extension UIColor {
             }
             return UIColor.white
         }
+        let notificationColor: UIColor = UIColor.create(defultColor: UIColor.white) { traitCollection -> UIColor in
+            switch traitCollection.userInterfaceStyle {
+            case .light, .unspecified:
+                return UIColor.white
+            case .dark:
+                return UIColor(hex: "6f6e70")
+            @unknown default:
+                fatalError("No implementation for userInterfaceStyle")
+            }
+        }
         var label: UIColor {
             if #available(iOS 13.0, *) {
                 return UIColor.label
@@ -40,6 +60,8 @@ public extension UIColor {
         let nonActiveButtonColor = UIColor(hex: "BABEC4")
         let negativeColor = UIColor(hex: "D21350")
         let backgroundInImageView = UIColor.lightGray
+
+        fileprivate init() {}
 
         func systemBackground(isSecondary: Bool) -> UIColor {
             return isSecondary ? secondarySystemBackground : systemBackground

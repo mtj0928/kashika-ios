@@ -26,7 +26,11 @@ class FriendUseCase {
 
         friendRepository.friendsObservable
             .subscribe(onNext: { [weak self] documents in
-                self?.friends.accept(documents.compactMap({ $0.data }))
+                let values: [Friend] = documents
+                    .compactMap({ $0.data })
+                    .sorted(by: { abs($0.totalDebt.rawValue) > abs($1.totalDebt.rawValue) })
+
+                self?.friends.accept(values)
             }).disposed(by: disposeBag)
     }
 
