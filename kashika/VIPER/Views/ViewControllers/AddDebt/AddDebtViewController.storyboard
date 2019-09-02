@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,148 +16,154 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-ZB-MrA" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="315" y="54" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="EOC-ZB-MrA" secondAttribute="height" multiplier="1:1" id="YvP-yg-XTR"/>
-                                    <constraint firstAttribute="width" constant="50" id="ZQE-e0-SNy"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="tappedCloseButton:" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Ece-cl-idG"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お金を..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-4P-PyH">
-                                <rect key="frame" x="28.000000000000007" y="63" width="106.66666666666669" height="32.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="に" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-rN-k5N">
-                                <rect key="frame" x="28" y="222" width="27.666666666666671" height="32.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-aD-q7t">
-                                <rect key="frame" x="0.0" y="112" width="375" height="102"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="vvq-mq-TZu"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sfB-bS-fIr">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
-                                <rect key="frame" x="3" y="254.33333333333337" width="369" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-p7-kYR" userLabel="main Stack View">
+                                <rect key="frame" x="16" y="60" width="343" height="702"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5g-7S-5U1">
-                                        <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="98"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xam-Nf-WdD" userLabel="Half Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="352.33333333333331"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額を入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFz-2M-lB1">
-                                                <rect key="frame" x="0.0" y="34.666666666666657" width="121.66666666666667" height="28.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="SFz-2M-lB1" firstAttribute="leading" secondItem="r5g-7S-5U1" secondAttribute="leading" id="ghJ-he-WGB"/>
-                                            <constraint firstAttribute="trailing" secondItem="SFz-2M-lB1" secondAttribute="trailing" constant="8" id="tJF-tA-pur" userLabel="trailing = 金額を入力.trailing "/>
-                                            <constraint firstItem="SFz-2M-lB1" firstAttribute="centerY" secondItem="r5g-7S-5U1" secondAttribute="centerY" id="vm3-8s-wHy"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
-                                        <rect key="frame" x="137.66666666666663" y="10.666666666666657" width="173.33333333333337" height="76.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-eg-m84">
-                                        <rect key="frame" x="319" y="0.0" width="50" height="98"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
-                                                <rect key="frame" x="0.0" y="48.666666666666657" width="50" height="28.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="pAy-nM-Bo4">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お金を..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9I-4P-PyH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="113" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOC-ZB-MrA" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
+                                                        <rect key="frame" x="293" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="EOC-ZB-MrA" secondAttribute="height" multiplier="1:1" id="YvP-yg-XTR"/>
+                                                            <constraint firstAttribute="width" constant="50" id="ZQE-e0-SNy"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="tappedCloseButton:" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Ece-cl-idG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-aD-q7t">
+                                                <rect key="frame" x="0.0" y="55" width="343" height="102"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="102" id="vvq-mq-TZu"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sfB-bS-fIr">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="に" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-rN-k5N">
+                                                <rect key="frame" x="0.0" y="162" width="343" height="32.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
+                                                <rect key="frame" x="68.666666666666671" y="199.33333333333331" width="205.66666666666663" height="98"/>
+                                                <subviews>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="金額を入力" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFz-2M-lB1">
+                                                        <rect key="frame" x="0.0" y="34.666666666666686" width="0.0" height="28.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                        <color key="textColor" systemColor="placeholderTextColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="1,080" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-tn-q9B">
+                                                        <rect key="frame" x="0.0" y="10.666666666666686" width="173.33333333333334" height="76.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-eg-m84">
+                                                        <rect key="frame" x="181.33333333333331" y="0.0" width="24.333333333333343" height="98"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-8v-d5U">
+                                                                <rect key="frame" x="0.0" y="48.666666666666686" width="24.333333333333332" height="28.666666666666671"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="EJS-8v-d5U" firstAttribute="leading" secondItem="0DW-eg-m84" secondAttribute="leading" id="4aB-jL-i7i"/>
+                                                            <constraint firstAttribute="trailing" secondItem="EJS-8v-d5U" secondAttribute="trailing" id="g7R-3t-G39"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="98" id="Ec0-cv-USm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0DW-eg-m84" secondAttribute="bottom" id="Qs0-2J-lmc"/>
+                                                    <constraint firstItem="iU0-tn-q9B" firstAttribute="centerY" secondItem="olN-2K-M7j" secondAttribute="centerY" id="XNH-3J-tLl"/>
+                                                    <constraint firstItem="0DW-eg-m84" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="bvK-Kf-Yhe"/>
+                                                    <constraint firstItem="EJS-8v-d5U" firstAttribute="firstBaseline" secondItem="iU0-tn-q9B" secondAttribute="firstBaseline" id="nrG-q0-iR7"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Urf-lQ-RE7">
+                                                <rect key="frame" x="0.0" y="302.33333333333331" width="343" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="168" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zNQ-2i-fnn"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="tappedKaritaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Q8z-5e-NZP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-H1-cRx" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
+                                                        <rect key="frame" x="175" y="0.0" width="168" height="50"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="tappedKashitaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="H2n-9m-CzC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="x5l-H1-cRx" firstAttribute="width" secondItem="v1O-b2-IZp" secondAttribute="width" id="1gg-Cu-MbJ"/>
+                                                    <constraint firstItem="x5l-H1-cRx" firstAttribute="height" secondItem="v1O-b2-IZp" secondAttribute="height" id="SzB-OZ-vp1"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="EJS-8v-d5U" firstAttribute="leading" secondItem="0DW-eg-m84" secondAttribute="leading" id="4aB-jL-i7i"/>
-                                            <constraint firstAttribute="trailing" secondItem="EJS-8v-d5U" secondAttribute="trailing" id="g7R-3t-G39"/>
+                                            <constraint firstAttribute="trailing" secondItem="u7F-aD-q7t" secondAttribute="trailing" id="0ZM-rS-fyg"/>
+                                            <constraint firstAttribute="trailing" secondItem="pAy-nM-Bo4" secondAttribute="trailing" id="67H-m0-D55"/>
+                                            <constraint firstItem="Urf-lQ-RE7" firstAttribute="leading" secondItem="xam-Nf-WdD" secondAttribute="leading" id="8oK-oR-lP9"/>
+                                            <constraint firstItem="pAy-nM-Bo4" firstAttribute="leading" secondItem="xam-Nf-WdD" secondAttribute="leading" id="HU5-ER-mh3"/>
+                                            <constraint firstItem="GXX-rN-k5N" firstAttribute="leading" secondItem="xam-Nf-WdD" secondAttribute="leading" id="SE3-F6-4Fa"/>
+                                            <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="xam-Nf-WdD" secondAttribute="centerX" id="U3H-Ee-4IL"/>
+                                            <constraint firstItem="u7F-aD-q7t" firstAttribute="leading" secondItem="xam-Nf-WdD" secondAttribute="leading" id="kaC-MD-Evs"/>
+                                            <constraint firstAttribute="trailing" secondItem="Urf-lQ-RE7" secondAttribute="trailing" id="tYu-NI-LOH"/>
+                                            <constraint firstAttribute="trailing" secondItem="GXX-rN-k5N" secondAttribute="trailing" id="zu4-E6-bLT"/>
                                         </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tq3-pq-T4c">
+                                        <rect key="frame" x="0.0" y="352.33333333333326" width="343" height="349.66666666666674"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="r5g-7S-5U1" secondAttribute="trailing" id="22w-yl-whG"/>
-                                    <constraint firstItem="r5g-7S-5U1" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="7VU-8H-lbJ"/>
-                                    <constraint firstAttribute="height" constant="98" id="Ec0-cv-USm"/>
-                                    <constraint firstAttribute="bottom" secondItem="0DW-eg-m84" secondAttribute="bottom" id="Qs0-2J-lmc"/>
-                                    <constraint firstItem="iU0-tn-q9B" firstAttribute="centerY" secondItem="olN-2K-M7j" secondAttribute="centerY" id="XNH-3J-tLl"/>
-                                    <constraint firstAttribute="bottom" secondItem="r5g-7S-5U1" secondAttribute="bottom" id="YiP-tC-s4d"/>
-                                    <constraint firstItem="0DW-eg-m84" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="bvK-Kf-Yhe"/>
-                                    <constraint firstAttribute="trailing" secondItem="0DW-eg-m84" secondAttribute="trailing" id="mat-SL-sok"/>
-                                    <constraint firstItem="EJS-8v-d5U" firstAttribute="firstBaseline" secondItem="iU0-tn-q9B" secondAttribute="firstBaseline" id="nrG-q0-iR7"/>
-                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-H1-cRx" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="191.66666666666663" y="368.33333333333331" width="175.33333333333337" height="50"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu2-fc-SpX">
+                                <rect key="frame" x="16" y="259.33333333333331" width="343" height="98"/>
                                 <connections>
-                                    <action selector="tappedKashitaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="H2n-9m-CzC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
-                                <rect key="frame" x="8" y="368.33333333333331" width="175.66666666666666" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="zNQ-2i-fnn"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="tappedKaritaButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="Q8z-5e-NZP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSw-lh-MF5" userLabel="Money Button">
-                                <rect key="frame" x="0.0" y="254.33333333333337" width="375" height="98"/>
-                                <connections>
-                                    <action selector="tappedMoneyButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="58t-NB-Aun"/>
+                                    <action selector="tappedMoneyButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="MAh-BJ-fXO"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="PSw-lh-MF5" secondAttribute="trailing" id="3C7-2f-4bP"/>
-                            <constraint firstItem="x5l-H1-cRx" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="CKQ-sH-Xmn"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="EOC-ZB-MrA" secondAttribute="trailing" constant="10" id="DYu-Gr-wd5"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="olN-2K-M7j" secondAttribute="trailing" id="ETg-xs-mdA"/>
-                            <constraint firstItem="EOC-ZB-MrA" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="10" id="GbH-ht-VlD"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="u7F-aD-q7t" secondAttribute="trailing" id="HVq-Vh-nDR"/>
-                            <constraint firstItem="x5l-H1-cRx" firstAttribute="height" secondItem="v1O-b2-IZp" secondAttribute="height" id="JQT-WH-ba1"/>
-                            <constraint firstItem="PSw-lh-MF5" firstAttribute="bottom" secondItem="olN-2K-M7j" secondAttribute="bottom" id="JUb-xW-ZwA"/>
-                            <constraint firstItem="PSw-lh-MF5" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="Mde-al-7dw"/>
-                            <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="Q8m-zE-aew"/>
-                            <constraint firstItem="v1O-b2-IZp" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="8" id="Rzi-8h-1Gu"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="olN-2K-M7j" secondAttribute="leading" id="SdG-PK-7Re"/>
-                            <constraint firstItem="x5l-H1-cRx" firstAttribute="leading" secondItem="v1O-b2-IZp" secondAttribute="trailing" constant="8" id="U59-2M-M6w"/>
-                            <constraint firstItem="u7F-aD-q7t" firstAttribute="top" secondItem="EOC-ZB-MrA" secondAttribute="bottom" constant="8" id="c9V-XK-Mjb"/>
-                            <constraint firstItem="PSw-lh-MF5" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="dV4-Hq-bYv"/>
-                            <constraint firstItem="x5l-H1-cRx" firstAttribute="centerY" secondItem="v1O-b2-IZp" secondAttribute="centerY" id="da3-fs-fsp"/>
-                            <constraint firstItem="EOC-ZB-MrA" firstAttribute="centerY" secondItem="l9I-4P-PyH" secondAttribute="centerY" id="eQO-PP-EIK"/>
-                            <constraint firstItem="x5l-H1-cRx" firstAttribute="width" secondItem="v1O-b2-IZp" secondAttribute="width" id="eU6-ZF-kYi"/>
-                            <constraint firstItem="GXX-rN-k5N" firstAttribute="top" secondItem="u7F-aD-q7t" secondAttribute="bottom" constant="8" id="goj-G5-y5t"/>
-                            <constraint firstItem="olN-2K-M7j" firstAttribute="top" secondItem="GXX-rN-k5N" secondAttribute="bottom" id="kvr-tK-pA5"/>
-                            <constraint firstItem="u7F-aD-q7t" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="oXi-B2-AXi"/>
-                            <constraint firstItem="olN-2K-M7j" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="qPR-IA-hkw"/>
-                            <constraint firstItem="v1O-b2-IZp" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="bottom" constant="16" id="sDY-FA-kyq"/>
-                            <constraint firstItem="GXX-rN-k5N" firstAttribute="leading" secondItem="l9I-4P-PyH" secondAttribute="leading" id="tg8-OI-oud"/>
-                            <constraint firstItem="l9I-4P-PyH" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="28" id="vg1-bM-Rg9"/>
-                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="x5l-H1-cRx" secondAttribute="trailing" constant="8" id="yQe-dS-Wcr"/>
+                            <constraint firstItem="Uu2-fc-SpX" firstAttribute="trailing" secondItem="gxe-p7-kYR" secondAttribute="trailing" id="8Y7-hD-yY8"/>
+                            <constraint firstItem="Uu2-fc-SpX" firstAttribute="leading" secondItem="gxe-p7-kYR" secondAttribute="leading" id="BcX-wK-dDi"/>
+                            <constraint firstItem="Uu2-fc-SpX" firstAttribute="bottom" secondItem="olN-2K-M7j" secondAttribute="bottom" id="ByI-wj-YJE"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="gxe-p7-kYR" secondAttribute="trailing" constant="16" id="FWo-Yz-VcS"/>
+                            <constraint firstItem="gxe-p7-kYR" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" constant="16" id="RtM-nh-BF8"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="bottom" secondItem="gxe-p7-kYR" secondAttribute="bottom" constant="16" id="VeM-Lm-9ej"/>
+                            <constraint firstItem="Uu2-fc-SpX" firstAttribute="top" secondItem="olN-2K-M7j" secondAttribute="top" id="bNb-Fi-8IS"/>
+                            <constraint firstItem="gxe-p7-kYR" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="16" id="kaZ-3y-XsU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P8d-UG-YEN"/>
                     </view>
@@ -168,13 +174,13 @@
                         <outlet property="kashitaButton" destination="x5l-H1-cRx" id="OaM-jW-g9Y"/>
                         <outlet property="moneylabel" destination="iU0-tn-q9B" id="VRF-1m-NQV"/>
                         <outlet property="okanewoLabel" destination="l9I-4P-PyH" id="hGY-KN-rWK"/>
-                        <outlet property="placeHolderView" destination="r5g-7S-5U1" id="Zpg-Tu-Ldr"/>
+                        <outlet property="placeHolderView" destination="SFz-2M-lB1" id="Ywf-MP-XeC"/>
                         <outlet property="unitLabel" destination="EJS-8v-d5U" id="PG3-lx-L0R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413.60000000000002" y="-288.17733990147786"/>
+            <point key="canvasLocation" x="-1404" y="-327"/>
         </scene>
     </scenes>
 </document>

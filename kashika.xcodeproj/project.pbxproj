@@ -13,6 +13,7 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
 		58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7C23165D990060E882 /* DebtRepository.swift */; };
 		58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7E23165F390060E882 /* DebtUseCase.swift */; };
 		58CA7CF12316458D001231A9 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF02316458D001231A9 /* Debt.swift */; };
@@ -123,7 +124,6 @@
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
-		90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
@@ -1352,6 +1352,7 @@
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */,
 				909EF947231A314500DA5F0D /* SummeryView.swift in Sources */,
+				5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */,
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
 				90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
@@ -1392,7 +1393,6 @@
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,
-				90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
