@@ -14,6 +14,7 @@ import TapticEngine
 
 final class AddDebtViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -100,6 +101,7 @@ extension AddDebtViewController {
         collectionView.alwaysBounceHorizontal = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0.0, left: okanewoLabel.frame.minX, bottom: 0.0, right: okanewoLabel.frame.minX)
+        collectionView.backgroundColor = UIColor.clear
 
         collectionView.register(R.nib.simpleFriendCell)
         collectionView.register(R.nib.userIconCollectionViewCell)
