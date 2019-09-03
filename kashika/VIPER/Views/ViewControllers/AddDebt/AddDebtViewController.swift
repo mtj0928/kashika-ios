@@ -25,6 +25,8 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var kashitaButton: UIButton!
     @IBOutlet private weak var unitLabel: UILabel!
     @IBOutlet private weak var additionalView: UIView!
+    @IBOutlet private weak var addImageButton: UIButton!
+    @IBOutlet private weak var memoTextView: UITextView!
 
     private(set) var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
@@ -32,10 +34,8 @@ final class AddDebtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        additionalView.alpha = 0.0
-        setupButton()
-        setupMoneyLabel()
-        setupCollectionView()
+        setupEssentialView()
+        setupAdditionalView()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -70,10 +70,16 @@ final class AddDebtViewController: UIViewController {
     }
 }
 
-// MARK: - Set Up
+// MARK: - Set Up for EssentialView
 
 extension AddDebtViewController {
-    
+
+    private func setupEssentialView() {
+        setupSaveButton()
+        setupMoneyLabel()
+        setupCollectionView()
+    }
+
     private func setupMoneyLabel() {
         presenter.shouldShowPlaceHolder.subscribe(onNext: { [weak self] shouldShowPlaceHolder in
             self?.placeHolderView.isHidden = !shouldShowPlaceHolder
@@ -85,7 +91,7 @@ extension AddDebtViewController {
         }).disposed(by: disposeBag)
     }
 
-    private func setupButton() {
+    private func setupSaveButton() {
         presenter.canBeAddDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] canBeAdd in
             self?.karitaButton.backgroundColor = canBeAdd ? UIColor.app.negativeColor : UIColor.app.nonActiveButtonColor
             self?.kashitaButton.backgroundColor = canBeAdd ? UIColor.app.positiveColor : UIColor.app.nonActiveButtonColor
@@ -116,6 +122,31 @@ extension AddDebtViewController {
         presenter.friends.asDriver().drive(onNext: { [weak self] _ in
             self?.collectionView.reloadData()
         }).disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Setup for AdditionalView
+
+extension AddDebtViewController {
+
+    private func setupAdditionalView() {
+        additionalView.alpha = 0.0
+        setupAddImageButton()
+        setupTextView()
+    }
+
+    private func setupAddImageButton() {
+        addImageButton.layer.cornerRadius = 8.0
+    }
+
+    private func setupTextView() {
+        memoTextView.setDoneButton()
+        memoTextView.placeholder = "メモを入力"
+    }
+
+    @objc
+    private func hideKeyboard() {
+        memoTextView.resignFirstResponder()
     }
 }
 
@@ -269,6 +300,9 @@ extension AddDebtViewController: FloatingPanelControllerDelegate {
     func floatingPanelDidEndDecelerating(_ viewController: FloatingPanelController) {
         if viewController.position == .hidden {
             presenter.dismissedFloatingPanel()
+        }
+        if viewController.position != .full {
+            memoTextView.resignFirstResponder()
         }
         presenter.isDecelerating.accept(false)
     }

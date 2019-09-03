@@ -19,6 +19,9 @@
 		58CA7CF12316458D001231A9 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF02316458D001231A9 /* Debt.swift */; };
 		58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF2231655FA001231A9 /* DebtDataStore.swift */; };
 		58CA7CF723165820001231A9 /* Document+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF623165820001231A9 /* Document+extension.swift */; };
+		58F37598231E234900B82A1C /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */; };
+		58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F3759A231E2CB900B82A1C /* UITextView+extension.swift */; };
 		90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */; };
 		90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */; };
 		90037D1D231B9DC900C8C125 /* HomeTitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */; };
@@ -206,6 +209,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
+				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
 				90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -228,6 +232,8 @@
 		58CA7CF02316458D001231A9 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
 		58CA7CF2231655FA001231A9 /* DebtDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDataStore.swift; sourceTree = "<group>"; };
 		58CA7CF623165820001231A9 /* Document+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+extension.swift"; sourceTree = "<group>"; };
+		58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		58F3759A231E2CB900B82A1C /* UITextView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+extension.swift"; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGridPresenter.swift; sourceTree = "<group>"; };
@@ -391,6 +397,7 @@
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
 				90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
+				58F37598231E234900B82A1C /* IQKeyboardManagerSwift.framework in Frameworks */,
 				90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +429,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */,
 				90E309ED2318A4C20097104C /* SwiftMessages.framework */,
 				90E309EC2318A4AE0097104C /* SwiftMessages.framework.dSYM */,
 				90FB187C22DEF6D500092BB3 /* TapticEngine.framework */,
@@ -444,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				90E309E7231617350097104C /* Batch+extension.swift */,
+				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
 				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
@@ -1207,6 +1216,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TapticEngine.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftMessages.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1409,6 +1419,7 @@
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
+				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
 				909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */,
 				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,

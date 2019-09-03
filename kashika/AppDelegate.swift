@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Ballcap
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupFirebase()
+        setupKeyboard()
         setupWindow()
 
         return true
@@ -31,6 +33,11 @@ extension AppDelegate {
     private func setupFirebase() {
         FirebaseApp.configure()
         BallcapApp.configure(Firestore.firestore().document("version/1"))
+    }
+
+    private func setupKeyboard() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
     }
 
     private func setupWindow() {
