@@ -14,6 +14,7 @@ import TapticEngine
 
 final class AddDebtViewController: UIViewController {
 
+    // swiftlint:disable:next private_outlet
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
@@ -23,6 +24,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var karitaButton: UIButton!
     @IBOutlet private weak var kashitaButton: UIButton!
     @IBOutlet private weak var unitLabel: UILabel!
+    @IBOutlet private weak var additionalView: UIView!
 
     private(set) var presenter: AddDebtPresenterProtocol!
     private let disposeBag = DisposeBag()
@@ -30,6 +32,7 @@ final class AddDebtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        additionalView.alpha = 0.0
         setupButton()
         setupMoneyLabel()
         setupCollectionView()
@@ -268,5 +271,40 @@ extension AddDebtViewController: FloatingPanelControllerDelegate {
             presenter.dismissedFloatingPanel()
         }
         presenter.isDecelerating.accept(false)
+    }
+
+    func floatingPanelDidMove(_ viewController: FloatingPanelController) {
+        // swiftlint:disable:next identifier_name
+        let y = viewController.surfaceView.frame.origin.y
+        let halfY = viewController.originYOfSurface(for: .half)
+        let fullY = viewController.originYOfSurface(for: .full)
+
+        if fullY < y && y < halfY {
+            let progress = (y - fullY) / (halfY - fullY)
+            additionalView.alpha = 1 - progress
+        }
+    }
+
+    func floatingPanel(_ vc: FloatingPanelController, behaviorFor newCollection: UITraitCollection) -> FloatingPanelBehavior? {
+        return AddDebtPanelBehavior(additionalView)
+    }
+}
+
+private class AddDebtPanelBehavior: FloatingPanelBehavior {
+
+    private weak var additionalView: UIView?
+
+    init(_ view: UIView?) {
+        self.additionalView = view
+    }
+
+    func interactionAnimator(_ viewController: FloatingPanelController, to targetPosition: FloatingPanelPosition, with velocity: CGVector) -> UIViewPropertyAnimator {
+        let animator = UIViewPropertyAnimator()
+
+        animator.addAnimations {[weak self] in
+            self?.additionalView?.alpha = targetPosition == .full ? 1.0 : 0.0
+        }
+
+        return animator
     }
 }
