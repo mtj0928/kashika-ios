@@ -25,7 +25,6 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var kashitaButton: UIButton!
     @IBOutlet private weak var unitLabel: UILabel!
     @IBOutlet private weak var additionalView: UIView!
-    @IBOutlet private weak var addImageButton: UIButton!
     @IBOutlet private weak var memoTextView: UITextView!
 
     private(set) var presenter: AddDebtPresenterProtocol!
@@ -131,12 +130,7 @@ extension AddDebtViewController {
 
     private func setupAdditionalView() {
         additionalView.alpha = 0.0
-        setupAddImageButton()
         setupTextView()
-    }
-
-    private func setupAddImageButton() {
-        addImageButton.layer.cornerRadius = 8.0
     }
 
     private func setupTextView() {
