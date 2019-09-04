@@ -8,17 +8,30 @@
 
 import UIKit
 import JTAppleCalendar
+import RxSwift
+import RxCocoa
 
 class CalendarViewController: UIViewController {
 
     @IBOutlet private weak var calendarView: JTAppleCalendarView!
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var calendarViewAspectConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var decideButton: UIButton!
+
+    private var presenter: CalendarPresenterProtocol!
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCalendarView()
+        setupDecideButton()
+    }
+
+    static func createFromStoryboard(with presenter: CalendarPresenterProtocol) -> CalendarViewController {
+        let viewController = CalendarViewController.createFromStoryboard()
+        viewController.presenter = presenter
+        return viewController
     }
 }
 
@@ -49,6 +62,28 @@ extension CalendarViewController {
         if let month = calendar.dateComponents([.month], from: startDate).month {
             monthLabel.text = "\(month)月"
         }
+    }
+
+    private func setupDecideButton() {
+        decideButton.layer.cornerRadius = decideButton.frame.height / 2
+
+        presenter.selectedDate
+            .filter({ $0 == nil })
+            .asDriver(onErrorJustReturn: nil)
+            .drive(onNext: { [weak self] _ in
+                self?.decideButton.isHidden = true
+            }).disposed(by: disposeBag)
+
+        presenter.selectedDate
+            .filter({ $0 != nil })
+            .asDriver(onErrorDriveWith: Driver.empty())
+            .drive(onNext: { [weak self] _ in
+                self?.showButton()
+            }).disposed(by: disposeBag)
+    }
+
+    private func showButton() {
+        decideButton.isHidden = false
     }
 }
 
@@ -90,7 +125,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     }
 
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        cell.isSelected = cellState.isSelected
     }
 
     func calendar(_ calendar: JTAppleCalendarView, willScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
@@ -98,6 +132,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     }
 
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        cell?.isSelected = cellState.isSelected
+        presenter.selectedDate.accept(date)
     }
 }

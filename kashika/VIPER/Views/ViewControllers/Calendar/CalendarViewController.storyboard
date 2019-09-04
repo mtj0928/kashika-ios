@@ -122,10 +122,24 @@
                                     <constraint firstAttribute="height" constant="73" id="qIC-VH-ssz"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-LI-Ory">
+                                <rect key="frame" x="37.666666666666657" y="596" width="300" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="a4O-at-gIO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="日付を決定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lpJ-k2-vhi" firstAttribute="trailing" secondItem="WPf-re-U2q" secondAttribute="trailing" id="3kp-2c-fmy"/>
+                            <constraint firstItem="Pof-LI-Ory" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="LBI-QI-ATo"/>
+                            <constraint firstItem="Pof-LI-Ory" firstAttribute="top" secondItem="lpJ-k2-vhi" secondAttribute="bottom" constant="40" id="RAe-PT-57d"/>
+                            <constraint firstItem="Pof-LI-Ory" firstAttribute="width" secondItem="lpJ-k2-vhi" secondAttribute="width" id="RdF-Hf-aia"/>
                             <constraint firstItem="lpJ-k2-vhi" firstAttribute="leading" secondItem="WPf-re-U2q" secondAttribute="leading" id="SqM-ol-od8"/>
                             <constraint firstItem="lpJ-k2-vhi" firstAttribute="centerX" secondItem="n8X-UT-ubS" secondAttribute="centerX" id="XEt-Sv-s4f"/>
                             <constraint firstItem="lpJ-k2-vhi" firstAttribute="top" secondItem="WPf-re-U2q" secondAttribute="bottom" id="bqM-Lt-HDx"/>
@@ -136,6 +150,7 @@
                     <connections>
                         <outlet property="calendarView" destination="lpJ-k2-vhi" id="bbU-H3-o02"/>
                         <outlet property="calendarViewAspectConstraint" destination="nZi-do-TiM" id="G4Y-mc-4gV"/>
+                        <outlet property="decideButton" destination="Pof-LI-Ory" id="af7-ox-wMz"/>
                         <outlet property="monthLabel" destination="4yF-N6-YgI" id="gOC-ol-vpK"/>
                     </connections>
                 </viewController>
