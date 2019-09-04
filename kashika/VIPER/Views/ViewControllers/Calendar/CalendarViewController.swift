@@ -12,6 +12,8 @@ import JTAppleCalendar
 class CalendarViewController: UIViewController {
 
     @IBOutlet private weak var calendarView: JTAppleCalendarView!
+    @IBOutlet private weak var monthLabel: UILabel!
+    @IBOutlet private weak var calendarViewAspectConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +31,40 @@ extension CalendarViewController {
         calendarView.calendarDataSource = self
 
         calendarView.register(R.nib.calendarViewCell)
+
+        let today = Date()
+        calendarView.scrollToDate(today, animateScroll: false)
+        updateMonthLabel(for: today)
+    }
+
+    private func updateMonthLabel(for date: Date?) {
+        let calendar = Calendar(identifier: .gregorian)
+        guard let date = date else {
+            return
+        }
+        let startDate = calendar.startOfMonth(for: date)
+        if let month = calendar.dateComponents([.month], from: startDate).month {
+            monthLabel.text = "\(month)月"
+        }
     }
 }
 
 // MARK: - JTAppleCalendarViewDataSource
 
 extension CalendarViewController: JTAppleCalendarViewDataSource {
+
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
-        let startDate = formatter.date(from: "2019 01 01") ?? Date()
-        let endDate = Date()
-        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let calendar = Calendar(identifier: .gregorian)
+
+        let lastYear = calendar.date(byAdding: .year, value: -1, to: Date()) ?? Date()
+        let startDate = calendar.startOfMonth(for: lastYear)
+
+        let nextYear = calendar.date(byAdding: .year, value: 1, to: Date()) ?? Date()
+        let endDate = calendar.endOfMonth(for: nextYear)
+
+        return ConfigurationParameters(startDate: startDate, endDate: endDate, generateOutDates: .tillEndOfRow)
     }
 }
 
@@ -53,14 +77,18 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         cell?.set(cellState.text)
 
         if cellState.dateBelongsTo == .thisMonth {
-           cell?.isHidden = false
+            cell?.isHidden = false
         } else {
-           cell?.isHidden = true
+            cell?.isHidden = true
         }
 
         return cell ?? JTAppleCell()
     }
 
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, willScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        updateMonthLabel(for: visibleDates.monthDates.first?.date)
     }
 }

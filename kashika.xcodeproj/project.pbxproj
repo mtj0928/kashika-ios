@@ -13,6 +13,7 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		587E257F231F5C070079DFB3 /* Calendar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587E257E231F5C070079DFB3 /* Calendar+extension.swift */; };
 		5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
 		58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7C23165D990060E882 /* DebtRepository.swift */; };
 		58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7E23165F390060E882 /* DebtUseCase.swift */; };
@@ -234,6 +235,7 @@
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		58701270224C5A61003888E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		587E257E231F5C070079DFB3 /* Calendar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+extension.swift"; sourceTree = "<group>"; };
 		58C0DB7C23165D990060E882 /* DebtRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtRepository.swift; sourceTree = "<group>"; };
 		58C0DB7E23165F390060E882 /* DebtUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtUseCase.swift; sourceTree = "<group>"; };
 		58CA7CF02316458D001231A9 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			children = (
 				90E309E7231617350097104C /* Batch+extension.swift */,
 				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
+				587E257E231F5C070079DFB3 /* Calendar+extension.swift */,
 				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
@@ -1389,6 +1392,7 @@
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */,
 				909EF93C231A118500DA5F0D /* HomeViewController.swift in Sources */,
+				587E257F231F5C070079DFB3 /* Calendar+extension.swift in Sources */,
 				900E4D5B225CAB07003C59B1 /* AddUserCell.swift in Sources */,
 				9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
