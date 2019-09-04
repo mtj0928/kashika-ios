@@ -31,10 +31,13 @@ extension CalendarViewController {
         calendarView.calendarDataSource = self
 
         calendarView.register(R.nib.calendarViewCell)
+        calendarView.contentInset = UIEdgeInsets.zero
+        calendarView.minimumLineSpacing = 0
+        calendarView.minimumInteritemSpacing = 0
 
         let today = Date()
-        calendarView.scrollToDate(today, animateScroll: false)
         updateMonthLabel(for: today)
+        calendarView.scrollToDate(today, animateScroll: false)
     }
 
     private func updateMonthLabel(for date: Date?) {
@@ -81,14 +84,20 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         } else {
             cell?.isHidden = true
         }
+        cell?.isSelected = cellState.isSelected
 
         return cell ?? JTAppleCell()
     }
 
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+        cell.isSelected = cellState.isSelected
     }
 
     func calendar(_ calendar: JTAppleCalendarView, willScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         updateMonthLabel(for: visibleDates.monthDates.first?.date)
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        cell?.isSelected = cellState.isSelected
     }
 }

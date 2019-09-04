@@ -957,12 +957,12 @@
 			children = (
 				900E4D5A225CAB07003C59B1 /* AddUserCell.swift */,
 				900E4D5C225CAB19003C59B1 /* AddUserCell.xib */,
+				9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */,
+				9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */,
 				90D1610822587CED00AF7934 /* SimpleFriendCell.swift */,
 				90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */,
 				900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */,
 				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
-				9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */,
-				9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";

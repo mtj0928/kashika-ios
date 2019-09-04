@@ -11,6 +11,14 @@ import JTAppleCalendar
 
 class CalendarViewCell: JTAppleCell {
     @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet private weak var selectedView: UIView!
+
+    override var isSelected: Bool {
+        didSet {
+            selectedView.isHidden = !self.isSelected
+            selectedView.layer.cornerRadius = selectedView.frame.height / 2
+        }
+    }
 
     func set(_ text: String) {
         dateLabel.text = text

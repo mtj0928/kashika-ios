@@ -11,29 +11,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarViewCell" id="AD0-dq-KME" customClass="CalendarViewCell" customModule="kashika" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="112" height="72"/>
+            <rect key="frame" x="0.0" y="0.0" width="166" height="187"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K7E-wf-JcD">
-                <rect key="frame" x="0.0" y="0.0" width="112" height="72"/>
+                <rect key="frame" x="0.0" y="0.0" width="166" height="187"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7b-ai-H2p">
+                        <rect key="frame" x="0.0" y="10.5" width="166" height="166"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="12" id="0Dr-O4-wQ8"/>
+                            <constraint firstAttribute="width" secondItem="e7b-ai-H2p" secondAttribute="height" multiplier="1:1" id="0rA-BB-ZoE"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYl-Sg-B8J">
-                        <rect key="frame" x="46" y="25.5" width="20.5" height="21"/>
+                        <rect key="frame" x="73" y="83" width="20.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="e7b-ai-H2p" firstAttribute="top" secondItem="K7E-wf-JcD" secondAttribute="top" priority="999" id="IPQ-Ei-rFn"/>
+                    <constraint firstItem="e7b-ai-H2p" firstAttribute="centerY" secondItem="K7E-wf-JcD" secondAttribute="centerY" id="IZ3-z3-tOb"/>
+                    <constraint firstItem="e7b-ai-H2p" firstAttribute="centerX" secondItem="K7E-wf-JcD" secondAttribute="centerX" id="Obz-iu-ppR"/>
+                    <constraint firstItem="e7b-ai-H2p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="K7E-wf-JcD" secondAttribute="top" id="Qfs-xi-mcu"/>
                     <constraint firstItem="XYl-Sg-B8J" firstAttribute="centerY" secondItem="K7E-wf-JcD" secondAttribute="centerY" id="TWS-27-RLa"/>
                     <constraint firstItem="XYl-Sg-B8J" firstAttribute="centerX" secondItem="K7E-wf-JcD" secondAttribute="centerX" id="Zox-dR-vJX"/>
+                    <constraint firstItem="e7b-ai-H2p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K7E-wf-JcD" secondAttribute="leading" id="jbC-C7-mcU"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="112" height="72"/>
+            <size key="customSize" width="166" height="187"/>
             <connections>
                 <outlet property="dateLabel" destination="XYl-Sg-B8J" id="2oY-Q2-Crg"/>
+                <outlet property="selectedView" destination="e7b-ai-H2p" id="3LU-s2-g3f"/>
             </connections>
-            <point key="canvasLocation" x="189.85507246376812" y="22.767857142857142"/>
+            <point key="canvasLocation" x="228.98550724637684" y="-5.0223214285714279"/>
         </collectionViewCell>
     </objects>
 </document>
