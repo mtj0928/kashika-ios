@@ -53,6 +53,12 @@ public extension UIColor {
             }
             return UIColor.black
         }
+        var placeHolderText: UIColor {
+            if #available(iOS 13.0, *) {
+                return UIColor.placeholderText
+            }
+            return UIColor.lightGray
+        }
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")

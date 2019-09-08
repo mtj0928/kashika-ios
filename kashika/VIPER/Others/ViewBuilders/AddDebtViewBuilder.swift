@@ -23,6 +23,7 @@ final class AddDebtViewBuilder {
 
         floatingPanelController.delegate = viewController
         floatingPanelController.set(contentViewController: viewController)
+        floatingPanelController.track(scrollView: viewController.scrollView)
 
         return (floatingPanelController, presenter.output)
     }

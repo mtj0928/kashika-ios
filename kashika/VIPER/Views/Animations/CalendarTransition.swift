@@ -1,28 +1,20 @@
 //
-//   ModalTextFieldTransition.swift
+//  CalendarTransition.swift
 //  kashika
 //
-//  Created by 松本淳之介 on 2019/07/15.
+//  Created by 松本淳之介 on 2019/09/05.
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
 import UIKit
+import ViewAnimator
 
-protocol ModalTextFieldTransitionView: UIViewController {
+protocol CalendarTransitionView: UIViewController {
     var backgroundAlpha: CGFloat { get set }
     var idealBackgroundAlpha: CGFloat { get }
 }
 
-//extension ModalTextFieldTransitionView
-
-extension ModalTextFieldTransitionView {
-
-    var idealBackgroundAlpha: CGFloat {
-        return 0.8
-    }
-}
-
-class ModalTextFieldTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class CalendarTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
     var isPresent = true
 
@@ -33,29 +25,30 @@ class ModalTextFieldTransition: NSObject, UIViewControllerAnimatedTransitioning 
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let modalTextFieldTransitionView = extractModalTextFieldTransitionView(using: transitionContext),
+        guard let calendarTransition = extractCalendarTransitionView(using: transitionContext),
         let callViewController = extractCallerViewController(using: transitionContext) else {
                 transitionContext.completeTransition(false)
                 return
         }
 
         let containerView = transitionContext.containerView
-        containerView.insertSubview(modalTextFieldTransitionView.view, aboveSubview: callViewController.view)
+        containerView.insertSubview(calendarTransition.view, aboveSubview: callViewController.view)
 
-        modalTextFieldTransitionView.backgroundAlpha = isPresent ? 0.0 : modalTextFieldTransitionView.idealBackgroundAlpha
+        calendarTransition.backgroundAlpha = isPresent ? 0.0 : calendarTransition.idealBackgroundAlpha
 
-        let toAlpha = isPresent ? modalTextFieldTransitionView.idealBackgroundAlpha : 0.0
+        let toAlpha = isPresent ? calendarTransition.idealBackgroundAlpha : 0.0
+
         UIView.animate(withDuration: duration, animations: {
-            modalTextFieldTransitionView.backgroundAlpha = toAlpha
+            calendarTransition.backgroundAlpha = toAlpha
         }, completion: { didCompleted in
-            modalTextFieldTransitionView.backgroundAlpha = toAlpha
+            calendarTransition.backgroundAlpha = toAlpha
             transitionContext.completeTransition(didCompleted)
         })
     }
 
-    private func extractModalTextFieldTransitionView(using transitionContext: UIViewControllerContextTransitioning) -> ModalTextFieldTransitionView? {
+    private func extractCalendarTransitionView(using transitionContext: UIViewControllerContextTransitioning) -> CalendarTransitionView? {
         let key = isPresent ? UITransitionContextViewControllerKey.to : UITransitionContextViewControllerKey.from
-        return transitionContext.viewController(forKey: key) as? ModalTextFieldTransitionView
+        return transitionContext.viewController(forKey: key) as? CalendarTransitionView
     }
 
     private func extractCallerViewController(using transitionContext: UIViewControllerContextTransitioning) -> UIViewController? {

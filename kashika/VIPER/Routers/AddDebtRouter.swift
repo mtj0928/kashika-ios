@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 import RxCocoa
 
 final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
@@ -32,11 +33,11 @@ final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
 extension AddDebtRouter: UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return ModalTextFieldTransition<EditMoneyViewController>()
+        return ModalTextFieldTransition()
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let trasition = ModalTextFieldTransition<EditMoneyViewController>()
+        let trasition = ModalTextFieldTransition()
         trasition.isPresent = false
         return trasition
     }

@@ -13,11 +13,16 @@
 		5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587012682249F819003888E8 /* RxSwift.framework */; };
 		58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58701270224C5A61003888E8 /* GoogleService-Info.plist */; };
 		5870127F224C644A003888E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5870127E224C644A003888E8 /* User.swift */; };
+		587E257F231F5C070079DFB3 /* Calendar+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587E257E231F5C070079DFB3 /* Calendar+extension.swift */; };
+		5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
 		58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7C23165D990060E882 /* DebtRepository.swift */; };
 		58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C0DB7E23165F390060E882 /* DebtUseCase.swift */; };
 		58CA7CF12316458D001231A9 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF02316458D001231A9 /* Debt.swift */; };
 		58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF2231655FA001231A9 /* DebtDataStore.swift */; };
 		58CA7CF723165820001231A9 /* Document+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CA7CF623165820001231A9 /* Document+extension.swift */; };
+		58F37598231E234900B82A1C /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */; };
+		58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F3759A231E2CB900B82A1C /* UITextView+extension.swift */; };
 		90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */; };
 		90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */; };
 		90037D1D231B9DC900C8C125 /* HomeTitleHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */; };
@@ -42,6 +47,14 @@
 		90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */; };
 		90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */; };
 		90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */; };
+		9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */; };
+		9039C3C1231E7D4A009B0A83 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */; };
+		9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */; };
+		9039C3CD231FA14E009B0A83 /* BuilderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */; };
+		9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; };
+		9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C61E623208C6C00965A4D /* CalendarTransition.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
@@ -81,6 +94,7 @@
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
+		907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD032323CFFD00F15F61 /* Observable+extension.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
@@ -123,7 +137,6 @@
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
-		90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
@@ -206,7 +219,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
+				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
+				9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */,
 				90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */,
+				9039C3C1231E7D4A009B0A83 /* JTAppleCalendar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,11 +239,14 @@
 		587012682249F819003888E8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		58701270224C5A61003888E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5870127E224C644A003888E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		587E257E231F5C070079DFB3 /* Calendar+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+extension.swift"; sourceTree = "<group>"; };
 		58C0DB7C23165D990060E882 /* DebtRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtRepository.swift; sourceTree = "<group>"; };
 		58C0DB7E23165F390060E882 /* DebtUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtUseCase.swift; sourceTree = "<group>"; };
 		58CA7CF02316458D001231A9 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
 		58CA7CF2231655FA001231A9 /* DebtDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDataStore.swift; sourceTree = "<group>"; };
 		58CA7CF623165820001231A9 /* Document+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+extension.swift"; sourceTree = "<group>"; };
+		58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		58F3759A231E2CB900B82A1C /* UITextView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+extension.swift"; sourceTree = "<group>"; };
 		620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashika.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashika/Pods-kashika.debug.xcconfig"; sourceTree = "<group>"; };
 		7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGridPresenter.swift; sourceTree = "<group>"; };
@@ -254,6 +273,13 @@
 		90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUsernameViewController.storyboard; sourceTree = "<group>"; };
 		90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewController.swift; sourceTree = "<group>"; };
 		90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameContracts.swift; sourceTree = "<group>"; };
+		9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = JTAppleCalendar.framework.dSYM; path = Carthage/Build/iOS/JTAppleCalendar.framework.dSYM; sourceTree = "<group>"; };
+		9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
+		9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
+		9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewCell.xib; sourceTree = "<group>"; };
+		9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderOutput.swift; sourceTree = "<group>"; };
+		9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewAnimator.framework; path = Carthage/Build/iOS/ViewAnimator.framework; sourceTree = "<group>"; };
+		903C61E623208C6C00965A4D /* CalendarTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransition.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
@@ -293,6 +319,7 @@
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
+		907FAD032323CFFD00F15F61 /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -387,10 +414,13 @@
 			files = (
 				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
+				9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
+				9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */,
 				90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
+				58F37598231E234900B82A1C /* IQKeyboardManagerSwift.framework in Frameworks */,
 				90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +452,10 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */,
+				9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */,
+				9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */,
+				58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */,
 				90E309ED2318A4C20097104C /* SwiftMessages.framework */,
 				90E309EC2318A4AE0097104C /* SwiftMessages.framework.dSYM */,
 				90FB187C22DEF6D500092BB3 /* TapticEngine.framework */,
@@ -444,6 +478,8 @@
 			isa = PBXGroup;
 			children = (
 				90E309E7231617350097104C /* Batch+extension.swift */,
+				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
+				587E257E231F5C070079DFB3 /* Calendar+extension.swift */,
 				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
@@ -455,6 +491,7 @@
 				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
 				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				907FAD032323CFFD00F15F61 /* Observable+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -597,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
+				9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
@@ -679,6 +717,7 @@
 		906FE6A323053DF000EBC043 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
 				904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */,
 				904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */,
 				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
@@ -919,10 +958,11 @@
 			children = (
 				900E4D5A225CAB07003C59B1 /* AddUserCell.swift */,
 				900E4D5C225CAB19003C59B1 /* AddUserCell.xib */,
+				9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */,
+				9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */,
 				90D1610822587CED00AF7934 /* SimpleFriendCell.swift */,
 				90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */,
 				900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */,
-				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -940,6 +980,7 @@
 			isa = PBXGroup;
 			children = (
 				90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */,
+				903C61E623208C6C00965A4D /* CalendarTransition.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -1109,6 +1150,7 @@
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
 				909EF949231A316D00DA5F0D /* SummeryView.xib in Resources */,
+				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */,
 				909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */,
 				90FD9FD82312259E002D214B /* TitleHeaderView.xib in Resources */,
@@ -1207,6 +1249,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/FloatingPanel.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TapticEngine.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftMessages.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ViewAnimator.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1318,6 +1363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */,
 				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
@@ -1330,9 +1376,11 @@
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
+				9039C3CD231FA14E009B0A83 /* BuilderOutput.swift in Sources */,
 				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
@@ -1347,11 +1395,13 @@
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */,
 				909EF93C231A118500DA5F0D /* HomeViewController.swift in Sources */,
+				587E257F231F5C070079DFB3 /* Calendar+extension.swift in Sources */,
 				900E4D5B225CAB07003C59B1 /* AddUserCell.swift in Sources */,
 				9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */,
 				909EF947231A314500DA5F0D /* SummeryView.swift in Sources */,
+				5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */,
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
 				90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
@@ -1392,7 +1442,6 @@
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,
-				90D009A022ED29A700DCDEB6 /* FloatingPanelBuilder.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
@@ -1409,6 +1458,8 @@
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
+				907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */,
+				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
 				909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */,
 				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,

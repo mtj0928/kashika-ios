@@ -11,9 +11,11 @@ import Ballcap
 struct UnstoredDebt {
     let money: Int
     let friend: Friend
+    let paymentDate: Date?
+    let memo: String?
     let document: Document<Friend>?
 
-    init(money: Int, friend: Friend, type: DebtType) {
+    init(money: Int, friend: Friend, paymentDate: Date?, memo: String?, type: DebtType) {
         switch type {
         case .kari:
             self.money = money
@@ -21,12 +23,16 @@ struct UnstoredDebt {
             self.money = -money
         }
         self.friend = friend
+        self.paymentDate = paymentDate
+        self.memo = memo
         self.document = nil
     }
 
     init(from debt: UnstoredDebt, document: Document<Friend>) {
         self.money = debt.money
         self.friend = debt.friend
+        self.paymentDate = debt.paymentDate
+        self.memo = debt.memo
         self.document = document
     }
 }

@@ -3,3 +3,6 @@ github "eggswift/ESTabBarController"
 github "scenee/FloatingPanel" "master"
 github "WorldDownTown/TapticEngine"
 github "SwiftKickMobile/SwiftMessages"
+github "hackiftekhar/IQKeyboardManager"
+github "patchthecode/JTAppleCalendar" ~> 7.1
+github "marcosgriselli/ViewAnimator"
