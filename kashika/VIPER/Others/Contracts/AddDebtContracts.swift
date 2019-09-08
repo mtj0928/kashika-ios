@@ -35,6 +35,9 @@ protocol AddDebtPresenterProtocol {
     var money: BehaviorRelay<Int> { get }
     var shouldShowPlaceHolder: Observable<Bool> { get }
     var output: Observable<AddDebtOutputProtocol> { get }
+    var selectedDate: BehaviorRelay<Date?> { get }
+    var shouldOpenCalendar: BehaviorRelay<Bool> { get }
+    var memo: BehaviorRelay<String?> { get }
 
     func createDebt(debtType: DebtType)
     func tappedCloseButton()

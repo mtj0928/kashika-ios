@@ -43,11 +43,11 @@ class AddUserManuallyRouter: NSObject, AddUserManuallyRouterProtocol {
 extension AddUserManuallyRouter: UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return ModalTextFieldTransition<EditUsernameViewController>()
+        return ModalTextFieldTransition()
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let trasition = ModalTextFieldTransition<EditUsernameViewController>()
+        let trasition = ModalTextFieldTransition()
         trasition.isPresent = false
         return trasition
     }

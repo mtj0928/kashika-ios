@@ -12,8 +12,6 @@ import RxCocoa
 
 final class EditMoneyViewController: UIViewController {
     
-    static let backgroundAlpha: CGFloat = 0.8
-    
     @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var modalTextField: ModalTextField!
     @IBOutlet private weak var bottomLayout: NSLayoutConstraint!
@@ -61,7 +59,7 @@ extension EditMoneyViewController {
 
     private func setupBackground() {
         backgroundView.backgroundColor = UIColor.black
-        backgroundView.alpha = EditMoneyViewController.backgroundAlpha
+        backgroundView.alpha = 0.8
         
         view.backgroundColor = UIColor.clear
     }
@@ -117,9 +115,9 @@ extension EditMoneyViewController {
     }
 }
 
-// MARK: - ModalTextFieldTransitionProtocol
+// MARK: - ModalTextFieldTransitionView
 
-extension EditMoneyViewController: ModalTextFieldTransitionProtocol {
+extension EditMoneyViewController: ModalTextFieldTransitionView {
 
     var backgroundAlpha: CGFloat {
         get {

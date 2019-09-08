@@ -42,7 +42,7 @@ extension AppDelegate {
 
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = CalendarViewBuilder.build().viewController //router.createRootViewController()
+        window?.rootViewController = router.createRootViewController()
         window?.makeKeyAndVisible()
     }
 }

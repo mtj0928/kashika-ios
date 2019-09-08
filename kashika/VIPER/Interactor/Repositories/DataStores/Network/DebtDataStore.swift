@@ -27,6 +27,7 @@ struct DebtDataStore {
 
                     debtDocument.data?.money = debt.money
                     debtDocument.data?.friendId = debt.document?.id
+                    debtDocument.data?.paymentDate = debt.paymentDate
                     friendDocument?.data?.totalDebt = .increment(Int64(debt.money))
                     userDocument.data?.totalDebt = .increment(Int64(debt.money))
 

@@ -32,7 +32,10 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
         return outputSubject
     }
     private let outputSubject = PublishSubject<AddDebtOutputProtocol>()
-
+    let selectedDate: BehaviorRelay<Date?> = BehaviorRelay(value: nil)
+    let shouldOpenCalendar: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    let memo: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    
     private let interactor: AddDebtInteractorProtocol
     private let router: AddDebtRouterProtocol
     private let disposeBag = DisposeBag()
@@ -50,13 +53,19 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     func createDebt(debtType: DebtType) {
         let debts = selectedIndexes.value
             .compactMap({ friends.value[$0] })
-            .map({ UnstoredDebt(money: money.value, friend: $0, type: debtType) })
+            .map({ [weak self] friend in
+                self!.createUnstoredDebt(friend: friend, debtType: debtType)
+            })
 
         let debtsSingle = interactor.save(debts: debts)
         let output = AddDebtOutput(debts: debtsSingle)
         outputSubject.onNext(output)
 
         router.dismiss()
+    }
+
+    private func createUnstoredDebt(friend: Friend, debtType: DebtType) -> UnstoredDebt {
+        return UnstoredDebt(money: money.value, friend: friend, paymentDate: selectedDate.value, memo: memo.value, type: debtType)
     }
 
     func tappedCloseButton() {

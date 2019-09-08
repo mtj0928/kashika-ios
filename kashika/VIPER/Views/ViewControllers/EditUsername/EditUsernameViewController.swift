@@ -110,9 +110,9 @@ extension EditUsernameViewController {
     }
 }
 
-// MARK: - ModalTextFieldTransitionProtocol
+// MARK: - ModalTextFieldTransitionView
 
-extension EditUsernameViewController: ModalTextFieldTransitionProtocol {
+extension EditUsernameViewController: ModalTextFieldTransitionView {
 
     var backgroundAlpha: CGFloat {
         get {

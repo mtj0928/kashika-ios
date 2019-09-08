@@ -47,16 +47,14 @@
 		90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */; };
 		90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */; };
 		90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */; };
-		9039C3BC231E7911009B0A83 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9039C3BA231E7911009B0A83 /* CalendarViewController.storyboard */; };
 		9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */; };
 		9039C3C1231E7D4A009B0A83 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9039C3C3231E7FBC009B0A83 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3BB231E7911009B0A83 /* CalendarViewController.swift */; };
 		9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */; };
 		9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */; };
-		9039C3C9231F9EDD009B0A83 /* CalendarContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3C8231F9EDD009B0A83 /* CalendarContracts.swift */; };
-		9039C3CB231F9FF8009B0A83 /* CalendarViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3CA231F9FF8009B0A83 /* CalendarViewBuilder.swift */; };
 		9039C3CD231FA14E009B0A83 /* BuilderOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */; };
-		9039C3CF231FA24F009B0A83 /* CalendarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9039C3CE231FA24F009B0A83 /* CalendarPresenter.swift */; };
+		9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; };
+		9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C61E623208C6C00965A4D /* CalendarTransition.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
@@ -96,6 +94,7 @@
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
+		907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD032323CFFD00F15F61 /* Observable+extension.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
@@ -221,6 +220,7 @@
 			files = (
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
 				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
+				9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */,
 				90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */,
 				9039C3C1231E7D4A009B0A83 /* JTAppleCalendar.framework in Embed Frameworks */,
 			);
@@ -273,16 +273,13 @@
 		90364D7D22ED97D6000DCFA7 /* EditUsernameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditUsernameViewController.storyboard; sourceTree = "<group>"; };
 		90364D7E22ED97D6000DCFA7 /* EditUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewController.swift; sourceTree = "<group>"; };
 		90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameContracts.swift; sourceTree = "<group>"; };
-		9039C3BA231E7911009B0A83 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
-		9039C3BB231E7911009B0A83 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = JTAppleCalendar.framework.dSYM; path = Carthage/Build/iOS/JTAppleCalendar.framework.dSYM; sourceTree = "<group>"; };
 		9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		9039C3C4231E8050009B0A83 /* CalendarViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewCell.swift; sourceTree = "<group>"; };
 		9039C3C6231E808F009B0A83 /* CalendarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewCell.xib; sourceTree = "<group>"; };
-		9039C3C8231F9EDD009B0A83 /* CalendarContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarContracts.swift; sourceTree = "<group>"; };
-		9039C3CA231F9FF8009B0A83 /* CalendarViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewBuilder.swift; sourceTree = "<group>"; };
 		9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderOutput.swift; sourceTree = "<group>"; };
-		9039C3CE231FA24F009B0A83 /* CalendarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPresenter.swift; sourceTree = "<group>"; };
+		9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewAnimator.framework; path = Carthage/Build/iOS/ViewAnimator.framework; sourceTree = "<group>"; };
+		903C61E623208C6C00965A4D /* CalendarTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransition.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
@@ -322,6 +319,7 @@
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
+		907FAD032323CFFD00F15F61 /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -416,6 +414,7 @@
 			files = (
 				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
+				9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
 				9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */,
@@ -453,6 +452,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */,
 				9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */,
 				9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */,
 				58F37597231E234900B82A1C /* IQKeyboardManagerSwift.framework */,
@@ -491,6 +491,7 @@
 				906FE6A823054CDA00EBC043 /* UITableView+extension.swift */,
 				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				907FAD032323CFFD00F15F61 /* Observable+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -589,15 +590,6 @@
 			path = EditUsername;
 			sourceTree = "<group>";
 		};
-		9039C3B8231E78CC009B0A83 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				9039C3BA231E7911009B0A83 /* CalendarViewController.storyboard */,
-				9039C3BB231E7911009B0A83 /* CalendarViewController.swift */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
 		904278182304EEAD009480CA /* Inputes */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,7 +636,6 @@
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
-				9039C3C8231F9EDD009B0A83 /* CalendarContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F4FF6B22E88E400029990C /* FriendListContracts.swift */,
@@ -663,7 +654,6 @@
 			children = (
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
 				90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */,
-				9039C3CA231F9FF8009B0A83 /* CalendarViewBuilder.swift */,
 				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 				907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */,
 				90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */,
@@ -727,6 +717,7 @@
 		906FE6A323053DF000EBC043 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
 				904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */,
 				904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */,
 				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
@@ -886,7 +877,6 @@
 			children = (
 				905C76082256CE6C0011580B /* AddDebtPresenter.swift */,
 				90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */,
-				9039C3CE231FA24F009B0A83 /* CalendarPresenter.swift */,
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
 				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
@@ -904,7 +894,6 @@
 			children = (
 				905C75FC2255F07D0011580B /* AddDebt */,
 				90EA361822ED1EE0000EDF8A /* AddUser */,
-				9039C3B8231E78CC009B0A83 /* Calendar */,
 				901AC75C22D9B118002B3C17 /* EditMoney */,
 				90364D7C22ED9796000DCFA7 /* EditUsername */,
 				900C1A0C22E5CFC600576AEC /* FriendList */,
@@ -974,7 +963,6 @@
 				90D1610822587CED00AF7934 /* SimpleFriendCell.swift */,
 				90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */,
 				900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */,
-				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -992,6 +980,7 @@
 			isa = PBXGroup;
 			children = (
 				90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */,
+				903C61E623208C6C00965A4D /* CalendarTransition.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -1160,7 +1149,6 @@
 				90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */,
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
-				9039C3BC231E7911009B0A83 /* CalendarViewController.storyboard in Resources */,
 				909EF949231A316D00DA5F0D /* SummeryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */,
@@ -1263,6 +1251,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftMessages.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ViewAnimator.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1387,6 +1376,7 @@
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
@@ -1396,7 +1386,6 @@
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
 				58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */,
-				9039C3C9231F9EDD009B0A83 /* CalendarContracts.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
 				58CA7CF723165820001231A9 /* Document+extension.swift in Sources */,
 				90714AE1230CC69400610109 /* AddUserManuallyOutput.swift in Sources */,
@@ -1423,7 +1412,6 @@
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
-				9039C3CB231F9FF8009B0A83 /* CalendarViewBuilder.swift in Sources */,
 				90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
@@ -1453,12 +1441,10 @@
 				904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */,
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
-				9039C3C3231E7FBC009B0A83 /* CalendarViewController.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
-				9039C3CF231FA24F009B0A83 /* CalendarPresenter.swift in Sources */,
 				90FD9FC723112758002D214B /* FriendsPool.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
 				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
@@ -1472,6 +1458,7 @@
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
+				907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */,
 				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
 				909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */,
 				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,

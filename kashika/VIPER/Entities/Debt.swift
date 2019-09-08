@@ -12,4 +12,6 @@ import FirebaseFirestore
 struct Debt: Codable, Equatable, Modelable {
     var money = 0
     var friendId: String?
+    var paymentDate: Date?
+    var memo: String?
 }
