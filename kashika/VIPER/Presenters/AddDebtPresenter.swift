@@ -53,8 +53,8 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     func createDebt(debtType: DebtType) {
         let debts = selectedIndexes.value
             .compactMap({ friends.value[$0] })
-            .map({ [weak self] friend in
-                self!.createUnstoredDebt(friend: friend, debtType: debtType)
+            .compactMap({ [weak self] friend in
+                self?.createUnstoredDebt(friend: friend, debtType: debtType)
             })
 
         let debtsSingle = interactor.save(debts: debts)
