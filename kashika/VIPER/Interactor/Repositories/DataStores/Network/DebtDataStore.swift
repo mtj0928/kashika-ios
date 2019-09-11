@@ -8,6 +8,7 @@
 
 import RxSwift
 import Ballcap
+import Firebase
 
 struct DebtDataStore {
 
@@ -27,8 +28,10 @@ struct DebtDataStore {
 
                     debtDocument.data?.money = debt.money
                     debtDocument.data?.friendId = debt.document?.id
-                    debtDocument.data?.paymentDate = debt.paymentDate
+                    // swiftlint:disable:next force_unwrapping
+                    debtDocument.data?.paymentDate = debt.paymentDate != nil ? Timestamp(date: debt.paymentDate!) : nil
                     debtDocument.data?.memo = debt.memo
+
                     friendDocument?.data?.totalDebt = .increment(Int64(debt.money))
                     userDocument.data?.totalDebt = .increment(Int64(debt.money))
 
@@ -43,5 +46,22 @@ struct DebtDataStore {
                     }
                 }.andThen(Single.just(debts.map({ $0.0 })))
             })
+    }
+
+    func listen(user userDocument: Document<User>) -> DataSource<Document<Debt>> {
+        let reference = userDocument.documentReference.collection(DebtDataStore.key)
+        let query = DataSource<Document<Debt>>.Query(reference)
+        let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
+            let document = Document<Debt>(documentSnapshot.reference)
+            document.get { (document, error) in
+                if let document = document {
+                    done(document)
+                }
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        return dataSource
     }
 }

@@ -41,6 +41,8 @@
 		901EF386231938B5001BA56C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901EF3842319385B001BA56C /* CardView.xib */; };
 		9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */; };
 		9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */; };
+		90299FE22325D6E100CBF7BA /* ScheduledPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */; };
+		90299FE42325E8BE00CBF7BA /* DebtsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90299FE32325E8BE00CBF7BA /* DebtsPool.swift */; };
 		90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */; };
 		90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */; };
 		90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90364D7A22ED8D02000DCFA7 /* AddUserManuallyRouter.swift */; };
@@ -95,6 +97,8 @@
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
 		907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD032323CFFD00F15F61 /* Observable+extension.swift */; };
+		907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */; };
+		907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
@@ -140,6 +144,8 @@
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
+		90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */; };
+		90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 		90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E123153DEA0097104C /* SettingMenuInteractor.swift */; };
 		90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E323153FFA0097104C /* SettingMenuRouter.swift */; };
@@ -165,7 +171,6 @@
 		90FB187D22DEF6D500092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
 		90FB187E22DEF6D500092BB3 /* TapticEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90FB188022DF05FF00092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
-		90FD9FC723112758002D214B /* FriendsPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FC623112758002D214B /* FriendsPool.swift */; };
 		90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
 		90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */; };
 		90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FBC230FF771002D214B /* FriendRepository.swift */; };
@@ -267,6 +272,8 @@
 		901EF3842319385B001BA56C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyContracts.swift; sourceTree = "<group>"; };
 		9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyPresenter.swift; sourceTree = "<group>"; };
+		90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledPresenter.swift; sourceTree = "<group>"; };
+		90299FE32325E8BE00CBF7BA /* DebtsPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsPool.swift; sourceTree = "<group>"; };
 		90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyContracts.swift; sourceTree = "<group>"; };
 		90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyPresenter.swift; sourceTree = "<group>"; };
 		90364D7A22ED8D02000DCFA7 /* AddUserManuallyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyRouter.swift; sourceTree = "<group>"; };
@@ -320,6 +327,8 @@
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
 		907FAD032323CFFD00F15F61 /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
+		907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledsTableViewCell.swift; sourceTree = "<group>"; };
+		907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledsTableViewCell.xib; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -367,6 +376,8 @@
 		90D1610822587CED00AF7934 /* SimpleFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendCell.swift; sourceTree = "<group>"; };
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleColleionViewCell.swift; sourceTree = "<group>"; };
+		90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentScheduleColleionViewCell.xib; sourceTree = "<group>"; };
 		90E309E123153DEA0097104C /* SettingMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInteractor.swift; sourceTree = "<group>"; };
 		90E309E323153FFA0097104C /* SettingMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuRouter.swift; sourceTree = "<group>"; };
 		90E309E5231606520097104C /* TargetedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetedExtension.swift; sourceTree = "<group>"; };
@@ -391,7 +402,6 @@
 		90FB187B22DEF6C400092BB3 /* TapticEngine.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TapticEngine.framework.dSYM; path = Carthage/Build/iOS/TapticEngine.framework.dSYM; sourceTree = "<group>"; };
 		90FB187C22DEF6D500092BB3 /* TapticEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TapticEngine.framework; path = Carthage/Build/iOS/TapticEngine.framework; sourceTree = "<group>"; };
 		90FD9FBC230FF771002D214B /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
-		90FD9FC623112758002D214B /* FriendsPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPool.swift; sourceTree = "<group>"; };
 		90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPoolContainer.swift; sourceTree = "<group>"; };
 		90FD9FCD23114592002D214B /* AddDebtInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtInteractor.swift; sourceTree = "<group>"; };
 		90FD9FD023121D4E002D214B /* SettingMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -717,7 +727,6 @@
 		906FE6A323053DF000EBC043 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
 				904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */,
 				904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */,
 				906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */,
@@ -725,6 +734,8 @@
 				90037D1A231B9DAA00C8C125 /* HomeTitleHeader.swift */,
 				90037D1C231B9DC900C8C125 /* HomeTitleHeader.xib */,
 				909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */,
+				907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */,
+				907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */,
 				909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */,
 				90FD9FDD2312315F002D214B /* TableViewCell.swift */,
 				90FD9FDF23123182002D214B /* TableViewCell.xib */,
@@ -885,6 +896,7 @@
 				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
 				90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */,
+				90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -963,6 +975,9 @@
 				90D1610822587CED00AF7934 /* SimpleFriendCell.swift */,
 				90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */,
 				900AD3EB22E08CA2004500BE /* UserIconCollectionViewCell.swift */,
+				900AD3ED22E08CCA004500BE /* UserIconCollectionViewCell.xib */,
+				90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */,
+				90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -988,8 +1003,8 @@
 		90FD9FC223112647002D214B /* OnMemory */ = {
 			isa = PBXGroup;
 			children = (
-				90FD9FC623112758002D214B /* FriendsPool.swift */,
 				90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */,
+				90299FE32325E8BE00CBF7BA /* DebtsPool.swift */,
 				904D74C5231B5F610002CDAA /* UserPool.swift */,
 			);
 			path = OnMemory;
@@ -1146,8 +1161,10 @@
 				90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */,
 				900C1A0F22E5CFEC00576AEC /* FriendListViewController.storyboard in Resources */,
 				90FD9FE023123182002D214B /* TableViewCell.xib in Resources */,
+				907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */,
 				90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */,
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
+				90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
 				909EF949231A316D00DA5F0D /* SummeryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
@@ -1380,6 +1397,7 @@
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
+				90299FE42325E8BE00CBF7BA /* DebtsPool.swift in Sources */,
 				9039C3CD231FA14E009B0A83 /* BuilderOutput.swift in Sources */,
 				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
@@ -1415,6 +1433,7 @@
 				90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
+				90299FE22325D6E100CBF7BA /* ScheduledPresenter.swift in Sources */,
 				909600562249B295002F1DE6 /* AppDelegate.swift in Sources */,
 				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
 				90FD9FD423121E89002D214B /* SettingMenuViewController.swift in Sources */,
@@ -1433,6 +1452,7 @@
 				9042782323052240009480CA /* FriendDataStore.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
+				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909EF944231A1AA100DA5F0D /* HomePresenter.swift in Sources */,
@@ -1445,7 +1465,6 @@
 				90FB187922DEE37100092BB3 /* String+extension.swift in Sources */,
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
-				90FD9FC723112758002D214B /* FriendsPool.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
 				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
 				90FD9FDE2312315F002D214B /* TableViewCell.swift in Sources */,
@@ -1455,6 +1474,7 @@
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				58CA7CF12316458D001231A9 /* Debt.swift in Sources */,
 				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
+				907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,

@@ -28,6 +28,7 @@ struct FriendDataStore {
 
                 document.data?.name = name
                 document.data?.iconFile = file
+                document.data?.id = document.id
 
                 return document
             })

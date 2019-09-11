@@ -59,6 +59,16 @@ public extension UIColor {
             }
             return UIColor.lightGray
         }
+        var cardViewBackgroundColor = UIColor.create(defultColor: UIColor.white) { (traitCollection) -> UIColor in
+            switch traitCollection.userInterfaceStyle {
+            case .light:
+                return UIColor.white
+            case .dark:
+                return UIColor.app.secondarySystemBackground
+            @unknown default:
+                fatalError("No implementation for userInterfaceStyle")
+            }
+        }
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")

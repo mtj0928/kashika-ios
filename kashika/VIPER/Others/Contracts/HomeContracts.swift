@@ -13,12 +13,14 @@ protocol HomePresenterProtocol {
     var sections: BehaviorRelay<[HomeSection]> { get }
     var userTotalDebtMoney: BehaviorRelay<Int> { get }
 
-    func resolvePresenter(for section: HomeSection) -> FriendsGridPresenterProtocol?
+    func resolveFriendGridPresenter(for section: HomeSection) -> FriendsGridPresenterProtocol?
+    func resolveScheduledPresenter() -> ScheduledPresenterProtocol
 }
 
 protocol HomeInteractorProtocol {
     var user: BehaviorRelay<User?> { get }
-    var scheduledFriend: BehaviorRelay<[Friend]> { get }
+    var scheduledDebts: BehaviorRelay<[Debt]> { get }
+    var friends: BehaviorRelay<[String?: Friend]> { get }
     var kashiFriend: BehaviorRelay<[Friend]> { get }
     var kariFriend: BehaviorRelay<[Friend]> { get }
 }
@@ -27,4 +29,11 @@ protocol FriendsGridPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
 
     func tapped(friend: Friend)
+}
+
+protocol ScheduledPresenterProtocol {
+    var debts: BehaviorRelay<[Debt]> { get }
+    var friends: BehaviorRelay<[String?: Friend]> { get }
+
+    func tapped(debt: Debt)
 }

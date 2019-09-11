@@ -9,6 +9,7 @@
 import Ballcap
 
 struct Friend: Codable, Equatable, Modelable {
+    var id: String = ""
     var name = ""
     var iconFile: File?
     var totalDebt: IncrementableInt = 0
