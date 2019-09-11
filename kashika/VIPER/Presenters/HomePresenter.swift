@@ -26,12 +26,12 @@ class HomePresenter: HomePresenterProtocol {
             self?.userTotalDebtMoney.accept(Int(user?.totalDebt.rawValue ?? 0))
         }).disposed(by: disposeBag)
 
-        Observable.combineLatest(interactor.scheduledFriend.asObservable(),
+        Observable.combineLatest(interactor.scheduledDebts.asObservable(),
                                  interactor.kariFriend.asObservable(),
                                  interactor.kashiFriend.asObservable()
-        ).subscribe(onNext: { [weak self] (scheduledFriends, kariFriends, kashiFriends) in
+        ).subscribe(onNext: { [weak self] (scheduledDebts, kariFriends, kashiFriends) in
             var sections: [HomeSection] = [.summery]
-            if !scheduledFriends.isEmpty {
+            if !scheduledDebts.isEmpty {
                 sections.append(.schedule)
             }
             if !kariFriends.isEmpty {
@@ -44,7 +44,7 @@ class HomePresenter: HomePresenterProtocol {
         }).disposed(by: disposeBag)
     }
 
-    func resolvePresenter(for section: HomeSection) -> FriendsGridPresenterProtocol? {
+    func resolveFriendGridPresenter(for section: HomeSection) -> FriendsGridPresenterProtocol? {
         switch section {
         case .summery:
             return nil
@@ -55,5 +55,10 @@ class HomePresenter: HomePresenterProtocol {
         case .kashi:
             return FriendsGridPresenter(interactor.kashiFriend)
         }
+    }
+
+    func resolveScheduledPresenter() -> ScheduledPresenterProtocol {
+        let presenter = ScheduledPresenter(debts: interactor.scheduledDebts, friends: interactor.friends)
+        return presenter
     }
 }

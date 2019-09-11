@@ -62,6 +62,7 @@ extension HomeViewController {
         tableView.tableFooterView = UIView()
 
         tableView.register(R.nib.summeryViewCell)
+        tableView.register(R.nib.scheduledsTableViewCell)
         tableView.register(R.nib.friendsTableViewCell)
 
         let headerViewNib = UINib(nibName: R.nib.homeTitleHeader.name, bundle: R.nib.homeTitleHeader.bundle)
@@ -93,11 +94,12 @@ extension HomeViewController: UITableViewDataSource {
             cell.set(money: presenter.userTotalDebtMoney)
             return cell
         case .schedule:
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.scheduledsTableViewCell, for: indexPath)
+            cell.presenter = presenter.resolveScheduledPresenter()
             return cell
         case .kari, .kashi:
             let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendsTableViewCell, for: indexPath)
-            if let presenter = self.presenter.resolvePresenter(for: section) {
+            if let presenter = self.presenter.resolveFriendGridPresenter(for: section) {
                 cell.set(presenter: presenter)
             }
             return cell
@@ -136,8 +138,10 @@ extension HomeViewController: UITableViewDelegate {
         switch section {
         case .summery:
             return UITableView.automaticDimension
-        case .kashi, .kari, .schedule:
+        case .kashi, .kari:
             return FriendsTableViewCell.height
+        case .schedule:
+            return ScheduledsTableViewCell.height
         }
     }
 }

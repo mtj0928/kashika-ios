@@ -12,15 +12,15 @@ import Ballcap
 
 class FriendRepository {
     var friends: [Document<Friend>] {
-        friendsPool.friends
+        friendsPool.value
     }
     var friendsObservable: Observable<[Document<Friend>]> {
-        friendsPool.friendsObservable
+        friendsPool.observable
     }
 
     private let dataStore = FriendDataStore()
-    private let friendsPool = MemoryPoolContainer.default.resolve(FriendsPool.self,
-                                                           ifNotExists: { FriendsPool() })
+    private let friendsPool = MemoryPoolContainer.default.resolve(Pool<Friend>.self,
+                                                           ifNotExists: { Pool() })
 
     func create(user: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
         return dataStore.create(user: user, name: name, icon: icon)

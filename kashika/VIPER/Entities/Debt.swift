@@ -12,6 +12,7 @@ import FirebaseFirestore
 struct Debt: Codable, Equatable, Modelable {
     var money = 0
     var friendId: String?
-    var paymentDate: Date?
+    var paymentDate: Timestamp?
     var memo: String?
+    var isPaid = false
 }
