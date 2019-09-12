@@ -30,6 +30,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var calendarView: JTAppleCalendarView!
     @IBOutlet private weak var calendarSelectView: UIView!
     @IBOutlet private weak var calendarSelectViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var calendarHeaderView: UIView!
     @IBOutlet private weak var monthLabel: UILabel!
     @IBOutlet private weak var scheduleLabel: UILabel!
     @IBOutlet private weak var clearButton: UIButton!
@@ -192,6 +193,9 @@ extension AddDebtViewController {
     private func setupCalendarView() {
         calendarSelectViewHeightConstraint.constant = 0
 
+        calendarHeaderView.backgroundColor = UIColor.create(defultColor: UIColor.lightGray, light: UIColor.lightGray, dark: UIColor.black)
+        calendarView.backgroundColor = UIColor.app.secondarySystemBackground
+
         calendarView.calendarDelegate = self
         calendarView.calendarDataSource = self
 
@@ -275,7 +279,7 @@ extension AddDebtViewController: UICollectionViewDataSource {
         let status = presenter.getStatus(at: indexPath.item)
         let friend = presenter.friends.value[indexPath.item]
         cell.set(friend: friend, status: status)
-        cell.isSecondary = true
+        cell.fadeViewColor = view.backgroundColor
         return cell
     }
 

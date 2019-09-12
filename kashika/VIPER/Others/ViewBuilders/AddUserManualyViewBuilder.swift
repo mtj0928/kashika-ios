@@ -17,6 +17,7 @@ struct AddUserManualyViewBuilder {
         let router = AddUserManuallyRouter()
         let presenter = AddUserManuallyPresenter(interactor: interactor, router: router)
         let viewController = AddUserManuallyViewController.createFromStoryboard(with: presenter)
+        viewController.view.backgroundColor = UIColor.app.floatingPanelBackgroundColor
         router.viewController = viewController
 
         let floatingPanelConoller = FloatingPanelBuilder.build()

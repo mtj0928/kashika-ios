@@ -13,9 +13,12 @@ class SimnpleFriendCell: UICollectionViewCell {
     @IBOutlet private weak var nameLable: UILabel!
     @IBOutlet private weak var fadeView: UIView!
 
-    var isSecondary = false {
-        didSet {
-            fadeView.backgroundColor = UIColor.app.systemBackground(isSecondary: isSecondary)
+    var fadeViewColor: UIColor? {
+        get {
+            return fadeView.backgroundColor
+        }
+        set {
+            fadeView.backgroundColor = newValue
         }
     }
 
