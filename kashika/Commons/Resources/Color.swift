@@ -8,11 +8,29 @@
 
 import UIKit
 
-fileprivate extension UIColor {
+extension UIColor {
 
     static func create(defultColor: UIColor, dynamicProvider: @escaping (UITraitCollection) -> UIColor) -> UIColor {
         if #available(iOS 13.0, *) {
             return UIColor(dynamicProvider: dynamicProvider)
+        }
+        return defultColor
+    }
+
+    static func create(defultColor: UIColor, light lightColor: UIColor, dark darkColor: UIColor) -> UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor { traitCollection -> UIColor in
+                switch traitCollection.userInterfaceStyle {
+                case .light:
+                    return lightColor
+                case .dark:
+                    return darkColor
+                case .unspecified:
+                    return defultColor
+                @unknown default:
+                    return defultColor
+                }
+            }
         }
         return defultColor
     }
@@ -61,7 +79,7 @@ public extension UIColor {
         }
         var cardViewBackgroundColor = UIColor.create(defultColor: UIColor.white) { (traitCollection) -> UIColor in
             switch traitCollection.userInterfaceStyle {
-            case .light:
+            case .light, .unspecified:
                 return UIColor.white
             case .dark:
                 return UIColor.app.secondarySystemBackground
@@ -69,6 +87,7 @@ public extension UIColor {
                 fatalError("No implementation for userInterfaceStyle")
             }
         }
+        private(set) lazy var floatingPanelBackgroundColor = UIColor.app.systemBackground
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")

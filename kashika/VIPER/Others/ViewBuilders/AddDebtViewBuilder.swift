@@ -18,6 +18,7 @@ final class AddDebtViewBuilder {
         let presenter = AddDebtPresenter(canShowFloatingPannel, interactor: interactor, router: router)
         let viewController = AddDebtViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
+        viewController.view.backgroundColor = UIColor.app.floatingPanelBackgroundColor
 
         let floatingPanelController = FloatingPanelBuilder.build()
 
