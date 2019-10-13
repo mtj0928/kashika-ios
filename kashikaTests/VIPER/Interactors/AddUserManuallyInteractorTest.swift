@@ -8,10 +8,15 @@
 
 import XCTest
 import Firebase
+import Ballcap
 import RxBlocking
 @testable import kashika
 
 class AddUserManuallyInteractorTest: XCTestCase {
+
+    override func setUp() {
+        BallcapApp.configure(Firestore.firestore().document("test/1"))
+    }
 
     override func tearDown() {
         do {

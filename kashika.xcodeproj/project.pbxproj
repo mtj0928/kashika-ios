@@ -102,7 +102,6 @@
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
-		9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9096006A2249B295002F1DE6 /* KashikaTests.swift */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
 		909BDA6F230ABFC800689573 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BDA6E230ABFC800689573 /* Monitor.swift */; };
 		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
@@ -335,7 +334,6 @@
 		9096005F2249B295002F1DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		909600612249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909600662249B295002F1DE6 /* kashikaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9096006A2249B295002F1DE6 /* KashikaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaTests.swift; sourceTree = "<group>"; };
 		9096006C2249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909600712249B295002F1DE6 /* kashikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kashikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
@@ -795,7 +793,6 @@
 		909600692249B295002F1DE6 /* kashikaTests */ = {
 			isa = PBXGroup;
 			children = (
-				9096006A2249B295002F1DE6 /* KashikaTests.swift */,
 				909D6AB8224E366A00FE7218 /* VIPER */,
 				9096006C2249B295002F1DE6 /* Info.plist */,
 			);
@@ -1509,7 +1506,6 @@
 			files = (
 				9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */,
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
-				9096006B2249B295002F1DE6 /* KashikaTests.swift in Sources */,
 				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
