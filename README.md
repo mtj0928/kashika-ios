@@ -2,5 +2,5 @@
 
 ## 環境構築スクリプト
 ```
-bundle install --path vendor/bundler
+bundle install --path vendor/bundle
 ```
