@@ -9,46 +9,53 @@
 import RxSwift
 import RxCocoa
 import Ballcap
+import FirebaseFirestore
 
-class FriendUseCase {
-    let friends = BehaviorRelay<[Friend]>(value: [])
+class FriendUseCase: DocumentOperatorSet {
+    typealias Request = FriendRequest
 
-    private let userRepository = UserRepository()
-    private let friendRepository = FriendRepository()
-    private let disposeBag = RxSwift.DisposeBag()
+    func listen(_ requestCreator: @escaping (Document<User>) -> FriendRequest) -> DocumentsListener<Friend> {
+        let request = UserUseCase().fetchOrCreateUser()
+            .map(requestCreator)
+        return Document.listen(request)
+    }
+}
 
-    init() {
-        userRepository
-            .fetchOrCreateUser()
-            .subscribe(onSuccess: { [weak self] user in
-                self?.friendRepository.listen(user: user)
-            }).disposed(by: disposeBag)
+struct FriendRequest: Request {
 
-        friendRepository.friendsObservable
-            .subscribe(onNext: { [weak self] documents in
-                let values: [Friend] = documents
-                    .compactMap({ $0.data })
-                    .sorted(by: { abs($0.totalDebt.rawValue) > abs($1.totalDebt.rawValue) })
+    typealias Model = Friend
 
-                self?.friends.accept(values)
-            }).disposed(by: disposeBag)
+    static let key = "friends"
+
+    let user: Document<User>
+    var debtType: DebtType?
+    var orders: [Order] = []
+    var limit: Int?
+    var after: Document<Friend>?
+
+    var collectionReference: CollectionReference {
+        user.documentReference.collection(FriendRequest.key)
     }
 
-    func fetchFirst(_ filter: @escaping  (Document<Friend>) -> Bool) -> Single<Document<Friend>> {
-        return Single.create { [weak self] event -> Disposable in
-            guard let first = self?.friendRepository.friends.first(where: filter) else {
-                event(.error(NSError(domain: "[mtj0928] Friend is not exists in FriendUseCase", code: -1, userInfo: nil)))
-                return Disposables.create()
-            }
-            event(.success(first))
-            return Disposables.create()
+    func resolve() -> DataSource<Document<Friend>>.Query {
+        var query = DataSource<Document<Friend>>.Query(collectionReference)
+
+        query = .kashi == debtType ? query.where("totalDebt", isGreaterThan: 0)
+            : .kari == debtType ? query.where("totalDebt", isLessThan: 0)
+            : query
+
+        orders.forEach { order in
+            query = query.order(by: order.key, descending: order.descending)
         }
-    }
 
-    func delete(friends: [Friend]) -> Completable {
-        let friendDocuments = self.friendRepository.friends.filter({ document -> Bool in
-            return friends.contains(where: { document.data == $0 })
-        })
-        return friendRepository.deleteFriends(friends: friendDocuments)
+        if let limit = limit {
+            query = query.limit(to: limit)
+        }
+
+        if let snapshot = after?.snapshot {
+            query = query.start(afterDocument: snapshot)
+        }
+
+        return query
     }
 }

@@ -11,22 +11,24 @@ import RxCocoa
 import Ballcap
 
 struct UserUseCase {
-    let user = BehaviorRelay<User?>(value: nil)
 
-    private let userRepository = UserRepository()
+    private let firebaseAuthStore = FirebaseAuthStore()
     private let disposeBag = RxSwift.DisposeBag()
 
-    init() {
-        userRepository.userObservable.subscribe(onNext: { [self] user in
-            self.user.accept(user?.data)
-        }).disposed(by: disposeBag)
+    func fetchOrCreateUser() -> Single<Document<User>> {
+        if let user = firebaseAuthStore.fetchCurrentUser() {
+            return Document<User>(id: user.uid).ex.get()
+        }
+        return firebaseAuthStore.createUser()
+            .map({ Document<User>(id: $0.uid) })
+            .flatMap({ $0.ex.save() })
     }
 
-    func fetchOrCreateUser() -> Single<Document<User>> {
-        return userRepository.fetchOrCreateUser()
+    func listen() -> DocumentListener<User> {
+        return Document.listen(fetchOrCreateUser())
     }
 
     func signout() -> Completable {
-        return userRepository.signout()
+        return firebaseAuthStore.signout()
     }
 }

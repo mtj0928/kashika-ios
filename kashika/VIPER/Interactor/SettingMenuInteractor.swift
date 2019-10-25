@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import Ballcap
 
 class SettingMenuInteractor: SettingMenuInteractorProtocol {
 
@@ -18,6 +19,9 @@ class SettingMenuInteractor: SettingMenuInteractorProtocol {
     }
 
     func deleteFriends() -> Completable {
-        return friendsUseCase.delete(friends: friendsUseCase.friends.value)
+        return userUseCase.fetchOrCreateUser()
+            .map({ FriendRequest(user: $0) })
+            .flatMap({ FriendUseCase().fetch(request: $0) })
+            .flatMapCompletable({ FriendUseCase().delete($0) })
     }
 }

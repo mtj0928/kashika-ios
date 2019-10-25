@@ -6,11 +6,18 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 
 class FriendListInteractor: FriendListInteractorProtocol {
+
     var friends: BehaviorRelay<[Friend]> {
-        return friendListUseCase.friends
+        friendsDisposer.behaviorRelay
     }
-    private let friendListUseCase = FriendUseCase()
+    private let friendsDisposer: ListenerDisposer<[Friend], DocumentsListener<Friend>>
+
+    init() {
+        let documentListener = FriendUseCase().listen({ FriendRequest(user: $0) })
+        friendsDisposer = ListenerDisposer(documentListener, { $0.extractData() })
+    }
 }

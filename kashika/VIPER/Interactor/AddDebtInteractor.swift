@@ -8,20 +8,24 @@
 
 import RxSwift
 import RxCocoa
+import Ballcap
 
 class AddDebtInteractor: AddDebtInteractorProtocol {
 
     var friends: BehaviorRelay<[Friend]> {
-        return friendsUseCase.friends
+        return friendsDisposer.behaviorRelay
     }
 
+    private let friendsDisposer: ListenerDisposer<[Friend], DocumentsListener<Friend>>
     private let friendsUseCase = FriendUseCase()
-    private let debtUseCase = DebtUseCase()
+
+    init() {
+        let friendbsListener = friendsUseCase.listen({ FriendRequest(user: $0) })
+        friendsDisposer = ListenerDisposer(friendbsListener, { $0.extractData() })
+    }
 
     func save(debts: [UnstoredDebt]) -> Single<[Debt]> {
-        return debtUseCase.create(debts).map({ debts in
-            // swiftlint:disable:next force_unwrapping
-            return debts.map({ $0.data! })
-        })
+        return DebtUseCase().create(debts)
+            .map({ $0.extractData() })
     }
 }

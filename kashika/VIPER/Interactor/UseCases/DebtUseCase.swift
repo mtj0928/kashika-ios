@@ -38,7 +38,7 @@ class DebtUseCase {
     func create(_ debts: [UnstoredDebt]) -> Single<[Document<Debt>]> {
         let user = userRepository.fetchOrCreateUser()
         let unstoredDebtSingles = debts.compactMap { [weak self] unstoredDebt in
-            self?.friendUseCase.fetchFirst({ $0.data == unstoredDebt.friend })
+            self?.friendUseCase.fetch(id: unstoredDebt.friend.id)
                 .map({ UnstoredDebt(from: unstoredDebt, document: $0) })
         }
 

@@ -27,6 +27,20 @@ extension TargetedExtension {
         }
     }
 
+    func get<Model: Modelable & Codable>() -> Single<Document<Model>> where Base: Document<Model> {
+        return Single.create { event -> Disposable in
+            self.base.get { (document, error) in
+                if let error = error {
+                    event(.error(error))
+                }
+                if let document = document {
+                    event(.success(document))
+                }
+            }
+            return Disposables.create()
+        }
+    }
+
     func update<Model: Modelable & Codable>() -> Single<Document<Model>> where Base: Document<Model> {
         return Single.create { event -> Disposable in
             self.base.update { error in
@@ -38,5 +52,27 @@ extension TargetedExtension {
             }
             return Disposables.create()
         }
+    }
+
+    func delete<Model: Modelable & Codable>() -> Completable where Base: Document<Model> {
+        return Completable.create { event -> Disposable in
+            self.base.delete { error in
+                if let error = error {
+                    event(.error(error))
+                } else {
+                    event(.completed)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+}
+
+extension Array {
+
+    func extractData<Model: Modelable & Codable>() -> [Model] where Element: Document<Model> {
+        return self.compactMap({ document in
+            document.data
+        })
     }
 }

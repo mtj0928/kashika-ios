@@ -57,6 +57,8 @@
 		9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; };
 		9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C61E623208C6C00965A4D /* CalendarTransition.swift */; };
+		90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A4D235EE01B003D66CF /* DocumentOperator.swift */; };
+		90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A50235F0760003D66CF /* ListenerDisposer.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
@@ -154,6 +156,9 @@
 		90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E309ED2318A4C20097104C /* SwiftMessages.framework */; };
 		90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90E309ED2318A4C20097104C /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90E309F12318C4100097104C /* MessageNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309F02318C4100097104C /* MessageNotification.swift */; };
+		90E567D6235EA5F60005B2AF /* DataSource+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E567D5235EA5F50005B2AF /* DataSource+extension.swift */; };
+		90E567D8235ECF5B0005B2AF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E567D7235ECF5B0005B2AF /* Request.swift */; };
+		90E567DA235ECFA80005B2AF /* DocumentsListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E567D9235ECFA80005B2AF /* DocumentsListener.swift */; };
 		90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */; };
 		90EA361622ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */; };
 		90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */; };
@@ -286,6 +291,8 @@
 		9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderOutput.swift; sourceTree = "<group>"; };
 		9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewAnimator.framework; path = Carthage/Build/iOS/ViewAnimator.framework; sourceTree = "<group>"; };
 		903C61E623208C6C00965A4D /* CalendarTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransition.swift; sourceTree = "<group>"; };
+		90418A4D235EE01B003D66CF /* DocumentOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentOperator.swift; sourceTree = "<group>"; };
+		90418A50235F0760003D66CF /* ListenerDisposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDisposer.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
@@ -384,6 +391,9 @@
 		90E309EC2318A4AE0097104C /* SwiftMessages.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftMessages.framework.dSYM; path = Carthage/Build/iOS/SwiftMessages.framework.dSYM; sourceTree = "<group>"; };
 		90E309ED2318A4C20097104C /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
 		90E309F02318C4100097104C /* MessageNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNotification.swift; sourceTree = "<group>"; };
+		90E567D5235EA5F50005B2AF /* DataSource+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource+extension.swift"; sourceTree = "<group>"; };
+		90E567D7235ECF5B0005B2AF /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		90E567D9235ECFA80005B2AF /* DocumentsListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListener.swift; sourceTree = "<group>"; };
 		90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerContracts.swift; sourceTree = "<group>"; };
 		90EA361422ED1ED9000EDF8A /* AddUserManuallyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUserManuallyViewController.storyboard; sourceTree = "<group>"; };
 		90EA361522ED1ED9000EDF8A /* AddUserManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyViewController.swift; sourceTree = "<group>"; };
@@ -488,6 +498,7 @@
 				90E309E7231617350097104C /* Batch+extension.swift */,
 				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
 				587E257E231F5C070079DFB3 /* Calendar+extension.swift */,
+				90E567D5235EA5F50005B2AF /* DataSource+extension.swift */,
 				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
@@ -598,6 +609,14 @@
 			path = EditUsername;
 			sourceTree = "<group>";
 		};
+		90418A4F235F0756003D66CF /* Reactives */ = {
+			isa = PBXGroup;
+			children = (
+				90418A50235F0760003D66CF /* ListenerDisposer.swift */,
+			);
+			path = Reactives;
+			sourceTree = "<group>";
+		};
 		904278182304EEAD009480CA /* Inputes */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +724,7 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				90418A4F235F0756003D66CF /* Reactives */,
 				909BDA72230AC26400689573 /* Entities */,
 				5870126C224C5373003888E8 /* Extensions */,
 				905D83122250CF0900EB20AC /* Resources */,
@@ -859,6 +879,9 @@
 				906FE6AC230643FA00EBC043 /* FriendUseCase.swift */,
 				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 				58C0DB7E23165F390060E882 /* DebtUseCase.swift */,
+				90E567D9235ECFA80005B2AF /* DocumentsListener.swift */,
+				90E567D7235ECF5B0005B2AF /* Request.swift */,
+				90418A4D235EE01B003D66CF /* DocumentOperator.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1380,6 +1403,7 @@
 				9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */,
 				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
+				90E567DA235ECFA80005B2AF /* DocumentsListener.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */,
@@ -1394,11 +1418,13 @@
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
+				90E567D6235EA5F60005B2AF /* DataSource+extension.swift in Sources */,
 				90299FE42325E8BE00CBF7BA /* DebtsPool.swift in Sources */,
 				9039C3CD231FA14E009B0A83 /* BuilderOutput.swift in Sources */,
 				90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */,
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
+				90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
 				58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
@@ -1407,6 +1433,7 @@
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */,
+				90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */,
 				909EF93C231A118500DA5F0D /* HomeViewController.swift in Sources */,
@@ -1435,6 +1462,7 @@
 				905C760F2256D0B30011580B /* AddDebtViewBuilder.swift in Sources */,
 				90FD9FD423121E89002D214B /* SettingMenuViewController.swift in Sources */,
 				58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */,
+				90E567D8235ECF5B0005B2AF /* Request.swift in Sources */,
 				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,
 				906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */,
 				9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */,

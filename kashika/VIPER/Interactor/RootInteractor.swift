@@ -21,7 +21,7 @@ struct RootInteractor: RootInteractorProtocol {
         guard let id = id else {
             return Single.just(nil)
         }
-        return friendUseCase.fetchFirst({ $0.id == id })
+        return friendUseCase.fetch(id: id)
             .map({ $0.data })
     }
 }
