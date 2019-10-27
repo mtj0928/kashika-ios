@@ -8,24 +8,23 @@
 
 import RxSwift
 import RxCocoa
-import Ballcap
 
 class AddDebtInteractor: AddDebtInteractorProtocol {
 
-    var friends: BehaviorRelay<[Friend]> {
-        return friendsDisposer.behaviorRelay
-    }
+    let friends: BehaviorRelay<[Friend]>
 
-    private let friendsDisposer: ListenerDisposer<[Friend], DocumentsListener<Friend>>
     private let friendsUseCase = FriendUseCase()
+    private let disposeBag = DisposeBag()
 
     init() {
-        let friendbsListener = friendsUseCase.listen({ FriendRequest(user: $0) })
-        friendsDisposer = ListenerDisposer(friendbsListener, { $0.extractData() })
+        let observable = friendsUseCase.listen({ FriendRequest(user: $0) })
+            .map({ $0.extractData() })
+        friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
     }
 
-    func save(debts: [UnstoredDebt]) -> Single<[Debt]> {
-        return DebtUseCase().create(debts)
-            .map({ $0.extractData() })
+    func save(money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Debt]> {
+        return DebtUseCase().create(money: money, friends: friends, paymentDate: paymentDate, memo: memo, type: type).map { documents in
+            documents.extractData()
+        }
     }
 }

@@ -8,10 +8,20 @@
 
 import Ballcap
 import RxSwift
+import FirebaseFirestore
 
 protocol DocumentOperator {
     associatedtype Request: kashika.Request
     typealias Model = Request.Model
+
+    var collectionReference: Single<CollectionReference?> { get }
+}
+
+extension DocumentOperator {
+
+    var collectionReference: Single<CollectionReference?> {
+        Single.just(nil)
+    }
 }
 
 // MARK: - DocumentCreator
@@ -31,8 +41,11 @@ protocol DocumentFetcher: DocumentOperator {
 }
 
 extension DocumentFetcher {
+
     func fetch(id: String) -> Single<Document<Model>> {
-        return Document<Model>(id: id).ex.get()
+        return collectionReference.flatMap { reference in
+            Document<Model>(id: id, collectionReference: reference).ex.get()
+        }
     }
 
     func fetch(request: Request) -> Single<[Document<Model>]> {

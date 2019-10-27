@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 import Ballcap
 
+/*
 class ListenerDisposer<T, Listener: kashika.Listener> {
     let behaviorRelay: BehaviorRelay<T>
     private let listener: Listener
@@ -48,3 +49,4 @@ class ListenerDisposer<T, Listener: kashika.Listener> {
         self.init(listener.obserbavle, initialValue: listener.value, listener: listener, mapper)
     }
 }
+*/

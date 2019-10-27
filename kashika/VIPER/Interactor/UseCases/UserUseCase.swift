@@ -10,10 +10,11 @@ import RxSwift
 import RxCocoa
 import Ballcap
 
-struct UserUseCase {
+class UserUseCase {
 
     private let firebaseAuthStore = FirebaseAuthStore()
     private let disposeBag = RxSwift.DisposeBag()
+    private var user: Document<User>?
 
     func fetchOrCreateUser() -> Single<Document<User>> {
         if let user = firebaseAuthStore.fetchCurrentUser() {
@@ -24,8 +25,10 @@ struct UserUseCase {
             .flatMap({ $0.ex.save() })
     }
 
-    func listen() -> DocumentListener<User> {
-        return Document.listen(fetchOrCreateUser())
+    func listen() -> Observable<Document<User>> {
+        return fetchOrCreateUser().asObservable()
+            .do(onNext: { [weak self] user in self?.user = user })
+            .flatMap({ $0.listen() })
     }
 
     func signout() -> Completable {

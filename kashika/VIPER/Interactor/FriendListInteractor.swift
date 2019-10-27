@@ -11,13 +11,12 @@ import RxCocoa
 
 class FriendListInteractor: FriendListInteractorProtocol {
 
-    var friends: BehaviorRelay<[Friend]> {
-        friendsDisposer.behaviorRelay
-    }
-    private let friendsDisposer: ListenerDisposer<[Friend], DocumentsListener<Friend>>
+    let friends: BehaviorRelay<[Friend]>
+    private let disposeBag = DisposeBag()
 
     init() {
-        let documentListener = FriendUseCase().listen({ FriendRequest(user: $0) })
-        friendsDisposer = ListenerDisposer(documentListener, { $0.extractData() })
+        let observable = FriendUseCase().listen({ FriendRequest(user: $0) })
+            .map({ $0.extractData() })
+        friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
     }
 }

@@ -51,21 +51,13 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
     }
 
     func createDebt(debtType: DebtType) {
-        let debts = selectedIndexes.value
-            .compactMap({ friends.value[$0] })
-            .compactMap({ [weak self] friend in
-                self?.createUnstoredDebt(friend: friend, debtType: debtType)
-            })
-
-        let debtsSingle = interactor.save(debts: debts)
+        let friends = selectedIndexes.value
+            .compactMap({ self.friends.value[$0] })
+        let debtsSingle = interactor.save(money: money.value, friends: friends, paymentDate: selectedDate.value, memo: memo.value, type: debtType)
         let output = AddDebtOutput(debts: debtsSingle)
         outputSubject.onNext(output)
 
         router.dismiss()
-    }
-
-    private func createUnstoredDebt(friend: Friend, debtType: DebtType) -> UnstoredDebt {
-        return UnstoredDebt(money: money.value, friend: friend, paymentDate: selectedDate.value, memo: memo.value, type: debtType)
     }
 
     func tappedCloseButton() {

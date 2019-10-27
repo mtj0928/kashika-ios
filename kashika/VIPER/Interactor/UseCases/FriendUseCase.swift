@@ -12,12 +12,32 @@ import Ballcap
 import FirebaseFirestore
 
 class FriendUseCase: DocumentOperatorSet {
+
     typealias Request = FriendRequest
 
-    func listen(_ requestCreator: @escaping (Document<User>) -> FriendRequest) -> DocumentsListener<Friend> {
-        let request = UserUseCase().fetchOrCreateUser()
+    private static let key = "friends"
+
+    private var _collectioeference: CollectionReference?
+    var collectionReference: Single<CollectionReference?> {
+        getCollectionReference()
+    }
+
+    func listen(_ requestCreator: @escaping (Document<User>) -> FriendRequest) -> Observable<[Document<Friend>]> {
+        return UserUseCase().fetchOrCreateUser()
             .map(requestCreator)
-        return Document.listen(request)
+            .asObservable()
+            .flatMap({ Document<Friend>.listen($0) })
+    }
+
+    private func getCollectionReference() -> Single<CollectionReference?> {
+        if let reference = _collectioeference {
+            return Single.just(reference)
+        }
+        return UserUseCase().fetchOrCreateUser().map { user in
+            user.documentReference.collection(FriendUseCase.key)
+        }.do(onSuccess: {[weak self] ref in
+            self?._collectioeference = ref
+        })
     }
 }
 
