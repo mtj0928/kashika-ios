@@ -14,7 +14,6 @@ class UserUseCase {
 
     private let firebaseAuthStore = FirebaseAuthStore()
     private let disposeBag = RxSwift.DisposeBag()
-    private var user: Document<User>?
 
     func fetchOrCreateUser() -> Single<Document<User>> {
         if let user = firebaseAuthStore.fetchCurrentUser() {
@@ -27,7 +26,6 @@ class UserUseCase {
 
     func listen() -> Observable<Document<User>> {
         return fetchOrCreateUser().asObservable()
-            .do(onNext: { [weak self] user in self?.user = user })
             .flatMap({ $0.listen() })
     }
 

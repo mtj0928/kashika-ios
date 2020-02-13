@@ -21,12 +21,8 @@ class HomeInteractor: HomeInteractorProtocol {
     private let debtUseCase = DebtUseCase()
     private let disposeBag = DisposeBag()
 
-    private let _observable: Observable<User?>
-
     init() {
-        _observable = userUseCase.listen().map({ $0.data })
-        // TODO: - Updateされないバグあり
-        user = BehaviorRelay.create(observable: _observable,
+        user = BehaviorRelay.create(observable: userUseCase.listen().map({ $0.data }),
                                     initialValue: nil,
                                     disposeBag: disposeBag)
 

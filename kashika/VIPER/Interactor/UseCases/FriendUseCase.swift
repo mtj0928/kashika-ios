@@ -57,25 +57,16 @@ struct FriendRequest: Request {
         user.documentReference.collection(FriendRequest.key)
     }
 
-    func resolve() -> DataSource<Document<Friend>>.Query {
-        var query = DataSource<Document<Friend>>.Query(collectionReference)
-
-        query = .kashi == debtType ? query.where("totalDebt", isGreaterThan: 0)
-            : .kari == debtType ? query.where("totalDebt", isLessThan: 0)
-            : query
-
-        orders.forEach { order in
-            query = query.order(by: order.key, descending: order.descending)
+    func resolve(_ query: Self.Query) -> Self.Query {
+        var query = query
+        switch debtType {
+        case .kari:
+            query = query.where("totalDebt", isGreaterThan: 0)
+        case .kashi:
+            query = query.where("totalDebt", isLessThan: 0)
+        case .none:
+            break
         }
-
-        if let limit = limit {
-            query = query.limit(to: limit)
-        }
-
-        if let snapshot = after?.snapshot {
-            query = query.start(afterDocument: snapshot)
-        }
-
         return query
     }
 }

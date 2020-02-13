@@ -101,6 +101,7 @@
 		907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD032323CFFD00F15F61 /* Observable+extension.swift */; };
 		907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */; };
 		907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */; };
+		908825F02365CAB500DD254A /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908825EF2365CAB500DD254A /* Date+extension.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
@@ -335,6 +336,7 @@
 		907FAD032323CFFD00F15F61 /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
 		907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledsTableViewCell.swift; sourceTree = "<group>"; };
 		907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledsTableViewCell.xib; sourceTree = "<group>"; };
+		908825EF2365CAB500DD254A /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9096005C2249B295002F1DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				90E309E7231617350097104C /* Batch+extension.swift */,
 				587E257E231F5C070079DFB3 /* Calendar+extension.swift */,
 				90E567D5235EA5F50005B2AF /* DataSource+extension.swift */,
+				908825EF2365CAB500DD254A /* Date+extension.swift */,
 				58CA7CF623165820001231A9 /* Document+extension.swift */,
 				909E64A92308D18000B0ACCB /* File+extension.swift */,
 				907FAD032323CFFD00F15F61 /* Observable+extension.swift */,
@@ -1455,6 +1458,7 @@
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */,
+				908825F02365CAB500DD254A /* Date+extension.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				90299FE22325D6E100CBF7BA /* ScheduledPresenter.swift in Sources */,

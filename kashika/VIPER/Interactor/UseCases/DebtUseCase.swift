@@ -42,7 +42,7 @@ class DebtUseCase {
         let userSingle = userUseCase.fetchOrCreateUser()
         let friendsSingle = Single.zip(friends.map({ FriendUseCase().fetch(id: $0.id) }))
         return Single.zip(userSingle, friendsSingle)
-            .flatMap { (user, friends) -> Single<[Document<Debt>]> in
+            .flatMap { (user, friends) in
                 let debts = friends.map({ friend -> Document<Debt> in
                     let collectionReference = user.documentReference.collection(DebtDataStore.key)
                     let document = Document<Debt>(collectionReference: collectionReference)
@@ -60,14 +60,8 @@ class DebtUseCase {
                 }.andThen(Single.just(debts))
         }
     }
-}
 
-extension Date: TargetedExtensionCompatible {
-}
-
-extension TargetedExtension where Base == Date {
-
-    func asTimestamp() -> Timestamp {
-        return Timestamp(date: self.base)
+    func listen(_ requestCreator: (Document<User>) -> Void) -> Observable<[Document<Debt>]> {
+        return Observable.just([])
     }
 }
