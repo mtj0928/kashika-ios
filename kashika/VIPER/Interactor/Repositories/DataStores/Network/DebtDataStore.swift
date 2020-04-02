@@ -53,7 +53,7 @@ struct DebtDataStore {
         let query = DataSource<Document<Debt>>.Query(reference)
         let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
             let document = Document<Debt>(documentSnapshot.reference)
-            document.get { (document, error) in
+            _ = document.get { (document, error) in
                 if let document = document {
                     done(document)
                 }

@@ -29,7 +29,7 @@ extension TargetedExtension {
 
     func get<Model: Modelable & Codable>() -> Single<Document<Model>> where Base: Document<Model> {
         return Single.create { event -> Disposable in
-            self.base.get { (document, error) in
+            _ = self.base.get { (document, error) in
                 if let error = error {
                     event(.error(error))
                 }

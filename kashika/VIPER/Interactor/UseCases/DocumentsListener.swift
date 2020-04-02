@@ -39,9 +39,10 @@ extension Document {
             .flatMap { dataSource in
                 Observable<[Document<Model>]>.create { observer -> Disposable in
                     let dataSource = dataSource.retrieve { (_, documentSnapshot, done) in
-                        if let document = Document<Model>(snapshot: documentSnapshot) {
-                            done(document)
+                        guard let document = try? Document<Model>(snapshot: documentSnapshot) else {
+                            return
                         }
+                        done(document)
                     }.onChanged { (_, dataSourceSnapshot) in
                         observer.on(.next(dataSourceSnapshot.after))
                     }.listen()

@@ -27,7 +27,7 @@ extension TargetedExtension {
                     return
                 }
                 let documents = querySnapshot.documents
-                    .compactMap({ Document<Model>(snapshot: $0) })
+                    .compactMap({ try? Document<Model>(snapshot: $0) })
                 event(.success(documents))
             }
             return Disposables.create()
