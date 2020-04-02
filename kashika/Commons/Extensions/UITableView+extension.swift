@@ -13,7 +13,7 @@ extension UITableView {
 
     func dequeueReusableCellAndWrap<Identifier: ReuseIdentifierType>(withReuseIdentifier identifier: Identifier, for indexPath: IndexPath) -> Identifier.ReusableType {
         guard let cell = dequeueReusableCell(withIdentifier: identifier.identifier, for: indexPath) as? Identifier.ReusableType else {
-            assert(false, "Identifier, " + identifier.identifier + " is not registerd.")
+            fatalError("Identifier, " + identifier.identifier + " is not registerd.")
         }
         return cell
     }
