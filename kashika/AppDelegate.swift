@@ -32,7 +32,6 @@ extension AppDelegate {
 
     private func setupFirebase() {
         FirebaseApp.configure()
-        BallcapApp.configure(Firestore.firestore().document("version/1"))
     }
 
     private func setupKeyboard() {
