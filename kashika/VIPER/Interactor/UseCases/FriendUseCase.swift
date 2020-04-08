@@ -57,13 +57,31 @@ struct FriendRequest: Request {
         user.documentReference.collection(FriendRequest.key)
     }
 
-    func resolve(_ query: Self.Query) -> Self.Query {
+    func query(_ query: Self.Query) -> Self.Query {
         var query = query
+        query = debtType(query)
+
+        orders.forEach { order in
+            query = query.order(by: order.key, descending: order.descending)
+        }
+
+        if let limit = limit {
+            query = query.limit(to: limit)
+        }
+
+        if let snapshot = after?.snapshot {
+            query = query.start(afterDocument: snapshot)
+        }
+
+        return query
+    }
+
+    private func debtType(_ query: Self.Query) -> Self.Query {
         switch debtType {
         case .kari:
-            query = query.where("totalDebt", isGreaterThan: 0)
+            return query.where("totalDebt", isGreaterThan: 0)
         case .kashi:
-            query = query.where("totalDebt", isLessThan: 0)
+            return query.where("totalDebt", isLessThan: 0)
         case .none:
             break
         }
