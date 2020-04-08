@@ -9,10 +9,12 @@
 import RxSwift
 import RxCocoa
 import Ballcap
+import Firebase
 
 class DebtUseCase {
     let debts = BehaviorRelay<[Debt]>(value: [])
 
+    private let userUseCase = UserUseCase()
     private let friendUseCase = FriendUseCase()
     private let friendRepository = FriendRepository()
     private let userRepository = UserRepository()
@@ -35,21 +37,31 @@ class DebtUseCase {
             }).disposed(by: disposeBag)
     }
 
-    func create(_ debts: [UnstoredDebt]) -> Single<[Document<Debt>]> {
-        let user = userRepository.fetchOrCreateUser()
-        let unstoredDebtSingles = debts.compactMap { [weak self] unstoredDebt in
-            self?.friendUseCase.fetchFirst({ $0.data == unstoredDebt.friend })
-                .map({ UnstoredDebt(from: unstoredDebt, document: $0) })
-        }
-
-        let unstoredDebts = Single.zip(unstoredDebtSingles)
-
-        return Single.zip(unstoredDebts, user)
-            .flatMap({ [weak self] (debts: [UnstoredDebt], user: Document<User>) in
-                guard let `self` = self else {
-                    return Single.error(NSError())
+    func create(money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Document<Debt>]> {
+        let money = type == .kari ? money : -money
+        let userSingle = userUseCase.fetchOrCreateUser()
+        let friendsSingle = Single.zip(friends.map({ FriendUseCase().fetch(id: $0.id) }))
+        return Single.zip(userSingle, friendsSingle)
+            .flatMap { (user, friends) in
+                let debts = friends.map({ friend -> Document<Debt> in
+                    let collectionReference = user.documentReference.collection(DebtDataStore.key)
+                    let document = Document<Debt>(collectionReference: collectionReference)
+                    document.data = Debt(money: money, friendId: friend.id, paymentDate: paymentDate?.ex.asTimestamp(), memo: memo, isPaid: false)
+                    return document
+                })
+                friends.forEach { friend in
+                    friend.data?.totalDebt = .increment(Int64(money))
                 }
-                return self.debtRepository.create(debts: debts, user: user)
-            })
+                user.data?.totalDebt = .increment(Int64(money * friends.count))
+                return Batch.ex.commit { batch in
+                    debts.forEach { batch.save($0) }
+                    friends.forEach { batch.update($0) }
+                    batch.update(user)
+                }.andThen(Single.just(debts))
+        }
+    }
+
+    func listen(_ requestCreator: (Document<User>) -> Void) -> Observable<[Document<Debt>]> {
+        return Observable.just([])
     }
 }

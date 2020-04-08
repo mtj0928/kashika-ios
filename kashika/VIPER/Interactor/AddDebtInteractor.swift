@@ -11,17 +11,20 @@ import RxCocoa
 
 class AddDebtInteractor: AddDebtInteractorProtocol {
 
-    var friends: BehaviorRelay<[Friend]> {
-        return friendsUseCase.friends
-    }
+    let friends: BehaviorRelay<[Friend]>
 
     private let friendsUseCase = FriendUseCase()
-    private let debtUseCase = DebtUseCase()
+    private let disposeBag = DisposeBag()
 
-    func save(debts: [UnstoredDebt]) -> Single<[Debt]> {
-        return debtUseCase.create(debts).map({ debts in
-            // swiftlint:disable:next force_unwrapping
-            return debts.map({ $0.data! })
-        })
+    init() {
+        let observable = friendsUseCase.listen({ FriendRequest(user: $0) })
+            .map({ $0.extractData() })
+        friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
+    }
+
+    func save(money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Debt]> {
+        return DebtUseCase().create(money: money, friends: friends, paymentDate: paymentDate, memo: memo, type: type).map { documents in
+            documents.extractData()
+        }
     }
 }

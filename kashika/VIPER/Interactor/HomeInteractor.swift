@@ -9,14 +9,12 @@
 import RxSwift
 import RxCocoa
 
-struct HomeInteractor: HomeInteractorProtocol {
-    var user: BehaviorRelay<User?> {
-        return userUseCase.user
-    }
+class HomeInteractor: HomeInteractorProtocol {
+    let user: BehaviorRelay<User?>
     let scheduledDebts: BehaviorRelay<[Debt]> = BehaviorRelay(value: [])
-    let friends: BehaviorRelay<[String? : Friend]> = BehaviorRelay(value: [:])
-    let kashiFriend: BehaviorRelay<[Friend]> = BehaviorRelay(value: [])
-    let kariFriend: BehaviorRelay<[Friend]> = BehaviorRelay(value: [])
+    let friends: BehaviorRelay<[String? : Friend]>
+    let kashiFriend: BehaviorRelay<[Friend]>
+    let kariFriend: BehaviorRelay<[Friend]>
 
     private let userUseCase = UserUseCase()
     private let friendUseCase = FriendUseCase()
@@ -24,11 +22,26 @@ struct HomeInteractor: HomeInteractorProtocol {
     private let disposeBag = DisposeBag()
 
     init() {
-        friendUseCase.friends.subscribe(onNext: { [self] _ in
-            self.userUseCase.fetchOrCreateUser().subscribe(onSuccess: { [self] document in
-                self.user.accept(document.data)
-            }).disposed(by: self.disposeBag)
-        }).disposed(by: disposeBag)
+        user = BehaviorRelay.create(observable: userUseCase.listen().map({ $0.data }),
+                                    initialValue: nil,
+                                    disposeBag: disposeBag)
+
+        let observable = friendUseCase.listen({ FriendRequest(user: $0) })
+            .map({ $0.extractData() })
+            .map({ friends -> [String? : Friend] in
+                var dictionary: [String?: Friend] = [:]
+                friends.forEach({ dictionary[$0.id] = $0 })
+                return dictionary
+            })
+        friends = BehaviorRelay.create(observable: observable,
+                                       initialValue: [:],
+                                       disposeBag: disposeBag)
+        kariFriend = BehaviorRelay.create(observable: friendUseCase.listen({ FriendRequest(user: $0, debtType: .kari) }).map({ $0.extractData() }),
+                                          initialValue: [],
+                                          disposeBag: disposeBag)
+        kashiFriend = BehaviorRelay.create(observable: friendUseCase.listen({ FriendRequest(user: $0, debtType: .kashi) }).map({ $0.extractData() }),
+                                           initialValue: [],
+                                           disposeBag: disposeBag)
 
         debtUseCase.debts.map({ debt in
             debt.filter({ !$0.isPaid && $0.paymentDate != nil })
@@ -39,24 +52,6 @@ struct HomeInteractor: HomeInteractorProtocol {
             }
         }.subscribe(onNext: { [self] debts in
             self.scheduledDebts.accept(debts)
-        }).disposed(by: disposeBag)
-
-        friendUseCase.friends.subscribe(onNext: { [self] friends in
-            var dictionary: [String?: Friend] = [:]
-            friends.forEach({ dictionary[$0.id] = $0 })
-            self.friends.accept(dictionary)
-        }).disposed(by: disposeBag)
-
-        friendUseCase.friends.map({ (friends: [Friend]) -> [Friend] in
-            return friends.filter({ Int($0.totalDebt.rawValue) > 0 })
-        }).subscribe(onNext: { [self] friends in
-            self.kariFriend.accept(friends)
-        }).disposed(by: disposeBag)
-
-        friendUseCase.friends.map({ (friends: [Friend]) -> [Friend] in
-            return friends.filter({ Int($0.totalDebt.rawValue) < 0 })
-        }).subscribe(onNext: { [self] friends in
-            self.kashiFriend.accept(friends)
         }).disposed(by: disposeBag)
     }
 }

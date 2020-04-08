@@ -52,7 +52,7 @@ struct FriendDataStore {
         let query = DataSource<Document<Friend>>.Query(reference)
         let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
             let document = Document<Friend>(documentSnapshot.reference)
-            document.get { (document, _) in
+            _ = document.get { (document, _) in
                 // swiftlint:disable:next force_unwrapping
                 done(document!)
             }

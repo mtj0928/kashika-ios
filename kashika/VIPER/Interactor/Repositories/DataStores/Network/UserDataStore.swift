@@ -23,7 +23,7 @@ struct UserDataStore {
 
     func fetch(authId: String) -> Single<Document<User>> {
         return Single.create(subscribe: { observer -> Disposable in
-            Document<User>(id: authId).get { (document, error) in
+            _ = Document<User>(id: authId).get { (document, error) in
                 if let document = document {
                     observer(.success(document))
                     return

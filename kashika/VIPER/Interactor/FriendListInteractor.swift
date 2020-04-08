@@ -6,11 +6,17 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 
 class FriendListInteractor: FriendListInteractorProtocol {
-    var friends: BehaviorRelay<[Friend]> {
-        return friendListUseCase.friends
+
+    let friends: BehaviorRelay<[Friend]>
+    private let disposeBag = DisposeBag()
+
+    init() {
+        let observable = FriendUseCase().listen({ FriendRequest(user: $0) })
+            .map({ $0.extractData() })
+        friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
     }
-    private let friendListUseCase = FriendUseCase()
 }
