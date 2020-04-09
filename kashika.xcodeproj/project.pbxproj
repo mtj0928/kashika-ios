@@ -63,7 +63,6 @@
 		9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781C2304EFF6009480CA /* EditUsernameInput.swift */; };
 		9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781E2304F037009480CA /* EditUsernameOutput.swift */; };
 		90427821230521A8009480CA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90427820230521A8009480CA /* Friend.swift */; };
-		9042782323052240009480CA /* FriendDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782223052240009480CA /* FriendDataStore.swift */; };
 		9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782623052B10009480CA /* AddUserManuallyInteractor.swift */; };
 		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
@@ -98,6 +97,7 @@
 		907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519B922EF1022006D2894 /* EditUsernamePresenter.swift */; };
 		907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BB22EF1153006D2894 /* EditUsernameRouter.swift */; };
 		907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */; };
+		907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907F5248243F5DB700BB0BAC /* FriendRepository.swift */; };
 		907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD032323CFFD00F15F61 /* Observable+extension.swift */; };
 		907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */; };
 		907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */; };
@@ -178,7 +178,6 @@
 		90FB188022DF05FF00092BB3 /* TapticEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB187C22DEF6D500092BB3 /* TapticEngine.framework */; };
 		90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6AF230644E800EBC043 /* UserRepository.swift */; };
 		90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */; };
-		90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FBC230FF771002D214B /* FriendRepository.swift */; };
 		90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FCD23114592002D214B /* AddDebtInteractor.swift */; };
 		90FD9FD223121D4E002D214B /* SettingMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FD9FD023121D4E002D214B /* SettingMenuViewController.storyboard */; };
 		90FD9FD423121E89002D214B /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FD123121D4E002D214B /* SettingMenuViewController.swift */; };
@@ -298,7 +297,6 @@
 		9042781C2304EFF6009480CA /* EditUsernameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameInput.swift; sourceTree = "<group>"; };
 		9042781E2304F037009480CA /* EditUsernameOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameOutput.swift; sourceTree = "<group>"; };
 		90427820230521A8009480CA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		9042782223052240009480CA /* FriendDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataStore.swift; sourceTree = "<group>"; };
 		9042782623052B10009480CA /* AddUserManuallyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractor.swift; sourceTree = "<group>"; };
 		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
@@ -333,6 +331,7 @@
 		907519B922EF1022006D2894 /* EditUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernamePresenter.swift; sourceTree = "<group>"; };
 		907519BB22EF1153006D2894 /* EditUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameRouter.swift; sourceTree = "<group>"; };
 		907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameViewBuilder.swift; sourceTree = "<group>"; };
+		907F5248243F5DB700BB0BAC /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		907FAD032323CFFD00F15F61 /* Observable+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+extension.swift"; sourceTree = "<group>"; };
 		907FAD052325064900F15F61 /* ScheduledsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledsTableViewCell.swift; sourceTree = "<group>"; };
 		907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledsTableViewCell.xib; sourceTree = "<group>"; };
@@ -411,7 +410,6 @@
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		90FB187B22DEF6C400092BB3 /* TapticEngine.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = TapticEngine.framework.dSYM; path = Carthage/Build/iOS/TapticEngine.framework.dSYM; sourceTree = "<group>"; };
 		90FB187C22DEF6D500092BB3 /* TapticEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TapticEngine.framework; path = Carthage/Build/iOS/TapticEngine.framework; sourceTree = "<group>"; };
-		90FD9FBC230FF771002D214B /* FriendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRepository.swift; sourceTree = "<group>"; };
 		90FD9FCA2311321A002D214B /* MemoryPoolContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryPoolContainer.swift; sourceTree = "<group>"; };
 		90FD9FCD23114592002D214B /* AddDebtInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtInteractor.swift; sourceTree = "<group>"; };
 		90FD9FD023121D4E002D214B /* SettingMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingMenuViewController.storyboard; sourceTree = "<group>"; };
@@ -772,7 +770,8 @@
 				909D6AA8224DEA4E00FE7218 /* DataStores */,
 				906FE6AF230644E800EBC043 /* UserRepository.swift */,
 				58C0DB7C23165D990060E882 /* DebtRepository.swift */,
-				90FD9FBC230FF771002D214B /* FriendRepository.swift */,
+				907F5248243F5DB700BB0BAC /* FriendRepository.swift */,
+				90FD9FCD23114592002D214B /* AddDebtInteractor.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -845,7 +844,6 @@
 			children = (
 				909D6AB3224E12EB00FE7218 /* UseCases */,
 				906FE6AE230644D600EBC043 /* Repositories */,
-				90FD9FCD23114592002D214B /* AddDebtInteractor.swift */,
 				9042782623052B10009480CA /* AddUserManuallyInteractor.swift */,
 				909EF941231A18B400DA5F0D /* HomeInteractor.swift */,
 				906FE6AA23054E6F00EBC043 /* FriendListInteractor.swift */,
@@ -1038,7 +1036,6 @@
 			children = (
 				58CA7CF2231655FA001231A9 /* DebtDataStore.swift */,
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
-				9042782223052240009480CA /* FriendDataStore.swift */,
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 			);
 			path = Network;
@@ -1454,10 +1451,10 @@
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
+				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
-				90FD9FCC231133FD002D214B /* FriendRepository.swift in Sources */,
 				908825F02365CAB500DD254A /* Date+extension.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
@@ -1478,7 +1475,6 @@
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
-				9042782323052240009480CA /* FriendDataStore.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,

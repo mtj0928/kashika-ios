@@ -11,12 +11,13 @@ import RxCocoa
 import Ballcap
 import Firebase
 
-class DebtUseCase {
+class DebtUseCase: DocumentOperatorSet {
+    typealias Request = DebtRequest
+
     let debts = BehaviorRelay<[Debt]>(value: [])
 
     private let userUseCase = UserUseCase()
     private let friendUseCase = FriendUseCase()
-    private let friendRepository = FriendRepository()
     private let userRepository = UserRepository()
     private let debtRepository = DebtRepository()
 
@@ -63,5 +64,16 @@ class DebtUseCase {
 
     func listen(_ requestCreator: (Document<User>) -> Void) -> Observable<[Document<Debt>]> {
         return Observable.just([])
+    }
+}
+
+struct DebtRequest: Request {
+
+    typealias Model = Debt
+
+    var collectionReference: CollectionReference
+
+    func query(_ query: Self.Query) -> Self.Query {
+        query
     }
 }

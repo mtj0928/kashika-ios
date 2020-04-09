@@ -6,10 +6,12 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import UIKit
 import RxSwift
 import RxCocoa
 import Ballcap
 import FirebaseFirestore
+import FirebaseStorage
 
 class FriendUseCase: DocumentOperatorSet {
 
@@ -20,6 +22,10 @@ class FriendUseCase: DocumentOperatorSet {
     private var _collectioeference: CollectionReference?
     var collectionReference: Single<CollectionReference?> {
         getCollectionReference()
+    }
+
+    func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
+        return FriendRepository().create(user: userDocument, name: name, icon: icon)
     }
 
     func listen(_ requestCreator: @escaping (Document<User>) -> FriendRequest) -> Observable<[Document<Friend>]> {

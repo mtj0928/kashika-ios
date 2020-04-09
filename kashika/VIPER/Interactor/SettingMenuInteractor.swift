@@ -19,6 +19,8 @@ class SettingMenuInteractor: SettingMenuInteractorProtocol {
     }
 
     func deleteFriends() -> Completable {
+        let debtUseCase = DebtUseCase()
+        debtUseCase.fetch(request: <#T##DebtUseCase.Request#>)
         return userUseCase.fetchOrCreateUser()
             .map({ FriendRequest(user: $0) })
             .flatMap({ FriendUseCase().fetch(request: $0) })
