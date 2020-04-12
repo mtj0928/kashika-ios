@@ -10,7 +10,8 @@ import UIKit
 import FirebaseFirestore
 import Ballcap
 
-struct User: Codable, Equatable, Modelable {
+struct User: Codable, Equatable, Modelable, ModelIdentifier {
+    var id: String = ""
     var name: String = ""
     var icon: File?
     var totalDebt: IncrementableInt = 0

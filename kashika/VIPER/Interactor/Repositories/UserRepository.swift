@@ -7,22 +7,29 @@
 //
 
 import RxSwift
-import Ballcap
 
 struct UserRepository {
-
+    
+    private let userDataStore = UserDataStore()
     private let firebaseAuthStore = FirebaseAuthStore()
-    private let disposeBag = RxSwift.DisposeBag()
-
-    func fetchOrCreateUser() -> Single<Document<User>> {
-        if let user = firebaseAuthStore.fetchCurrentUser() {
-            return Document<User>(id: user.uid).ex.get()
-        }
-        return firebaseAuthStore.createUser()
-            .map({ Document<User>(id: $0.uid) })
-            .flatMap({ $0.ex.save() })
+    
+    func create(firebaseUser: FirebaseUser) -> Single<User> {
+        return userDataStore.create(authId: firebaseUser.uid)
+            .map { $0.data! }
     }
-
+    
+    func fetch(firebaseUser: FirebaseUser) -> Single<User> {
+        return userDataStore.fetch(authId: firebaseUser.uid)
+            .map { $0.data! }
+    }
+    
+    func listen(user: User) -> Observable<User> {
+        return user.document().asObservable()
+            .flatMap { userDoument  in
+                self.userDataStore.listen(userDoument)
+        }.map { $0.data! }
+    }
+    
     func signout() -> Completable {
         return firebaseAuthStore.signout()
     }

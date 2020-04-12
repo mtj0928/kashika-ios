@@ -77,10 +77,13 @@ extension ScheduledsTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.paymentScheduleColleionViewCell, for: indexPath)
         let debt = presenter.debts.value[indexPath.item]
-        if let friend = presenter.friends.value[debt.friendId] {
+        presenter.getFriend(has: debt).subscribe(onSuccess: { friend in
+            guard let friend = friend else {
+                return
+            }
             cell.set(debt: debt, friend: friend)
             cell.mainView.backgroundColor = UIColor.app.cardViewBackgroundColor
-        }
+            }).disposed(by: disposeBag)
         return cell
     }
 }

@@ -12,7 +12,7 @@ import Ballcap
 class SettingMenuInteractor: SettingMenuInteractorProtocol {
 
     private let userUseCase = UserUseCase()
-    private let friendsUseCase = FriendUseCase()
+    private let friendsUseCase = FriendUseCase(user: UserUseCase().fetchOrCreateUser())
 
     func signout() -> Completable {
         return userUseCase.signout()
@@ -20,10 +20,11 @@ class SettingMenuInteractor: SettingMenuInteractorProtocol {
 
     func deleteFriends() -> Completable {
         let debtUseCase = DebtUseCase()
-        debtUseCase.fetch(request: <#T##DebtUseCase.Request#>)
+        let friendsUseCase = self.friendsUseCase
+
         return userUseCase.fetchOrCreateUser()
-            .map({ FriendRequest(user: $0) })
-            .flatMap({ FriendUseCase().fetch(request: $0) })
-            .flatMapCompletable({ FriendUseCase().delete($0) })
+            .map { FriendRequest(user: $0) }
+            .flatMap { friendsUseCase.fetch(request: $0) }
+            .flatMapCompletable { friendsUseCase.delete($0) }
     }
 }

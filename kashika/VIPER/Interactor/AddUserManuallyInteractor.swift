@@ -12,9 +12,8 @@ import RxSwift
 struct AddUserManuallyInteractor: AddUserManuallyInteractorProtocol {
 
     func addUser(name: String, icon: UIImage?) -> MonitorObservable<Friend?> {
-        return UserUseCase().fetchOrCreateUser()
-            .asObservable()
-            .flatMap { FriendUseCase().create(user: $0, name: name, icon: icon) }
-            .map { $0.map { document -> Friend? in document.data } }
+        return FriendUseCase(user: UserUseCase().fetchOrCreateUser())
+            .create(name: name, icon: icon)
+            .map { $0.map { friend in friend } }
     }
 }

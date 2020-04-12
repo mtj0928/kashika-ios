@@ -14,7 +14,7 @@ struct UserDataStore {
     func create(authId: String) -> Single<Document<User>> {
         return Single.create(subscribe: { observer -> Disposable in
             let document = Document<User>(id: authId)
-            document.data?.name = authId.description
+            document.data?.id = authId
             document.save()
             observer(.success(document))
             return Disposables.create()
@@ -35,5 +35,9 @@ struct UserDataStore {
             }
             return Disposables.create()
         })
+    }
+
+    func listen(_ user: Document<User>) -> Observable<Document<User>> {
+        return user.listen()
     }
 }

@@ -14,13 +14,13 @@ protocol DocumentOperator {
     associatedtype Request: kashika.Request
     typealias Model = Request.Model
 
-    var collectionReference: Single<CollectionReference?> { get }
+    var collectionReference: CollectionReference? { get }
 }
 
 extension DocumentOperator {
 
-    var collectionReference: Single<CollectionReference?> {
-        Single.just(nil)
+    var collectionReference: CollectionReference? {
+        return nil
     }
 }
 
@@ -43,7 +43,7 @@ protocol DocumentFetcher: DocumentOperator {
 extension DocumentFetcher {
 
     func fetch(id: String) -> Single<Document<Model>> {
-        return collectionReference.flatMap { reference in
+        return Single.just(collectionReference).flatMap { reference in
             Document<Model>(id: id, collectionReference: reference).ex.get()
         }
     }
@@ -88,7 +88,19 @@ extension DocumentDeleter {
     }
 }
 
+// MARK: - DocumentListener
+
+protocol DocumentListener: DocumentOperator {
+}
+
+extension DocumentListener {
+
+    func listen<Request: kashika.Request>(_ request: Request) -> Observable<[Document<Model>]> where Request.Model == Model {
+        return Document<Model>.listen(request)
+    }
+}
+
 // MARK: - DocumentOperatorSet
 
-protocol DocumentOperatorSet: DocumentCreator, DocumentDeleter, DocumentFetcher, DocumentUpdater {
+protocol DocumentOperatorSet: DocumentCreator, DocumentDeleter, DocumentFetcher, DocumentUpdater, DocumentListener {
 }

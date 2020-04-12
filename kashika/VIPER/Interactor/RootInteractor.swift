@@ -10,11 +10,10 @@ import RxSwift
 
 struct RootInteractor: RootInteractorProtocol {
 
-    private let friendUseCase = FriendUseCase()
+    private let friendUseCase = FriendUseCase(user: UserUseCase().fetchOrCreateUser())
 
     func fetchOrCreateCurrentUser() -> Single<User?> {
-        return UserUseCase().fetchOrCreateUser()
-            .map { $0.data }
+        return UserUseCase().fetchOrCreateUser().map { $0 }
     }
 
     func fetchFriend(id: String?) -> Single<Friend?> {
@@ -22,6 +21,5 @@ struct RootInteractor: RootInteractorProtocol {
             return Single.just(nil)
         }
         return friendUseCase.fetch(id: id)
-            .map({ $0.data })
     }
 }

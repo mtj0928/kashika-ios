@@ -8,8 +8,11 @@
 
 import Ballcap
 
-struct Friend: Codable, Equatable, Modelable {
+struct Friend: Codable, Equatable, Modelable, UserObject {
+    static let collectionName: String = "friends"
+
     var id: String = ""
+    var userId: String = ""
     var name = ""
     var iconFile: File?
     var totalDebt: IncrementableInt = 0

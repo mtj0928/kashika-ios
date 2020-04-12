@@ -9,7 +9,11 @@
 import Ballcap
 import FirebaseFirestore
 
-struct Debt: Codable, Equatable, Modelable {
+struct Debt: Codable, Equatable, Modelable, ModelIdentifier, UserObject {
+    static let collectionName = "debts"
+
+    var id = ""
+    var userId: String = ""
     var money = 0
     var friendId: String?
     var paymentDate: Timestamp?

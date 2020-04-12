@@ -6,15 +6,21 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
+import RxSwift
 import RxCocoa
 
 class ScheduledPresenter: ScheduledPresenterProtocol {
-    let debts: BehaviorRelay<[Debt]>
-    let friends: BehaviorRelay<[String?: Friend]>
+    var debts: BehaviorRelay<[Debt]> {
+        return interactor.debts
+    }
+    private let interactor: ScheduledInteractorProtocol
 
-    init(debts: BehaviorRelay<[Debt]>, friends: BehaviorRelay<[String?: Friend]>) {
-        self.debts = debts
-        self.friends = friends
+    init(interactor: ScheduledInteractorProtocol) {
+        self.interactor = interactor
+    }
+
+    func getFriend(has debt: Debt) -> Single<Friend?> {
+        return interactor.getFriend(has: debt)
     }
 
     func tapped(debt: Debt) {

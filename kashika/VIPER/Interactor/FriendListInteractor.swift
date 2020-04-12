@@ -15,8 +15,7 @@ class FriendListInteractor: FriendListInteractorProtocol {
     private let disposeBag = DisposeBag()
 
     init() {
-        let observable = FriendUseCase().listen({ FriendRequest(user: $0) })
-            .map({ $0.extractData() })
+        let observable = FriendUseCase(user: UserUseCase().fetchOrCreateUser()).listen({ FriendRequest(user: $0) })
         friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
     }
 }

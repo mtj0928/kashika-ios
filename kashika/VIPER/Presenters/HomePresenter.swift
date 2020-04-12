@@ -58,7 +58,10 @@ class HomePresenter: HomePresenterProtocol {
     }
 
     func resolveScheduledPresenter() -> ScheduledPresenterProtocol {
-        let presenter = ScheduledPresenter(debts: interactor.scheduledDebts, friends: interactor.friends)
+        // TODO: - ここで組み立てるべきではない
+        let interactor = ScheduledInteractor()
+        let presenter = ScheduledPresenter(interactor: interactor)
         return presenter
+
     }
 }

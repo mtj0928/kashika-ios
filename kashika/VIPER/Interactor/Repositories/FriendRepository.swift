@@ -7,44 +7,44 @@
 //
 
 import UIKit
-import Ballcap
 import RxSwift
 import FirebaseStorage
 
 struct FriendRepository {
 
-    static let key = "friends"
-    static let imageMinLength: CGFloat = 200
-    static let fileName = "icon"
+    private let dataStore: FriendDataStore
 
-    func create(user userDocument: Document<User>, name: String, icon: UIImage?) -> MonitorObservable<Document<Friend>> {
-        return Observable.just(createFriend(user: userDocument, name: name, icon: icon))
-            .flatMap({ (document: Document<Friend>) -> Observable<(Document<Friend>, Monitor<StorageMetadata?>)> in
-                guard let data = document.data else {
-                    return Observable.error(NSError(domain: "[mtj0928] Document.data is not exist", code: -1, userInfo: nil))
-
-                }
-                return Observable.combineLatest(Observable.just(document), data.iconFile?.ex.save() ?? Observable.just(Monitor(nil)))
-            })
-            .map { (document, monitor) in monitor.map { _ in document } }
-            .do(onNext: { (monitor: Monitor<Document<Friend>>) in
-                if let value = monitor.value {
-                    value.save()
-                }
-            })
+    init(user: User) {
+        self.dataStore = FriendDataStore(userId: user.id)
     }
 
-    private func createFriend(user userDocument: Document<User>, name: String, icon: UIImage?) -> Document<Friend> {
-        let collectionReference = userDocument.documentReference.collection(FriendRepository.key)
-        let document = Document<Friend>(collectionReference: collectionReference)
-        let reference = document.storageReference.child(FriendRepository.fileName)
-        let data = icon?.resize(minLength: FriendRepository.imageMinLength)?.pngData()
-        let file = File(reference, data: data, mimeType: .png)
+    func create(name: String, icon: UIImage?) -> MonitorObservable<Friend> {
+        return dataStore.create(name: name, icon: icon)
+            .map { observer in return observer.map { $0.data! } }
+    }
 
-        document.data?.name = name
-        document.data?.iconFile = file
-        document.data?.id = document.id
+    func fetch(request: FriendRequest) -> Single<[Friend]> {
+        return dataStore.fetch(request: request).map { $0.extractData() }
+    }
 
-        return document
+    func fetch(id: String) -> Single<Friend?> {
+        return dataStore.fetch(id: id).map { $0.data }
+    }
+
+    func delete(_ friend: Friend) -> Completable {
+        friend.document().flatMapCompletable { friendDocument in
+            self.dataStore.delete(friendDocument)
+        }
+    }
+
+    func delete(_ friends: [Friend]) -> Completable {
+        Single.zip(friends.map { $0.document() }).flatMapCompletable { friendDocuments in
+            self.dataStore.delete(friendDocuments)
+        }
+    }
+
+    func listen(request: FriendRequest) -> Observable<[Friend]> {
+        return dataStore.listen(request)
+            .map { $0.extractData() }
     }
 }

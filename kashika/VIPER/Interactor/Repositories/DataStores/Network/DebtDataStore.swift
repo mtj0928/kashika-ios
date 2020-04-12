@@ -10,58 +10,79 @@ import RxSwift
 import Ballcap
 import Firebase
 
-struct DebtDataStore {
+struct DebtDataStore: DocumentOperatorSet {
 
-    static let key = "debts"
+    typealias Request = DebtRequest
 
-    func create(debt: UnstoredDebt, userDocument: Document<User>) -> Single<Document<Debt>> {
-        return create(debts: [debt], userDocument: userDocument).map({ $0[0] })
-    }
-
-    func create(debts: [UnstoredDebt], userDocument: Document<User>) -> Single<[Document<Debt>]> {
-        return Single.just(userDocument)
-            .map({ userDocument -> [(Document<Debt>, Document<Friend>, Document<User>)] in
-                return debts.map({ debt in
-                    let collectionReference = userDocument.documentReference.collection(DebtDataStore.key)
-                    let debtDocument = Document<Debt>(collectionReference: collectionReference)
-                    let friendDocument: Document<Friend>! = debt.document
-
-                    debtDocument.data?.money = debt.money
-                    debtDocument.data?.friendId = debt.document?.id
-                    // swiftlint:disable:next force_unwrapping
-                    debtDocument.data?.paymentDate = debt.paymentDate != nil ? Timestamp(date: debt.paymentDate!) : nil
-                    debtDocument.data?.memo = debt.memo
-
-                    friendDocument?.data?.totalDebt = .increment(Int64(debt.money))
-                    userDocument.data?.totalDebt = .increment(Int64(debt.money))
-
-                    return (debtDocument, friendDocument, userDocument)
+    // swiftlint:disable:next function_parameter_count
+    func create(owner user: Document<User>, money: Int, friends: [Document<Friend>], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Document<Debt>]> {
+        let money = type == .kari ? money : -money
+        return Single.just(friends)
+            .flatMap { (friends) in
+                let debts = friends.map({ friend -> Document<Debt> in
+                    let collectionReference = user.documentReference.collection(Debt.collectionName)
+                    let document = Document<Debt>(collectionReference: collectionReference)
+                    document.data = Debt(id: document.id, userId: user.id, money: money, friendId: friend.id, paymentDate: paymentDate?.ex.asTimestamp(), memo: memo, isPaid: false)
+                    return document
                 })
-            }).flatMap({ debts in
-                Batch.ex.commit { batch in
-                    debts.forEach { debt in
-                        batch.save(debt.0)
-                        batch.update(debt.1)
-                        batch.update(debt.2)
-                    }
-                }.andThen(Single.just(debts.map({ $0.0 })))
-            })
+                friends.forEach { friend in
+                    friend.data?.totalDebt = .increment(Int64(money))
+                }
+                user.data?.totalDebt = .increment(Int64(money * friends.count))
+                return Batch.ex.commit { batch in
+                    debts.forEach { batch.save($0) }
+                    friends.forEach { batch.update($0) }
+                    batch.update(user)
+                }.andThen(Single.just(debts))
+        }
     }
 
-    func listen(user userDocument: Document<User>) -> DataSource<Document<Debt>> {
-        let reference = userDocument.documentReference.collection(DebtDataStore.key)
-        let query = DataSource<Document<Debt>>.Query(reference)
-        let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
-            let document = Document<Debt>(documentSnapshot.reference)
-            _ = document.get { (document, error) in
-                if let document = document {
-                    done(document)
+    func listen(user userDocument: Document<User>) -> Observable<[Document<Debt>]> {
+        return Observable.create { emitter -> Disposable in
+            let reference = userDocument.documentReference.collection(Debt.collectionName)
+            let query = DataSource<Document<Debt>>.Query(reference)
+            let dataSource = DataSource(reference: query).retrieve { (_, documentSnapshot, done) in
+                let document = Document<Debt>(documentSnapshot.reference)
+                _ = document.get { (document, error) in
+                    if let document = document {
+                        done(document)
+                    }
+                    if let error = error {
+                        print(error.localizedDescription)
+                        done(nil)
+                    }
                 }
-                if let error = error {
-                    print(error.localizedDescription)
-                }
+            }.onChanged { (_, snapshot) in
+                emitter.onNext(snapshot.after)
+            }.listen()
+
+            return Disposables.create {
+                dataSource.stop()
             }
         }
-        return dataSource
+    }
+}
+
+struct DebtRequest: Request {
+
+    typealias Model = Debt
+
+    let user: User
+    var orders: [Order] = []
+    var predicates: [NSPredicate] = []
+
+    var collectionReference: CollectionReference {
+        Document<User>(id: user.id).documentReference.collection(Debt.collectionName)
+    }
+
+    func query(_ query: Self.Query) -> Self.Query {
+        var query = query
+        orders.forEach { order in
+            query = query.order(by: order.key, descending: order.descending)
+        }
+        predicates.forEach { predicate in
+            query = query.filter(using: predicate)
+        }
+        return query
     }
 }

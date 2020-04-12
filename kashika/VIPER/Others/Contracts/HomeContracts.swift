@@ -33,7 +33,13 @@ protocol FriendsGridPresenterProtocol {
 
 protocol ScheduledPresenterProtocol {
     var debts: BehaviorRelay<[Debt]> { get }
-    var friends: BehaviorRelay<[String?: Friend]> { get }
 
     func tapped(debt: Debt)
+    func getFriend(has debt: Debt) -> Single<Friend?>
+}
+
+protocol ScheduledInteractorProtocol {
+    var debts: BehaviorRelay<[Debt]> { get }
+
+    func getFriend(has debt: Debt) -> Single<Friend?>
 }

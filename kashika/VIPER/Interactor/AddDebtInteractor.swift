@@ -13,18 +13,16 @@ class AddDebtInteractor: AddDebtInteractorProtocol {
 
     let friends: BehaviorRelay<[Friend]>
 
-    private let friendsUseCase = FriendUseCase()
+    private var friendsUseCase: FriendUseCase!
     private let disposeBag = DisposeBag()
 
     init() {
-        let observable = friendsUseCase.listen({ FriendRequest(user: $0) })
-            .map({ $0.extractData() })
+        let observable: Observable<[Friend]> = FriendUseCase(user: UserUseCase().fetchOrCreateUser())
+            .listen { user in FriendRequest(user: user) }
         friends = BehaviorRelay.create(observable: observable, initialValue: [], disposeBag: disposeBag)
     }
 
     func save(money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Debt]> {
-        return DebtUseCase().create(money: money, friends: friends, paymentDate: paymentDate, memo: memo, type: type).map { documents in
-            documents.extractData()
-        }
+        return DebtUseCase().create(money: money, friends: friends, paymentDate: paymentDate, memo: memo, type: type)
     }
 }

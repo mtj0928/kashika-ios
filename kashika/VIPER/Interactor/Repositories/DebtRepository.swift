@@ -6,27 +6,40 @@
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
 //
 
-import RxSwift
+import Foundation
 import Ballcap
+import RxSwift
 
 struct DebtRepository {
-    var debts: [Document<Debt>] {
-        debtsPool.value
-    }
-    var debtsObservable: Observable<[Document<Debt>]> {
-        debtsPool.observable
-    }
+    typealias Request = DebtRequest
+
     private let userRepository = UserRepository()
     private let debtDataStore = DebtDataStore()
-    private let debtsPool = MemoryPoolContainer.default.resolve(Pool<Debt>.self,
-                                                                ifNotExists: { Pool() })
+    private let disposeBag = RxSwift.DisposeBag()
 
-    func create(debts: [UnstoredDebt], user: Document<User>) -> Single<[Document<Debt>]> {
-        return debtDataStore.create(debts: debts, userDocument: user)
+    // swiftlint:disable:next function_parameter_count
+    func create(owner user: User, money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Debt]> {
+        let documents = friends.map { $0.document() }
+        return Single.zip(user.document(), Single.zip(documents))
+            .flatMap { (user, friendDocuments) -> Single<[Document<Debt>]> in
+                self.debtDataStore.create(owner: user, money: money, friends: friendDocuments, paymentDate: paymentDate, memo: memo, type: type)
+        }.map { $0.extractData() }
+
     }
 
-    func listen(user: Document<User>) {
-        let dataSource = debtDataStore.listen(user: user)
-        debtsPool.listen(user: user, dataSource: dataSource)
+    // 多分いらない
+    func listen(user: User) -> Observable<[Debt]> {
+        return user.document()
+            .asObservable()
+            .flatMap { user in
+                self.debtDataStore.listen(user: user).map { documents -> [Debt] in
+                    documents.compactMap { $0.data }
+                }.share()
+        }
+    }
+
+    func listen(request: DebtRequest) -> Observable<[Debt]> {
+        return debtDataStore.listen(request)
+            .map { $0.extractData() }
     }
 }
