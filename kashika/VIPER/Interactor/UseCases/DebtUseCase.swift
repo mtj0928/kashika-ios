@@ -19,6 +19,14 @@ class DebtUseCase {
             .flatMap { self.debtRepository.create(owner: $0, money: money, friends: friends, paymentDate: paymentDate, memo: memo, type: type) }
     }
 
+    func fetch(request: DebtRequest) -> Single<[Debt]> {
+        return debtRepository.fetch(request: request)
+    }
+
+    func delete(_ debts: [Debt]) -> Completable {
+        return debtRepository.delete(debts)
+    }
+
     func listen(_ requestCreator: @escaping (User) -> DebtRequest) -> Observable<[Debt]> {
         return userUseCase.fetchOrCreateUser()
             .map { requestCreator($0) }

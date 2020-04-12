@@ -21,6 +21,10 @@ struct UserDataStore {
         })
     }
 
+    func save(user: Document<User>) -> Single<Document<User>> {
+        return user.ex.save()
+    }
+
     func fetch(authId: String) -> Single<Document<User>> {
         return Single.create(subscribe: { observer -> Disposable in
             _ = Document<User>(id: authId).get { (document, error) in

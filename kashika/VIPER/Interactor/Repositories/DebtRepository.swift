@@ -24,18 +24,16 @@ struct DebtRepository {
             .flatMap { (user, friendDocuments) -> Single<[Document<Debt>]> in
                 self.debtDataStore.create(owner: user, money: money, friends: friendDocuments, paymentDate: paymentDate, memo: memo, type: type)
         }.map { $0.extractData() }
-
     }
 
-    // 多分いらない
-    func listen(user: User) -> Observable<[Debt]> {
-        return user.document()
-            .asObservable()
-            .flatMap { user in
-                self.debtDataStore.listen(user: user).map { documents -> [Debt] in
-                    documents.compactMap { $0.data }
-                }.share()
-        }
+    func fetch(request: DebtRequest) -> Single<[Debt]> {
+        return debtDataStore.fetch(request: request)
+            .map { $0.extractData() }
+    }
+
+    func delete(_ debts: [Debt]) -> Completable {
+        let debtDocuments = Single.zip(debts.map { $0.document() })
+        return debtDocuments.flatMapCompletable { self.debtDataStore.delete($0) }
     }
 
     func listen(request: DebtRequest) -> Observable<[Debt]> {

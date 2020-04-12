@@ -28,6 +28,12 @@ struct UserUseCase {
             .flatMap { self.userRepository.listen(user: $0) }
     }
 
+    func reset() -> Completable {
+        return fetchOrCreateUser().flatMapCompletable { user in
+            return self.userRepository.reset(user: user)
+        }
+    }
+
     func signout() -> Completable {
         return userRepository.signout()
     }
