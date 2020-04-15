@@ -27,7 +27,7 @@ final class ScheduledsTableViewCell: UITableViewCell {
     }
 
     private var cellWidth: CGFloat {
-        return collectionView.frame.width - 2 * cellSpace - 80.0
+        return collectionView.frame.width - 2 * cellSpace - 60.0
     }
 
     private var cellSpace: CGFloat {
@@ -59,7 +59,11 @@ final class ScheduledsTableViewCell: UITableViewCell {
         disposeBag = DisposeBag()
 
         presenter.debts.asDriver().drive(onNext: { [weak self] _ in
-            self?.collectionView.reloadData()
+            guard let `self` = self else {
+                return
+            }
+            self.collectionView.reloadData()
+            self.collectionView.setCollectionViewLayout(CollectionViewLayout(pageWidth: self.cellWidth, height: self.cellHeight, space: self.cellSpace), animated: false)
         }).disposed(by: disposeBag)
 
         collectionView.reloadData()
