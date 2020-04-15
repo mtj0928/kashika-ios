@@ -61,6 +61,18 @@ struct FriendDataStore: DocumentOperatorSet {
 
         return document
     }
+
+    func delete(_ documents: [Document<Friend>]) -> Completable {
+        return StorageBatch.ex.commit { batch in
+            let iconFiles = documents.compactMap { $0.data?.iconFile }
+            batch.delete(iconFiles)
+        }
+        .andThen(Batch.ex.commit { batch in
+            documents.forEach { document in
+                batch.delete(document)
+            }
+        })
+    }
 }
 
 struct FriendRequest: Request {

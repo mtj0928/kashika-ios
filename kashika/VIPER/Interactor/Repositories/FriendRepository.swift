@@ -38,8 +38,9 @@ struct FriendRepository {
     }
 
     func delete(_ friends: [Friend]) -> Completable {
-        Single.zip(friends.map { $0.document() }).flatMapCompletable { friendDocuments in
-            self.dataStore.delete(friendDocuments)
+        Single.zip(friends.map { $0.document() })
+            .flatMapCompletable { friendDocuments in
+                self.dataStore.delete(friendDocuments)
         }
     }
 
