@@ -70,6 +70,7 @@ struct DebtRequest: Request {
     let user: User
     var orders: [Order] = []
     var predicates: [NSPredicate] = []
+    var limit: Int?
 
     var collectionReference: CollectionReference {
         Document<User>(id: user.id).documentReference.collection(Debt.collectionName)
@@ -82,6 +83,9 @@ struct DebtRequest: Request {
         }
         predicates.forEach { predicate in
             query = query.filter(using: predicate)
+        }
+        if let limit = limit {
+            query = query.limit(to: limit)
         }
         return query
     }

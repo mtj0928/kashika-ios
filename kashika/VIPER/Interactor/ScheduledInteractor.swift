@@ -11,7 +11,7 @@ import RxCocoa
 
 final class ScheduledInteractor: ScheduledInteractorProtocol {
 
-    let debts: BehaviorRelay<[Debt]>
+    var debts: BehaviorRelay<[Debt]>
 
     private let debtUseCase = DebtUseCase()
     private let friendUseCase = FriendUseCase(user: UserUseCase().fetchOrCreateUser())
@@ -19,11 +19,9 @@ final class ScheduledInteractor: ScheduledInteractorProtocol {
 
     init() {
         let observer = debtUseCase.listen { user in
-            var request = DebtRequest(user: user)
-            request.predicates.append(NSPredicate("isPaid", equal: false as AnyObject))
-            request.orders.append(Order(key: "paymentDate", descending: false))
-            return request
+            return DebtRequest(user: user, orders: [Order(key: "paymentDate", descending: true)], predicates: [NSPredicate("isPaid", equal: false as AnyObject)], limit: nil)
         }
+
         self.debts = BehaviorRelay.create(observable: observer, initialValue: [], disposeBag: disposeBag)
     }
 

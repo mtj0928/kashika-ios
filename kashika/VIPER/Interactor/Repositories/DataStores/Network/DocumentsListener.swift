@@ -10,6 +10,7 @@ import UIKit
 import Ballcap
 import RxSwift
 import RxCocoa
+import FirebaseFirestore
 
 extension Document {
 
@@ -45,6 +46,8 @@ extension Document {
                         done(document)
                     }.onChanged { (_, dataSourceSnapshot) in
                         observer.on(.next(dataSourceSnapshot.after))
+                    }.sorted { (_, _) in
+                        return true
                     }.listen()
                     return Disposables.create {
                         dataSource.stop()

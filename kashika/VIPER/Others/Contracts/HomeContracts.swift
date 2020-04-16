@@ -20,7 +20,6 @@ protocol HomePresenterProtocol {
 protocol HomeInteractorProtocol {
     var user: BehaviorRelay<User?> { get }
     var scheduledDebts: BehaviorRelay<[Debt]> { get }
-    var friends: BehaviorRelay<[String?: Friend]> { get }
     var kashiFriend: BehaviorRelay<[Friend]> { get }
     var kariFriend: BehaviorRelay<[Friend]> { get }
 }
