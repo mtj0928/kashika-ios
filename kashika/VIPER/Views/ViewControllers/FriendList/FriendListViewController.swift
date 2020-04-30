@@ -29,6 +29,12 @@ final class FriendListViewController: UIViewController {
         setupTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        TapticEngine.impact.prepare(.light)
+    }
+
     static func createFromStoryboard(friendListpresenter: FriendListPresenterProtocol,
                                      footerPresenter: SNSFooterPresenterProtocol) -> Self {
         let viewController = createFromStoryboard()
@@ -92,5 +98,11 @@ extension FriendListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friend = presenter.friends.value[indexPath.row]
         presenter.tapped(friend: friend)
+
+        TapticEngine.impact.feedback(.light)
+        let viewController = FriendDetailViewBuilder.build(friend: friend)
+        self.present(viewController, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

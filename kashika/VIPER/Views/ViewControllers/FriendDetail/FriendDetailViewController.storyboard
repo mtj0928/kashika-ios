@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hZu-Tc-lJh">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Detail View Controller-->
+        <scene sceneID="k1K-3D-0Xn">
+            <objects>
+                <viewController interfaceStyle="light" id="hZu-Tc-lJh" customClass="FriendDetailViewController" customModule="kashika" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8X-UT-ubS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="glH-LR-bvN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAz-6V-gGm" customClass="CloseButton" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="309" y="60" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SAz-6V-gGm" secondAttribute="height" multiplier="1:1" id="5xh-Qi-EkP"/>
+                                    <constraint firstAttribute="width" constant="50" id="ejj-TC-v0J"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tappedCloseButton" destination="hZu-Tc-lJh" eventType="touchUpInside" id="hNk-fN-AMi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1R-ga-rKF">
+                                <rect key="frame" x="0.0" y="692" width="375" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="wnZ-qG-VWX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="glH-LR-bvN" firstAttribute="bottom" secondItem="n8X-UT-ubS" secondAttribute="bottom" id="0B5-Sy-pnp"/>
+                            <constraint firstItem="i1R-ga-rKF" firstAttribute="bottom" secondItem="glH-LR-bvN" secondAttribute="bottom" id="9Uh-67-dwC"/>
+                            <constraint firstItem="i1R-ga-rKF" firstAttribute="leading" secondItem="glH-LR-bvN" secondAttribute="leading" id="Aa2-BK-6RZ"/>
+                            <constraint firstItem="SAz-6V-gGm" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" constant="16" id="I4e-e0-snP"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="SAz-6V-gGm" secondAttribute="trailing" constant="16" id="NP5-iz-R13"/>
+                            <constraint firstItem="glH-LR-bvN" firstAttribute="leading" secondItem="P8d-UG-YEN" secondAttribute="leading" id="b1L-0P-fim"/>
+                            <constraint firstItem="P8d-UG-YEN" firstAttribute="trailing" secondItem="glH-LR-bvN" secondAttribute="trailing" id="dOA-6W-v9t"/>
+                            <constraint firstItem="i1R-ga-rKF" firstAttribute="trailing" secondItem="glH-LR-bvN" secondAttribute="trailing" id="gxt-1v-zeX"/>
+                            <constraint firstItem="glH-LR-bvN" firstAttribute="top" secondItem="P8d-UG-YEN" secondAttribute="top" id="waM-NY-5f0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P8d-UG-YEN"/>
+                    </view>
+                    <connections>
+                        <outlet property="overlayHeightConstraint" destination="wnZ-qG-VWX" id="id9-rI-19a"/>
+                        <outlet property="overlayView" destination="i1R-ga-rKF" id="EFv-eM-7ZW"/>
+                        <outlet property="tableView" destination="glH-LR-bvN" id="J1C-d1-dt3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413.60000000000002" y="-288.17733990147786"/>
+        </scene>
+    </scenes>
+</document>

@@ -11,8 +11,8 @@ import UIKit
 struct FloatingPanelConfiguration {
 
     // inset
-    static let insetForFull: CGFloat? = 18.0
-    static let insetForHalf: CGFloat? = 384.0
+    static let insetForFull: CGFloat = 18.0
+    static let insetForHalf: CGFloat = 384.0
 
     //backgroundAlpha
     static let backgroundAlphaForFull: CGFloat = 0.8
