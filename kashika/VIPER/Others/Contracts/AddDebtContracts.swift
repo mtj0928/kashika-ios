@@ -13,13 +13,15 @@ import RxCocoa
 enum DebtType: String {
     case kashi = "貸し"
     case kari = "借り"
+    case none = "貸し借りなし"
 
     static func make(debt: Debt) -> DebtType {
         return make(money: debt.money)
     }
 
     static func make(money: Int) -> DebtType {
-        return money > 0 ? .kari : .kashi
+        return money > 0 ? .kari :
+            money < 0 ? .kashi : .none
     }
 }
 

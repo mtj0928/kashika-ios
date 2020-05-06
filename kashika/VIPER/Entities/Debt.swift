@@ -19,4 +19,14 @@ struct Debt: Codable, Equatable, Modelable, ModelIdentifier, UserObject {
     var paymentDate: Timestamp?
     var memo: String?
     var isPaid = false
+    var createdAt = Timestamp()
+
+    var debtType: DebtType {
+        if money > 0 {
+            return .kari
+        } else if money < 0 {
+            return .kashi
+        }
+        return .none
+    }
 }

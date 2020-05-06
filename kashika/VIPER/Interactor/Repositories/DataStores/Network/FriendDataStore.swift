@@ -114,6 +114,8 @@ struct FriendRequest: Request {
             return query.where("totalDebt", isGreaterThan: 0)
         case .kashi:
             return query.where("totalDebt", isLessThan: 0)
+        case .some(.none):
+                break
         case .none:
             break
         }
