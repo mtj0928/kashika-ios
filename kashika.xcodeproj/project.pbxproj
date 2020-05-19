@@ -116,6 +116,8 @@
 		907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */; };
 		908825F02365CAB500DD254A /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908825EF2365CAB500DD254A /* Date+extension.swift */; };
 		908B5D6C2442F2E300C240E5 /* NSPredicate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B5D6B2442F2E300C240E5 /* NSPredicate+extension.swift */; };
+		908DC4532462689800B82759 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DC4522462689800B82759 /* Calculator.swift */; };
+		908DC4562462891F00B82759 /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DC4552462891F00B82759 /* CalculatorTest.swift */; };
 		9093B5D524416CA2003AC383 /* FriendDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093B5D424416CA2003AC383 /* FriendDataStore.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
@@ -366,6 +368,8 @@
 		907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledsTableViewCell.xib; sourceTree = "<group>"; };
 		908825EF2365CAB500DD254A /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		908B5D6B2442F2E300C240E5 /* NSPredicate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+extension.swift"; sourceTree = "<group>"; };
+		908DC4522462689800B82759 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		908DC4552462891F00B82759 /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
 		9093B5D424416CA2003AC383 /* FriendDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataStore.swift; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -761,6 +765,7 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				908DC4512462685600B82759 /* Services */,
 				90418A4F235F0756003D66CF /* Reactives */,
 				909BDA72230AC26400689573 /* Entities */,
 				5870126C224C5373003888E8 /* Extensions */,
@@ -816,6 +821,22 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		908DC4512462685600B82759 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				908DC4522462689800B82759 /* Calculator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		908DC454246288FB00B82759 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				908DC4552462891F00B82759 /* CalculatorTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		909600492249B295002F1DE6 = {
 			isa = PBXGroup;
 			children = (
@@ -855,6 +876,7 @@
 		909600692249B295002F1DE6 /* kashikaTests */ = {
 			isa = PBXGroup;
 			children = (
+				908DC454246288FB00B82759 /* Services */,
 				909D6AB8224E366A00FE7218 /* VIPER */,
 				9096006C2249B295002F1DE6 /* Info.plist */,
 			);
@@ -1518,6 +1540,7 @@
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
+				908DC4532462689800B82759 /* Calculator.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
@@ -1605,6 +1628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */,
+				908DC4562462891F00B82759 /* CalculatorTest.swift in Sources */,
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,
 			);
