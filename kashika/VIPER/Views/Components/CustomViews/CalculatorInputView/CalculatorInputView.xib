@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorInputView" customModule="kashika" customModuleProvider="target">
+            <connections>
+                <outlet property="devideButton" destination="1Fg-lT-Oq7" id="Lth-Ko-VCa"/>
+                <outlet property="multipleButton" destination="it7-B8-19f" id="uJf-wS-ApG"/>
+                <outlet property="plusButton" destination="sqW-5S-ihc" id="bie-De-Dvo"/>
+                <outlet property="pointButton" destination="ZM1-Qg-eJc" id="jH9-xf-hfM"/>
+                <outlet property="subButton" destination="DfE-Nz-3zB" id="Cj0-kR-rzr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="djX-r7-hjd">
+                    <rect key="frame" x="0.0" y="0.0" width="328" height="347"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrF-ce-wK7">
+                            <rect key="frame" x="0.0" y="0.0" width="328" height="87"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueD-XD-8D2" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="7">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="kJA-Ji-mLJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-2i-RES" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="82" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="8">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="pT9-tu-NMI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sw-75-NgV" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="164" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="9">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="Ohw-ta-F3c"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fg-lT-Oq7" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="246" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <state key="normal" title="÷">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="bMN-CL-AQd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ks1-2i-RES" firstAttribute="width" secondItem="ueD-XD-8D2" secondAttribute="width" id="Bl2-sO-r59"/>
+                                <constraint firstItem="ks1-2i-RES" firstAttribute="height" secondItem="ueD-XD-8D2" secondAttribute="height" id="FPF-LN-CC3"/>
+                                <constraint firstItem="ks1-2i-RES" firstAttribute="leading" secondItem="ueD-XD-8D2" secondAttribute="trailing" id="Wxn-ZG-e4R"/>
+                                <constraint firstItem="8sw-75-NgV" firstAttribute="height" secondItem="ueD-XD-8D2" secondAttribute="height" id="dl1-qE-dmU"/>
+                                <constraint firstItem="1Fg-lT-Oq7" firstAttribute="width" secondItem="ueD-XD-8D2" secondAttribute="width" id="omV-Ga-8HJ"/>
+                                <constraint firstItem="1Fg-lT-Oq7" firstAttribute="height" secondItem="ueD-XD-8D2" secondAttribute="height" id="pFm-64-Y4L"/>
+                                <constraint firstItem="8sw-75-NgV" firstAttribute="width" secondItem="ueD-XD-8D2" secondAttribute="width" id="zod-4r-rmd"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNs-Nb-yjg">
+                            <rect key="frame" x="0.0" y="87" width="328" height="86.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79x-ra-BzN" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="4">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="ROg-si-6h8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULH-dZ-ule" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="82" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="5">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="FjY-vu-LBk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-zP-SLa" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="164" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="6">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="SU7-P0-JNG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it7-B8-19f" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="246" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <state key="normal" title="×">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="gUO-HW-VPW"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ULH-dZ-ule" firstAttribute="width" secondItem="79x-ra-BzN" secondAttribute="width" id="6pe-Z3-fGt"/>
+                                <constraint firstItem="z2S-zP-SLa" firstAttribute="width" secondItem="79x-ra-BzN" secondAttribute="width" id="CsL-fS-qv1"/>
+                                <constraint firstItem="z2S-zP-SLa" firstAttribute="height" secondItem="79x-ra-BzN" secondAttribute="height" id="HQm-ga-5m3"/>
+                                <constraint firstItem="it7-B8-19f" firstAttribute="width" secondItem="79x-ra-BzN" secondAttribute="width" id="byl-D4-CRW"/>
+                                <constraint firstItem="ULH-dZ-ule" firstAttribute="height" secondItem="79x-ra-BzN" secondAttribute="height" id="lbf-Qu-qod"/>
+                                <constraint firstItem="it7-B8-19f" firstAttribute="height" secondItem="79x-ra-BzN" secondAttribute="height" id="zE8-Va-ZBw"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukS-ZJ-gJS">
+                            <rect key="frame" x="0.0" y="173.5" width="328" height="87"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-iH-sXx" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="1">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="ruI-gD-XWZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="al3-0a-Hp2" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="82" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="2">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="Yp6-dD-GK2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X4-rS-U7B" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="164" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="1YB-Vs-M0g"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-Nz-3zB" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="246" y="0.0" width="82" height="87"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <state key="normal" title="-">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="qxd-HJ-BDa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="DfE-Nz-3zB" firstAttribute="width" secondItem="8jj-iH-sXx" secondAttribute="width" id="KsP-j5-aqR"/>
+                                <constraint firstItem="6X4-rS-U7B" firstAttribute="width" secondItem="8jj-iH-sXx" secondAttribute="width" id="OOh-of-8ih"/>
+                                <constraint firstItem="al3-0a-Hp2" firstAttribute="height" secondItem="8jj-iH-sXx" secondAttribute="height" id="Plm-u6-gyE"/>
+                                <constraint firstItem="al3-0a-Hp2" firstAttribute="width" secondItem="8jj-iH-sXx" secondAttribute="width" id="VwN-XW-piq"/>
+                                <constraint firstItem="DfE-Nz-3zB" firstAttribute="height" secondItem="8jj-iH-sXx" secondAttribute="height" id="hF9-5B-B7m"/>
+                                <constraint firstItem="6X4-rS-U7B" firstAttribute="height" secondItem="8jj-iH-sXx" secondAttribute="height" id="pIh-sv-cwP"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8Q-Eh-d88">
+                            <rect key="frame" x="0.0" y="260.5" width="328" height="86.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM1-Qg-eJc" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title=".">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="e3T-c2-DWN"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-uj-P0T" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="82" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="0">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="Ezc-SW-taf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv9-bp-EX3" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="164" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <state key="normal" title="Del">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedDeleteButton:" destination="-1" eventType="touchUpInside" id="LNH-UO-M2u"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-5S-ihc" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="246" y="0.0" width="82" height="86.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <state key="normal" title="+">
+                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="gvW-Bk-PaJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="cv9-bp-EX3" firstAttribute="width" secondItem="ZM1-Qg-eJc" secondAttribute="width" id="CHy-Yp-6gn"/>
+                                <constraint firstItem="gd7-uj-P0T" firstAttribute="height" secondItem="ZM1-Qg-eJc" secondAttribute="height" id="DA4-qS-hJB"/>
+                                <constraint firstItem="sqW-5S-ihc" firstAttribute="width" secondItem="ZM1-Qg-eJc" secondAttribute="width" id="UPs-vf-uVL"/>
+                                <constraint firstItem="cv9-bp-EX3" firstAttribute="height" secondItem="ZM1-Qg-eJc" secondAttribute="height" id="aKo-Xl-DpJ"/>
+                                <constraint firstItem="gd7-uj-P0T" firstAttribute="width" secondItem="ZM1-Qg-eJc" secondAttribute="width" id="deI-Ke-i85"/>
+                                <constraint firstItem="sqW-5S-ihc" firstAttribute="height" secondItem="ZM1-Qg-eJc" secondAttribute="height" id="hnq-I7-5TD"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ukS-ZJ-gJS" firstAttribute="height" secondItem="SrF-ce-wK7" secondAttribute="height" id="B93-Fa-5PQ"/>
+                        <constraint firstItem="lNs-Nb-yjg" firstAttribute="height" secondItem="SrF-ce-wK7" secondAttribute="height" id="T9Y-qp-nNq"/>
+                        <constraint firstItem="l8Q-Eh-d88" firstAttribute="height" secondItem="SrF-ce-wK7" secondAttribute="height" id="dOt-3i-REC"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="djX-r7-hjd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="61F-EE-6FA"/>
+                <constraint firstItem="uds-MS-uNA" firstAttribute="bottom" secondItem="djX-r7-hjd" secondAttribute="bottom" id="OvF-la-8RM"/>
+                <constraint firstItem="djX-r7-hjd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xuu-Cy-EOb"/>
+                <constraint firstAttribute="trailing" secondItem="djX-r7-hjd" secondAttribute="trailing" id="efe-RL-vww"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="uds-MS-uNA"/>
+            <point key="canvasLocation" x="-96.376811594202906" y="98.772321428571431"/>
+        </view>
+    </objects>
+</document>

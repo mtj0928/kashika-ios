@@ -14,7 +14,9 @@ protocol ModalTextFieldPresenterProtocol {
     var text: Observable<String?> { get }
     var title: Observable<String?> { get }
     var unit: Observable<String?> { get }
-    var keyboardType: Observable<UIKeyboardType> { get }
+    var summaryIsHidden: Driver<Bool> { get }
+    var summaryText: Driver<String?> { get }
+    var keyboardType: Observable<ModalTextFieldKeyboardType> { get }
 
     func inputed(text: String?)
     func tappedOkButton()

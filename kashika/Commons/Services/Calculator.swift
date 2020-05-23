@@ -10,6 +10,22 @@ import Foundation
 
 struct Calculator {
 
+    static let operations = [
+        ExpressionOperation.addition.rawValue,
+        ExpressionOperation.subtraction.rawValue,
+        TermOperation.division.rawValue,
+        TermOperation.multiple.rawValue
+    ]
+    
+    func performLexicalAnalysis(_ string: String) -> [Token] {
+        Lexer.analyse(for: string)
+    }
+
+    func calculate(_ tokens: [Token]) throws -> NSDecimalNumber {
+        let expresion = try Expression.parse(tokens)
+        return try expresion.calculate()
+    }
+
     func calculate(_ string: String) throws -> NSDecimalNumber {
         let tokens = Lexer.analyse(for: string)
         let expresion = try Expression.parse(tokens)
@@ -18,6 +34,7 @@ struct Calculator {
 }
 
 enum CalculatorError: Error {
+    case consecutiveOperators
     case insufficientError
     case invalidError
     case zeroDevisionError
@@ -84,6 +101,10 @@ struct Expression {
     }
 
     static func parse(_ tokens: [Token]) throws -> Expression {
+        if tokens.contains("") {
+            throw CalculatorError.consecutiveOperators
+        }
+
         var expression: Expression?
 
         var operation: ExpressionOperation?
