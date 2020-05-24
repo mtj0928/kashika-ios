@@ -34,7 +34,7 @@ final class DeleteButton: CalculatorButton {
         imageView?.contentMode = .scaleAspectFit
         contentHorizontalAlignment = .fill
         contentVerticalAlignment = .fill
-        
+
         self.highlightBackgroundColor = UIColor.create(defultColor: UIColor(hex: "D3D3D7"), light: UIColor(hex: "D3D3D7"), dark: UIColor(hex: "333334"))
     }
 }

@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SummeryViewCell" rowHeight="170" id="LXe-sa-2SD" customClass="SummeryViewCell" customModule="kashika" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="411" height="170"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SummeryViewCell" rowHeight="-113" id="LXe-sa-2SD" customClass="SummeryViewCell" customModule="kashika" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="136"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LXe-sa-2SD" id="nZF-Sm-3Kl">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="170"/>
+                <rect key="frame" x="0.0" y="0.0" width="238" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyz-BM-jlY" customClass="SummeryView" customModule="kashika" customModuleProvider="target">
-                        <rect key="frame" x="16" y="16" width="287.5" height="145"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyz-BM-jlY" customClass="SummaryView" customModule="kashika" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="228" height="115"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="fyz-BM-jlY" secondAttribute="height" multiplier="752:379" id="Wch-5b-Otu"/>
@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="mainView" destination="fyz-BM-jlY" id="5jb-1E-R8Z"/>
             </connections>
-            <point key="canvasLocation" x="-48.550724637681164" y="84.375"/>
+            <point key="canvasLocation" x="-427.536231884058" y="-10.714285714285714"/>
         </tableViewCell>
     </objects>
 </document>

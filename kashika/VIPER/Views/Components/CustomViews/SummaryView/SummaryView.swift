@@ -1,5 +1,5 @@
 //
-//  SummeryView.swift
+//  SummaryView.swift
 //  kashika
 //
 //  Created by 松本淳之介 on 2019/08/31.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class SummeryView: UIView {
+class SummaryView: UIView {
 
     private static let height: CGFloat = 136
 
@@ -41,7 +41,7 @@ class SummeryView: UIView {
     }
 
     func loadNib() {
-        addViewWithFilling(R.nib.summeryView(owner: self))
+        addViewWithFilling(R.nib.summaryView(owner: self))
     }
 
     func set(_ money: Int) {

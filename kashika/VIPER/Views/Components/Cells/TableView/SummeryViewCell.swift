@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class SummeryViewCell: UITableViewCell {
-    @IBOutlet private weak var mainView: SummeryView!
+    @IBOutlet private weak var mainView: SummaryView!
 
     private var disposeBag = DisposeBag()
 
