@@ -162,6 +162,8 @@
 		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
 		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
+		90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16707247A1DC5007C5161 /* HighlightButton.swift */; };
+		90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16709247A1DE6007C5161 /* DeleteButton.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
@@ -419,6 +421,8 @@
 		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
 		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
+		90C16707247A1DC5007C5161 /* HighlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
+		90C16709247A1DE6007C5161 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -625,6 +629,7 @@
 				9016FDF22474A984003AE8FC /* CalculatorInputView.swift */,
 				9016FDF42474A9B5003AE8FC /* CalculatorInputView.xib */,
 				9016FDF82474ACD8003AE8FC /* CalculatorButton.swift */,
+				90C16709247A1DE6007C5161 /* DeleteButton.swift */,
 			);
 			path = CalculatorInputView;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */,
 				90A57825230C093B00BBADDA /* SNSFooterButtons.swift */,
 				90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */,
+				90C16707247A1DC5007C5161 /* HighlightButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1596,6 +1602,7 @@
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */,
+				90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
@@ -1649,6 +1656,7 @@
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,
 				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,

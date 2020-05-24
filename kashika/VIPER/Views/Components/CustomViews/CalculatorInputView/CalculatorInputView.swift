@@ -16,6 +16,7 @@ class CalculatorInputView: UIButton {
     @IBOutlet private weak var subButton: CalculatorButton!
     @IBOutlet private weak var plusButton: CalculatorButton!
     @IBOutlet private weak var pointButton: CalculatorButton!
+    @IBOutlet private weak var deleteButton: CalculatorButton!
 
     weak var keyInput: UIKeyInput?
 
@@ -47,9 +48,19 @@ class CalculatorInputView: UIButton {
         loadNib()
     }
 
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+
+        loadNib()
+    }
+
     private func loadNib() {
         addViewWithFilling(R.nib.calculatorInputView(owner: self))
         TapticEngine.impact.prepare(.light)
+
+        deleteButton.imageView?.contentMode = .scaleAspectFit
+        deleteButton.contentVerticalAlignment = .fill
+        deleteButton.contentHorizontalAlignment = .fill
     }
 
     @IBAction func tappedNumberButton(_ sender: UIButton) {

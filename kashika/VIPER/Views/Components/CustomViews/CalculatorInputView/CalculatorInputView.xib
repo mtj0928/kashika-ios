@@ -10,26 +10,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorInputView" customModule="kashika" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="cv9-bp-EX3" id="bF9-O3-1IJ"/>
                 <outlet property="devideButton" destination="1Fg-lT-Oq7" id="Lth-Ko-VCa"/>
                 <outlet property="multipleButton" destination="it7-B8-19f" id="uJf-wS-ApG"/>
                 <outlet property="plusButton" destination="sqW-5S-ihc" id="bie-De-Dvo"/>
-                <outlet property="pointButton" destination="ZM1-Qg-eJc" id="jH9-xf-hfM"/>
+                <outlet property="pointButton" destination="ZM1-Qg-eJc" id="WD7-6b-vjo"/>
                 <outlet property="subButton" destination="DfE-Nz-3zB" id="Cj0-kR-rzr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="light" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="328" height="347"/>
+            <rect key="frame" x="0.0" y="0.0" width="465" height="347"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="djX-r7-hjd">
-                    <rect key="frame" x="0.0" y="0.0" width="328" height="347"/>
+                    <rect key="frame" x="0.0" y="0.0" width="465" height="313"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SrF-ce-wK7">
-                            <rect key="frame" x="0.0" y="0.0" width="328" height="87"/>
+                            <rect key="frame" x="0.0" y="0.0" width="465" height="78.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueD-XD-8D2" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="7">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,7 +45,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-2i-RES" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="82" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="116.5" y="0.0" width="116" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="8">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,7 +60,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sw-75-NgV" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="164" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="9">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,7 +75,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fg-lT-Oq7" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="246" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="349" y="0.0" width="116" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <state key="normal" title="÷">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -100,10 +101,10 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNs-Nb-yjg">
-                            <rect key="frame" x="0.0" y="87" width="328" height="86.5"/>
+                            <rect key="frame" x="0.0" y="78.5" width="465" height="78"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79x-ra-BzN" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="4">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -118,7 +119,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULH-dZ-ule" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="82" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="116.5" y="0.0" width="116" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="5">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -133,7 +134,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2S-zP-SLa" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="164" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="6">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -148,7 +149,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it7-B8-19f" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="246" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="349" y="0.0" width="116" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <state key="normal" title="×">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -173,10 +174,10 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukS-ZJ-gJS">
-                            <rect key="frame" x="0.0" y="173.5" width="328" height="87"/>
+                            <rect key="frame" x="0.0" y="156.5" width="465" height="78.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-iH-sXx" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="1">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -191,7 +192,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="al3-0a-Hp2" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="82" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="116.5" y="0.0" width="116" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="2">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -206,7 +207,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X4-rS-U7B" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="164" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="3">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -221,7 +222,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-Nz-3zB" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="246" y="0.0" width="82" height="87"/>
+                                    <rect key="frame" x="349" y="0.0" width="116" height="78.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <state key="normal" title="-">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -246,10 +247,10 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8Q-Eh-d88">
-                            <rect key="frame" x="0.0" y="260.5" width="328" height="86.5"/>
+                            <rect key="frame" x="0.0" y="235" width="465" height="78"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZM1-Qg-eJc" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title=".">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -264,29 +265,29 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd7-uj-P0T" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="82" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="116.5" y="0.0" width="116" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                     <state key="normal" title="0">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
-                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="tappedNumberButton:" destination="-1" eventType="touchUpInside" id="Ezc-SW-taf"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv9-bp-EX3" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="164" y="0.0" width="82" height="86.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                    <state key="normal" title="Del">
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv9-bp-EX3" customClass="DeleteButton" customModule="kashika" customModuleProvider="target">
+                                    <rect key="frame" x="232.5" y="0.0" width="116.5" height="78"/>
+                                    <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                    <state key="normal" title="Del" image="delete_button">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
-                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="value" red="0.89403921369999995" green="0.89416825769999997" blue="0.90969532730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -294,7 +295,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-5S-ihc" customClass="CalculatorButton" customModule="kashika" customModuleProvider="target">
-                                    <rect key="frame" x="246" y="0.0" width="82" height="86.5"/>
+                                    <rect key="frame" x="349" y="0.0" width="116" height="78"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <state key="normal" title="+">
                                         <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -337,7 +338,10 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="uds-MS-uNA"/>
-            <point key="canvasLocation" x="-96.376811594202906" y="98.772321428571431"/>
+            <point key="canvasLocation" x="2.1739130434782612" y="98.772321428571431"/>
         </view>
     </objects>
+    <resources>
+        <image name="delete_button" width="1024" height="1024"/>
+    </resources>
 </document>
