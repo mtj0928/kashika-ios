@@ -634,13 +634,13 @@
 			path = CalculatorInputView;
 			sourceTree = "<group>";
 		};
-		9016FDF72474A9E1003AE8FC /* SummeryView */ = {
+		9016FDF72474A9E1003AE8FC /* SummaryView */ = {
 			isa = PBXGroup;
 			children = (
 				909EF946231A314500DA5F0D /* SummeryView.swift */,
 				909EF948231A316D00DA5F0D /* SummeryView.xib */,
 			);
-			path = SummeryView;
+			path = SummaryView;
 			sourceTree = "<group>";
 		};
 		901AC75C22D9B118002B3C17 /* EditMoney */ = {
@@ -1057,7 +1057,7 @@
 			isa = PBXGroup;
 			children = (
 				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
-				9016FDF72474A9E1003AE8FC /* SummeryView */,
+				9016FDF72474A9E1003AE8FC /* SummaryView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";

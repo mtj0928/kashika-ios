@@ -20,6 +20,7 @@ class SummeryViewCell: UITableViewCell {
 
         mainView.backgroundColor = UIColor.app.secondarySystemBackground
         mainView.layer.cornerRadius = 12
+        mainView.layer.masksToBounds = true
     }
 
     override func prepareForReuse() {
