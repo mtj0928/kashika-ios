@@ -55,28 +55,27 @@ extension UIColor {
 extension UIImage {
 
     static func filledImage(byColor color: UIColor) -> UIImage {
-        let createImage = { (rawColor: UIColor) -> UIImage in
-            let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-            UIGraphicsBeginImageContext(rect.size)
-            let context = UIGraphicsGetCurrentContext()!
-            context.setFillColor(rawColor.cgColor)
-            context.fill(rect)
-            let image = UIGraphicsGetImageFromCurrentImageContext()!
-            UIGraphicsEndImageContext()
-            return image
-        }
-
         if #available(iOS 13.0, *) { //ダークモードはiOS13からなので分岐する必要がある
             let image = UIImage()
             let appearances: [UIUserInterfaceStyle] = [.light, .dark]
             appearances.forEach {
                 let traitCollection = UITraitCollection(userInterfaceStyle: $0)
-                image.imageAsset?.register(createImage(color.resolvedColor(with: traitCollection)),
+                image.imageAsset?.register(UIImage.createImage(color.resolvedColor(with: traitCollection)),
                                            with: traitCollection) // ライトモードとダークモードの色を直接指定してImageを生成している
             }
             return image
-        } else {
-            return createImage(color)
         }
+        return UIImage.createImage(color)
+    }
+
+    private static func createImage(_ rawColor: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(rawColor.cgColor)
+        context.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
     }
 }
