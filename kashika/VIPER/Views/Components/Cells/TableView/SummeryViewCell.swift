@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class SummeryViewCell: UITableViewCell {
-    @IBOutlet private weak var mainView: SummeryView!
+    @IBOutlet private weak var mainView: SummaryView!
 
     private var disposeBag = DisposeBag()
 
@@ -20,6 +20,7 @@ class SummeryViewCell: UITableViewCell {
 
         mainView.backgroundColor = UIColor.app.secondarySystemBackground
         mainView.layer.cornerRadius = 12
+        mainView.layer.masksToBounds = true
     }
 
     override func prepareForReuse() {

@@ -34,6 +34,10 @@ extension UIColor {
         }
         return defultColor
     }
+
+    static func create(light lightColor: UIColor, dark darkColor: UIColor) -> UIColor {
+        return create(defultColor: lightColor, light: lightColor, dark: darkColor)
+    }
 }
 
 public extension UIColor {
@@ -96,11 +100,14 @@ public extension UIColor {
         let negativeColor = UIColor(hex: "D21350")
         let backgroundInImageView = UIColor.lightGray
 
+        let redCardColor = UIColor.create(light: UIColor(hex: "BD4956"), dark: UIColor(hex: "702A32"))
+        let blueCardColor = UIColor.create(light: UIColor(hex: "5D78C6"), dark: UIColor(hex: "2A3C70"))
+        let grayCardColor = UIColor.create(light: UIColor(hex: "F2F1F6"), dark: UIColor(hex: "1C1C1E"))
+
         fileprivate init() {}
 
         func systemBackground(isSecondary: Bool) -> UIColor {
             return isSecondary ? secondarySystemBackground : systemBackground
         }
     }
-
 }

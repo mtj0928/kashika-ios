@@ -153,8 +153,8 @@
 		909EF940231A126200DA5F0D /* HomViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF93F231A126200DA5F0D /* HomViewBuilder.swift */; };
 		909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF941231A18B400DA5F0D /* HomeInteractor.swift */; };
 		909EF944231A1AA100DA5F0D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF943231A1AA100DA5F0D /* HomePresenter.swift */; };
-		909EF947231A314500DA5F0D /* SummeryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF946231A314500DA5F0D /* SummeryView.swift */; };
-		909EF949231A316D00DA5F0D /* SummeryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF948231A316D00DA5F0D /* SummeryView.xib */; };
+		909EF947231A314500DA5F0D /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF946231A314500DA5F0D /* SummaryView.swift */; };
+		909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF948231A316D00DA5F0D /* SummaryView.xib */; };
 		909EF94B231A3B1800DA5F0D /* SummeryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */; };
 		909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
@@ -412,8 +412,8 @@
 		909EF93F231A126200DA5F0D /* HomViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomViewBuilder.swift; sourceTree = "<group>"; };
 		909EF941231A18B400DA5F0D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		909EF943231A1AA100DA5F0D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		909EF946231A314500DA5F0D /* SummeryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummeryView.swift; sourceTree = "<group>"; };
-		909EF948231A316D00DA5F0D /* SummeryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummeryView.xib; sourceTree = "<group>"; };
+		909EF946231A314500DA5F0D /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		909EF948231A316D00DA5F0D /* SummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummeryViewCell.swift; sourceTree = "<group>"; };
 		909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummeryViewCell.xib; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
@@ -634,13 +634,13 @@
 			path = CalculatorInputView;
 			sourceTree = "<group>";
 		};
-		9016FDF72474A9E1003AE8FC /* SummeryView */ = {
+		9016FDF72474A9E1003AE8FC /* SummaryView */ = {
 			isa = PBXGroup;
 			children = (
-				909EF946231A314500DA5F0D /* SummeryView.swift */,
-				909EF948231A316D00DA5F0D /* SummeryView.xib */,
+				909EF946231A314500DA5F0D /* SummaryView.swift */,
+				909EF948231A316D00DA5F0D /* SummaryView.xib */,
 			);
-			path = SummeryView;
+			path = SummaryView;
 			sourceTree = "<group>";
 		};
 		901AC75C22D9B118002B3C17 /* EditMoney */ = {
@@ -1057,7 +1057,7 @@
 			isa = PBXGroup;
 			children = (
 				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
-				9016FDF72474A9E1003AE8FC /* SummeryView */,
+				9016FDF72474A9E1003AE8FC /* SummaryView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1302,7 +1302,7 @@
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
-				909EF949231A316D00DA5F0D /* SummeryView.xib in Resources */,
+				909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */,
 				909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */,
@@ -1564,7 +1564,7 @@
 				9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */,
 				909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */,
 				900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */,
-				909EF947231A314500DA5F0D /* SummeryView.swift in Sources */,
+				909EF947231A314500DA5F0D /* SummaryView.swift in Sources */,
 				5894B76D231CF2A500E8FAE8 /* FloatingPanelBuilder.swift in Sources */,
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
 				90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */,
