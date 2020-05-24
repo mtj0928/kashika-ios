@@ -17,7 +17,9 @@ class EditUsernamePresenter: EditUsernamePresenterProtocol {
     let text: Observable<String?>
     let title: Observable<String?> = BehaviorSubject(value: "名前を入力")
     let unit: Observable<String?> = BehaviorSubject(value: "")
-    let keyboardType: Observable<UIKeyboardType> = BehaviorSubject(value: .default)
+    let summaryIsHidden: Driver<Bool> = BehaviorSubject(value: true).asDriver(onErrorJustReturn: true)
+    let summaryText: Driver<String?> = Driver.just("")
+    let keyboardType: Observable<ModalTextFieldKeyboardType> = BehaviorSubject(value: .default)
     var output: EditUsernameOutputProtocol {
         return rawOutput
     }

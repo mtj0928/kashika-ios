@@ -15,6 +15,7 @@ extension UIView {
             return
         }
         self.addSubview(view)
+        view.isUserInteractionEnabled = true
         view.fillSuperview()
     }
 

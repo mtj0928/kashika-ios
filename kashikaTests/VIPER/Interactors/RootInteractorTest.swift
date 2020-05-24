@@ -15,7 +15,7 @@ import RxBlocking
 class RootInteractorTest: XCTestCase {
 
     override func setUp() {
-        BallcapApp.configure(Firestore.firestore().document("test/1"))
+//        BallcapApp.configure(Firestore.firestore().document("test/1"))
     }
 
     override func tearDown() {

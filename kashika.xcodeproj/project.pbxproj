@@ -36,6 +36,9 @@
 		900E4D59225C1855003C59B1 /* CellStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E4D58225C1855003C59B1 /* CellStatus.swift */; };
 		900E4D5B225CAB07003C59B1 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E4D5A225CAB07003C59B1 /* AddUserCell.swift */; };
 		900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900E4D5C225CAB19003C59B1 /* AddUserCell.xib */; };
+		9016FDF32474A984003AE8FC /* CalculatorInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016FDF22474A984003AE8FC /* CalculatorInputView.swift */; };
+		9016FDF52474A9B5003AE8FC /* CalculatorInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9016FDF42474A9B5003AE8FC /* CalculatorInputView.xib */; };
+		9016FDF92474ACD8003AE8FC /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9016FDF82474ACD8003AE8FC /* CalculatorButton.swift */; };
 		901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */; };
 		901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */; };
 		901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC76222D9B803002B3C17 /* UnitTextField.swift */; };
@@ -116,6 +119,9 @@
 		907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */; };
 		908825F02365CAB500DD254A /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908825EF2365CAB500DD254A /* Date+extension.swift */; };
 		908B5D6C2442F2E300C240E5 /* NSPredicate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908B5D6B2442F2E300C240E5 /* NSPredicate+extension.swift */; };
+		908DC4532462689800B82759 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DC4522462689800B82759 /* Calculator.swift */; };
+		908DC4562462891F00B82759 /* CalculatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908DC4552462891F00B82759 /* CalculatorTest.swift */; };
+		909297F52478FD9500A12736 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909297F42478FD9500A12736 /* Regex.swift */; };
 		9093B5D524416CA2003AC383 /* FriendDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9093B5D424416CA2003AC383 /* FriendDataStore.swift */; };
 		909600562249B295002F1DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600552249B295002F1DE6 /* AppDelegate.swift */; };
 		9096005D2249B295002F1DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9096005C2249B295002F1DE6 /* Assets.xcassets */; };
@@ -156,6 +162,8 @@
 		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
 		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
+		90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16707247A1DC5007C5161 /* HighlightButton.swift */; };
+		90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16709247A1DE6007C5161 /* DeleteButton.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
@@ -287,6 +295,9 @@
 		900E4D58225C1855003C59B1 /* CellStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellStatus.swift; sourceTree = "<group>"; };
 		900E4D5A225CAB07003C59B1 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
 		900E4D5C225CAB19003C59B1 /* AddUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserCell.xib; sourceTree = "<group>"; };
+		9016FDF22474A984003AE8FC /* CalculatorInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorInputView.swift; sourceTree = "<group>"; };
+		9016FDF42474A9B5003AE8FC /* CalculatorInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorInputView.xib; sourceTree = "<group>"; };
+		9016FDF82474ACD8003AE8FC /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		901AC75D22D9B138002B3C17 /* EditMoneyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditMoneyViewController.storyboard; sourceTree = "<group>"; };
 		901AC75E22D9B138002B3C17 /* EditMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewController.swift; sourceTree = "<group>"; };
 		901AC76222D9B803002B3C17 /* UnitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTextField.swift; sourceTree = "<group>"; };
@@ -366,6 +377,9 @@
 		907FAD072325069100F15F61 /* ScheduledsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledsTableViewCell.xib; sourceTree = "<group>"; };
 		908825EF2365CAB500DD254A /* Date+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		908B5D6B2442F2E300C240E5 /* NSPredicate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPredicate+extension.swift"; sourceTree = "<group>"; };
+		908DC4522462689800B82759 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		908DC4552462891F00B82759 /* CalculatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTest.swift; sourceTree = "<group>"; };
+		909297F42478FD9500A12736 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		9093B5D424416CA2003AC383 /* FriendDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataStore.swift; sourceTree = "<group>"; };
 		909600522249B295002F1DE6 /* kashika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kashika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		909600552249B295002F1DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -407,6 +421,8 @@
 		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
 		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
+		90C16707247A1DC5007C5161 /* HighlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
+		90C16709247A1DE6007C5161 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -607,6 +623,26 @@
 			path = FriendList;
 			sourceTree = "<group>";
 		};
+		9016FDF62474A9C4003AE8FC /* CalculatorInputView */ = {
+			isa = PBXGroup;
+			children = (
+				9016FDF22474A984003AE8FC /* CalculatorInputView.swift */,
+				9016FDF42474A9B5003AE8FC /* CalculatorInputView.xib */,
+				9016FDF82474ACD8003AE8FC /* CalculatorButton.swift */,
+				90C16709247A1DE6007C5161 /* DeleteButton.swift */,
+			);
+			path = CalculatorInputView;
+			sourceTree = "<group>";
+		};
+		9016FDF72474A9E1003AE8FC /* SummeryView */ = {
+			isa = PBXGroup;
+			children = (
+				909EF946231A314500DA5F0D /* SummeryView.swift */,
+				909EF948231A316D00DA5F0D /* SummeryView.xib */,
+			);
+			path = SummeryView;
+			sourceTree = "<group>";
+		};
 		901AC75C22D9B118002B3C17 /* EditMoney */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +724,7 @@
 				90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */,
 				90A57825230C093B00BBADDA /* SNSFooterButtons.swift */,
 				90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */,
+				90C16707247A1DC5007C5161 /* HighlightButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -761,6 +798,7 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				908DC4512462685600B82759 /* Services */,
 				90418A4F235F0756003D66CF /* Reactives */,
 				909BDA72230AC26400689573 /* Entities */,
 				5870126C224C5373003888E8 /* Extensions */,
@@ -816,6 +854,22 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		908DC4512462685600B82759 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				908DC4522462689800B82759 /* Calculator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		908DC454246288FB00B82759 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				908DC4552462891F00B82759 /* CalculatorTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		909600492249B295002F1DE6 = {
 			isa = PBXGroup;
 			children = (
@@ -855,6 +909,7 @@
 		909600692249B295002F1DE6 /* kashikaTests */ = {
 			isa = PBXGroup;
 			children = (
+				908DC454246288FB00B82759 /* Services */,
 				909D6AB8224E366A00FE7218 /* VIPER */,
 				9096006C2249B295002F1DE6 /* Info.plist */,
 			);
@@ -873,6 +928,7 @@
 		909BDA72230AC26400689573 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				909297F42478FD9500A12736 /* Regex.swift */,
 				909BDA6E230ABFC800689573 /* Monitor.swift */,
 				90E309F02318C4100097104C /* MessageNotification.swift */,
 				907F524C243FF3E400BB0BAC /* ModelIdentifier.swift */,
@@ -1000,8 +1056,8 @@
 		909EF945231A312A00DA5F0D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				909EF946231A314500DA5F0D /* SummeryView.swift */,
-				909EF948231A316D00DA5F0D /* SummeryView.xib */,
+				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
+				9016FDF72474A9E1003AE8FC /* SummeryView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1242,6 +1298,7 @@
 				90FD9FE023123182002D214B /* TableViewCell.xib in Resources */,
 				907FAD082325069100F15F61 /* ScheduledsTableViewCell.xib in Resources */,
 				90364D7F22ED97D6000DCFA7 /* EditUsernameViewController.storyboard in Resources */,
+				9016FDF52474A9B5003AE8FC /* CalculatorInputView.xib in Resources */,
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
@@ -1495,6 +1552,7 @@
 				905D83182250D44300EB20AC /* R.generated.swift in Sources */,
 				909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */,
 				9042781D2304EFF6009480CA /* EditUsernameInput.swift in Sources */,
+				9016FDF32474A984003AE8FC /* CalculatorInputView.swift in Sources */,
 				90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */,
 				909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */,
 				90EA361A22ED202E000EDF8A /* AddUserManualyLayout.swift in Sources */,
@@ -1511,6 +1569,7 @@
 				90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */,
 				90364D8222EE5D33000DCFA7 /* EditUsernameContracts.swift in Sources */,
 				9093B5D524416CA2003AC383 /* FriendDataStore.swift in Sources */,
+				909297F52478FD9500A12736 /* Regex.swift in Sources */,
 				908B5D6C2442F2E300C240E5 /* NSPredicate+extension.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
 				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
@@ -1518,6 +1577,8 @@
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
+				908DC4532462689800B82759 /* Calculator.swift in Sources */,
+				9016FDF92474ACD8003AE8FC /* CalculatorButton.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
@@ -1541,6 +1602,7 @@
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */,
+				90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
@@ -1594,6 +1656,7 @@
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,
 				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,
 				905E4877224B940300BDC321 /* AppRouter.swift in Sources */,
@@ -1605,6 +1668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */,
+				908DC4562462891F00B82759 /* CalculatorTest.swift in Sources */,
 				905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				909D6ABC224E36BB00FE7218 /* RootInteractorTest.swift in Sources */,
 			);

@@ -4,11 +4,35 @@
 //
 //  Created by 松本淳之介 on 2019/07/28.
 //  Copyright © 2019 JunnosukeMatsumoto. All rights reserved.
-//
+// 
 
 import UIKit
 import RxSwift
 import RxCocoa
+
+enum ModalTextFieldKeyboardType {
+    case `default`
+    case calculator(enableToInsertButtonDriver: Driver<Bool>)
+
+    func apply(textField: UITextField, parentView: UIView, disposeBag: DisposeBag) {
+        switch self {
+        case .default:
+            textField.keyboardType = .default
+        case .calculator(let driver):
+            let frame = CGRect(
+                x: 0,
+                y: 0,
+                width: parentView.frame.width,
+                height: 0.75 * parentView.frame.width + parentView.safeAreaInsets.bottom
+            )
+            let view = CalculatorInputView(frame: frame, keyInput: textField)
+            textField.inputView = view
+            driver.drive(onNext: { enableToInsert in
+                view.canBeInsertSymbol = enableToInsert
+            }).disposed(by: disposeBag)
+        }
+    }
+}
 
 @IBDesignable
 class ModalTextField: UIView {
@@ -24,6 +48,8 @@ class ModalTextField: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var separateView: UIView!
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var summaryView: UIView!
+    @IBOutlet private weak var summaryLabel: UILabel!
     @IBOutlet private weak var unitLabel: UILabel!
     @IBOutlet private weak var okButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
@@ -47,8 +73,6 @@ class ModalTextField: UIView {
         let view = R.nib.modalTextField.firstView(owner: self)
         addViewWithFilling(view)
 
-        self.heightAnchor.constraint(equalToConstant: ModalTextField.height).isActive = true
-
         okButton.backgroundColor = UIColor.app.positiveColor
         cancelButton.backgroundColor = UIColor.app.negativeColor
 
@@ -57,7 +81,6 @@ class ModalTextField: UIView {
             button?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
         }
         if #available(iOS 13.0, *) {
-            view?.backgroundColor = UIColor.secondarySystemBackground
             textField.textColor = UIColor.label
             separateView.backgroundColor = UIColor.separator
         }
@@ -88,11 +111,9 @@ class ModalTextField: UIView {
             self?.textField.text = text
         }).disposed(by: disposeBag)
 
-        textField.rx.text
-            .subscribe(onNext: { [weak self] text in
+        textField.rx.text.subscribe(onNext: { [weak self] text in
                 self?.presenter?.inputed(text: text)
-            })
-            .disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
 
         presenter?.title.subscribe(onNext: { [weak self] text in
             self?.titleLabel.text = text
@@ -102,8 +123,22 @@ class ModalTextField: UIView {
             self?.unitLabel.text = unit
         }).disposed(by: disposeBag)
 
+        presenter?.summaryIsHidden.drive(onNext: { [weak self] isHidden in
+            self?.summaryView.isHidden = isHidden
+        }).disposed(by: disposeBag)
+
+        presenter?.summaryText.drive(onNext: { [weak self] text in
+            self?.summaryLabel.text = text
+        }).disposed(by: disposeBag)
+
         presenter?.keyboardType.subscribe(onNext: { [weak self] type in
-            self?.textField.keyboardType = type
+            guard let view = self,
+                let textField = self?.textField,
+                let disposeBag = self?.disposeBag else {
+                return
+            }
+
+            type.apply(textField: textField, parentView: view, disposeBag: disposeBag)
         }).disposed(by: disposeBag)
     }
 }
