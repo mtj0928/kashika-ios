@@ -36,14 +36,17 @@ protocol AddDebtPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
     var money: BehaviorRelay<Int> { get }
     var shouldShowPlaceHolder: Observable<Bool> { get }
+    var showWarikanButton: Driver<Bool> { get }
     var output: Observable<AddDebtOutputProtocol> { get }
     var selectedDate: BehaviorRelay<Date?> { get }
     var shouldOpenCalendar: BehaviorRelay<Bool> { get }
     var memo: BehaviorRelay<String?> { get }
 
     func createDebt(debtType: DebtType)
+    func tappedWarikanButton()
     func tappedCloseButton()
     func tappedMoneyButton()
+    func tappedWarikanSwitchButton()
     func dismissedFloatingPanel()
     func getStatus(at index: Int) -> CellStatus
     func selectFriend(at index: Int)

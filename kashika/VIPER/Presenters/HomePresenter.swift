@@ -14,10 +14,12 @@ class HomePresenter: HomePresenterProtocol {
     let sections: BehaviorRelay<[HomeSection]> = BehaviorRelay(value: [])
 
     private let interactor: HomeInteractorProtocol
+    private let router: HomeRouterProtocol
     private let disposeBag = DisposeBag()
 
-    init(interactor: HomeInteractorProtocol) {
+    init(interactor: HomeInteractorProtocol, router: HomeRouterProtocol) {
         self.interactor = interactor
+        self.router = router
         subscribeInteractor()
     }
 
@@ -51,9 +53,9 @@ class HomePresenter: HomePresenterProtocol {
         case .schedule:
             return nil
         case .kari:
-            return FriendsGridPresenter(interactor.kariFriend)
+            return FriendsGridPresenter(interactor.kariFriend, router: router)
         case .kashi:
-            return FriendsGridPresenter(interactor.kashiFriend)
+            return FriendsGridPresenter(interactor.kashiFriend, router: router)
         }
     }
 

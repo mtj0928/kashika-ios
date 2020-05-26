@@ -12,8 +12,10 @@ struct HomeViewBuilder {
 
     static func build() -> UIViewController {
         let interactor = HomeInteractor()
-        let presenter = HomePresenter(interactor: interactor)
+        let router = HomeRouter()
+        let presenter = HomePresenter(interactor: interactor, router: router)
         let viewController = HomeViewController.createFromStoryboard(with: presenter)
+        router.rootViewController = viewController
         return viewController
     }
 }

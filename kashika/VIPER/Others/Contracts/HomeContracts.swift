@@ -24,10 +24,17 @@ protocol HomeInteractorProtocol {
     var kariFriend: BehaviorRelay<[Friend]> { get }
 }
 
+protocol HomeRouterProtocol: FriendsGridRouterProtocol {
+}
+
 protocol FriendsGridPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
 
     func tapped(friend: Friend)
+}
+
+protocol FriendsGridRouterProtocol {
+    func present(friend: Friend)
 }
 
 protocol ScheduledPresenterProtocol {

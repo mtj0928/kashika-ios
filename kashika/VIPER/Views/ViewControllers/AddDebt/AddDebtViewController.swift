@@ -13,6 +13,7 @@ import FloatingPanel
 import TapticEngine
 import JTAppleCalendar
 
+// swiftlint:disable file_length
 final class AddDebtViewController: UIViewController {
 
     // swiftlint:disable:next private_outlet
@@ -20,6 +21,7 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var warikanSwitchButton: UIButton!
     @IBOutlet private weak var moneylabel: UILabel!
     @IBOutlet private weak var placeHolderView: UIView!
     @IBOutlet private weak var karitaButton: UIButton!
@@ -96,8 +98,14 @@ extension AddDebtViewController {
     private func setupEssentialView() {
         scrollView.delegate = self
         setupSaveButton()
+        setupWarikanSwitchButton()
         setupMoneyLabel()
         setupCollectionView()
+    }
+
+    private func setupWarikanSwitchButton() {
+        warikanSwitchButton.layer.masksToBounds = true
+        warikanSwitchButton.layer.cornerRadius = warikanSwitchButton.frame.height / 2
     }
 
     private func setupMoneyLabel() {
@@ -118,6 +126,15 @@ extension AddDebtViewController {
             self?.karitaButton.isUserInteractionEnabled = canBeAdd
             self?.kashitaButton.isUserInteractionEnabled = canBeAdd
         }).disposed(by: disposeBag)
+
+        presenter.showWarikanButton
+            .distinctUntilChanged()
+            .drive(onNext: { [weak self] showWarikan in
+                UIView.animate(withDuration: 0.3) {
+                    self?.karitaButton.isHidden = showWarikan
+                    self?.kashitaButton.setTitle(showWarikan ? "割り勘" : "貸した！", for: .normal)
+                }
+            }).disposed(by: disposeBag)
 
         karitaButton.setTitle("借りた！", for: .normal)
         kashitaButton.setTitle("貸した！", for: .normal)
