@@ -21,7 +21,10 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var warikanSwitchButton: UIButton!
+    @IBOutlet private weak var thirdLabel: UILabel!
+    @IBOutlet private weak var sumButton: UIButton!
+    @IBOutlet private weak var perButton: UIButton!
+    @IBOutlet private weak var warikanSwitch: WarikanSwitch!
     @IBOutlet private weak var moneylabel: UILabel!
     @IBOutlet private weak var placeHolderView: UIView!
     @IBOutlet private weak var karitaButton: UIButton!
@@ -98,14 +101,54 @@ extension AddDebtViewController {
     private func setupEssentialView() {
         scrollView.delegate = self
         setupSaveButton()
-        setupWarikanSwitchButton()
+        setupThirdLabelAndButtons()
+        setupWarikanSwitch()
         setupMoneyLabel()
         setupCollectionView()
     }
 
-    private func setupWarikanSwitchButton() {
-        warikanSwitchButton.layer.masksToBounds = true
-        warikanSwitchButton.layer.cornerRadius = warikanSwitchButton.frame.height / 2
+    private func setupWarikanSwitch() {
+        warikanSwitch.layer.masksToBounds = true
+        warikanSwitch.layer.cornerRadius = warikanSwitch.frame.height / 2
+        warikanSwitch.effectView.backgroundColor = UIColor.app.secondarySystemBackground.withAlphaComponent(0.5)
+
+        warikanSwitch.rx.isActive.subscribe(onNext: { [weak self] isActive in
+            self?.presenter.tappedWarikanSwitch(isActive: isActive)
+        }).disposed(by: disposeBag)
+
+        presenter.isWarikan.drive(onNext: { [weak self] isWarikan in
+            self?.warikanSwitch.isActive = isWarikan
+        }).disposed(by: disposeBag)
+
+        presenter.isEnabledWarikanSwitch.drive(onNext: { [weak self] isEnabled in
+            self?.warikanSwitch.isEnabled = isEnabled
+        }).disposed(by: disposeBag)
+    }
+
+    private func setupThirdLabelAndButtons() {
+        presenter.isWarikan.drive(onNext: { [weak self] isWarikan in
+            self?.thirdLabel.text = isWarikan ? "と" : "に"
+            self?.sumButton.isHidden = !isWarikan
+            self?.perButton.isHidden = !isWarikan
+        }).disposed(by: disposeBag)
+
+        presenter.isSumSelected.drive(onNext: { [weak self] isSelected in
+            self?.sumButton.setTitleColor(isSelected ? UIColor.app.label : UIColor.app.placeHolderText, for: .normal)
+            self?.sumButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: isSelected ? 28 : 18)
+        }).disposed(by: disposeBag)
+
+        sumButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.presenter.tappedSumButton()
+        }).disposed(by: disposeBag)
+
+        presenter.isPerSelected.drive(onNext: { [weak self] isSelected in
+            self?.perButton.setTitleColor(isSelected ? UIColor.app.label : UIColor.app.placeHolderText, for: .normal)
+            self?.perButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: isSelected ? 28 : 18)
+        }).disposed(by: disposeBag)
+
+        perButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.presenter.tappedPerButton()
+        }).disposed(by: disposeBag)
     }
 
     private func setupMoneyLabel() {
@@ -127,7 +170,7 @@ extension AddDebtViewController {
             self?.kashitaButton.isUserInteractionEnabled = canBeAdd
         }).disposed(by: disposeBag)
 
-        presenter.showWarikanButton
+        presenter.isWarikan
             .distinctUntilChanged()
             .drive(onNext: { [weak self] showWarikan in
                 UIView.animate(withDuration: 0.3) {

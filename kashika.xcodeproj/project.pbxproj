@@ -94,6 +94,7 @@
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		906C18A7247C992500047744 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A6247C992500047744 /* HomeRouter.swift */; };
+		906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A8247D596A00047744 /* WarikanSwitch.swift */; };
 		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
 		906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */; };
 		906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */; };
@@ -352,6 +353,7 @@
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		906C18A6247C992500047744 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		906C18A8247D596A00047744 /* WarikanSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanSwitch.swift; sourceTree = "<group>"; };
 		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
 		906CA7EB2252D0C60092E796 /* EditDebtLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDebtLayout.swift; sourceTree = "<group>"; };
 		906FE6A423053E1500EBC043 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
@@ -770,11 +772,12 @@
 		905D830B22504C0100EB20AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				909EF945231A312A00DA5F0D /* CustomViews */,
 				905C76012255F1EB0011580B /* Buttons */,
 				90D1610622587CCD00AF7934 /* Cells */,
+				909EF945231A312A00DA5F0D /* CustomViews */,
 				906CA7EA2252D0A50092E796 /* FloatingPanelLayouts */,
 				901EF37D23192AF8001BA56C /* MessageViews */,
+				906C18AA247D597100047744 /* Switch */,
 				905D83112250C3C700EB20AC /* Tabbars */,
 				901AC76122D9B7EB002B3C17 /* TextFields */,
 			);
@@ -808,6 +811,14 @@
 				905D83122250CF0900EB20AC /* Resources */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		906C18AA247D597100047744 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				906C18A8247D596A00047744 /* WarikanSwitch.swift */,
+			);
+			path = Switch;
 			sourceTree = "<group>";
 		};
 		906CA7EA2252D0A50092E796 /* FloatingPanelLayouts */ = {
@@ -1578,6 +1589,7 @@
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
 				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
+				906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,

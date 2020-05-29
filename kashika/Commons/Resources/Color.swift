@@ -91,10 +91,22 @@ public extension UIColor {
                 fatalError("No implementation for userInterfaceStyle")
             }
         }
+        var link: UIColor {
+            if #available(iOS 13.0, *) {
+                return UIColor.link
+            }
+            return UIColor.systemBlue
+        }
         private(set) lazy var floatingPanelBackgroundColor = UIColor.app.systemBackground
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
         let positiveColor = UIColor(hex: "027AFF")
+        let nonActiveWarikanSwitchColor = UIColor.create(light: UIColor(hex: "F4F4F4"), dark: UIColor(hex: "313131"))
+        var activeWarikanSwitchColor: UIColor {
+            return UIColor.app.positiveColor
+        }
+        var noactiveSwitchButtonToggleColor = UIColor.create(light: UIColor.white, dark: UIColor(hex: "5E5E5E"))
+        var activeSwitchButtonToggleColor = UIColor.white
         let saveButtonColor = UIColor(hex: "007AFF")
         let nonActiveButtonColor = UIColor(hex: "BABEC4")
         let negativeColor = UIColor(hex: "D21350")

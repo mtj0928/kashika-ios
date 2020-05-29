@@ -20,16 +20,16 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSX-cI-4xB">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2839.6666666666665"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2844.6666666666665"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-p7-kYR" userLabel="main Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2839.6666666666665"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2844.6666666666665"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIF-S6-VIu" userLabel="EssentialView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="387"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="392"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xam-Nf-WdD" userLabel="Half Stack View">
-                                                                <rect key="frame" x="16" y="16" width="343" height="355"/>
+                                                                <rect key="frame" x="16" y="16" width="343" height="360"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="pAy-nM-Bo4">
                                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
@@ -58,30 +58,47 @@
                                                                         </collectionViewFlowLayout>
                                                                         <cells/>
                                                                     </collectionView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OZ-4k-BUP">
-                                                                        <rect key="frame" x="0.0" y="162" width="343" height="35"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7OZ-4k-BUP">
+                                                                        <rect key="frame" x="0.0" y="162" width="343" height="40"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="に" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-rN-k5N">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="265" height="35"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="に" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXX-rN-k5N">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="27.666666666666668" height="40"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLT-qW-OH0">
-                                                                                <rect key="frame" x="265" y="0.0" width="78" height="35"/>
+                                                                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smo-4B-8oh">
+                                                                                <rect key="frame" x="35.666666666666664" y="0.0" width="36.999999999999993" height="40"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                                                <state key="normal" title="合計"/>
+                                                                            </button>
+                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2G-mw-lsf">
+                                                                                <rect key="frame" x="80.666666666666671" y="0.0" width="83.000000000000014" height="40"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                                                <state key="normal" title="1人あたり"/>
+                                                                            </button>
+                                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="IZ3-ed-Va0" userLabel="Spacer">
+                                                                                <rect key="frame" x="171.66666666666666" y="0.0" width="43.333333333333343" height="40"/>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                            </view>
+                                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLT-qW-OH0" customClass="WarikanSwitch" customModule="kashika" customModuleProvider="target">
+                                                                                <rect key="frame" x="223" y="0.0" width="120" height="40"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                                 <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
-                                                                                <state key="normal" title="割り勘">
-                                                                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <state key="normal">
+                                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </state>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
+                                                                                </userDefinedRuntimeAttributes>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="35" id="dft-zK-tZJ"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="dft-zK-tZJ"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olN-2K-M7j">
-                                                                        <rect key="frame" x="68.666666666666671" y="202" width="205.66666666666663" height="98"/>
+                                                                        <rect key="frame" x="68.666666666666671" y="207" width="205.66666666666663" height="98"/>
                                                                         <subviews>
                                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="金額を入力" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFz-2M-lB1">
                                                                                 <rect key="frame" x="0.0" y="34.666666666666686" width="0.0" height="28.666666666666671"/>
@@ -120,7 +137,7 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Urf-lQ-RE7">
-                                                                        <rect key="frame" x="0.0" y="305" width="343" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="310" width="343" height="50"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-b2-IZp" customClass="EmphasisButton" customModule="kashika" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="168" height="50"/>
@@ -166,7 +183,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tq3-pq-T4c" userLabel="AdditionalView">
-                                                        <rect key="frame" x="0.0" y="387" width="375" height="2452.6666666666665"/>
+                                                        <rect key="frame" x="0.0" y="392" width="375" height="2452.6666666666665"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-tY-RlP">
                                                                 <rect key="frame" x="0.0" y="24" width="375" height="2428.6666666666665"/>
@@ -476,7 +493,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu2-fc-SpX" customClass="HighlightButton" customModule="kashika" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="218" width="375" height="98"/>
+                                                <rect key="frame" x="0.0" y="223" width="375" height="98"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
                                                         <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -552,11 +569,14 @@
                         <outlet property="moneylabel" destination="iU0-tn-q9B" id="VRF-1m-NQV"/>
                         <outlet property="monthLabel" destination="gqW-Jf-CdV" id="t7u-gv-HtM"/>
                         <outlet property="okanewoLabel" destination="l9I-4P-PyH" id="hGY-KN-rWK"/>
+                        <outlet property="perButton" destination="o2G-mw-lsf" id="Rrs-3L-uDA"/>
                         <outlet property="placeHolderView" destination="SFz-2M-lB1" id="Ywf-MP-XeC"/>
                         <outlet property="scheduleLabel" destination="RxT-wP-y0b" id="BSI-Rd-T71"/>
                         <outlet property="scrollView" destination="TxB-ch-xV2" id="tO0-JI-7Ky"/>
+                        <outlet property="sumButton" destination="Smo-4B-8oh" id="Y9z-vb-6Jt"/>
+                        <outlet property="thirdLabel" destination="GXX-rN-k5N" id="OxH-t4-UMr"/>
                         <outlet property="unitLabel" destination="EJS-8v-d5U" id="PG3-lx-L0R"/>
-                        <outlet property="warikanSwitchButton" destination="lLT-qW-OH0" id="B7r-3z-41v"/>
+                        <outlet property="warikanSwitch" destination="lLT-qW-OH0" id="B7r-3z-41v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4N-gs-HjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
