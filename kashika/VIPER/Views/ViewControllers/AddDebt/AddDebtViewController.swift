@@ -139,6 +139,7 @@ extension AddDebtViewController {
 
         sumButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.presenter.tappedSumButton()
+            TapticEngine.impact.feedback(.light)
         }).disposed(by: disposeBag)
 
         presenter.isPerSelected.drive(onNext: { [weak self] isSelected in
@@ -148,6 +149,7 @@ extension AddDebtViewController {
 
         perButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.presenter.tappedPerButton()
+            TapticEngine.impact.feedback(.light)
         }).disposed(by: disposeBag)
     }
 
