@@ -77,16 +77,6 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
         }).disposed(by: disposeBag)
     }
 
-    func createDebt(debtType: DebtType) {
-        let friends = selectedIndexes.value
-            .compactMap({ self.friends.value[$0] })
-        let debtsSingle = interactor.save(money: money.value, friends: friends, paymentDate: selectedDate.value, memo: memo.value, type: debtType)
-        let output = AddDebtOutput(debts: debtsSingle)
-        outputSubject.onNext(output)
-
-        router.dismiss()
-    }
-
     func tappedWarikanSwitch(isActive: Bool) {
         let state = warikanSwitchState.value
         let nextState = state.next(selectedFriendsCount: selectedIndexes.value.count, isButtonAtive: isActive)
@@ -140,6 +130,31 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
 
     func tappedWarikanSwitchButton(isActive: Bool) {
         showWarikanButtonSubject.onNext(isActive)
+    }
+
+    func tappedKashitaOrWarikanButton() {
+        if warikanSwitchState.value.isActive {
+            router.presentWarikan(value: money.value, friends: selectedIndexes.value.compactMap { [weak self] index in
+                return self?.friends.value[index]
+            }, type: warikanInputMoneyType.value)
+        } else {
+            createDebt(debtType: .kashi)
+        }
+    }
+
+    func tappedKaritaButton() {
+        createDebt(debtType: .kari)
+    }
+
+    private func createDebt(debtType: DebtType) {
+        let friends = selectedIndexes.value
+            .compactMap { self.friends.value[$0] }
+        let debtsSingle = interactor.save(money: money.value, friends: friends,
+                                          paymentDate: selectedDate.value, memo: memo.value, type: debtType)
+        let output = AddDebtOutput(debts: debtsSingle)
+        outputSubject.onNext(output)
+
+        router.dismiss()
     }
 }
 

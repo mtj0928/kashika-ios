@@ -12,12 +12,13 @@ import FloatingPanel
 
 final class AddDebtViewBuilder {
 
-    static func build(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> (viewController: UIViewController, output: Observable<AddDebtOutputProtocol>) {
+    static func build(canFloatingPanelShow: BehaviorRelay<Bool>, from rootViewController: UIViewController?) -> (viewController: UIViewController, output: Observable<AddDebtOutputProtocol>) {
         let interactor = AddDebtInteractor()
         let router = AddDebtRouter()
-        let presenter = AddDebtPresenter(canShowFloatingPannel, interactor: interactor, router: router)
+        let presenter = AddDebtPresenter(canFloatingPanelShow, interactor: interactor, router: router)
         let viewController = AddDebtViewController.createFromStoryboard(presenter: presenter)
         router.viewController = viewController
+        router.rootViewController = rootViewController
         viewController.view.backgroundColor = UIColor.app.floatingPanelBackgroundColor
 
         let floatingPanelController = FloatingPanelBuilder.build()

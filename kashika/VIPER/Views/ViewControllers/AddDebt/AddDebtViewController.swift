@@ -69,12 +69,12 @@ final class AddDebtViewController: UIViewController {
 
     @IBAction func tappedKashitaButton() {
         TapticEngine.impact.feedback(.light)
-        presenter.createDebt(debtType: .kashi)
+        presenter.tappedKashitaOrWarikanButton()
     }
     
     @IBAction func tappedKaritaButton() {
         TapticEngine.impact.feedback(.light)
-        presenter.createDebt(debtType: .kari)
+        presenter.tappedKaritaButton()
     }
 
     @IBAction func tappedScheduleButton() {
@@ -177,7 +177,7 @@ extension AddDebtViewController {
             .drive(onNext: { [weak self] showWarikan in
                 UIView.animate(withDuration: 0.3) {
                     self?.karitaButton.isHidden = showWarikan
-                    self?.kashitaButton.setTitle(showWarikan ? "割り勘" : "貸した！", for: .normal)
+                    self?.kashitaButton.setTitle(showWarikan ? "割り勘した！" : "貸した！", for: .normal)
                 }
             }).disposed(by: disposeBag)
 

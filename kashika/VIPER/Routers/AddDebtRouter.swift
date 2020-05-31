@@ -12,10 +12,24 @@ import RxCocoa
 
 final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
 
+    weak var rootViewController: UIViewController?
     weak var viewController: UIViewController?
 
     func dismiss() {
         viewController?.dismiss(animated: true, completion: nil)
+    }
+
+    func presentWarikan(value: Int, friends: [Friend], type: WarikanInputMoaneyType) {
+        viewController?.dismiss(animated: true) { [weak self] in
+            let presenter = WarikanSettingPresenter(friends: friends, value: value, type: type)
+            let viewController = WarikanViewController.createFromStoryboard(with: presenter)
+
+            let floatingPanelController = FloatingPanelBuilder.build()
+            floatingPanelController.delegate = viewController
+            floatingPanelController.track(scrollView: viewController.scrollView)
+            floatingPanelController.set(contentViewController: viewController)
+            self?.rootViewController?.present(floatingPanelController, animated: true, completion: nil)
+        }
     }
 
     func toEditMoneyView(input: EditMoneyInputProtocol) -> EditMoneyOutputProtocol {

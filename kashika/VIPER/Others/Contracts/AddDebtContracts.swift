@@ -45,7 +45,6 @@ protocol AddDebtPresenterProtocol {
     var shouldOpenCalendar: BehaviorRelay<Bool> { get }
     var memo: BehaviorRelay<String?> { get }
 
-    func createDebt(debtType: DebtType)
     func tappedCloseButton()
     func tappedSumButton()
     func tappedPerButton()
@@ -54,6 +53,9 @@ protocol AddDebtPresenterProtocol {
     func dismissedFloatingPanel()
     func getStatus(at index: Int) -> CellStatus
     func selectFriend(at index: Int)
+
+    func tappedKashitaOrWarikanButton()
+    func tappedKaritaButton()
 }
 
 protocol AddDebtInteractorProtocol {
@@ -64,5 +66,6 @@ protocol AddDebtInteractorProtocol {
 
 protocol AddDebtRouterProtocol {
     func dismiss()
+    func presentWarikan(value: Int, friends: [Friend], type: WarikanInputMoaneyType)
     func toEditMoneyView(input: EditMoneyInputProtocol) -> EditMoneyOutputProtocol
 }
