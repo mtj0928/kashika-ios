@@ -67,6 +67,7 @@
 		903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C61E623208C6C00965A4D /* CalendarTransition.swift */; };
 		903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */; };
 		903FC2B02485D50A00FBBC68 /* WarikanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */; };
+		903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */; };
 		90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A4D235EE01B003D66CF /* DocumentOperator.swift */; };
 		90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A50235F0760003D66CF /* ListenerDisposer.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
@@ -338,6 +339,7 @@
 		903C61E623208C6C00965A4D /* CalendarTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransition.swift; sourceTree = "<group>"; };
 		903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanRouter.swift; sourceTree = "<group>"; };
 		903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanInteractor.swift; sourceTree = "<group>"; };
+		903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanUser.swift; sourceTree = "<group>"; };
 		90418A4D235EE01B003D66CF /* DocumentOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentOperator.swift; sourceTree = "<group>"; };
 		90418A50235F0760003D66CF /* ListenerDisposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDisposer.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 				58CA7CF02316458D001231A9 /* Debt.swift */,
 				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
+				903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1672,6 +1675,7 @@
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
+				903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
