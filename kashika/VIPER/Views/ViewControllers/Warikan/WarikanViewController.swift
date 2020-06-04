@@ -96,9 +96,17 @@ extension WarikanViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.warikanUserTableViewCell, for: indexPath)
         cell.color = view.backgroundColor
         if indexPath.section == 0 {
-            cell.warikanUser = presenter.usersWhoHavePaid.value[indexPath.row]
+            let user = presenter.usersWhoHavePaid.value[indexPath.row]
+            cell.warikanUser = user
+            cell.tapped.subscribe(onNext: { [weak self] _ in
+                self?.presenter.tappedMoney(for: user)
+            }).disposed(by: cell.disposeBag)
         } else if indexPath.section == 1 {
-            cell.warikanUser = presenter.usersWhoWillPay.value[indexPath.row]
+            let user = presenter.usersWhoWillPay.value[indexPath.row]
+            cell.warikanUser = user
+            cell.tapped.subscribe(onNext: { [weak self] _ in
+                self?.presenter.tappedMoney(for: user)
+            }).disposed(by: cell.disposeBag)
         }
         return cell
     }
@@ -113,6 +121,13 @@ extension WarikanViewController: UITableViewDelegate {
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.warikanHeaderView.name) as? WarikanHeaderView
             view?.text = section == 0 ? "支払った人" : "支払う人"
             view?.color = self.view.backgroundColor
+            view?.divideButton.isHidden = section == 0
+
+            if let view = view {
+                view.divideButton.rx.tap.asDriver().drive(onNext: { [weak self] _ in
+                    self?.presenter.tappedDivideButton()
+                }).disposed(by: view.disposeBag)
+            }
             return view
         }
 
@@ -124,6 +139,16 @@ extension WarikanViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 70.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            let selectedUser = presenter.usersWhoHavePaid.value[indexPath.row]
+            presenter.tapped(user: selectedUser)
+        } else if indexPath.section == 1 {
+            let selectedUser = presenter.usersWhoWillPay.value[indexPath.row]
+            presenter.tapped(user: selectedUser)
+        }
     }
 }
 

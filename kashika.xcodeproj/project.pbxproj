@@ -65,6 +65,8 @@
 		9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; };
 		9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C61E623208C6C00965A4D /* CalendarTransition.swift */; };
+		903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */; };
+		903FC2B02485D50A00FBBC68 /* WarikanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */; };
 		90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A4D235EE01B003D66CF /* DocumentOperator.swift */; };
 		90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A50235F0760003D66CF /* ListenerDisposer.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
@@ -334,6 +336,8 @@
 		9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderOutput.swift; sourceTree = "<group>"; };
 		9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViewAnimator.framework; path = Carthage/Build/iOS/ViewAnimator.framework; sourceTree = "<group>"; };
 		903C61E623208C6C00965A4D /* CalendarTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTransition.swift; sourceTree = "<group>"; };
+		903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanRouter.swift; sourceTree = "<group>"; };
+		903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanInteractor.swift; sourceTree = "<group>"; };
 		90418A4D235EE01B003D66CF /* DocumentOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentOperator.swift; sourceTree = "<group>"; };
 		90418A50235F0760003D66CF /* ListenerDisposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDisposer.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
@@ -620,6 +624,7 @@
 				900C1A0A22E42EEC00576AEC /* RootRouter.swift */,
 				90E309E323153FFA0097104C /* SettingMenuRouter.swift */,
 				906C18A6247C992500047744 /* HomeRouter.swift */,
+				903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -987,6 +992,7 @@
 				909D6AAC224E0C3000FE7218 /* RootInteractor.swift */,
 				900702DB244359C00098647E /* ScheduledInteractor.swift */,
 				90E309E123153DEA0097104C /* SettingMenuInteractor.swift */,
+				903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */,
 			);
 			name = Interactors;
 			path = Interactor;
@@ -1046,14 +1052,14 @@
 				90364D7822ED88EC000DCFA7 /* AddUserManuallyPresenter.swift */,
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
+				9076C6622451E118005BA3B4 /* FriendDetailPresenter.swift */,
 				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
 				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
-				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
-				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
-				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
 				90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */,
+				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
+				909D6AD6224E465400FE7218 /* RootPresenter.swift */,
 				90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */,
-				9076C6622451E118005BA3B4 /* FriendDetailPresenter.swift */,
+				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				90D749222482079D00F574E3 /* WarikanSettingPresenter.swift */,
 			);
 			path = Presenters;
@@ -1630,6 +1636,7 @@
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
+				903FC2B02485D50A00FBBC68 /* WarikanInteractor.swift in Sources */,
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
 				908DC4532462689800B82759 /* Calculator.swift in Sources */,
@@ -1712,6 +1719,7 @@
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
 				9076C6632451E118005BA3B4 /* FriendDetailPresenter.swift in Sources */,
+				903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */,
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,

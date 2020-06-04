@@ -27,37 +27,62 @@
                                     <constraint firstAttribute="width" secondItem="Sdx-b1-aZs" secondAttribute="height" multiplier="1:1" id="pnf-zQ-g0d"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHt-yd-NYR">
-                                <rect key="frame" x="58" y="64.5" width="45" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="999" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHt-yd-NYR">
+                                <rect key="frame" x="58" y="64.5" width="340.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-CX-VA1">
-                                <rect key="frame" x="111" y="60.5" width="391" height="29"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZW-jd-J5t" customClass="HighlightButton" customModule="kashika" customModuleProvider="target">
+                                <rect key="frame" x="406.5" y="60.5" width="29" height="29"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6ZW-jd-J5t" secondAttribute="height" multiplier="1:1" id="28J-ZS-ZRJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="edit_icon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="747" verticalCompressionResistancePriority="748" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-CX-VA1">
+                                <rect key="frame" x="443.5" y="60.5" width="58.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="5Gd-CX-VA1" firstAttribute="height" secondItem="6ZW-jd-J5t" secondAttribute="height" id="Xkw-VF-77g"/>
+                        </constraints>
                     </stackView>
-                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-MQ-H3g">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3V-Gg-GQk" customClass="HighlightButton" customModule="kashika" customModuleProvider="target">
+                        <rect key="frame" x="414.5" y="11" width="119.5" height="136"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view hidden="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YA-MQ-H3g">
                         <rect key="frame" x="0.0" y="0.0" width="534" height="158"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6ZW-jd-J5t" firstAttribute="leading" secondItem="L3V-Gg-GQk" secondAttribute="leading" constant="8" id="4bI-9Y-xgz"/>
                     <constraint firstItem="4YA-MQ-H3g" firstAttribute="top" secondItem="zej-sF-a1F" secondAttribute="top" id="FBV-0X-FA9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="L3V-Gg-GQk" secondAttribute="bottom" id="FNm-r7-fJf"/>
                     <constraint firstItem="obs-yf-H9H" firstAttribute="top" secondItem="zej-sF-a1F" secondAttribute="top" constant="4" id="JOV-3o-J7X"/>
                     <constraint firstAttribute="trailing" secondItem="obs-yf-H9H" secondAttribute="trailing" constant="16" id="K2r-v9-6Hb"/>
                     <constraint firstAttribute="trailing" secondItem="4YA-MQ-H3g" secondAttribute="trailing" id="PJt-wp-pdB"/>
                     <constraint firstItem="obs-yf-H9H" firstAttribute="centerY" secondItem="zej-sF-a1F" secondAttribute="centerY" id="Qff-BB-SiL"/>
+                    <constraint firstItem="L3V-Gg-GQk" firstAttribute="top" secondItem="zej-sF-a1F" secondAttribute="topMargin" id="TBY-Ic-RDy"/>
                     <constraint firstItem="4YA-MQ-H3g" firstAttribute="leading" secondItem="zej-sF-a1F" secondAttribute="leading" id="Vod-ib-GgL"/>
                     <constraint firstAttribute="bottom" secondItem="4YA-MQ-H3g" secondAttribute="bottom" id="ZsZ-rr-U3n"/>
+                    <constraint firstAttribute="trailing" secondItem="L3V-Gg-GQk" secondAttribute="trailing" id="xIk-NX-bGX"/>
                     <constraint firstItem="obs-yf-H9H" firstAttribute="leading" secondItem="zej-sF-a1F" secondAttribute="leading" constant="16" id="yyF-PR-CWE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="backgroundEditButton" destination="L3V-Gg-GQk" id="Wn1-gu-lLn"/>
+                <outlet property="editButton" destination="6ZW-jd-J5t" id="cLg-5H-O0J"/>
                 <outlet property="effectedView" destination="4YA-MQ-H3g" id="dYE-tK-OzL"/>
                 <outlet property="nameLabel" destination="bHt-yd-NYR" id="ikS-JK-SzZ"/>
                 <outlet property="userIconImage" destination="Sdx-b1-aZs" id="8EP-cw-t7a"/>
@@ -66,4 +91,7 @@
             <point key="canvasLocation" x="15.942028985507248" y="-24.107142857142858"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="edit_icon" width="541" height="540"/>
+    </resources>
 </document>

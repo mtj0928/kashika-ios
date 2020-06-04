@@ -21,9 +21,12 @@ final class AddDebtRouter: NSObject, AddDebtRouterProtocol {
 
     func presentWarikan(value: Int, friends: [Friend], type: WarikanInputMoaneyType) {
         viewController?.dismiss(animated: true) { [weak self] in
-            let presenter = WarikanSettingPresenter(friends: friends, value: value, type: type)
+            let router = WarikanRouter()
+            let interacotor = WarikanInteractor()
+            let presenter = WarikanSettingPresenter(friends: friends, value: value, type: type, interactor: interacotor, router: router)
             let viewController = WarikanViewController.createFromStoryboard(with: presenter)
 
+            router.viewController = viewController
             let floatingPanelController = FloatingPanelBuilder.build()
             floatingPanelController.delegate = viewController
             floatingPanelController.track(scrollView: viewController.scrollView)

@@ -19,27 +19,6 @@ class HighlightButton: UIButton {
         }
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        setupAttributes()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        setupAttributes()
-    }
-
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-
-        setupAttributes()
-    }
-
-    private func setupAttributes() {
-    }
-
     private func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
         let image = color.image
         setBackgroundImage(image, for: state)

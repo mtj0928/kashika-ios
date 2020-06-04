@@ -43,7 +43,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="backView" destination="VJ4-Cg-Mo6" id="ekT-Yy-Egq"/>
-                <outlet property="devideButton" destination="l0O-OT-d6f" id="wlc-BE-Y6A"/>
+                <outlet property="divideButton" destination="l0O-OT-d6f" id="wlc-BE-Y6A"/>
                 <outlet property="titleLabel" destination="0Mk-za-874" id="Gv8-Q4-pf1"/>
             </connections>
             <point key="canvasLocation" x="169.56521739130437" y="-108.14732142857143"/>

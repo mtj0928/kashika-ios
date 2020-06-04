@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RxSwift
 
 final class WarikanHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet private weak var backView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var devideButton: UIButton!
+    @IBOutlet weak var divideButton: UIButton! // swiftlint:disable:this private_outlet
+
+    private(set) var disposeBag = DisposeBag()
 
     var text: String? {
         didSet {
@@ -27,5 +30,11 @@ final class WarikanHeaderView: UITableViewHeaderFooterView {
         set {
             backView.backgroundColor = newValue
         }
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        disposeBag = DisposeBag()
     }
 }
