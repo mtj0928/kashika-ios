@@ -9,7 +9,7 @@
 import Foundation
 
 struct WarikanDebtFlow {
-    let from: WarikanUserWhoHasPaid
-    let to: WarikanUserWhoWillPay
+    let from: WarikanUser
+    let to: WarikanUser
     let value: Int
 }

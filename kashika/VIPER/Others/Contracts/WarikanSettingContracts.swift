@@ -30,6 +30,7 @@ protocol WarikanInteractorProtocol {
     func select<User: WarikanUser>(_ user: User, in users: [User], totalMoney: Int) -> Single<[User]>
     func update<User: WarikanUser>(_ money: Int, for user: User, in users: [User], totalMoney: Int) -> Single<[User]>
     func divideEqually(for users: [WarikanUserWhoWillPay], totalMoney: Int) -> Single<[WarikanUserWhoWillPay]>
+    func compute(usersWhoHavePaid: [WarikanUserWhoHasPaid], usersWhoWillPay: [WarikanUserWhoWillPay]) -> Single<[WarikanDebtFlow]> 
 }
 
 protocol WarikanRouterProtocol {

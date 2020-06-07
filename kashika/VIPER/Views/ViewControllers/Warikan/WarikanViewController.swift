@@ -39,6 +39,14 @@ class WarikanViewController: UIViewController {
         presenter.usersWhoWillPay.asDriver().drive(onNext: { [weak self] _ in
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
+
+        presenter.flows.asDriver().drive(onNext: { flows in
+            print("====== Flow ======")
+
+            flows.forEach { flow in
+                print(flow.from.name + " -> " + flow.to.name + " \(flow.value)")
+            }
+        }).disposed(by: disposeBag)
     }
 
     override func viewWillAppear(_ animated: Bool) {

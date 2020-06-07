@@ -178,6 +178,7 @@
 		90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */; };
 		90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */; };
 		90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */; };
+		90D63C38248C98570048C7E6 /* WarikanDebtFlowUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D63C37248C98570048C7E6 /* WarikanDebtFlowUseCase.swift */; };
 		90D7491B2481E53900F574E3 /* WarikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7491A2481E53900F574E3 /* WarikanViewController.swift */; };
 		90D7491D2481E57000F574E3 /* WarikanViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7491C2481E57000F574E3 /* WarikanViewController.storyboard */; };
 		90D7491F2481F8E100F574E3 /* WarikanSettingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7491E2481F8E100F574E3 /* WarikanSettingLayout.swift */; };
@@ -454,6 +455,7 @@
 		90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleColleionViewCell.swift; sourceTree = "<group>"; };
 		90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentScheduleColleionViewCell.xib; sourceTree = "<group>"; };
 		90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtBalanceUseCase.swift; sourceTree = "<group>"; };
+		90D63C37248C98570048C7E6 /* WarikanDebtFlowUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanDebtFlowUseCase.swift; sourceTree = "<group>"; };
 		90D7491A2481E53900F574E3 /* WarikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanViewController.swift; sourceTree = "<group>"; };
 		90D7491C2481E57000F574E3 /* WarikanViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WarikanViewController.storyboard; sourceTree = "<group>"; };
 		90D7491E2481F8E100F574E3 /* WarikanSettingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanSettingLayout.swift; sourceTree = "<group>"; };
@@ -1033,6 +1035,7 @@
 				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 				58C0DB7E23165F390060E882 /* DebtUseCase.swift */,
 				90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */,
+				90D63C37248C98570048C7E6 /* WarikanDebtFlowUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1735,6 +1738,7 @@
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90D63C38248C98570048C7E6 /* WarikanDebtFlowUseCase.swift in Sources */,
 				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,
 				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,

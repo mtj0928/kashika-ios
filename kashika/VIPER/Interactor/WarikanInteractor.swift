@@ -11,6 +11,7 @@ import RxSwift
 struct WarikanInteractor: WarikanInteractorProtocol {
 
     private let userUseCase = UserUseCase()
+    private let flowsUseCase = WarikanDebtFlowUseCase()
     private let debtBalanceUseCase = DebtBalanceUseCase()
 
     func createInitialWarikanUsersWhoHavePaid(friends: [Friend], value: Int, type: WarikanInputMoaneyType) -> Single<[WarikanUserWhoHasPaid]> {
@@ -37,5 +38,9 @@ struct WarikanInteractor: WarikanInteractorProtocol {
 
     func divideEqually(for users: [WarikanUserWhoWillPay], totalMoney: Int) -> Single<[WarikanUserWhoWillPay]> {
         debtBalanceUseCase.divideEqually(for: users, totalMoney: totalMoney)
+    }
+
+    func compute(usersWhoHavePaid: [WarikanUserWhoHasPaid], usersWhoWillPay: [WarikanUserWhoWillPay]) -> Single<[WarikanDebtFlow]> {
+        flowsUseCase.compute(usersWhoHavePaid: usersWhoHavePaid, usersWhoWillPay: usersWhoWillPay)
     }
 }

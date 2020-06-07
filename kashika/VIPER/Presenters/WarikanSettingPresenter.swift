@@ -26,6 +26,7 @@ final class WarikanSettingPresenter: WarikanSettingPresenterProtocol {
         self.router = router
 
         setupUsers(friends: friends, value: value, type: type)
+        setupFlows()
     }
 
     private func setupUsers(friends: [Friend], value: Int, type: WarikanInputMoaneyType) {
@@ -40,6 +41,24 @@ final class WarikanSettingPresenter: WarikanSettingPresenterProtocol {
                 self?.usersWhoWillPay.accept(users)
             })
             .disposed(by: disposeBag)
+    }
+
+    private func setupFlows() {
+        Observable.of(
+            usersWhoHavePaid.map { $0 as [WarikanUser] },
+            usersWhoWillPay.map { $0 as [WarikanUser] }
+        )
+            .merge()
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else {
+                    return
+                }
+                self.interactor
+                    .compute(usersWhoHavePaid: self.usersWhoHavePaid.value, usersWhoWillPay: self.usersWhoWillPay.value)
+                    .subscribe(onSuccess: { flow in
+                        self.flows.accept(flow)
+                    }).disposed(by: self.disposeBag)
+            }).disposed(by: disposeBag)
     }
 
     func tappedSaveButton() {
