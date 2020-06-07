@@ -13,6 +13,7 @@ import RxCocoa
 protocol WarikanSettingPresenterProtocol {
     var usersWhoHavePaid: BehaviorRelay<[WarikanUserWhoHasPaid]> { get }
     var usersWhoWillPay: BehaviorRelay<[WarikanUserWhoWillPay]> { get }
+    var flows: BehaviorRelay<[WarikanDebtFlow]> { get }
 
     func tappedSaveButton()
     func dismiss()

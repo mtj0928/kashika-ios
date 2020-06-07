@@ -13,6 +13,7 @@ final class WarikanSettingPresenter: WarikanSettingPresenterProtocol {
 
     let usersWhoHavePaid = BehaviorRelay<[WarikanUserWhoHasPaid]>(value: [])
     let usersWhoWillPay = BehaviorRelay<[WarikanUserWhoWillPay]>(value: [])
+    let flows = BehaviorRelay<[WarikanDebtFlow]>(value: [])
 
     private let totalMoney: Int
     private let interactor: WarikanInteractorProtocol

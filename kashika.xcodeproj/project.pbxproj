@@ -68,6 +68,7 @@
 		903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */; };
 		903FC2B02485D50A00FBBC68 /* WarikanInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */; };
 		903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */; };
+		903FC2B42489BC2000FBBC68 /* WarikanDebtFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903FC2B32489BC2000FBBC68 /* WarikanDebtFlow.swift */; };
 		90418A4E235EE01B003D66CF /* DocumentOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A4D235EE01B003D66CF /* DocumentOperator.swift */; };
 		90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90418A50235F0760003D66CF /* ListenerDisposer.swift */; };
 		9042781B2304EED4009480CA /* PhotoLibraryPickerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */; };
@@ -176,6 +177,7 @@
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
 		90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */; };
 		90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */; };
+		90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */; };
 		90D7491B2481E53900F574E3 /* WarikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7491A2481E53900F574E3 /* WarikanViewController.swift */; };
 		90D7491D2481E57000F574E3 /* WarikanViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D7491C2481E57000F574E3 /* WarikanViewController.storyboard */; };
 		90D7491F2481F8E100F574E3 /* WarikanSettingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7491E2481F8E100F574E3 /* WarikanSettingLayout.swift */; };
@@ -340,6 +342,7 @@
 		903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanRouter.swift; sourceTree = "<group>"; };
 		903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanInteractor.swift; sourceTree = "<group>"; };
 		903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanUser.swift; sourceTree = "<group>"; };
+		903FC2B32489BC2000FBBC68 /* WarikanDebtFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanDebtFlow.swift; sourceTree = "<group>"; };
 		90418A4D235EE01B003D66CF /* DocumentOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentOperator.swift; sourceTree = "<group>"; };
 		90418A50235F0760003D66CF /* ListenerDisposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerDisposer.swift; sourceTree = "<group>"; };
 		9042781A2304EED4009480CA /* PhotoLibraryPickerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryPickerOutput.swift; sourceTree = "<group>"; };
@@ -450,6 +453,7 @@
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
 		90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleColleionViewCell.swift; sourceTree = "<group>"; };
 		90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentScheduleColleionViewCell.xib; sourceTree = "<group>"; };
+		90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtBalanceUseCase.swift; sourceTree = "<group>"; };
 		90D7491A2481E53900F574E3 /* WarikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanViewController.swift; sourceTree = "<group>"; };
 		90D7491C2481E57000F574E3 /* WarikanViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WarikanViewController.storyboard; sourceTree = "<group>"; };
 		90D7491E2481F8E100F574E3 /* WarikanSettingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanSettingLayout.swift; sourceTree = "<group>"; };
@@ -610,6 +614,7 @@
 				90427820230521A8009480CA /* Friend.swift */,
 				5870127E224C644A003888E8 /* User.swift */,
 				903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */,
+				903FC2B32489BC2000FBBC68 /* WarikanDebtFlow.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1027,6 +1032,7 @@
 				906FE6AC230643FA00EBC043 /* FriendUseCase.swift */,
 				909D6AB6224E1E3100FE7218 /* UserUseCase.swift */,
 				58C0DB7E23165F390060E882 /* DebtUseCase.swift */,
+				90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1697,12 +1703,14 @@
 				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				90FD9FD623122588002D214B /* TitleHeaderView.swift in Sources */,
+				903FC2B42489BC2000FBBC68 /* WarikanDebtFlow.swift in Sources */,
 				5870127F224C644A003888E8 /* User.swift in Sources */,
 				58CA7CF12316458D001231A9 /* Debt.swift in Sources */,
 				909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */,
 				907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
+				90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
 				907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */,
 				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
