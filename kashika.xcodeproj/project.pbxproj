@@ -211,6 +211,9 @@
 		90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */; };
 		90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */; };
 		90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */; };
+		90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */; };
+		90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */; };
+		90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /*  ArrowView.swift */; };
 		90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */; };
 		90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */; };
 		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
@@ -487,6 +490,9 @@
 		90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
 		90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewBuilder.swift; sourceTree = "<group>"; };
 		90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
+		90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanFlowCell.swift; sourceTree = "<group>"; };
+		90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanFlowCell.xib; sourceTree = "<group>"; };
+		90F89CFB248DB4B600225CB1 /*  ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ArrowView.swift"; sourceTree = "<group>"; };
 		90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewBuilder.swift; sourceTree = "<group>"; };
 		90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyRouter.swift; sourceTree = "<group>"; };
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -892,6 +898,8 @@
 				90D7492624820BDF00F574E3 /* WarikanUserTableViewCell.xib */,
 				90D74928248225B900F574E3 /* WarikanHeaderView.swift */,
 				90D7492A248225C500F574E3 /* WarikanHeaderView.xib */,
+				90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */,
+				90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1116,6 +1124,7 @@
 			children = (
 				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
 				9016FDF72474A9E1003AE8FC /* SummaryView */,
+				90F89CFB248DB4B600225CB1 /*  ArrowView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1371,6 +1380,7 @@
 				900E4D5D225CAB19003C59B1 /* AddUserCell.xib in Resources */,
 				90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */,
 				58701271224C5A61003888E8 /* GoogleService-Info.plist in Resources */,
+				90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */,
 				909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				90D7492724820BDF00F574E3 /* WarikanUserTableViewCell.xib in Resources */,
@@ -1603,6 +1613,7 @@
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
+				90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */,
 				903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
@@ -1666,6 +1677,7 @@
 				90FD9FD423121E89002D214B /* SettingMenuViewController.swift in Sources */,
 				90D749212482041B00F574E3 /* WarikanSettingContracts.swift in Sources */,
 				9028AF1C244ACCDB00181D23 /* FriendDetailMainTableViewCell.swift in Sources */,
+				90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */,
 				58CA7CF3231655FA001231A9 /* DebtDataStore.swift in Sources */,
 				90E567D8235ECF5B0005B2AF /* Request.swift in Sources */,
 				900C1A1022E5CFEC00576AEC /* FriendListViewController.swift in Sources */,

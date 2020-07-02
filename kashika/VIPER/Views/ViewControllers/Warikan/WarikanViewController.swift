@@ -24,7 +24,8 @@ class WarikanViewController: UIViewController {
 
     @IBAction func tappedClosedButtton() {
         TapticEngine.impact.feedback(.light)
-        dismiss(animated: true)
+
+        dismissWithAlert()
     }
 
     override func viewDidLoad() {
@@ -74,12 +75,38 @@ extension WarikanViewController {
         tableView.tableFooterView = UIView()
 
         tableView.register(R.nib.warikanUserTableViewCell)
+        tableView.register(R.nib.warikanFlowCell)
 
         let warikanHeaderViewNib = UINib(nibName: R.nib.warikanHeaderView.name, bundle: R.nib.warikanHeaderView.bundle)
         tableView.register(warikanHeaderViewNib, forHeaderFooterViewReuseIdentifier: R.nib.warikanHeaderView.name)
 
         let headerViewNib = UINib(nibName: R.nib.homeTitleHeader.name, bundle: R.nib.homeTitleHeader.bundle)
         tableView.register(headerViewNib, forHeaderFooterViewReuseIdentifier: R.nib.homeTitleHeader.name)
+    }
+
+    private func dismissWithAlert(_ vc: FloatingPanelController? = nil) {
+        let alertController = UIAlertController(title: "割り勘の設定を終了しますか？", message: "設定した内容は保存されません", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "終了", style: .destructive, handler: { [weak self] _ in
+            self?.haveBeenFinished = true
+            if let vc = vc {
+                vc.move(to: .hidden, animated: true) { [weak self] in
+                    self?.dismiss(animated: true)
+                }
+            } else {
+                self?.dismiss(animated: true)
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel))
+
+        DispatchQueue.main.async { [weak self] in
+            if let vc = vc {
+                vc.move(to: .full, animated: true) {
+                    self?.present(alertController, animated: true)
+                }
+            } else {
+                self?.present(alertController, animated: true)
+            }
+        }
     }
 }
 
@@ -97,26 +124,34 @@ extension WarikanViewController: UITableViewDataSource {
         } else if section == 1 {
             return presenter.usersWhoWillPay.value.count
         }
-        return 0
+        return presenter.flows.value.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.warikanUserTableViewCell, for: indexPath)
-        cell.color = view.backgroundColor
         if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.warikanUserTableViewCell, for: indexPath)
+            cell.color = view.backgroundColor
             let user = presenter.usersWhoHavePaid.value[indexPath.row]
             cell.warikanUser = user
             cell.tapped.subscribe(onNext: { [weak self] _ in
                 self?.presenter.tappedMoney(for: user)
             }).disposed(by: cell.disposeBag)
+            return cell
         } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.warikanUserTableViewCell, for: indexPath)
+            cell.color = view.backgroundColor
             let user = presenter.usersWhoWillPay.value[indexPath.row]
             cell.warikanUser = user
             cell.tapped.subscribe(onNext: { [weak self] _ in
                 self?.presenter.tappedMoney(for: user)
             }).disposed(by: cell.disposeBag)
+            return cell
+        } else if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.warikanFlowCell, for: indexPath)
+            cell.update(presenter.flows.value[indexPath.row])
+            return cell
         }
-        return cell
+        return UITableViewCell()
     }
 }
 
@@ -171,22 +206,8 @@ extension WarikanViewController: FloatingPanelControllerDelegate {
 
     func floatingPanelDidChangePosition(_ vc: FloatingPanelController) {
         if vc.position == .hidden && !haveBeenFinished {
-            let alertController = UIAlertController(title: "割り勘の設定を終了しますか？", message: "設定した内容は保存されません", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "終了", style: .destructive, handler: { [weak self] _ in
-            self?.haveBeenFinished = true
-                vc.move(to: .hidden, animated: true) { [weak self] in
-                    self?.dismiss(animated: true, completion: nil)
-                }
-            }))
-            alertController.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: { _ in
-            }))
-
-            DispatchQueue.main.async { [weak self] in
-                TapticEngine.impact.feedback(.light)
-                vc.move(to: .full, animated: true) {
-                    self?.present(alertController, animated: true, completion: nil)
-                }
-            }
+            TapticEngine.impact.feedback(.light)
+            dismissWithAlert(vc)
         }
     }
 }
