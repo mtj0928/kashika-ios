@@ -10,19 +10,14 @@ import RxCocoa
 
 class FriendsGridPresenter: FriendsGridPresenterProtocol {
     let friends: BehaviorRelay<[Friend]>
-    let tappedHandler: ((Friend) -> Void)?
+    let router: FriendsGridRouterProtocol
 
-    init(_ friends: BehaviorRelay<[Friend]>) {
+    init(_ friends: BehaviorRelay<[Friend]>, router: FriendsGridRouterProtocol) {
         self.friends = friends
-        self.tappedHandler = nil
-    }
-
-    init(_ friends: BehaviorRelay<[Friend]>, tappedHandler: @escaping (Friend) -> Void) {
-        self.friends = friends
-        self.tappedHandler = tappedHandler
+        self.router = router
     }
 
     func tapped(friend: Friend) {
-        tappedHandler?(friend)
+        router.present(friend: friend)
     }
 }

@@ -32,6 +32,12 @@ class CloseButton: UIButton {
         sharedInit()
     }
 
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+
+        sharedInit()
+    }
+
     private func sharedInit() {
         imageView?.contentMode = .scaleAspectFill
         setImage(R.image.crossWhite(), for: .normal)

@@ -10,28 +10,48 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+enum WarikanInputMoaneyType {
+    case sum, per
+}
+
 final class AddDebtPresenter: AddDebtPresenterProtocol {
 
     let isDecelerating: BehaviorRelay<Bool>
     let selectedIndexes = BehaviorRelay<Set<Int>>(value: [])
     let isSelected = BehaviorRelay<Bool>(value: false)
-    var canBeAddDebt: Observable<Bool> {
+    private(set) lazy var canBeAddDebt: Observable<Bool> = {
         let moneyIsInputed = money.map({ $0 != 0 })
         return Observable.combineLatest(isSelected.asObservable(), moneyIsInputed)
             .map({ $0.0 && $0.1 })
             .share()
-    }
+    }()
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }
+
+    private(set) lazy var isSumSelected = self.warikanInputMoneyType.map { $0 == .sum }.asDriver(onErrorJustReturn: false)
+    private(set) lazy var isPerSelected = self.warikanInputMoneyType.map { $0 == .per }.asDriver(onErrorJustReturn: false)
+    private let warikanInputMoneyType = BehaviorRelay<WarikanInputMoaneyType>(value: .sum)
+
     let money = BehaviorRelay<Int>(value: 0)
     var shouldShowPlaceHolder: Observable<Bool> {
         return money.asObservable().map({ $0 == 0 }).share()
     }
+    private(set) lazy var isWarikan = warikanSwitchState.map { $0.isActive }
+        .asDriver(onErrorJustReturn: false)
+
+    private(set) lazy var isEnabledWarikanSwitch: Driver<Bool> = warikanSwitchState.map { $0.buttonEnable }
+        .asDriver(onErrorJustReturn: false)
+
+    private let showWarikanButtonSubject = BehaviorSubject(value: false)
+
+    private let warikanSwitchState = BehaviorRelay<State>(value: .none)
+
     var output: Observable<AddDebtOutputProtocol> {
         return outputSubject
     }
     private let outputSubject = PublishSubject<AddDebtOutputProtocol>()
+
     let selectedDate: BehaviorRelay<Date?> = BehaviorRelay(value: nil)
     let shouldOpenCalendar: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     let memo: BehaviorRelay<String?> = BehaviorRelay(value: nil)
@@ -47,21 +67,32 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
 
         selectedIndexes.subscribe(onNext: { [weak self] indexes in
             self?.isSelected.accept(!indexes.isEmpty)
+
+            guard let self = self else {
+                return
+            }
+            let state = self.warikanSwitchState.value
+            let nextState = state.next(selectedFriendsCount: indexes.count, isButtonAtive: state.isActive)
+            self.warikanSwitchState.accept(nextState)
         }).disposed(by: disposeBag)
     }
 
-    func createDebt(debtType: DebtType) {
-        let friends = selectedIndexes.value
-            .compactMap({ self.friends.value[$0] })
-        let debtsSingle = interactor.save(money: money.value, friends: friends, paymentDate: selectedDate.value, memo: memo.value, type: debtType)
-        let output = AddDebtOutput(debts: debtsSingle)
-        outputSubject.onNext(output)
-
-        router.dismiss()
+    func tappedWarikanSwitch(isActive: Bool) {
+        let state = warikanSwitchState.value
+        let nextState = state.next(selectedFriendsCount: selectedIndexes.value.count, isButtonAtive: isActive)
+        warikanSwitchState.accept(nextState)
     }
 
     func tappedCloseButton() {
         router.dismiss()
+    }
+
+    func tappedSumButton() {
+        warikanInputMoneyType.accept(.sum)
+    }
+
+    func tappedPerButton() {
+        warikanInputMoneyType.accept(.per)
     }
 
     func tappedMoneyButton() {
@@ -95,5 +126,78 @@ final class AddDebtPresenter: AddDebtPresenterProtocol {
 
     func dismissedFloatingPanel() {
         router.dismiss()
+    }
+
+    func tappedWarikanSwitchButton(isActive: Bool) {
+        showWarikanButtonSubject.onNext(isActive)
+    }
+
+    func tappedKashitaOrWarikanButton() {
+        if warikanSwitchState.value.isActive {
+            router.presentWarikan(value: money.value, friends: selectedIndexes.value.compactMap { [weak self] index in
+                return self?.friends.value[index]
+            }, type: warikanInputMoneyType.value)
+        } else {
+            createDebt(debtType: .kashi)
+        }
+    }
+
+    func tappedKaritaButton() {
+        createDebt(debtType: .kari)
+    }
+
+    private func createDebt(debtType: DebtType) {
+        let friends = selectedIndexes.value
+            .compactMap { self.friends.value[$0] }
+        let debtsSingle = interactor.save(money: money.value, friends: friends,
+                                          paymentDate: selectedDate.value, memo: memo.value, type: debtType)
+        let output = AddDebtOutput(debts: debtsSingle)
+        outputSubject.onNext(output)
+
+        router.dismiss()
+    }
+}
+
+extension AddDebtPresenter {
+
+    enum State {
+        case none, selectedActive, switchActive, selectedActiveFromSwitch
+
+        func next(selectedFriendsCount: Int, isButtonAtive: Bool) -> State {
+            switch self {
+            case .none:
+                if selectedFriendsCount >= 2 {
+                    return .selectedActive
+                } else if isButtonAtive {
+                    return .switchActive
+                }
+                return .none
+            case .selectedActive:
+                if selectedFriendsCount < 2 {
+                    return .none
+                }
+                return .selectedActive
+            case .switchActive:
+                if selectedFriendsCount >= 2 {
+                    return .selectedActiveFromSwitch
+                } else if !isButtonAtive {
+                    return .none
+                }
+                return .switchActive
+            case .selectedActiveFromSwitch:
+                if selectedFriendsCount < 2 {
+                    return .switchActive
+                }
+                return .selectedActiveFromSwitch
+            }
+        }
+
+        var isActive: Bool {
+            return self != .none
+        }
+
+        var buttonEnable: Bool {
+            return self != .selectedActive && self != .selectedActiveFromSwitch
+        }
     }
 }

@@ -14,8 +14,8 @@ class RootRouter: RootRouterProtocol {
 
     weak var viewController: UIViewController?
 
-    func showFloatingPannel(_ canShowFloatingPannel: BehaviorRelay<Bool>) -> Observable<AddDebtOutputProtocol> {
-        let buildResult = AddDebtViewBuilder.build(canShowFloatingPannel)
+    func showFloatingPannel(_ canFloatingPanelShow: BehaviorRelay<Bool>) -> Observable<AddDebtOutputProtocol> {
+        let buildResult = AddDebtViewBuilder.build(canFloatingPanelShow: canFloatingPanelShow, from: viewController)
         viewController?.present(buildResult.viewController, animated: true)
         return buildResult.output
     }

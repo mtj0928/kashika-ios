@@ -13,6 +13,7 @@ import FloatingPanel
 import TapticEngine
 import JTAppleCalendar
 
+// swiftlint:disable file_length
 final class AddDebtViewController: UIViewController {
 
     // swiftlint:disable:next private_outlet
@@ -20,6 +21,10 @@ final class AddDebtViewController: UIViewController {
     @IBOutlet private weak var okanewoLabel: UILabel!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var thirdLabel: UILabel!
+    @IBOutlet private weak var sumButton: UIButton!
+    @IBOutlet private weak var perButton: UIButton!
+    @IBOutlet private weak var warikanSwitch: WarikanSwitch!
     @IBOutlet private weak var moneylabel: UILabel!
     @IBOutlet private weak var placeHolderView: UIView!
     @IBOutlet private weak var karitaButton: UIButton!
@@ -64,12 +69,12 @@ final class AddDebtViewController: UIViewController {
 
     @IBAction func tappedKashitaButton() {
         TapticEngine.impact.feedback(.light)
-        presenter.createDebt(debtType: .kashi)
+        presenter.tappedKashitaOrWarikanButton()
     }
     
     @IBAction func tappedKaritaButton() {
         TapticEngine.impact.feedback(.light)
-        presenter.createDebt(debtType: .kari)
+        presenter.tappedKaritaButton()
     }
 
     @IBAction func tappedScheduleButton() {
@@ -96,8 +101,56 @@ extension AddDebtViewController {
     private func setupEssentialView() {
         scrollView.delegate = self
         setupSaveButton()
+        setupThirdLabelAndButtons()
+        setupWarikanSwitch()
         setupMoneyLabel()
         setupCollectionView()
+    }
+
+    private func setupWarikanSwitch() {
+        warikanSwitch.layer.masksToBounds = true
+        warikanSwitch.layer.cornerRadius = warikanSwitch.frame.height / 2
+        warikanSwitch.effectView.backgroundColor = UIColor.app.secondarySystemBackground.withAlphaComponent(0.5)
+
+        warikanSwitch.rx.isActive.subscribe(onNext: { [weak self] isActive in
+            self?.presenter.tappedWarikanSwitch(isActive: isActive)
+        }).disposed(by: disposeBag)
+
+        presenter.isWarikan.drive(onNext: { [weak self] isWarikan in
+            self?.warikanSwitch.isActive = isWarikan
+        }).disposed(by: disposeBag)
+
+        presenter.isEnabledWarikanSwitch.drive(onNext: { [weak self] isEnabled in
+            self?.warikanSwitch.isEnabled = isEnabled
+        }).disposed(by: disposeBag)
+    }
+
+    private func setupThirdLabelAndButtons() {
+        presenter.isWarikan.drive(onNext: { [weak self] isWarikan in
+            self?.thirdLabel.text = isWarikan ? "と" : "に"
+            self?.sumButton.isHidden = !isWarikan
+            self?.perButton.isHidden = !isWarikan
+        }).disposed(by: disposeBag)
+
+        presenter.isSumSelected.drive(onNext: { [weak self] isSelected in
+            self?.sumButton.setTitleColor(isSelected ? UIColor.app.label : UIColor.app.placeHolderText, for: .normal)
+            self?.sumButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: isSelected ? 28 : 18)
+        }).disposed(by: disposeBag)
+
+        sumButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.presenter.tappedSumButton()
+            TapticEngine.impact.feedback(.light)
+        }).disposed(by: disposeBag)
+
+        presenter.isPerSelected.drive(onNext: { [weak self] isSelected in
+            self?.perButton.setTitleColor(isSelected ? UIColor.app.label : UIColor.app.placeHolderText, for: .normal)
+            self?.perButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: isSelected ? 28 : 18)
+        }).disposed(by: disposeBag)
+
+        perButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.presenter.tappedPerButton()
+            TapticEngine.impact.feedback(.light)
+        }).disposed(by: disposeBag)
     }
 
     private func setupMoneyLabel() {
@@ -118,6 +171,15 @@ extension AddDebtViewController {
             self?.karitaButton.isUserInteractionEnabled = canBeAdd
             self?.kashitaButton.isUserInteractionEnabled = canBeAdd
         }).disposed(by: disposeBag)
+
+        presenter.isWarikan
+            .distinctUntilChanged()
+            .drive(onNext: { [weak self] showWarikan in
+                UIView.animate(withDuration: 0.3) {
+                    self?.karitaButton.isHidden = showWarikan
+                    self?.kashitaButton.setTitle(showWarikan ? "割り勘した！" : "貸した！", for: .normal)
+                }
+            }).disposed(by: disposeBag)
 
         karitaButton.setTitle("借りた！", for: .normal)
         kashitaButton.setTitle("貸した！", for: .normal)
