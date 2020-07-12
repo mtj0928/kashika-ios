@@ -139,7 +139,7 @@ DEPENDENCIES:
   - R.swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - BoringSSL
     - Firebase
     - FirebaseAnalytics
@@ -189,6 +189,6 @@ SPEC CHECKSUMS:
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: f5d37e3c66f975e5ab7317ebe28451b461f902e4
+PODFILE CHECKSUM: b636bb4b3f1a120fff5f64b6aa4b8873ed5f6ea8
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3
