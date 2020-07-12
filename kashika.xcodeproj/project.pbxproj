@@ -1975,7 +1975,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02E44F4CAA7F1C4E43FA5AE9 /* Pods-kashikaTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
@@ -2001,7 +2001,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3BE67E3740BE4FF3839F1C99 /* Pods-kashikaTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
@@ -2027,7 +2027,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				INFOPLIST_FILE = kashikaUITests/Info.plist;
@@ -2048,7 +2048,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37E761663240D9C06C1A0D97 /* Pods-kashikaUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				INFOPLIST_FILE = kashikaUITests/Info.plist;

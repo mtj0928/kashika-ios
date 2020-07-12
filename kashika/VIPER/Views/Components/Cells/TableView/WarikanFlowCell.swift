@@ -28,7 +28,10 @@ class WarikanFlowCell: UITableViewCell {
         super.layoutSubviews()
 
         [fromUserIconImageView, toUserIconImageView].forEach {
-            guard let height = $0?.frame.height else { return }
+            guard let height = $0?.frame.height else {
+                return
+            }
+
             $0?.layer.cornerRadius = height / 2
         }
     }
@@ -51,4 +54,3 @@ class WarikanFlowCell: UITableViewCell {
         toUserNameLabel.text = flow.to.name
     }
 }
-
