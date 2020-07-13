@@ -56,23 +56,22 @@ class TabbarButton: ESTabBarItemContentView {
     }
 
     public override func highlightAnimation(animated: Bool, completion: (() -> Void)?) {
-        UIView.beginAnimations("small", context: nil)
-        UIView.setAnimationDuration(0.2)
         let scale: CGFloat = 0.8
-        [imageView, buttonView].forEach { view in
-            view.transform = view.transform.scaledBy(x: scale, y: scale)
-        }
-        UIView.commitAnimations()
-        completion?()
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            guard let self = self else { return }
+
+            [self.imageView, self.buttonView].forEach { view in
+                view.transform = view.transform.scaledBy(x: scale, y: scale)
+            }
+        }, completion: { _ in completion?() })
     }
 
     public override func dehighlightAnimation(animated: Bool, completion: (() -> Void)?) {
-        UIView.beginAnimations("big", context: nil)
-        UIView.setAnimationDuration(0.2)
-        [imageView, buttonView].forEach { view in
-            view.transform = CGAffineTransform.identity
-        }
-        UIView.commitAnimations()
-        completion?()
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            guard let self = self else { return }
+            [self.imageView, self.buttonView].forEach { view in
+                view.transform = CGAffineTransform.identity
+            }
+        }, completion: { _ in completion?() })
     }
 }

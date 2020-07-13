@@ -18,7 +18,8 @@ final class FriendTableViewCell: UITableViewCell {
     @IBOutlet private weak var kashiLabel: UILabel!
     @IBOutlet private weak var kariLabel: UILabel!
     @IBOutlet private weak var moneyLabel: UILabel!
-    @IBOutlet private weak var moDebtLabel: UILabel!
+    @IBOutlet private weak var noDebtLabel: UILabel!
+    @IBOutlet private weak var linkButton: UIButton!
 
     private var disposeBag = DisposeBag()
 
@@ -32,23 +33,6 @@ final class FriendTableViewCell: UITableViewCell {
         super.prepareForReuse()
 
         disposeBag = DisposeBag()
-    }
-
-    private func setup() {
-        iconView.layer.masksToBounds = true
-
-        if #available(iOS 13.0, *) {
-            moDebtLabel.textColor = UIColor.placeholderText
-        }
-
-        kariLabel.backgroundColor = UIColor.app.negativeColor
-        kashiLabel.backgroundColor = UIColor.app.positiveColor
-
-        [kashiLabel, kariLabel].forEach { label in
-            label?.textColor = UIColor.white
-            label?.layer.masksToBounds = true
-        }
-        updateLayout()
     }
 
     func set(presenter: FriendListCellPresenterProtocol) {
@@ -76,8 +60,30 @@ final class FriendTableViewCell: UITableViewCell {
 
         presenter.hasNoDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] noDebt in
             self?.moneyLabel.isHidden = noDebt
-            self?.moDebtLabel.isHidden = !noDebt
+            self?.noDebtLabel.isHidden = !noDebt
         }).disposed(by: disposeBag)
+    }
+
+    private func setup() {
+        iconView.layer.masksToBounds = true
+
+        noDebtLabel.textColor = UIColor.placeholderText
+
+        kariLabel.backgroundColor = UIColor.app.negativeColor
+        kashiLabel.backgroundColor = UIColor.app.positiveColor
+
+        [kashiLabel, kariLabel].forEach { label in
+            label?.textColor = UIColor.white
+            label?.layer.masksToBounds = true
+        }
+
+        setupLinkButton()
+        updateLayout()
+    }
+
+    private func setupLinkButton() {
+        linkButton.layer.masksToBounds = true
+        linkButton.layer.cornerRadius = 6.0
     }
 
     private func updateLayout() {
