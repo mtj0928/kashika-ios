@@ -134,6 +134,8 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
 		909BDA6F230ABFC800689573 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BDA6E230ABFC800689573 /* Monitor.swift */; };
+		909D0B6324BCA3F800E55B78 /* SFSafeSymbols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */; };
+		909D0B6424BCA3F800E55B78 /* SFSafeSymbols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
 		909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAC224E0C3000FE7218 /* RootInteractor.swift */; };
 		909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAF224E0CC800FE7218 /* RootContracts.swift */; };
@@ -271,6 +273,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				909D0B6424BCA3F800E55B78 /* SFSafeSymbols.framework in Embed Frameworks */,
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
 				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
 				9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */,
@@ -418,6 +421,8 @@
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909BDA6E230ABFC800689573 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
+		909D0B6124BCA3D300E55B78 /* SFSafeSymbols.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SFSafeSymbols.framework.dSYM; path = Carthage/Build/iOS/SFSafeSymbols.framework.dSYM; sourceTree = "<group>"; };
+		909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFSafeSymbols.framework; path = Carthage/Build/iOS/SFSafeSymbols.framework; sourceTree = "<group>"; };
 		909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		909D6AAC224E0C3000FE7218 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		909D6AAF224E0CC800FE7218 /* RootContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContracts.swift; sourceTree = "<group>"; };
@@ -521,6 +526,7 @@
 				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */,
+				909D0B6324BCA3F800E55B78 /* SFSafeSymbols.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
 				9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */,
@@ -558,6 +564,8 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */,
+				909D0B6124BCA3D300E55B78 /* SFSafeSymbols.framework.dSYM */,
 				9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */,
 				9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */,
 				9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */,
@@ -1485,6 +1493,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ViewAnimator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SFSafeSymbols.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (

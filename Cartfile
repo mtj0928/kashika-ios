@@ -6,3 +6,4 @@ github "SwiftKickMobile/SwiftMessages"
 github "hackiftekhar/IQKeyboardManager"
 github "patchthecode/JTAppleCalendar" ~> 7.1
 github "marcosgriselli/ViewAnimator"
+github "piknotech/SFSafeSymbols" ~> 1.2.0
