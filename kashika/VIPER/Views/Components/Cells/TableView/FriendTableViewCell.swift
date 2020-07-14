@@ -22,7 +22,7 @@ final class FriendTableViewCell: UITableViewCell {
     @IBOutlet private weak var noDebtLabel: UILabel!
     @IBOutlet private weak var linkButton: UIButton!
 
-    private var disposeBag = DisposeBag()
+    private(set) var disposeBag = DisposeBag()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,34 +41,21 @@ final class FriendTableViewCell: UITableViewCell {
 
         updateLayout()
     }
-
-    func set(presenter: FriendListCellPresenterProtocol) {
+    
+    func set(_ friend: Friend) {
         updateLayout()
 
-        presenter.name.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] name in
-            self?.nameLabel.text = name
-        }).disposed(by: disposeBag)
+        nameLabel.text = friend.name
+        iconView.sd_setImage(with: friend.iconFile?.url)
+        let debt = Int(friend.totalDebt.rawValue)
+        moneyLabel.text = (String.convertWithComma(from: abs(debt)) ?? "0") + "円"
 
-        Observable.combineLatest(presenter.iconURL, presenter.plaveHolderImage).asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] (url, placeHolderImage) in
-            self?.iconView?.sd_setImage(with: url, placeholderImage: placeHolderImage)
-        }).disposed(by: disposeBag)
+        let debtType = DebtType.make(money: debt)
 
-        presenter.debt.map { abs($0) }.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] debt in
-            self?.moneyLabel.text = (String.convertWithComma(from: debt) ?? "0") + "円"
-        }).disposed(by: disposeBag)
-
-        presenter.isKashi.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] isKashi in
-            self?.kashiLabel.isHidden = !isKashi
-        }).disposed(by: disposeBag)
-
-        presenter.isKari.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] isKari in
-            self?.kariLabel.isHidden = !isKari
-        }).disposed(by: disposeBag)
-
-        presenter.hasNoDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] noDebt in
-            self?.moneyLabel.isHidden = noDebt
-            self?.noDebtLabel.isHidden = !noDebt
-        }).disposed(by: disposeBag)
+        kashiLabel.isHidden = debtType != .kashi
+        kariLabel.isHidden = debtType != .kari
+        moneyLabel.isHidden = debtType == .none
+        noDebtLabel.isHidden = debtType != .none
     }
 
     private func setup() {

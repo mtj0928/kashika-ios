@@ -154,7 +154,6 @@
 		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
 		909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64A92308D18000B0ACCB /* File+extension.swift */; };
-		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
 		909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909EF939231A118500DA5F0D /* HomeViewController.storyboard */; };
 		909EF93C231A118500DA5F0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF93A231A118500DA5F0D /* HomeViewController.swift */; };
 		909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF93D231A123B00DA5F0D /* HomeContracts.swift */; };
@@ -436,7 +435,6 @@
 		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
 		909E64A92308D18000B0ACCB /* File+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "File+extension.swift"; path = "kashika/Commons/Extensions/File+extension.swift"; sourceTree = SOURCE_ROOT; };
-		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
 		909EF939231A118500DA5F0D /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		909EF93A231A118500DA5F0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		909EF93D231A123B00DA5F0D /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
@@ -1081,7 +1079,6 @@
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
 				9076C6622451E118005BA3B4 /* FriendDetailPresenter.swift */,
-				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
 				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
 				90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */,
 				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
@@ -1739,7 +1736,6 @@
 				907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */,
 				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
 				909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */,
-				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
 				909EF94B231A3B1800DA5F0D /* SummeryViewCell.swift in Sources */,
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,

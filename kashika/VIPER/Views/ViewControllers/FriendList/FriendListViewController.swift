@@ -86,7 +86,7 @@ extension FriendListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendTableViewCell, for: indexPath)
         let friend = presenter.friends.value[indexPath.row]
-        cell.set(presenter: FriendListCellPresenter(friend))
+        cell.set(friend)
         return cell
     }
 }
