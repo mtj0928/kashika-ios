@@ -22,6 +22,10 @@ final class FriendTableViewCell: UITableViewCell {
     @IBOutlet private weak var noDebtLabel: UILabel!
     @IBOutlet private weak var linkButton: UIButton!
 
+    var tappedLinkButton: ControlEvent<Void> {
+        linkButton.rx.tap
+    }
+
     private(set) var disposeBag = DisposeBag()
 
     override func awakeFromNib() {
@@ -41,7 +45,7 @@ final class FriendTableViewCell: UITableViewCell {
 
         updateLayout()
     }
-    
+
     func set(_ friend: Friend) {
         updateLayout()
 

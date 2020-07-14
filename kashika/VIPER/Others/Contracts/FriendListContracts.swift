@@ -13,6 +13,7 @@ protocol FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
 
     func tapped(friend: Friend)
+    func tappedLinkButton(friend: Friend)
 }
 
 protocol FriendListInteractorProtocol {
@@ -20,5 +21,5 @@ protocol FriendListInteractorProtocol {
 }
 
 protocol FriendListRouterProtocol {
-    func shoUserDetailView()
+    func showDetailView(for friend: Friend)
 }

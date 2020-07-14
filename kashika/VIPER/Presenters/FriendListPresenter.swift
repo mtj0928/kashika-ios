@@ -30,6 +30,10 @@ class FriendListPresenter: FriendListPresenterProtocol {
     }
 
     func tapped(friend: Friend) {
+        router.showDetailView(for: friend)
+    }
+
+    func tappedLinkButton(friend: Friend) {
     }
 }
 

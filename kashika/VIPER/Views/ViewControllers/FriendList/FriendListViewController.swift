@@ -87,6 +87,9 @@ extension FriendListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendTableViewCell, for: indexPath)
         let friend = presenter.friends.value[indexPath.row]
         cell.set(friend)
+        cell.tappedLinkButton.asDriver().drive(onNext: { [weak self] _ in
+            self?.presenter.tappedLinkButton(friend: friend)
+        }).disposed(by: cell.disposeBag)
         return cell
     }
 }
@@ -96,13 +99,11 @@ extension FriendListViewController: UITableViewDataSource {
 extension FriendListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        TapticEngine.impact.feedback(.light)
+
         let friend = presenter.friends.value[indexPath.row]
         presenter.tapped(friend: friend)
 
-        TapticEngine.impact.feedback(.light)
-        let viewController = FriendDetailViewBuilder.build(friend: friend)
-        self.present(viewController, animated: true)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
