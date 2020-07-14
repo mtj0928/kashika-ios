@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SDWebImage
+import SFSafeSymbols
 
 final class FriendTableViewCell: UITableViewCell {
 
@@ -33,6 +34,12 @@ final class FriendTableViewCell: UITableViewCell {
         super.prepareForReuse()
 
         disposeBag = DisposeBag()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        updateLayout()
     }
 
     func set(presenter: FriendListCellPresenterProtocol) {
@@ -84,11 +91,14 @@ final class FriendTableViewCell: UITableViewCell {
     private func setupLinkButton() {
         linkButton.layer.masksToBounds = true
         linkButton.layer.cornerRadius = 6.0
+        linkButton.imageView?.contentMode = .scaleAspectFit
     }
 
     private func updateLayout() {
         kashiLabel.layer.cornerRadius = kashiLabel.frame.height / 2
         kariLabel.layer.cornerRadius = kariLabel.frame.height / 2
         iconView.layer.cornerRadius = iconView.frame.height / 2
+
+        layoutIfNeeded()
     }
 }
