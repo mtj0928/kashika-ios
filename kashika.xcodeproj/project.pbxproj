@@ -169,6 +169,7 @@
 		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
 		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
+		90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7EFFA24BDF72700D95BC9 /* PopupView.swift */; };
 		90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16707247A1DC5007C5161 /* HighlightButton.swift */; };
 		90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16709247A1DE6007C5161 /* DeleteButton.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
@@ -208,13 +209,15 @@
 		90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361B22ED20B2000EDF8A /* FloatingPanelConfiguration.swift */; };
 		90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */; };
 		90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0E9792451D9210013056B /* FriendDetailContracts.swift */; };
+		90F1496124BE6F8E008B2A14 /* LinkPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */; };
+		90F1496324BE8012008B2A14 /* LinkPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1496224BE8012008B2A14 /* LinkPopupView.swift */; };
 		90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6B22E88E400029990C /* FriendListContracts.swift */; };
 		90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */; };
 		90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */; };
 		90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */; };
 		90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */; };
 		90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */; };
-		90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /*  ArrowView.swift */; };
+		90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /* ArrowView.swift */; };
 		90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */; };
 		90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */; };
 		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
@@ -450,6 +453,7 @@
 		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
 		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
+		90B7EFFA24BDF72700D95BC9 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		90C16707247A1DC5007C5161 /* HighlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
 		90C16709247A1DE6007C5161 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
@@ -489,13 +493,15 @@
 		90EA361B22ED20B2000EDF8A /* FloatingPanelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelConfiguration.swift; sourceTree = "<group>"; };
 		90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldTransition.swift; sourceTree = "<group>"; };
 		90F0E9792451D9210013056B /* FriendDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailContracts.swift; sourceTree = "<group>"; };
+		90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkPopupView.xib; sourceTree = "<group>"; };
+		90F1496224BE8012008B2A14 /* LinkPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPopupView.swift; sourceTree = "<group>"; };
 		90F4FF6B22E88E400029990C /* FriendListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListContracts.swift; sourceTree = "<group>"; };
 		90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
 		90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewBuilder.swift; sourceTree = "<group>"; };
 		90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
 		90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanFlowCell.swift; sourceTree = "<group>"; };
 		90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanFlowCell.xib; sourceTree = "<group>"; };
-		90F89CFB248DB4B600225CB1 /*  ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ArrowView.swift"; sourceTree = "<group>"; };
+		90F89CFB248DB4B600225CB1 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewBuilder.swift; sourceTree = "<group>"; };
 		90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyRouter.swift; sourceTree = "<group>"; };
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -1127,9 +1133,10 @@
 		909EF945231A312A00DA5F0D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				90F1495E24BE6F4B008B2A14 /* PopupView */,
 				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
 				9016FDF72474A9E1003AE8FC /* SummaryView */,
-				90F89CFB248DB4B600225CB1 /*  ArrowView.swift */,
+				90F89CFB248DB4B600225CB1 /* ArrowView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1208,6 +1215,24 @@
 				903C61E623208C6C00965A4D /* CalendarTransition.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		90F1495E24BE6F4B008B2A14 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				90F1495F24BE6F56008B2A14 /* LinkPopupView */,
+				90B7EFFA24BDF72700D95BC9 /* PopupView.swift */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
+		90F1495F24BE6F56008B2A14 /* LinkPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */,
+				90F1496224BE8012008B2A14 /* LinkPopupView.swift */,
+			);
+			path = LinkPopupView;
 			sourceTree = "<group>";
 		};
 		90FD9FC223112647002D214B /* OnMemory */ = {
@@ -1389,6 +1414,7 @@
 				909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				90D7492724820BDF00F574E3 /* WarikanUserTableViewCell.xib in Resources */,
+				90F1496124BE6F8E008B2A14 /* LinkPopupView.xib in Resources */,
 				909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */,
 				909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */,
 				90FD9FD82312259E002D214B /* TitleHeaderView.xib in Resources */,
@@ -1619,8 +1645,9 @@
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
-				90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */,
+				90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */,
 				903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */,
+				90F1496324BE8012008B2A14 /* LinkPopupView.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
@@ -1755,6 +1782,7 @@
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */,
 				90D63C38248C98570048C7E6 /* WarikanDebtFlowUseCase.swift in Sources */,
 				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,

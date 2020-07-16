@@ -16,6 +16,7 @@ final class FriendListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var footerButtons: SNSFooterButtons!
     @IBOutlet private weak var bottomConstaraintOfFooter: NSLayoutConstraint!
+    private let popupView = PopupView()
 
     private var presenter: FriendListPresenterProtocol!
     private var footerPresenter: SNSFooterPresenterProtocol!
@@ -27,6 +28,7 @@ final class FriendListViewController: UIViewController {
         setupFooter()
         setupNavigationBar()
         setupTableView()
+        setupPopup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +75,39 @@ extension FriendListViewController {
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
     }
+
+    private func setupPopup() {
+        tabBarController?.view.addSubview(popupView)
+        popupView.fillSuperview()
+
+        let contenView = LinkPopupView()
+        let width = view.frame.width * 0.8
+        contenView.backgroundColor = UIColor.app.cardViewBackgroundColor
+
+        contenView.tappedCloseButton.asDriver().drive(onNext: { [weak self] _ in
+            TapticEngine.impact.feedback(.light)
+            self?.popupView.dismiss()
+            guard let friend = contenView.friend else {
+                return
+            }
+            self?.presenter.tappedLinkButton(friend: friend)
+        }).disposed(by: disposeBag)
+
+        popupView.contentSize = CGSize(width: width, height: 1.2 * width)
+        popupView.contentView = contenView
+        popupView.isHidden = true
+    }
+}
+
+// MARK: - View
+
+extension FriendListViewController {
+
+    func showPopupView(friend: Friend) {
+        (popupView.contentView as? LinkPopupView)?.set(friend)
+
+        popupView.presentation()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -88,7 +123,9 @@ extension FriendListViewController: UITableViewDataSource {
         let friend = presenter.friends.value[indexPath.row]
         cell.set(friend)
         cell.tappedLinkButton.asDriver().drive(onNext: { [weak self] _ in
+            TapticEngine.impact.feedback(.light)
             self?.presenter.tappedLinkButton(friend: friend)
+            self?.showPopupView(friend: friend)
         }).disposed(by: cell.disposeBag)
         return cell
     }
