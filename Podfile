@@ -8,6 +8,7 @@ target 'kashika' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/DynamicLinks'
   pod 'FirebaseUI/Storage'
   pod 'Ballcap' 
   pod 'R.swift'
