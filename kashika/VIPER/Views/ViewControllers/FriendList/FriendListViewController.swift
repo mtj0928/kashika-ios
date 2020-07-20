@@ -29,6 +29,7 @@ final class FriendListViewController: UIViewController {
         setupNavigationBar()
         setupTableView()
         setupPopup()
+        subscribePresenter()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -97,16 +98,28 @@ extension FriendListViewController {
         popupView.contentView = contenView
         popupView.isHidden = true
     }
+
+    private func subscribePresenter() {
+        presenter.sharedItem.asDriver(onErrorDriveWith: .empty())
+            .drive(onNext: { [weak self] item in
+                self?.showShareView(with: item)
+            }).disposed(by: disposeBag)
+    }
 }
 
 // MARK: - View
 
 extension FriendListViewController {
 
-    func showPopupView(friend: Friend) {
+    private func showPopupView(friend: Friend) {
         (popupView.contentView as? LinkPopupView)?.set(friend)
 
         popupView.presentation()
+    }
+
+    private func showShareView(with item: InviteActivityItemSource) {
+        let activityViewController = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+        present(activityViewController, animated: true)
     }
 }
 
@@ -124,7 +137,6 @@ extension FriendListViewController: UITableViewDataSource {
         cell.set(friend)
         cell.tappedLinkButton.asDriver().drive(onNext: { [weak self] _ in
             TapticEngine.impact.feedback(.light)
-            self?.presenter.tappedLinkButton(friend: friend)
             self?.showPopupView(friend: friend)
         }).disposed(by: cell.disposeBag)
         return cell

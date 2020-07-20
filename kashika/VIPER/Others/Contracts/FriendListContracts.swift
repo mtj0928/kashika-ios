@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import RxSwift
 import RxCocoa
+
+enum FriendListViewState {
+    case normal, showIndicartor
+}
 
 protocol FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
+    var sharedItem: Observable<InviteActivityItemSource> { get }
 
     func tapped(friend: Friend)
     func tappedLinkButton(friend: Friend)
@@ -18,6 +24,8 @@ protocol FriendListPresenterProtocol {
 
 protocol FriendListInteractorProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
+
+    func createShardURL(for friend: Friend) -> Single<URL>
 }
 
 protocol FriendListRouterProtocol {

@@ -23,6 +23,12 @@ struct FriendRepository {
             .map { observer in return observer.map { $0.data! } }
     }
 
+    func update(_ friend: Friend) -> Single<Friend?> {
+        friend.document().flatMap { document in
+            self.dataStore.update(document)
+        }.map { $0.data }
+    }
+
     func fetch(request: FriendRequest) -> Single<[Friend]> {
         return dataStore.fetch(request: request).map { $0.extractData() }
     }

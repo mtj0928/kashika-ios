@@ -79,6 +79,7 @@
 		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
+		904A178724C1EBA400968B84 /* RxProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A178624C1EBA400968B84 /* RxProperties.swift */; };
 		904D74C6231B5F610002CDAA /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C5231B5F610002CDAA /* UserPool.swift */; };
 		904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */; };
 		904D74CA231B73310002CDAA /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */; };
@@ -97,6 +98,7 @@
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
+		9064F5D624C3E15D00CAE1F9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064F5D524C3E15D00CAE1F9 /* Constant.swift */; };
 		906C18A7247C992500047744 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A6247C992500047744 /* HomeRouter.swift */; };
 		906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A8247D596A00047744 /* WarikanSwitch.swift */; };
 		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
@@ -164,14 +166,20 @@
 		909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF948231A316D00DA5F0D /* SummaryView.xib */; };
 		909EF94B231A3B1800DA5F0D /* SummeryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */; };
 		909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */; };
+		909F877624C11E3D0057209C /* TokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F877524C11E3D0057209C /* TokenGenerator.swift */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
 		90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57823230BF55400BBADDA /* UIImage+extension.swift */; };
 		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
 		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
 		90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7EFFA24BDF72700D95BC9 /* PopupView.swift */; };
+		90BAFCB424C3E7B400D6BACD /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB324C3E7B400D6BACD /* URL+extension.swift */; };
+		90BAFCB624C3F93800D6BACD /* DynamicLinkComponents+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */; };
+		90BAFCB824C416FE00D6BACD /* InviteActivityItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */; };
 		90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16707247A1DC5007C5161 /* HighlightButton.swift */; };
 		90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16709247A1DE6007C5161 /* DeleteButton.swift */; };
+		90C5325124C5E03F00E0F126 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */; };
+		90C5325224C5E03F00E0F126 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
@@ -275,6 +283,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				90C5325224C5E03F00E0F126 /* SVProgressHUD.framework in Embed Frameworks */,
 				909D0B6424BCA3F800E55B78 /* SFSafeSymbols.framework in Embed Frameworks */,
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
 				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
@@ -362,6 +371,7 @@
 		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
+		904A178624C1EBA400968B84 /* RxProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxProperties.swift; sourceTree = "<group>"; };
 		904D74C5231B5F610002CDAA /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
@@ -379,6 +389,7 @@
 		905D83192250F46300EB20AC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		9064F5D524C3E15D00CAE1F9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		906C18A6247C992500047744 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		906C18A8247D596A00047744 /* WarikanSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanSwitch.swift; sourceTree = "<group>"; };
 		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
@@ -448,14 +459,19 @@
 		909EF948231A316D00DA5F0D /* SummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummeryViewCell.swift; sourceTree = "<group>"; };
 		909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummeryViewCell.xib; sourceTree = "<group>"; };
+		909F877524C11E3D0057209C /* TokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenGenerator.swift; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
 		90A57823230BF55400BBADDA /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
 		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
 		90B7EFFA24BDF72700D95BC9 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		90BAFCB324C3E7B400D6BACD /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
+		90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicLinkComponents+extension.swift"; sourceTree = "<group>"; };
+		90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteActivityItemSource.swift; sourceTree = "<group>"; };
 		90C16707247A1DC5007C5161 /* HighlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
 		90C16709247A1DE6007C5161 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
@@ -533,6 +549,7 @@
 				909D0B6324BCA3F800E55B78 /* SFSafeSymbols.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
+				90C5325124C5E03F00E0F126 /* SVProgressHUD.framework in Frameworks */,
 				9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */,
 				90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
@@ -568,6 +585,7 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */,
 				909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */,
 				909D0B6124BCA3D300E55B78 /* SFSafeSymbols.framework.dSYM */,
 				9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */,
@@ -613,6 +631,8 @@
 				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
 				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				90BAFCB324C3E7B400D6BACD /* URL+extension.swift */,
+				90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -764,6 +784,14 @@
 			path = Outputs;
 			sourceTree = "<group>";
 		};
+		904A178524C1EB8300968B84 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				904A178624C1EBA400968B84 /* RxProperties.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
 		905C75FC2255F07D0011580B /* AddDebt */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,6 +875,7 @@
 		905D83122250CF0900EB20AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9064F5D524C3E15D00CAE1F9 /* Constant.swift */,
 				905D83172250D44300EB20AC /* R.generated.swift */,
 				905D83132250CF1700EB20AC /* Color.swift */,
 			);
@@ -856,6 +885,7 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				904A178524C1EB8300968B84 /* PropertyWrapper */,
 				908DC4512462685600B82759 /* Services */,
 				90418A4F235F0756003D66CF /* Reactives */,
 				909BDA72230AC26400689573 /* Entities */,
@@ -931,6 +961,7 @@
 			isa = PBXGroup;
 			children = (
 				908DC4522462689800B82759 /* Calculator.swift */,
+				909F877524C11E3D0057209C /* TokenGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1005,6 +1036,7 @@
 				909BDA6E230ABFC800689573 /* Monitor.swift */,
 				90E309F02318C4100097104C /* MessageNotification.swift */,
 				907F524C243FF3E400BB0BAC /* ModelIdentifier.swift */,
+				90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1517,6 +1549,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ViewAnimator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SFSafeSymbols.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1689,6 +1722,7 @@
 				908B5D6C2442F2E300C240E5 /* NSPredicate+extension.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
 				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
+				909F877624C11E3D0057209C /* TokenGenerator.swift in Sources */,
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
@@ -1696,6 +1730,7 @@
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
 				908DC4532462689800B82759 /* Calculator.swift in Sources */,
+				90BAFCB424C3E7B400D6BACD /* URL+extension.swift in Sources */,
 				9016FDF92474ACD8003AE8FC /* CalculatorButton.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
@@ -1720,8 +1755,10 @@
 				90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */,
 				90FD9FE623126AE5002D214B /* SettingMenuInput.swift in Sources */,
 				9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */,
+				90BAFCB824C416FE00D6BACD /* InviteActivityItemSource.swift in Sources */,
 				907552F6245872E100F91459 /* DebtLogCell.swift in Sources */,
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
+				904A178724C1EBA400968B84 /* RxProperties.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */,
 				90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */,
@@ -1746,8 +1783,10 @@
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
+				90BAFCB624C3F93800D6BACD /* DynamicLinkComponents+extension.swift in Sources */,
 				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
 				90FD9FDE2312315F002D214B /* TableViewCell.swift in Sources */,
+				9064F5D624C3E15D00CAE1F9 /* Constant.swift in Sources */,
 				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				90FD9FD623122588002D214B /* TitleHeaderView.swift in Sources */,

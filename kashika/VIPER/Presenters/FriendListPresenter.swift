@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 class FriendListPresenter: FriendListPresenterProtocol {
 
@@ -16,6 +17,7 @@ class FriendListPresenter: FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }
+    @RxPublished var sharedItem: Observable<InviteActivityItemSource>
 
     private let isSendingDataSubject = PublishSubject<Bool>()
     private let progressSubject = PublishSubject<Progress?>()
@@ -34,6 +36,16 @@ class FriendListPresenter: FriendListPresenterProtocol {
     }
 
     func tappedLinkButton(friend: Friend) {
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.show(withStatus: "リンクを生成中")
+        interactor.createShardURL(for: friend)
+            .map { InviteActivityItemSource(friend, $0) }
+            .subscribe(onSuccess: { [weak self] itemSource in
+                SVProgressHUD.dismiss()
+                self?._sharedItem.onNext(itemSource)
+                }, onError: { _ in
+                    SVProgressHUD.dismiss()
+            }).disposed(by: disposeBag)
     }
 }
 

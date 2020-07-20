@@ -48,4 +48,17 @@ class FriendUseCase {
     func delete(_ friends: [Friend]) -> Completable {
         return repository.flatMapCompletable { $0.delete(friends) }
     }
+
+    func createToken(for friend: Friend) -> Single<String> {
+        if let token = friend.token {
+            return Single.just(token)
+        }
+
+        var friend = friend
+        let token = Token.generate(length: 32)
+        friend.token = token
+        return repository.flatMap {
+            $0.update(friend)
+        }.map { _ in token }
+    }
 }
