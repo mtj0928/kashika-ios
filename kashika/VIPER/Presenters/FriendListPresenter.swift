@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import SVProgressHUD
+import TapticEngine
 
 class FriendListPresenter: FriendListPresenterProtocol {
 
@@ -43,8 +44,10 @@ class FriendListPresenter: FriendListPresenterProtocol {
             .map { InviteActivityItemSource(friend, $0) }
             .subscribe(onSuccess: { [weak self] itemSource in
                 SVProgressHUD.dismiss()
+                TapticEngine.impact.feedback(.light)
                 self?._sharedItem.onNext(itemSource)
                 }, onError: { _ in
+                    TapticEngine.impact.feedback(.light)
                     SVProgressHUD.dismiss()
             }).disposed(by: disposeBag)
     }

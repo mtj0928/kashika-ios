@@ -20,6 +20,7 @@ enum SettingMenuItem: String, CaseIterable {
     case copyright = "著作権表示"
     case signout = "サインアウト"
     case deleteFriends = "友達を削除"
+    case resetUserDefaults = "UserDefaultsをリセット"
 }
 
 protocol SettingMenuInputProtocol {
@@ -38,6 +39,7 @@ protocol SettingMenuPresenterProtocol {
 protocol SettingMenuInteractorProtocol {
     func signout() -> Completable
     func deleteFriends() -> Completable
+    func resetUserDefaults()
 }
 
 protocol SettingMenuRouterProtocol {

@@ -8,14 +8,13 @@
 
 import Foundation
 
+enum StorageKey: String, CaseIterable {
+    case popupLink
+}
+
 @propertyWrapper
 struct Storage<Value> {
-
-    enum Key: String {
-        case popupLink
-    }
-
-    private let key: Key
+    private let key: StorageKey
 
     var wrappedValue: Value {
         get {
@@ -28,7 +27,7 @@ struct Storage<Value> {
 
     private let defaultValue: Value
 
-    init(_ key: Key, defaultValue: Value) {
+    init(_ key: StorageKey, defaultValue: Value) {
         self.key = key
         self.defaultValue = defaultValue
     }
