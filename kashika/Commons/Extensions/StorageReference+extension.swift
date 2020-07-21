@@ -10,7 +10,7 @@ import Firebase
 
 extension StorageReference {
 
-    static func create(with path: String, from storage: Storage = Storage.storage()) -> StorageReference {
+    static func create(with path: String, from storage: Firebase.Storage = Firebase.Storage.storage()) -> StorageReference {
         let refersnce = storage.reference(withPath: path)
         return refersnce
     }

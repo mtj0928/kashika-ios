@@ -18,6 +18,7 @@ class FriendListPresenter: FriendListPresenterProtocol {
         return interactor.friends
     }
     @RxPublished var sharedItem: Observable<InviteActivityItemSource>
+    @Storage(.popupLink, defaultValue: true) var shouldShowPopup: Bool
 
     private let isSendingDataSubject = PublishSubject<Bool>()
     private let progressSubject = PublishSubject<Progress?>()

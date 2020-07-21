@@ -17,6 +17,7 @@ enum FriendListViewState {
 protocol FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> { get }
     var sharedItem: Observable<InviteActivityItemSource> { get }
+    var shouldShowPopup: Bool { get set }
 
     func tapped(friend: Friend)
     func tappedLinkButton(friend: Friend)

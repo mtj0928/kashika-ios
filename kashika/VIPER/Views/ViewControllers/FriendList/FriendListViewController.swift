@@ -91,6 +91,7 @@ extension FriendListViewController {
             guard let friend = contenView.friend else {
                 return
             }
+            self?.presenter.shouldShowPopup = !contenView.isSelectedUnshown
             self?.presenter.tappedLinkButton(friend: friend)
         }).disposed(by: disposeBag)
 
@@ -112,9 +113,12 @@ extension FriendListViewController {
 extension FriendListViewController {
 
     private func showPopupView(friend: Friend) {
-        (popupView.contentView as? LinkPopupView)?.set(friend)
-
-        popupView.presentation()
+        if presenter.shouldShowPopup {
+            (popupView.contentView as? LinkPopupView)?.set(friend)
+            popupView.presentation()
+        } else {
+            presenter.tappedLinkButton(friend: friend)
+        }
     }
 
     private func showShareView(with item: InviteActivityItemSource) {
