@@ -15,7 +15,7 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var router: AppRouter = AppRouter()
+    var router: AppRouter?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupFirebase()
@@ -23,6 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWindow()
 
         return true
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let webpageURL = userActivity.webpageURL else {
+                return true
+        }
+        let dynamicLinks = DynamicLinks.dynamicLinks()
+        return dynamicLinks.handleUniversalLink(webpageURL) { (link, _) in
+            guard let url = link?.url else {
+                return
+            }
+            print(url.absoluteString)
+        }
     }
 }
 
@@ -41,7 +55,9 @@ extension AppDelegate {
 
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = router.createRootViewController()
+        router = AppRouter(window: window!)
+        router?.presentRootViewController()
+
         window?.makeKeyAndVisible()
     }
 }

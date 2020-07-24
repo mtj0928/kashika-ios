@@ -9,12 +9,14 @@
 import Foundation
 
 class Constant {
-    static let pageLinkDomain = "https://kashikaDev.page.link"
+    static let pageLinkDomain = "https://kashikatest.page.link"
 
     // TODO: - アプリ名がfixしたらドメインをとる
     static let appDomain = "todoforuniv.com"
 
     static let appRootURL = URL(string: "https://\(appDomain)")
+
+    static let appStoreID = "1524737158"
 
     private init() {}
 }

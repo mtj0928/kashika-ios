@@ -17,7 +17,6 @@ extension TargetedExtension where Base: DynamicLinkComponents {
 
     func shorten() -> Single<URL> {
         Single.create { observer -> Disposable in
-            self.base.iOSParameters = DynamicLinkIOSParameters(bundleID: Bundle.main.bundleIdentifier!)
             self.base.shorten { (shortURL, _, error) in
                 guard let shortURL = shortURL else {
                     if let error = error {

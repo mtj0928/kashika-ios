@@ -35,10 +35,19 @@ class FriendListInteractor: FriendListInteractorProtocol {
             .flatMap { document in
                 let url = Constant.appRootURL?
                     .appendQuery(name: "path", value: document.path)?
-                    .appendQuery(name: "token", value: token)
+                    .appendQuery(name: "token", value: token)?
+                    .setDeeplink(.friendInvite)
+
                 guard let dynamicLinkComponents = DynamicLinkComponents(link: url!, domainURIPrefix: Constant.pageLinkDomain) else {
                     fatalError("failed creating DynamicLinkComponents")
                 }
+
+                // iOS
+                dynamicLinkComponents.iOSParameters = DynamicLinkIOSParameters(bundleID: Bundle.main.bundleIdentifier!)
+                dynamicLinkComponents.iOSParameters?.appStoreID = Constant.appStoreID
+
+                // Navigation Info
+                dynamicLinkComponents.navigationInfoParameters = DynamicLinkNavigationInfoParameters()
                 return dynamicLinkComponents.ex.shorten()
         }
     }
