@@ -31,10 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return true
         }
         let dynamicLinks = DynamicLinks.dynamicLinks()
-        return dynamicLinks.handleUniversalLink(webpageURL) { (link, _) in
+        return dynamicLinks.handleUniversalLink(webpageURL) { [weak self] (link, _) in
             guard let url = link?.url else {
                 return
             }
+            self?.router?.handleDeeplink(url)
             print(url.absoluteString)
         }
     }

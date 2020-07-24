@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseFunctions
 
 extension AppRouter {
 
@@ -22,5 +23,17 @@ extension AppRouter {
     }
 
     private func handleFriendInviteDeeplink(_ url: URL) {
+        let component = url.queries["path"]?.split(separator: "/") ?? [String.SubSequence]()
+        let userId = String(component[1])
+        let friendId = String(component[3])
+        guard let token = url.queries["token"] else {
+            return
+        }
+        let request = FetchFriendWithToken.Request(userId: userId, friendId: friendId, token: token)
+        FetchFriendWithToken.call(request).subscribe(onSuccess: { friend in
+            print(friend)
+        }, onError: { error in
+            print(error)
+        })
     }
 }

@@ -226,6 +226,8 @@
 		90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */; };
 		90F8840224C97BC30078E639 /* AppRouter+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840124C97BC30078E639 /* AppRouter+URL.swift */; };
 		90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840324C97C620078E639 /* DeeplinkType.swift */; };
+		90F8840924CAC2080078E639 /* CallableFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840824CAC2080078E639 /* CallableFunctions.swift */; };
+		90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */; };
 		90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */; };
 		90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */; };
 		90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /* ArrowView.swift */; };
@@ -523,6 +525,8 @@
 		90F8840024C9142B0078E639 /* kashika.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kashika.entitlements; sourceTree = "<group>"; };
 		90F8840124C97BC30078E639 /* AppRouter+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+URL.swift"; sourceTree = "<group>"; };
 		90F8840324C97C620078E639 /* DeeplinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkType.swift; sourceTree = "<group>"; };
+		90F8840824CAC2080078E639 /* CallableFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallableFunctions.swift; sourceTree = "<group>"; };
+		90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFriendWithToken.swift; sourceTree = "<group>"; };
 		90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanFlowCell.swift; sourceTree = "<group>"; };
 		90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanFlowCell.xib; sourceTree = "<group>"; };
 		90F89CFB248DB4B600225CB1 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
@@ -895,6 +899,7 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				90F8840624CAC1CC0078E639 /* Firebase */,
 				904A178524C1EB8300968B84 /* PropertyWrapper */,
 				908DC4512462685600B82759 /* Services */,
 				90418A4F235F0756003D66CF /* Reactives */,
@@ -1278,6 +1283,23 @@
 				90F1496224BE8012008B2A14 /* LinkPopupView.swift */,
 			);
 			path = LinkPopupView;
+			sourceTree = "<group>";
+		};
+		90F8840624CAC1CC0078E639 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				90F8840724CAC1F50078E639 /* Functions */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		90F8840724CAC1F50078E639 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				90F8840824CAC2080078E639 /* CallableFunctions.swift */,
+				90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		90FD9FC223112647002D214B /* OnMemory */ = {
@@ -1706,6 +1728,7 @@
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */,
 				90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */,
+				90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
 				58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
@@ -1785,6 +1808,7 @@
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
+				90F8840924CAC2080078E639 /* CallableFunctions.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909EF944231A1AA100DA5F0D /* HomePresenter.swift in Sources */,
 				90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */,

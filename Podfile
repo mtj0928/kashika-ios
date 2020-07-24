@@ -10,6 +10,7 @@ target 'kashika' do
   pod 'Firebase/Auth'
   pod 'Firebase/DynamicLinks'
   pod 'FirebaseUI/Storage'
+  pod 'Firebase/Functions'
   pod 'Ballcap' 
   pod 'R.swift'
 
