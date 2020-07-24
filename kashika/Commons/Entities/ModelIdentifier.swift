@@ -31,5 +31,9 @@ extension ModelIdentifier where Self: Modelable & Codable & UserObject {
         let userDocument = Document<User>(id: userId)
         let collectionReference = userDocument.documentReference.collection(Self.collectionName)
         return Document<Self>(id: id, collectionReference: collectionReference).ex.get()
+            .map { document  in
+                document.data = self
+                return document
+        }
     }
 }
