@@ -29,26 +29,28 @@ class FriendListInteractor: FriendListInteractorProtocol {
         friendUseCase.createToken(for: friend)
             .flatMap { Self.generateSharedURL(for: friend, token: $0) }
     }
+}
+
+
+extension FriendListInteractor {
 
     private static func generateSharedURL(for friend: Friend, token: Token) -> Single<URL> {
-        friend.document()
-            .flatMap { document in
-                let url = Constant.appRootURL?
-                    .appendQuery(name: "path", value: document.path)?
-                    .appendQuery(name: "token", value: token)?
-                    .setDeeplink(.friendInvite)
+        let url = Constant.appRootURL?
+            .appendQuery(name: "userId", value: friend.userId)?
+            .appendQuery(name: "friendId", value: friend.id)?
+            .appendQuery(name: "token", value: token)?
+            .appednDeeplink(.friendInvite)
 
-                guard let dynamicLinkComponents = DynamicLinkComponents(link: url!, domainURIPrefix: Constant.pageLinkDomain) else {
-                    fatalError("failed creating DynamicLinkComponents")
-                }
-
-                // iOS
-                dynamicLinkComponents.iOSParameters = DynamicLinkIOSParameters(bundleID: Bundle.main.bundleIdentifier!)
-                dynamicLinkComponents.iOSParameters?.appStoreID = Constant.appStoreID
-
-                // Navigation Info
-                dynamicLinkComponents.navigationInfoParameters = DynamicLinkNavigationInfoParameters()
-                return dynamicLinkComponents.ex.shorten()
+        guard let dynamicLinkComponents = DynamicLinkComponents(link: url!, domainURIPrefix: Constant.pageLinkDomain) else {
+            fatalError("failed creating DynamicLinkComponents")
         }
+
+        // iOS
+        dynamicLinkComponents.iOSParameters = DynamicLinkIOSParameters(bundleID: Bundle.main.bundleIdentifier!)
+        dynamicLinkComponents.iOSParameters?.appStoreID = Constant.appStoreID
+
+        // Navigation Info
+        dynamicLinkComponents.navigationInfoParameters = DynamicLinkNavigationInfoParameters()
+        return dynamicLinkComponents.ex.shorten()
     }
 }

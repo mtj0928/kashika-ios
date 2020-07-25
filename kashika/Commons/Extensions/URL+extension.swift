@@ -42,20 +42,13 @@ extension URL {
 extension URL {
 
     var deeplinkType: DeeplinkType? {
-        get {
-            guard let query = queries["deeplink_type"] else {
-                return nil
-            }
-            return DeeplinkType(rawValue: query)
+        guard let query = queries["deeplink_type"] else {
+            return nil
         }
-        set {
-            self = self.appendQuery(name: "deeplink_type", value: newValue?.rawValue) ?? self
-        }
+        return DeeplinkType(rawValue: query)
     }
 
-    func setDeeplink(_ type: DeeplinkType?) -> URL {
-        var url = self
-        url.deeplinkType = deeplinkType
-        return url
+    func appednDeeplink(_ type: DeeplinkType?) -> URL? {
+        return appendQuery(name: "deeplink_type", value: type?.rawValue)
     }
 }

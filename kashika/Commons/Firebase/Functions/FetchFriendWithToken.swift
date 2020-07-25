@@ -22,14 +22,21 @@ extension FetchFriendWithToken {
         let userId: String
         let friendId: String
         let token: String
+
+        static func parse(url: URL) -> Self? {
+            let queries = url.queries
+            guard let userId = queries["userId"],
+                let friendId = queries["friendId"],
+                let token = queries["token"] else {
+                    return nil
+            }
+            return Request(userId: userId, friendId: friendId, token: token)
+        }
     }
     
     struct FetchedFriend: Decodable {
         let id: String
-        let userId: String
         let name: String
         let iconFile: File?
-        let totalDebt: IncrementableInt
-        let token: String?
     }
 }

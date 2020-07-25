@@ -18,22 +18,21 @@ extension AppRouter {
 
         switch type {
         case .friendInvite:
-            self.handleDeeplink(url)
+            self.handleFriendInviteDeeplink(url)
         }
     }
 
     private func handleFriendInviteDeeplink(_ url: URL) {
-        let component = url.queries["path"]?.split(separator: "/") ?? [String.SubSequence]()
-        let userId = String(component[1])
-        let friendId = String(component[3])
-        guard let token = url.queries["token"] else {
+        guard let request = FetchFriendWithToken.Request.parse(url: url) else {
             return
         }
-        let request = FetchFriendWithToken.Request(userId: userId, friendId: friendId, token: token)
-        FetchFriendWithToken.call(request).subscribe(onSuccess: { friend in
-            print(friend)
-        }, onError: { error in
-            print(error)
-        })
+
+        _ = FetchFriendWithToken.call(request)
+            .subscribe(onSuccess: { friend in
+                // TODO: - 次はここから実装
+                print(friend)
+            }, onError: { error in
+                print(error)
+            })
     }
 }
