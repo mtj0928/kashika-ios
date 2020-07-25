@@ -11,6 +11,8 @@ import Ballcap
 
 struct UserDataStore {
 
+    private let privateUserInformationDataStore = PrivateUserInformationDataStore()
+
     func create(authId: String) -> Single<Document<User>> {
         return Single.create(subscribe: { observer -> Disposable in
             let document = Document<User>(id: authId)
@@ -18,7 +20,10 @@ struct UserDataStore {
             document.save()
             observer(.success(document))
             return Disposables.create()
-        })
+        }).flatMap { userDocument in
+            self.privateUserInformationDataStore.create(for: userDocument)
+                .map { _ in userDocument }
+        }
     }
 
     func save(user: Document<User>) -> Single<Document<User>> {

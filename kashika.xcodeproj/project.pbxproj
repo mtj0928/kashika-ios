@@ -228,6 +228,7 @@
 		90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840324C97C620078E639 /* DeeplinkType.swift */; };
 		90F8840924CAC2080078E639 /* CallableFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840824CAC2080078E639 /* CallableFunctions.swift */; };
 		90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */; };
+		90F8840D24CBCE390078E639 /* PrivateUserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */; };
 		90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */; };
 		90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */; };
 		90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /* ArrowView.swift */; };
@@ -249,6 +250,8 @@
 		90FD9FE2231251AB002D214B /* SettingMenuContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */; };
 		90FD9FE4231255A2002D214B /* SettingMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */; };
 		90FD9FE623126AE5002D214B /* SettingMenuInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE523126AE5002D214B /* SettingMenuInput.swift */; };
+		90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */; };
+		90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -527,6 +530,7 @@
 		90F8840324C97C620078E639 /* DeeplinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkType.swift; sourceTree = "<group>"; };
 		90F8840824CAC2080078E639 /* CallableFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallableFunctions.swift; sourceTree = "<group>"; };
 		90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFriendWithToken.swift; sourceTree = "<group>"; };
+		90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformation.swift; sourceTree = "<group>"; };
 		90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanFlowCell.swift; sourceTree = "<group>"; };
 		90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanFlowCell.xib; sourceTree = "<group>"; };
 		90F89CFB248DB4B600225CB1 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
@@ -546,6 +550,8 @@
 		90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuContracts.swift; sourceTree = "<group>"; };
 		90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuPresenter.swift; sourceTree = "<group>"; };
 		90FD9FE523126AE5002D214B /* SettingMenuInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInput.swift; sourceTree = "<group>"; };
+		90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationDataStore.swift; sourceTree = "<group>"; };
+		90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationRepository.swift; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -667,6 +673,7 @@
 				5870127E224C644A003888E8 /* User.swift */,
 				903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */,
 				903FC2B32489BC2000FBBC68 /* WarikanDebtFlow.swift */,
+				90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -968,6 +975,7 @@
 				906FE6AF230644E800EBC043 /* UserRepository.swift */,
 				58C0DB7C23165D990060E882 /* DebtRepository.swift */,
 				907F5248243F5DB700BB0BAC /* FriendRepository.swift */,
+				90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1322,6 +1330,7 @@
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 				9093B5D424416CA2003AC383 /* FriendDataStore.swift */,
+				90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1700,6 +1709,7 @@
 				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				90E1E95D2453ECE10068DF64 /* FriendDetailLayout.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
+				90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */,
 				906C18A7247C992500047744 /* HomeRouter.swift in Sources */,
 				900702DC244359C00098647E /* ScheduledInteractor.swift in Sources */,
 				90E567DA235ECFA80005B2AF /* DocumentsListener.swift in Sources */,
@@ -1803,6 +1813,7 @@
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
+				90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
@@ -1864,6 +1875,7 @@
 				90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */,
 				90D63C38248C98570048C7E6 /* WarikanDebtFlowUseCase.swift in Sources */,
 				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
+				90F8840D24CBCE390078E639 /* PrivateUserInformation.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,
 				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,
 				90D7491F2481F8E100F574E3 /* WarikanSettingLayout.swift in Sources */,

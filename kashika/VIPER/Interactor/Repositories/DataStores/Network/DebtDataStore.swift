@@ -15,7 +15,13 @@ struct DebtDataStore: DocumentOperatorSet {
     typealias Request = DebtRequest
 
     // swiftlint:disable:next function_parameter_count
-    func create(owner user: Document<User>, money: Int, friends: [Document<Friend>], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Document<Debt>]> {
+    func create(owner user: Document<User>,
+                privateUserInformation: Document<PrivateUserInformation>,
+                money: Int,
+                friends: [Document<Friend>],
+                paymentDate: Date?,
+                memo: String?,
+                type: DebtType) -> Single<[Document<Debt>]> {
         let money = type == .kari ? money : -money
         return Single.just(friends)
             .flatMap { (friends) in
@@ -28,11 +34,12 @@ struct DebtDataStore: DocumentOperatorSet {
                 friends.forEach { friend in
                     friend.data?.totalDebt = .increment(Int64(money))
                 }
-                user.data?.totalDebt = .increment(Int64(money * friends.count))
+                privateUserInformation.data?.totalDebt = .increment(Int64(money * friends.count))
                 return Batch.ex.commit { batch in
                     debts.forEach { batch.save($0) }
                     friends.forEach { batch.update($0) }
                     batch.update(user)
+                    batch.update(privateUserInformation)
                 }.andThen(Single.just(debts))
         }
     }

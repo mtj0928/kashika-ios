@@ -24,8 +24,8 @@ class HomePresenter: HomePresenterProtocol {
     }
 
     private func subscribeInteractor() {
-        interactor.user.subscribe(onNext: { [weak self] user in
-            self?.userTotalDebtMoney.accept(Int(user?.totalDebt.rawValue ?? 0))
+        interactor.privateUserInformation.subscribe(onNext: { [weak self] privateInfo in
+            self?.userTotalDebtMoney.accept(Int(privateInfo?.totalDebt.rawValue ?? 0))
         }).disposed(by: disposeBag)
 
         Observable.combineLatest(interactor.scheduledDebts.asObservable(),

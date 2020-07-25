@@ -19,6 +19,7 @@ protocol HomePresenterProtocol {
 
 protocol HomeInteractorProtocol {
     var user: BehaviorRelay<User?> { get }
+    var privateUserInformation: BehaviorRelay<PrivateUserInformation?> { get }
     var scheduledDebts: BehaviorRelay<[Debt]> { get }
     var kashiFriend: BehaviorRelay<[Friend]> { get }
     var kariFriend: BehaviorRelay<[Friend]> { get }
