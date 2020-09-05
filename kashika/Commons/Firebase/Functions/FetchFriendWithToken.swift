@@ -10,10 +10,11 @@ import Foundation
 import Ballcap
 
 struct FetchFriendWithToken: CallableFunctions {
-    typealias Input = Request
-    typealias Output = FetchedFriend
 
     static let name = "fetchFriend"
+
+    typealias Input = Request
+    typealias Output = FetchedFriend
 }
 
 extension FetchFriendWithToken {

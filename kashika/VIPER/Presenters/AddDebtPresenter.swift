@@ -163,6 +163,14 @@ extension AddDebtPresenter {
     enum State {
         case none, selectedActive, switchActive, selectedActiveFromSwitch
 
+        var isActive: Bool {
+            return self != .none
+        }
+
+        var buttonEnable: Bool {
+            return self != .selectedActive && self != .selectedActiveFromSwitch
+        }
+
         func next(selectedFriendsCount: Int, isButtonAtive: Bool) -> State {
             switch self {
             case .none:
@@ -190,14 +198,6 @@ extension AddDebtPresenter {
                 }
                 return .selectedActiveFromSwitch
             }
-        }
-
-        var isActive: Bool {
-            return self != .none
-        }
-
-        var buttonEnable: Bool {
-            return self != .selectedActive && self != .selectedActiveFromSwitch
         }
     }
 }

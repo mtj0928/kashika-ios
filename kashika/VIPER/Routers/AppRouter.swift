@@ -14,7 +14,11 @@ struct AppRouter {
 
     let window: UIWindow
 
-    func presentRootViewController() {
+    init(window: UIWindow) {
+        self.window = window
+    }
+
+    mutating func presentRootViewController() {
         let interactor = RootInteractor()
         let router = RootRouter()
         let presenter = RootPresenter(interactor: interactor, router: router)

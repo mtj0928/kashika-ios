@@ -60,6 +60,9 @@ final class FriendTableViewCell: UITableViewCell {
         kariLabel.isHidden = debtType != .kari
         moneyLabel.isHidden = debtType == .none
         noDebtLabel.isHidden = debtType != .none
+
+        linkButton.setImage(friend.isLinked ? UIImage(systemSymbol: .linkCircleFill) : UIImage(systemSymbol: .linkCircle), for: .normal)
+        linkButton.tintColor = friend.isLinked ? UIColor.app.green : UIColor.systemGray3
     }
 
     private func setup() {

@@ -31,7 +31,7 @@ extension CallableFunctions {
                     return Disposables.create()
             }
 
-            Functions.functions()
+            Functions.functions(region: "asia-northeast1")
                 .httpsCallable(Self.name)
                 .call(object) { (result, error) in
                     if let error = error {

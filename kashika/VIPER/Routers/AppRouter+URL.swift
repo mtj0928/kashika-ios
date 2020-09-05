@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseFunctions
+import SVProgressHUD
 
 extension AppRouter {
 
@@ -21,18 +22,28 @@ extension AppRouter {
             self.handleFriendInviteDeeplink(url)
         }
     }
+}
+
+extension AppRouter {
 
     private func handleFriendInviteDeeplink(_ url: URL) {
         guard let request = FetchFriendWithToken.Request.parse(url: url) else {
             return
         }
 
+        SVProgressHUD.show()
         _ = FetchFriendWithToken.call(request)
             .subscribe(onSuccess: { friend in
-                // TODO: - 次はここから実装
-                print(friend)
+                guard let nowViewController = self.window.rootViewController else {
+                    return
+                }
+
+                SVProgressHUD.dismiss()
+                let popupView = ConfirmationInviteViewBuilder.build(friend: friend, userId: request.userId, friendId: request.friendId, token: request.token, view: nowViewController.view)
+                popupView.presentation()
             }, onError: { error in
-                print(error)
+                SVProgressHUD.dismiss()
+                print(error.localizedDescription)
             })
     }
 }

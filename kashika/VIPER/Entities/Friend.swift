@@ -19,6 +19,11 @@ struct Friend: Codable, Equatable, Modelable, UserObject {
     var iconFile: File?
     var totalDebt: IncrementableInt = 0
     var token: String?
+    var linkedUserId: String?
+
+    var isLinked: Bool {
+        return linkedUserId != nil
+    }
 }
 
 enum FriendError: Error {

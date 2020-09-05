@@ -44,6 +44,11 @@
 		901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC76222D9B803002B3C17 /* UnitTextField.swift */; };
 		901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EF37923191176001BA56C /* AddDebtOutput.swift */; };
 		901EF386231938B5001BA56C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901EF3842319385B001BA56C /* CardView.xib */; };
+		901FCD8A24CD61FB00787533 /* ReactionForInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */; };
+		901FCD8C24CD685600787533 /* ConfirmationInvitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */; };
+		901FCD8F24CD72C600787533 /* InvitePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901FCD8E24CD72C600787533 /* InvitePopupView.xib */; };
+		901FCD9124CD77B800787533 /* InvitePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD9024CD77B800787533 /* InvitePopupView.swift */; };
+		901FCD9324CD7B4800787533 /* ConfirmationInviteViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */; };
 		9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */; };
 		9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */; };
 		9028AF192449F3E100181D23 /* FriendDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9028AF172449F3E100181D23 /* FriendDetailViewController.storyboard */; };
@@ -252,6 +257,9 @@
 		90FD9FE623126AE5002D214B /* SettingMenuInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE523126AE5002D214B /* SettingMenuInput.swift */; };
 		90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */; };
 		90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */; };
+		90FF920724CC756800DE5781 /* ConfirmationInviteContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */; };
+		90FF920A24CD0B1C00DE5781 /* ConfirmationInviteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */; };
+		90FF920C24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +353,11 @@
 		901AC76222D9B803002B3C17 /* UnitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTextField.swift; sourceTree = "<group>"; };
 		901EF37923191176001BA56C /* AddDebtOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtOutput.swift; sourceTree = "<group>"; };
 		901EF3842319385B001BA56C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionForInvitation.swift; sourceTree = "<group>"; };
+		901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInvitePresenter.swift; sourceTree = "<group>"; };
+		901FCD8E24CD72C600787533 /* InvitePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitePopupView.xib; sourceTree = "<group>"; };
+		901FCD9024CD77B800787533 /* InvitePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitePopupView.swift; sourceTree = "<group>"; };
+		901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteViewBuilder.swift; sourceTree = "<group>"; };
 		9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyContracts.swift; sourceTree = "<group>"; };
 		9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyPresenter.swift; sourceTree = "<group>"; };
 		9028AF172449F3E100181D23 /* FriendDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -552,6 +565,9 @@
 		90FD9FE523126AE5002D214B /* SettingMenuInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInput.swift; sourceTree = "<group>"; };
 		90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationDataStore.swift; sourceTree = "<group>"; };
 		90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationRepository.swift; sourceTree = "<group>"; };
+		90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteContracts.swift; sourceTree = "<group>"; };
+		90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteRouter.swift; sourceTree = "<group>"; };
+		90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteInteractor.swift; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -693,6 +709,7 @@
 				900C1A0A22E42EEC00576AEC /* RootRouter.swift */,
 				90E309E323153FFA0097104C /* SettingMenuRouter.swift */,
 				903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */,
+				90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -764,6 +781,15 @@
 				901EF3842319385B001BA56C /* CardView.xib */,
 			);
 			path = MessageViews;
+			sourceTree = "<group>";
+		};
+		901FCD8D24CD719900787533 /* InvitePopupView */ = {
+			isa = PBXGroup;
+			children = (
+				901FCD8E24CD72C600787533 /* InvitePopupView.xib */,
+				901FCD9024CD77B800787533 /* InvitePopupView.swift */,
+			);
+			path = InvitePopupView;
 			sourceTree = "<group>";
 		};
 		90364D7C22ED9796000DCFA7 /* EditUsername */ = {
@@ -851,6 +877,7 @@
 				90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */,
 				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 				90D749202482041B00F574E3 /* WarikanSettingContracts.swift */,
+				90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -860,12 +887,13 @@
 			children = (
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
 				90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */,
+				901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */,
 				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 				907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */,
 				90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */,
+				9076C6642451E206005BA3B4 /* FriendDetailViewBuilder.swift */,
 				90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */,
 				909EF93F231A126200DA5F0D /* HomViewBuilder.swift */,
-				9076C6642451E206005BA3B4 /* FriendDetailViewBuilder.swift */,
 			);
 			path = ViewBuilders;
 			sourceTree = "<group>";
@@ -1081,6 +1109,7 @@
 				900702DB244359C00098647E /* ScheduledInteractor.swift */,
 				90E309E123153DEA0097104C /* SettingMenuInteractor.swift */,
 				903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */,
+				90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */,
 			);
 			name = Interactors;
 			path = Interactor;
@@ -1150,6 +1179,7 @@
 				90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */,
 				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				90D749222482079D00F574E3 /* WarikanSettingPresenter.swift */,
+				901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1278,6 +1308,7 @@
 		90F1495E24BE6F4B008B2A14 /* PopupView */ = {
 			isa = PBXGroup;
 			children = (
+				901FCD8D24CD719900787533 /* InvitePopupView */,
 				90F1495F24BE6F56008B2A14 /* LinkPopupView */,
 				90B7EFFA24BDF72700D95BC9 /* PopupView.swift */,
 			);
@@ -1306,6 +1337,7 @@
 			children = (
 				90F8840824CAC2080078E639 /* CallableFunctions.swift */,
 				90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */,
+				901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -1461,6 +1493,7 @@
 			files = (
 				900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */,
 				9028AF192449F3E100181D23 /* FriendDetailViewController.storyboard in Resources */,
+				901FCD8F24CD72C600787533 /* InvitePopupView.xib in Resources */,
 				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
 				90FD9FD223121D4E002D214B /* SettingMenuViewController.storyboard in Resources */,
 				907552F82458730A00F91459 /* DebtLogCell.xib in Resources */,
@@ -1620,7 +1653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
 		905D830E2250562700EB20AC /* [Run Script] R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1714,8 +1747,10 @@
 				900702DC244359C00098647E /* ScheduledInteractor.swift in Sources */,
 				90E567DA235ECFA80005B2AF /* DocumentsListener.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
+				901FCD8A24CD61FB00787533 /* ReactionForInvitation.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */,
+				901FCD8C24CD685600787533 /* ConfirmationInvitePresenter.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				90D7492524820AFA00F574E3 /* WarikanUserTableViewCell.swift in Sources */,
 				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
@@ -1811,11 +1846,14 @@
 				90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */,
 				90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
+				901FCD9324CD7B4800787533 /* ConfirmationInviteViewBuilder.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
 				90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */,
+				90FF920A24CD0B1C00DE5781 /* ConfirmationInviteRouter.swift in Sources */,
+				90FF920724CC756800DE5781 /* ConfirmationInviteContracts.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
@@ -1858,12 +1896,14 @@
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
 				90E309F12318C4100097104C /* MessageNotification.swift in Sources */,
+				90FF920C24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift in Sources */,
 				90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */,
 				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
 				90FD9FE2231251AB002D214B /* SettingMenuContracts.swift in Sources */,
 				909EF940231A126200DA5F0D /* HomViewBuilder.swift in Sources */,
 				90427821230521A8009480CA /* Friend.swift in Sources */,
 				90FD9FE4231255A2002D214B /* SettingMenuPresenter.swift in Sources */,
+				901FCD9124CD77B800787533 /* InvitePopupView.swift in Sources */,
 				907552EF2453F28A00F91459 /* FriendDetailRouter.swift in Sources */,
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,

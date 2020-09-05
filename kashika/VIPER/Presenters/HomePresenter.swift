@@ -64,6 +64,5 @@ class HomePresenter: HomePresenterProtocol {
         let interactor = ScheduledInteractor()
         let presenter = ScheduledPresenter(interactor: interactor)
         return presenter
-
     }
 }

@@ -38,7 +38,6 @@ class FriendListPresenter: FriendListPresenterProtocol {
     }
 
     func tappedLinkButton(friend: Friend) {
-        SVProgressHUD.setDefaultMaskType(.black)
         SVProgressHUD.show(withStatus: "リンクを生成中")
         interactor.createShardURL(for: friend)
             .map { InviteActivityItemSource(friend, $0) }

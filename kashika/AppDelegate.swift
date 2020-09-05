@@ -9,22 +9,22 @@
 import UIKit
 import Firebase
 import Ballcap
+import SVProgressHUD
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     var router: AppRouter?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupFirebase()
-        setupKeyboard()
+        setupThirdParty()
         setupWindow()
-
+        
         return true
     }
-
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
             let webpageURL = userActivity.webpageURL else {
@@ -44,21 +44,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Configure
 
 extension AppDelegate {
-
+    
+    private func setupThirdParty() {
+        setupFirebase()
+        setupKeyboard()
+        setupProgressHUD()
+    }
+    
     private func setupFirebase() {
         FirebaseApp.configure()
     }
-
+    
     private func setupKeyboard() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
     }
-
+    
+    private func setupProgressHUD() {
+        SVProgressHUD.setDefaultMaskType(.black)
+    }
+    
     private func setupWindow() {
         window = UIWindow(frame: UIScreen.main.bounds)
         router = AppRouter(window: window!)
         router?.presentRootViewController()
-
+        
         window?.makeKeyAndVisible()
     }
 }
