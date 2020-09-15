@@ -24,19 +24,11 @@ struct UserRepository {
     }
     
     func listen(user: User) -> Observable<User> {
-        return user.document().asObservable()
+        user.document()
+            .asObservable()
             .flatMap { userDoument  in
                 self.userDataStore.listen(userDoument)
         }.map { $0.data! }
-    }
-
-    func reset(user: User) -> Completable {
-        return user.document()
-            .flatMap { user -> Single<User> in
-                user.data?.totalDebt = 0
-                return self.userDataStore.save(user: user)
-                    .map { $0.data! }
-        }.asCompletable()
     }
     
     func signout() -> Completable {

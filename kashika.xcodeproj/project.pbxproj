@@ -44,6 +44,11 @@
 		901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AC76222D9B803002B3C17 /* UnitTextField.swift */; };
 		901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EF37923191176001BA56C /* AddDebtOutput.swift */; };
 		901EF386231938B5001BA56C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901EF3842319385B001BA56C /* CardView.xib */; };
+		901FCD8A24CD61FB00787533 /* ReactionForInvitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */; };
+		901FCD8C24CD685600787533 /* ConfirmationInvitePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */; };
+		901FCD8F24CD72C600787533 /* InvitePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 901FCD8E24CD72C600787533 /* InvitePopupView.xib */; };
+		901FCD9124CD77B800787533 /* InvitePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD9024CD77B800787533 /* InvitePopupView.swift */; };
+		901FCD9324CD7B4800787533 /* ConfirmationInviteViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */; };
 		9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */; };
 		9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */; };
 		9028AF192449F3E100181D23 /* FriendDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9028AF172449F3E100181D23 /* FriendDetailViewController.storyboard */; };
@@ -79,6 +84,7 @@
 		9042782923052BF3009480CA /* AddUserManuallyInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */; };
 		9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044AB0F22ED417B00877E7F /* ModalTextField.xib */; };
 		9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AB1122ED427F00877E7F /* ModalTextFiled.swift */; };
+		904A178724C1EBA400968B84 /* RxProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A178624C1EBA400968B84 /* RxProperties.swift */; };
 		904D74C6231B5F610002CDAA /* UserPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C5231B5F610002CDAA /* UserPool.swift */; };
 		904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */; };
 		904D74CA231B73310002CDAA /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */; };
@@ -97,6 +103,7 @@
 		905E4877224B940300BDC321 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4876224B940300BDC321 /* AppRouter.swift */; };
 		905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
 		905E4882224C403D00BDC321 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905E4880224C403D00BDC321 /* UIViewController+extension.swift */; };
+		9064F5D624C3E15D00CAE1F9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064F5D524C3E15D00CAE1F9 /* Constant.swift */; };
 		906C18A7247C992500047744 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A6247C992500047744 /* HomeRouter.swift */; };
 		906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C18A8247D596A00047744 /* WarikanSwitch.swift */; };
 		906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CA7E7225215580092E796 /* FloatingPanel.framework */; };
@@ -134,6 +141,8 @@
 		909600602249B295002F1DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9096005E2249B295002F1DE6 /* LaunchScreen.storyboard */; };
 		909600762249B295002F1DE6 /* KashikaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909600752249B295002F1DE6 /* KashikaUITests.swift */; };
 		909BDA6F230ABFC800689573 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BDA6E230ABFC800689573 /* Monitor.swift */; };
+		909D0B6324BCA3F800E55B78 /* SFSafeSymbols.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */; };
+		909D0B6424BCA3F800E55B78 /* SFSafeSymbols.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */; };
 		909D6AAD224E0C3000FE7218 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAC224E0C3000FE7218 /* RootInteractor.swift */; };
 		909D6AB0224E0CC800FE7218 /* RootContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6AAF224E0CC800FE7218 /* RootContracts.swift */; };
@@ -152,7 +161,6 @@
 		909D6ADE224E48C800FE7218 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D6ADC224E48C800FE7218 /* RootViewController.swift */; };
 		909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */; };
 		909E64AA2308D18000B0ACCB /* File+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64A92308D18000B0ACCB /* File+extension.swift */; };
-		909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */; };
 		909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909EF939231A118500DA5F0D /* HomeViewController.storyboard */; };
 		909EF93C231A118500DA5F0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF93A231A118500DA5F0D /* HomeViewController.swift */; };
 		909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF93D231A123B00DA5F0D /* HomeContracts.swift */; };
@@ -163,18 +171,28 @@
 		909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF948231A316D00DA5F0D /* SummaryView.xib */; };
 		909EF94B231A3B1800DA5F0D /* SummeryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */; };
 		909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */; };
+		909F877624C11E3D0057209C /* TokenGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F877524C11E3D0057209C /* TokenGenerator.swift */; };
 		909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FFDBA230660670017EB56 /* StorageReference+extension.swift */; };
 		90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57823230BF55400BBADDA /* UIImage+extension.swift */; };
 		90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57825230C093B00BBADDA /* SNSFooterButtons.swift */; };
 		90A57828230C0C3A00BBADDA /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A57827230C0C3A00BBADDA /* UIView+extension.swift */; };
 		90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */; };
+		90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7EFFA24BDF72700D95BC9 /* PopupView.swift */; };
+		90BAFCB424C3E7B400D6BACD /* URL+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB324C3E7B400D6BACD /* URL+extension.swift */; };
+		90BAFCB624C3F93800D6BACD /* DynamicLinkComponents+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */; };
+		90BAFCB824C416FE00D6BACD /* InviteActivityItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */; };
 		90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16707247A1DC5007C5161 /* HighlightButton.swift */; };
 		90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C16709247A1DE6007C5161 /* DeleteButton.swift */; };
+		90C5325124C5E03F00E0F126 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */; };
+		90C5325224C5E03F00E0F126 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		90C5325624C6613100E0F126 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5325524C6613100E0F126 /* Storage.swift */; };
 		90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */; };
 		90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */; };
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
+		90D4EFA8250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */; };
+		90D4EFAA2510335300BA90D0 /* SelectLinkFriendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */; };
 		90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */; };
 		90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */; };
 		90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */; };
@@ -188,6 +206,14 @@
 		90D7492724820BDF00F574E3 /* WarikanUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D7492624820BDF00F574E3 /* WarikanUserTableViewCell.xib */; };
 		90D74929248225B900F574E3 /* WarikanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D74928248225B900F574E3 /* WarikanHeaderView.swift */; };
 		90D7492B248225C500F574E3 /* WarikanHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D7492A248225C500F574E3 /* WarikanHeaderView.xib */; };
+		90DAFD9F25036F02003C3954 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */; };
+		90DAFDA325048197003C3954 /* SimpleFriendListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */; };
+		90DAFDA425048197003C3954 /* SimpleFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */; };
+		90DAFDA625048330003C3954 /* SimpleFriendListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */; };
+		90DAFDA8250486EA003C3954 /* SimpleFrierndListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */; };
+		90DAFDAA2504875F003C3954 /* SimpleFriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */; };
+		90DAFDAC25048EB7003C3954 /* SelectLinkFriendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */; };
+		90DAFDAE250490A4003C3954 /* SelectLinkFriendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 		90E1E95D2453ECE10068DF64 /* FriendDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E95C2453ECE10068DF64 /* FriendDetailLayout.swift */; };
 		90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E123153DEA0097104C /* SettingMenuInteractor.swift */; };
@@ -207,13 +233,20 @@
 		90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EA361B22ED20B2000EDF8A /* FloatingPanelConfiguration.swift */; };
 		90EC144122DC6460007188F2 /* ModalTextFieldTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */; };
 		90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0E9792451D9210013056B /* FriendDetailContracts.swift */; };
+		90F1496124BE6F8E008B2A14 /* LinkPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */; };
+		90F1496324BE8012008B2A14 /* LinkPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F1496224BE8012008B2A14 /* LinkPopupView.swift */; };
 		90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6B22E88E400029990C /* FriendListContracts.swift */; };
 		90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */; };
 		90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */; };
 		90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */; };
+		90F8840224C97BC30078E639 /* AppRouter+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840124C97BC30078E639 /* AppRouter+URL.swift */; };
+		90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840324C97C620078E639 /* DeeplinkType.swift */; };
+		90F8840924CAC2080078E639 /* CallableFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840824CAC2080078E639 /* CallableFunctions.swift */; };
+		90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */; };
+		90F8840D24CBCE390078E639 /* PrivateUserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */; };
 		90F89CF8248D111C00225CB1 /* WarikanFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */; };
 		90F89CFA248D113000225CB1 /* WarikanFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */; };
-		90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /*  ArrowView.swift */; };
+		90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F89CFB248DB4B600225CB1 /* ArrowView.swift */; };
 		90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */; };
 		90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */; };
 		90FB187922DEE37100092BB3 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FB187822DEE37100092BB3 /* String+extension.swift */; };
@@ -232,6 +265,11 @@
 		90FD9FE2231251AB002D214B /* SettingMenuContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */; };
 		90FD9FE4231255A2002D214B /* SettingMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */; };
 		90FD9FE623126AE5002D214B /* SettingMenuInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FD9FE523126AE5002D214B /* SettingMenuInput.swift */; };
+		90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */; };
+		90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */; };
+		90FF920724CC756800DE5781 /* ConfirmationInviteContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */; };
+		90FF920A24CD0B1C00DE5781 /* ConfirmationInviteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */; };
+		90FF920C24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +309,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				90C5325224C5E03F00E0F126 /* SVProgressHUD.framework in Embed Frameworks */,
+				909D0B6424BCA3F800E55B78 /* SFSafeSymbols.framework in Embed Frameworks */,
 				90E309EF2318A4C20097104C /* SwiftMessages.framework in Embed Frameworks */,
 				58F37599231E234900B82A1C /* IQKeyboardManagerSwift.framework in Embed Frameworks */,
 				9039C3D2231FBE3D009B0A83 /* ViewAnimator.framework in Embed Frameworks */,
@@ -323,6 +363,11 @@
 		901AC76222D9B803002B3C17 /* UnitTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTextField.swift; sourceTree = "<group>"; };
 		901EF37923191176001BA56C /* AddDebtOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDebtOutput.swift; sourceTree = "<group>"; };
 		901EF3842319385B001BA56C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionForInvitation.swift; sourceTree = "<group>"; };
+		901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInvitePresenter.swift; sourceTree = "<group>"; };
+		901FCD8E24CD72C600787533 /* InvitePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvitePopupView.xib; sourceTree = "<group>"; };
+		901FCD9024CD77B800787533 /* InvitePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitePopupView.swift; sourceTree = "<group>"; };
+		901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteViewBuilder.swift; sourceTree = "<group>"; };
 		9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyContracts.swift; sourceTree = "<group>"; };
 		9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyPresenter.swift; sourceTree = "<group>"; };
 		9028AF172449F3E100181D23 /* FriendDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetailViewController.storyboard; sourceTree = "<group>"; };
@@ -357,6 +402,7 @@
 		9042782823052BF3009480CA /* AddUserManuallyInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManuallyInteractorTest.swift; sourceTree = "<group>"; };
 		9044AB0F22ED417B00877E7F /* ModalTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalTextField.xib; sourceTree = "<group>"; };
 		9044AB1122ED427F00877E7F /* ModalTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFiled.swift; sourceTree = "<group>"; };
+		904A178624C1EBA400968B84 /* RxProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxProperties.swift; sourceTree = "<group>"; };
 		904D74C5231B5F610002CDAA /* UserPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPool.swift; sourceTree = "<group>"; };
 		904D74C7231B731A0002CDAA /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		904D74C9231B73310002CDAA /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
@@ -374,6 +420,7 @@
 		905D83192250F46300EB20AC /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		905E4876224B940300BDC321 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		905E4880224C403D00BDC321 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		9064F5D524C3E15D00CAE1F9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		906C18A6247C992500047744 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		906C18A8247D596A00047744 /* WarikanSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanSwitch.swift; sourceTree = "<group>"; };
 		906CA7E7225215580092E796 /* FloatingPanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FloatingPanel.framework; path = Carthage/Build/iOS/FloatingPanel.framework; sourceTree = "<group>"; };
@@ -418,6 +465,8 @@
 		909600752249B295002F1DE6 /* KashikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KashikaUITests.swift; sourceTree = "<group>"; };
 		909600772249B295002F1DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		909BDA6E230ABFC800689573 /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
+		909D0B6124BCA3D300E55B78 /* SFSafeSymbols.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SFSafeSymbols.framework.dSYM; path = Carthage/Build/iOS/SFSafeSymbols.framework.dSYM; sourceTree = "<group>"; };
+		909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFSafeSymbols.framework; path = Carthage/Build/iOS/SFSafeSymbols.framework; sourceTree = "<group>"; };
 		909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		909D6AAC224E0C3000FE7218 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		909D6AAF224E0CC800FE7218 /* RootContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContracts.swift; sourceTree = "<group>"; };
@@ -431,7 +480,6 @@
 		909D6ADC224E48C800FE7218 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		909D6ADF224EF60E00FE7218 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = Carthage/Build/iOS/ESTabBarController.framework; sourceTree = "<group>"; };
 		909E64A92308D18000B0ACCB /* File+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "File+extension.swift"; path = "kashika/Commons/Extensions/File+extension.swift"; sourceTree = SOURCE_ROOT; };
-		909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCellPresenter.swift; sourceTree = "<group>"; };
 		909EF939231A118500DA5F0D /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		909EF93A231A118500DA5F0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		909EF93D231A123B00DA5F0D /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
@@ -442,19 +490,28 @@
 		909EF948231A316D00DA5F0D /* SummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummaryView.xib; sourceTree = "<group>"; };
 		909EF94A231A3B1800DA5F0D /* SummeryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummeryViewCell.swift; sourceTree = "<group>"; };
 		909EF94C231A3B2D00DA5F0D /* SummeryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SummeryViewCell.xib; sourceTree = "<group>"; };
+		909F877524C11E3D0057209C /* TokenGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenGenerator.swift; sourceTree = "<group>"; };
 		909FFDBA230660670017EB56 /* StorageReference+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+extension.swift"; sourceTree = "<group>"; };
 		90A57823230BF55400BBADDA /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		90A57825230C093B00BBADDA /* SNSFooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNSFooterButtons.swift; sourceTree = "<group>"; };
 		90A57827230C0C3A00BBADDA /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		90A57829230C0DD900BBADDA /* SNSFooterButtons.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SNSFooterButtons.xib; sourceTree = "<group>"; };
+		90B7EFFA24BDF72700D95BC9 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		90BAFCB324C3E7B400D6BACD /* URL+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+extension.swift"; sourceTree = "<group>"; };
+		90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicLinkComponents+extension.swift"; sourceTree = "<group>"; };
+		90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteActivityItemSource.swift; sourceTree = "<group>"; };
 		90C16707247A1DC5007C5161 /* HighlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightButton.swift; sourceTree = "<group>"; };
 		90C16709247A1DE6007C5161 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
+		90C5325524C6613100E0F126 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		90C660B322574A2E00AEB6F6 /* EmphasisButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmphasisButton.swift; sourceTree = "<group>"; };
 		90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserManualyViewBuilder.swift; sourceTree = "<group>"; };
 		90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelBuilder.swift; sourceTree = "<group>"; };
 		90D1610822587CED00AF7934 /* SimpleFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendCell.swift; sourceTree = "<group>"; };
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendViewBuilder.swift; sourceTree = "<group>"; };
+		90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendRouter.swift; sourceTree = "<group>"; };
 		90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleColleionViewCell.swift; sourceTree = "<group>"; };
 		90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentScheduleColleionViewCell.xib; sourceTree = "<group>"; };
 		90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtBalanceUseCase.swift; sourceTree = "<group>"; };
@@ -468,6 +525,14 @@
 		90D7492624820BDF00F574E3 /* WarikanUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanUserTableViewCell.xib; sourceTree = "<group>"; };
 		90D74928248225B900F574E3 /* WarikanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanHeaderView.swift; sourceTree = "<group>"; };
 		90D7492A248225C500F574E3 /* WarikanHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanHeaderView.xib; sourceTree = "<group>"; };
+		90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleFriendListViewController.storyboard; sourceTree = "<group>"; };
+		90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendListViewController.swift; sourceTree = "<group>"; };
+		90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendListContracts.swift; sourceTree = "<group>"; };
+		90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFrierndListCell.swift; sourceTree = "<group>"; };
+		90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendListCell.xib; sourceTree = "<group>"; };
+		90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendPresenter.swift; sourceTree = "<group>"; };
+		90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendInteractor.swift; sourceTree = "<group>"; };
 		90E1E95C2453ECE10068DF64 /* FriendDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailLayout.swift; sourceTree = "<group>"; };
 		90E309E123153DEA0097104C /* SettingMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInteractor.swift; sourceTree = "<group>"; };
 		90E309E323153FFA0097104C /* SettingMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuRouter.swift; sourceTree = "<group>"; };
@@ -486,13 +551,22 @@
 		90EA361B22ED20B2000EDF8A /* FloatingPanelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelConfiguration.swift; sourceTree = "<group>"; };
 		90EC144022DC6460007188F2 /* ModalTextFieldTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTextFieldTransition.swift; sourceTree = "<group>"; };
 		90F0E9792451D9210013056B /* FriendDetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailContracts.swift; sourceTree = "<group>"; };
+		90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkPopupView.xib; sourceTree = "<group>"; };
+		90F1496224BE8012008B2A14 /* LinkPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPopupView.swift; sourceTree = "<group>"; };
 		90F4FF6B22E88E400029990C /* FriendListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListContracts.swift; sourceTree = "<group>"; };
 		90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListPresenter.swift; sourceTree = "<group>"; };
 		90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewBuilder.swift; sourceTree = "<group>"; };
 		90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRouter.swift; sourceTree = "<group>"; };
+		90F883FF24C913B20078E639 /* kashikaRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kashikaRelease.entitlements; sourceTree = "<group>"; };
+		90F8840024C9142B0078E639 /* kashika.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kashika.entitlements; sourceTree = "<group>"; };
+		90F8840124C97BC30078E639 /* AppRouter+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppRouter+URL.swift"; sourceTree = "<group>"; };
+		90F8840324C97C620078E639 /* DeeplinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkType.swift; sourceTree = "<group>"; };
+		90F8840824CAC2080078E639 /* CallableFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallableFunctions.swift; sourceTree = "<group>"; };
+		90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchFriendWithToken.swift; sourceTree = "<group>"; };
+		90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformation.swift; sourceTree = "<group>"; };
 		90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanFlowCell.swift; sourceTree = "<group>"; };
 		90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanFlowCell.xib; sourceTree = "<group>"; };
-		90F89CFB248DB4B600225CB1 /*  ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ArrowView.swift"; sourceTree = "<group>"; };
+		90F89CFB248DB4B600225CB1 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 		90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyViewBuilder.swift; sourceTree = "<group>"; };
 		90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMoneyRouter.swift; sourceTree = "<group>"; };
 		90FB187822DEE37100092BB3 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -509,6 +583,11 @@
 		90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuContracts.swift; sourceTree = "<group>"; };
 		90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuPresenter.swift; sourceTree = "<group>"; };
 		90FD9FE523126AE5002D214B /* SettingMenuInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInput.swift; sourceTree = "<group>"; };
+		90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationDataStore.swift; sourceTree = "<group>"; };
+		90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateUserInformationRepository.swift; sourceTree = "<group>"; };
+		90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteContracts.swift; sourceTree = "<group>"; };
+		90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteRouter.swift; sourceTree = "<group>"; };
+		90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInviteInteractor.swift; sourceTree = "<group>"; };
 		9C59E26FBBD5B4F3B355F5B8 /* Pods_kashikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kashikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9ACB78D06B2E025BA02A9E7 /* Pods-kashikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kashikaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kashikaUITests/Pods-kashikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -521,8 +600,10 @@
 				906CA7E8225215580092E796 /* FloatingPanel.framework in Frameworks */,
 				909D6AE0224EF60E00FE7218 /* ESTabBarController.framework in Frameworks */,
 				9039C3D1231FBE3D009B0A83 /* ViewAnimator.framework in Frameworks */,
+				909D0B6324BCA3F800E55B78 /* SFSafeSymbols.framework in Frameworks */,
 				587012692249F819003888E8 /* RxCocoa.framework in Frameworks */,
 				5870126A2249F819003888E8 /* RxSwift.framework in Frameworks */,
+				90C5325124C5E03F00E0F126 /* SVProgressHUD.framework in Frameworks */,
 				9039C3C0231E7D4A009B0A83 /* JTAppleCalendar.framework in Frameworks */,
 				90E309EE2318A4C20097104C /* SwiftMessages.framework in Frameworks */,
 				90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */,
@@ -558,6 +639,9 @@
 		587012662249F818003888E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90C5325024C5E03F00E0F126 /* SVProgressHUD.framework */,
+				909D0B6224BCA3F700E55B78 /* SFSafeSymbols.framework */,
+				909D0B6124BCA3D300E55B78 /* SFSafeSymbols.framework.dSYM */,
 				9039C3D0231FBE3D009B0A83 /* ViewAnimator.framework */,
 				9039C3BF231E7D4A009B0A83 /* JTAppleCalendar.framework */,
 				9039C3BE231E7D34009B0A83 /* JTAppleCalendar.framework.dSYM */,
@@ -594,6 +678,7 @@
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
 				90FB187822DEE37100092BB3 /* String+extension.swift */,
 				90E309E5231606520097104C /* TargetedExtension.swift */,
+				90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */,
 				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
@@ -601,6 +686,8 @@
 				58F3759A231E2CB900B82A1C /* UITextView+extension.swift */,
 				90A57827230C0C3A00BBADDA /* UIView+extension.swift */,
 				905E4880224C403D00BDC321 /* UIViewController+extension.swift */,
+				90BAFCB324C3E7B400D6BACD /* URL+extension.swift */,
+				90BAFCB524C3F93800D6BACD /* DynamicLinkComponents+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -623,6 +710,7 @@
 				5870127E224C644A003888E8 /* User.swift */,
 				903FC2B12489BB0A00FBBC68 /* WarikanUser.swift */,
 				903FC2B32489BC2000FBBC68 /* WarikanDebtFlow.swift */,
+				90F8840C24CBCE390078E639 /* PrivateUserInformation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -633,14 +721,17 @@
 				905C760A2256CFDD0011580B /* AddDebtRouter.swift */,
 				90364D7A22ED8D02000DCFA7 /* AddUserManuallyRouter.swift */,
 				905E4876224B940300BDC321 /* AppRouter.swift */,
+				90F8840124C97BC30078E639 /* AppRouter+URL.swift */,
 				90FB187622DED9CF00092BB3 /* EditMoneyRouter.swift */,
 				907519BB22EF1153006D2894 /* EditUsernameRouter.swift */,
 				907552EE2453F28A00F91459 /* FriendDetailRouter.swift */,
 				90F4FF7122EA7D0D0029990C /* FriendListRouter.swift */,
+				906C18A6247C992500047744 /* HomeRouter.swift */,
 				900C1A0A22E42EEC00576AEC /* RootRouter.swift */,
 				90E309E323153FFA0097104C /* SettingMenuRouter.swift */,
-				906C18A6247C992500047744 /* HomeRouter.swift */,
 				903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */,
+				90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */,
+				90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -714,6 +805,15 @@
 			path = MessageViews;
 			sourceTree = "<group>";
 		};
+		901FCD8D24CD719900787533 /* InvitePopupView */ = {
+			isa = PBXGroup;
+			children = (
+				901FCD8E24CD72C600787533 /* InvitePopupView.xib */,
+				901FCD9024CD77B800787533 /* InvitePopupView.swift */,
+			);
+			path = InvitePopupView;
+			sourceTree = "<group>";
+		};
 		90364D7C22ED9796000DCFA7 /* EditUsername */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +852,15 @@
 			path = Outputs;
 			sourceTree = "<group>";
 		};
+		904A178524C1EB8300968B84 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				904A178624C1EBA400968B84 /* RxProperties.swift */,
+				90C5325524C6613100E0F126 /* Storage.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
 		905C75FC2255F07D0011580B /* AddDebt */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,6 +888,7 @@
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
 				9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */,
+				90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F0E9792451D9210013056B /* FriendDetailContracts.swift */,
@@ -788,6 +898,7 @@
 				90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
 				90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */,
+				90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */,
 				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 				90D749202482041B00F574E3 /* WarikanSettingContracts.swift */,
 			);
@@ -799,12 +910,14 @@
 			children = (
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
 				90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */,
+				901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */,
+				90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */,
 				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 				907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */,
 				90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */,
+				9076C6642451E206005BA3B4 /* FriendDetailViewBuilder.swift */,
 				90F4FF6F22E9CF3F0029990C /* FriendListViewBuilder.swift */,
 				909EF93F231A126200DA5F0D /* HomViewBuilder.swift */,
-				9076C6642451E206005BA3B4 /* FriendDetailViewBuilder.swift */,
 			);
 			path = ViewBuilders;
 			sourceTree = "<group>";
@@ -835,6 +948,7 @@
 		905D83122250CF0900EB20AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9064F5D524C3E15D00CAE1F9 /* Constant.swift */,
 				905D83172250D44300EB20AC /* R.generated.swift */,
 				905D83132250CF1700EB20AC /* Color.swift */,
 			);
@@ -844,6 +958,8 @@
 		905E487F224C400E00BDC321 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				90F8840624CAC1CC0078E639 /* Firebase */,
+				904A178524C1EB8300968B84 /* PropertyWrapper */,
 				908DC4512462685600B82759 /* Services */,
 				90418A4F235F0756003D66CF /* Reactives */,
 				909BDA72230AC26400689573 /* Entities */,
@@ -900,6 +1016,8 @@
 				90D7492A248225C500F574E3 /* WarikanHeaderView.xib */,
 				90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */,
 				90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */,
+				90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */,
+				90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -911,6 +1029,7 @@
 				906FE6AF230644E800EBC043 /* UserRepository.swift */,
 				58C0DB7C23165D990060E882 /* DebtRepository.swift */,
 				907F5248243F5DB700BB0BAC /* FriendRepository.swift */,
+				90FF920424CBDDF100DE5781 /* PrivateUserInformationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -919,6 +1038,7 @@
 			isa = PBXGroup;
 			children = (
 				908DC4522462689800B82759 /* Calculator.swift */,
+				909F877524C11E3D0057209C /* TokenGenerator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -956,6 +1076,8 @@
 		909600542249B295002F1DE6 /* kashika */ = {
 			isa = PBXGroup;
 			children = (
+				90F8840024C9142B0078E639 /* kashika.entitlements */,
+				90F883FF24C913B20078E639 /* kashikaRelease.entitlements */,
 				909600552249B295002F1DE6 /* AppDelegate.swift */,
 				90BBBFF8224CED6F00B50056 /* VIPER */,
 				905E487F224C400E00BDC321 /* Commons */,
@@ -993,6 +1115,8 @@
 				909BDA6E230ABFC800689573 /* Monitor.swift */,
 				90E309F02318C4100097104C /* MessageNotification.swift */,
 				907F524C243FF3E400BB0BAC /* ModelIdentifier.swift */,
+				90BAFCB724C416FE00D6BACD /* InviteActivityItemSource.swift */,
+				90F8840324C97C620078E639 /* DeeplinkType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1011,6 +1135,8 @@
 				900702DB244359C00098647E /* ScheduledInteractor.swift */,
 				90E309E123153DEA0097104C /* SettingMenuInteractor.swift */,
 				903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */,
+				90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */,
+				90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */,
 			);
 			name = Interactors;
 			path = Interactor;
@@ -1073,7 +1199,6 @@
 				9021816B22DDF15400ED6E74 /* EditMoneyPresenter.swift */,
 				907519B922EF1022006D2894 /* EditUsernamePresenter.swift */,
 				9076C6622451E118005BA3B4 /* FriendDetailPresenter.swift */,
-				909E64AB2308D86400B0ACCB /* FriendListCellPresenter.swift */,
 				90F4FF6D22E9CEF90029990C /* FriendListPresenter.swift */,
 				90037D17231B917F00C8C125 /* FriendsGridPresenter.swift */,
 				909EF943231A1AA100DA5F0D /* HomePresenter.swift */,
@@ -1081,6 +1206,8 @@
 				90299FE12325D6E100CBF7BA /* ScheduledPresenter.swift */,
 				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				90D749222482079D00F574E3 /* WarikanSettingPresenter.swift */,
+				901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */,
+				90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1097,6 +1224,7 @@
 				909EF938231A116900DA5F0D /* Home */,
 				909D6ADA224E48BC00FE7218 /* Root */,
 				90FD9FCF23121D30002D214B /* SettingMenu */,
+				90DAFDA025048179003C3954 /* SimpleFriendList */,
 				90D749192481E51700F574E3 /* Warikan */,
 			);
 			path = ViewControllers;
@@ -1122,9 +1250,10 @@
 		909EF945231A312A00DA5F0D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				90F1495E24BE6F4B008B2A14 /* PopupView */,
 				9016FDF62474A9C4003AE8FC /* CalculatorInputView */,
 				9016FDF72474A9E1003AE8FC /* SummaryView */,
-				90F89CFB248DB4B600225CB1 /*  ArrowView.swift */,
+				90F89CFB248DB4B600225CB1 /* ArrowView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -1178,6 +1307,15 @@
 			path = Warikan;
 			sourceTree = "<group>";
 		};
+		90DAFDA025048179003C3954 /* SimpleFriendList */ = {
+			isa = PBXGroup;
+			children = (
+				90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */,
+				90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */,
+			);
+			path = SimpleFriendList;
+			sourceTree = "<group>";
+		};
 		90E3CFD12449F393003269DC /* FriendDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1205,6 +1343,43 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		90F1495E24BE6F4B008B2A14 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				901FCD8D24CD719900787533 /* InvitePopupView */,
+				90F1495F24BE6F56008B2A14 /* LinkPopupView */,
+				90B7EFFA24BDF72700D95BC9 /* PopupView.swift */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
+		90F1495F24BE6F56008B2A14 /* LinkPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				90F1496024BE6F8E008B2A14 /* LinkPopupView.xib */,
+				90F1496224BE8012008B2A14 /* LinkPopupView.swift */,
+			);
+			path = LinkPopupView;
+			sourceTree = "<group>";
+		};
+		90F8840624CAC1CC0078E639 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				90F8840724CAC1F50078E639 /* Functions */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		90F8840724CAC1F50078E639 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				90F8840824CAC2080078E639 /* CallableFunctions.swift */,
+				90F8840A24CACA9A0078E639 /* FetchFriendWithToken.swift */,
+				901FCD8924CD61FB00787533 /* ReactionForInvitation.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		90FD9FC223112647002D214B /* OnMemory */ = {
 			isa = PBXGroup;
 			children = (
@@ -1225,6 +1400,7 @@
 				909D6AB1224E0EAB00FE7218 /* FirebaseAuthStore.swift */,
 				909D6AA6224DEA4C00FE7218 /* UserDataStore.swift */,
 				9093B5D424416CA2003AC383 /* FriendDataStore.swift */,
+				90FF920224CBD57900DE5781 /* PrivateUserInformationDataStore.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1355,13 +1531,16 @@
 			files = (
 				900AD3EE22E08CCA004500BE /* UserIconCollectionViewCell.xib in Resources */,
 				9028AF192449F3E100181D23 /* FriendDetailViewController.storyboard in Resources */,
+				901FCD8F24CD72C600787533 /* InvitePopupView.xib in Resources */,
 				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
 				90FD9FD223121D4E002D214B /* SettingMenuViewController.storyboard in Resources */,
 				907552F82458730A00F91459 /* DebtLogCell.xib in Resources */,
+				90DAFDA325048197003C3954 /* SimpleFriendListViewController.storyboard in Resources */,
 				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
 				90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */,
 				906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */,
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
+				90DAFDAA2504875F003C3954 /* SimpleFriendListCell.xib in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
 				90D7492B248225C500F574E3 /* WarikanHeaderView.xib in Resources */,
 				901EF386231938B5001BA56C /* CardView.xib in Resources */,
@@ -1384,6 +1563,7 @@
 				909EF949231A316D00DA5F0D /* SummaryView.xib in Resources */,
 				9039C3C7231E808F009B0A83 /* CalendarViewCell.xib in Resources */,
 				90D7492724820BDF00F574E3 /* WarikanUserTableViewCell.xib in Resources */,
+				90F1496124BE6F8E008B2A14 /* LinkPopupView.xib in Resources */,
 				909EF93B231A118500DA5F0D /* HomeViewController.storyboard in Resources */,
 				909EF94D231A3B2D00DA5F0D /* SummeryViewCell.xib in Resources */,
 				90FD9FD82312259E002D214B /* TitleHeaderView.xib in Resources */,
@@ -1485,6 +1665,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ViewAnimator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SFSafeSymbols.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			name = "[Run Script] carthage";
 			outputFileListPaths = (
@@ -1599,22 +1781,28 @@
 				9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */,
 				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				90E1E95D2453ECE10068DF64 /* FriendDetailLayout.swift in Sources */,
+				90DAFDAC25048EB7003C3954 /* SelectLinkFriendPresenter.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
+				90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */,
 				906C18A7247C992500047744 /* HomeRouter.swift in Sources */,
 				900702DC244359C00098647E /* ScheduledInteractor.swift in Sources */,
 				90E567DA235ECFA80005B2AF /* DocumentsListener.swift in Sources */,
 				90FB187522DED92F00092BB3 /* EditMoneyViewBuilder.swift in Sources */,
+				901FCD8A24CD61FB00787533 /* ReactionForInvitation.swift in Sources */,
 				90F4FF7222EA7D0D0029990C /* FriendListRouter.swift in Sources */,
 				90037D18231B917F00C8C125 /* FriendsGridPresenter.swift in Sources */,
+				901FCD8C24CD685600787533 /* ConfirmationInvitePresenter.swift in Sources */,
 				907519BC22EF1153006D2894 /* EditUsernameRouter.swift in Sources */,
 				90D7492524820AFA00F574E3 /* WarikanUserTableViewCell.swift in Sources */,
 				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
+				90DAFDA625048330003C3954 /* SimpleFriendListContracts.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
-				90F89CFC248DB4B600225CB1 /*  ArrowView.swift in Sources */,
+				90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */,
 				903C61E723208C6C00965A4D /* CalendarTransition.swift in Sources */,
+				90F1496324BE8012008B2A14 /* LinkPopupView.swift in Sources */,
 				909BDA6F230ABFC800689573 /* Monitor.swift in Sources */,
 				906FE6A523053E1500EBC043 /* FriendTableViewCell.swift in Sources */,
 				9044AB1222ED427F00877E7F /* ModalTextFiled.swift in Sources */,
@@ -1626,6 +1814,9 @@
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */,
+				90DAFDAE250490A4003C3954 /* SelectLinkFriendInteractor.swift in Sources */,
+				90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */,
+				90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
 				58C0DB7D23165D990060E882 /* DebtRepository.swift in Sources */,
 				90C660B422574A2E00AEB6F6 /* EmphasisButton.swift in Sources */,
@@ -1656,6 +1847,7 @@
 				908B5D6C2442F2E300C240E5 /* NSPredicate+extension.swift in Sources */,
 				90364D7922ED88EC000DCFA7 /* AddUserManuallyPresenter.swift in Sources */,
 				90FD9FCB2311321A002D214B /* MemoryPoolContainer.swift in Sources */,
+				909F877624C11E3D0057209C /* TokenGenerator.swift in Sources */,
 				90F4FF7022E9CF3F0029990C /* FriendListViewBuilder.swift in Sources */,
 				906C18A9247D596A00047744 /* WarikanSwitch.swift in Sources */,
 				90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */,
@@ -1663,12 +1855,14 @@
 				58C0DB7F23165F390060E882 /* DebtUseCase.swift in Sources */,
 				907F5249243F5DB700BB0BAC /* FriendRepository.swift in Sources */,
 				908DC4532462689800B82759 /* Calculator.swift in Sources */,
+				90BAFCB424C3E7B400D6BACD /* URL+extension.swift in Sources */,
 				9016FDF92474ACD8003AE8FC /* CalculatorButton.swift in Sources */,
 				905C76072256CCC50011580B /* AddDebtContracts.swift in Sources */,
 				905C76002255F09D0011580B /* AddDebtViewController.swift in Sources */,
 				90D7491B2481E53900F574E3 /* WarikanViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				908825F02365CAB500DD254A /* Date+extension.swift in Sources */,
+				90DAFD9F25036F02003C3954 /* UIApplication+extension.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				90299FE22325D6E100CBF7BA /* ScheduledPresenter.swift in Sources */,
@@ -1684,27 +1878,37 @@
 				906FE6AB23054E6F00EBC043 /* FriendListInteractor.swift in Sources */,
 				90D74929248225B900F574E3 /* WarikanHeaderView.swift in Sources */,
 				9053BAE623028A74002FD563 /* ModalTextFieldContracts.swift in Sources */,
+				90C5325624C6613100E0F126 /* Storage.swift in Sources */,
 				90EA361722ED1ED9000EDF8A /* AddUserManuallyViewController.swift in Sources */,
 				90FD9FE623126AE5002D214B /* SettingMenuInput.swift in Sources */,
 				9042781F2304F037009480CA /* EditUsernameOutput.swift in Sources */,
+				90BAFCB824C416FE00D6BACD /* InviteActivityItemSource.swift in Sources */,
 				907552F6245872E100F91459 /* DebtLogCell.swift in Sources */,
 				905C760B2256CFDD0011580B /* AddDebtRouter.swift in Sources */,
+				904A178724C1EBA400968B84 /* RxProperties.swift in Sources */,
 				90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */,
 				90F0E97A2451D9210013056B /* FriendDetailContracts.swift in Sources */,
 				90C16708247A1DC5007C5161 /* HighlightButton.swift in Sources */,
 				905D83142250CF1700EB20AC /* Color.swift in Sources */,
+				901FCD9324CD7B4800787533 /* ConfirmationInviteViewBuilder.swift in Sources */,
 				907519BA22EF1022006D2894 /* EditUsernamePresenter.swift in Sources */,
 				90FB187722DED9CF00092BB3 /* EditMoneyRouter.swift in Sources */,
+				90FF920524CBDDF100DE5781 /* PrivateUserInformationRepository.swift in Sources */,
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */,
+				90FF920A24CD0B1C00DE5781 /* ConfirmationInviteRouter.swift in Sources */,
+				90DAFDA425048197003C3954 /* SimpleFriendListViewController.swift in Sources */,
+				90FF920724CC756800DE5781 /* ConfirmationInviteContracts.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
 				901AC76322D9B803002B3C17 /* UnitTextField.swift in Sources */,
+				90F8840924CAC2080078E639 /* CallableFunctions.swift in Sources */,
 				905C76032255F20F0011580B /* CloseButton.swift in Sources */,
 				909EF944231A1AA100DA5F0D /* HomePresenter.swift in Sources */,
 				90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */,
 				90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */,
 				904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */,
+				90D4EFA8250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift in Sources */,
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,
@@ -1713,8 +1917,10 @@
 				90E309E8231617350097104C /* Batch+extension.swift in Sources */,
 				905D830D22504CD800EB20AC /* TabbarButton.swift in Sources */,
 				90F4FF6E22E9CEF90029990C /* FriendListPresenter.swift in Sources */,
+				90BAFCB624C3F93800D6BACD /* DynamicLinkComponents+extension.swift in Sources */,
 				90714ADF230C12C400610109 /* SNSFooterContracts.swift in Sources */,
 				90FD9FDE2312315F002D214B /* TableViewCell.swift in Sources */,
+				9064F5D624C3E15D00CAE1F9 /* Constant.swift in Sources */,
 				90A57826230C093B00BBADDA /* SNSFooterButtons.swift in Sources */,
 				9021816C22DDF15400ED6E74 /* EditMoneyPresenter.swift in Sources */,
 				90FD9FD623122588002D214B /* TitleHeaderView.swift in Sources */,
@@ -1725,33 +1931,39 @@
 				907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
+				90DAFDA8250486EA003C3954 /* SimpleFrierndListCell.swift in Sources */,
 				90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
+				90F8840224C97BC30078E639 /* AppRouter+URL.swift in Sources */,
 				907FAD042323CFFD00F15F61 /* Observable+extension.swift in Sources */,
 				58F3759B231E2CB900B82A1C /* UITextView+extension.swift in Sources */,
 				909EF93E231A123B00DA5F0D /* HomeContracts.swift in Sources */,
-				909E64AC2308D86400B0ACCB /* FriendListCellPresenter.swift in Sources */,
 				909FFDBB230660670017EB56 /* StorageReference+extension.swift in Sources */,
 				909EF94B231A3B1800DA5F0D /* SummeryViewCell.swift in Sources */,
 				906FE6A923054CDA00EBC043 /* UITableView+extension.swift in Sources */,
 				901AC76022D9B138002B3C17 /* EditMoneyViewController.swift in Sources */,
 				90E309F12318C4100097104C /* MessageNotification.swift in Sources */,
+				90FF920C24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift in Sources */,
 				90EA361C22ED20B2000EDF8A /* FloatingPanelConfiguration.swift in Sources */,
 				9021816A22DDF01D00ED6E74 /* EditMoneyContracts.swift in Sources */,
 				90FD9FE2231251AB002D214B /* SettingMenuContracts.swift in Sources */,
 				909EF940231A126200DA5F0D /* HomViewBuilder.swift in Sources */,
 				90427821230521A8009480CA /* Friend.swift in Sources */,
 				90FD9FE4231255A2002D214B /* SettingMenuPresenter.swift in Sources */,
+				901FCD9124CD77B800787533 /* InvitePopupView.swift in Sources */,
 				907552EF2453F28A00F91459 /* FriendDetailRouter.swift in Sources */,
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
+				90D4EFAA2510335300BA90D0 /* SelectLinkFriendRouter.swift in Sources */,
 				9076C6632451E118005BA3B4 /* FriendDetailPresenter.swift in Sources */,
 				903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */,
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,
 				90E309E6231606520097104C /* TargetedExtension.swift in Sources */,
 				90D0099E22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift in Sources */,
+				90B7EFFB24BDF72700D95BC9 /* PopupView.swift in Sources */,
 				90D63C38248C98570048C7E6 /* WarikanDebtFlowUseCase.swift in Sources */,
 				90C1670A247A1DE6007C5161 /* DeleteButton.swift in Sources */,
+				90F8840D24CBCE390078E639 /* PrivateUserInformation.swift in Sources */,
 				907552FA2459217300F91459 /* FriendDetailInteractor.swift in Sources */,
 				90FD9FC923112D2C002D214B /* UserRepository.swift in Sources */,
 				90D7491F2481F8E100F574E3 /* WarikanSettingLayout.swift in Sources */,
@@ -1856,7 +2068,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1912,7 +2124,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1928,6 +2140,7 @@
 			baseConfigurationReference = 620489F9EAFC497EB3AA4602 /* Pods-kashika.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kashika/kashika.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				ENABLE_BITCODE = NO;
@@ -1936,6 +2149,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = kashika/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1952,6 +2166,7 @@
 			baseConfigurationReference = 1E3A7394E9A11BA6B520A967 /* Pods-kashika.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kashika/kashikaRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q7G522V8;
 				ENABLE_BITCODE = NO;
@@ -1960,6 +2175,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = kashika/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

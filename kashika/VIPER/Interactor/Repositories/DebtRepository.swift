@@ -14,15 +14,18 @@ struct DebtRepository {
     typealias Request = DebtRequest
 
     private let userRepository = UserRepository()
+    private let prvateUserInformationDataStore = PrivateUserInformationDataStore()
     private let debtDataStore = DebtDataStore()
     private let disposeBag = RxSwift.DisposeBag()
 
     // swiftlint:disable:next function_parameter_count
     func create(owner user: User, money: Int, friends: [Friend], paymentDate: Date?, memo: String?, type: DebtType) -> Single<[Debt]> {
         let documents = friends.map { $0.document() }
-        return Single.zip(user.document(), Single.zip(documents))
-            .flatMap { (user, friendDocuments) -> Single<[Document<Debt>]> in
-                self.debtDataStore.create(owner: user, money: money, friends: friendDocuments, paymentDate: paymentDate, memo: memo, type: type)
+        let privateInfo = user.document().flatMap { self.prvateUserInformationDataStore.fetch(of: $0) }
+
+        return Single.zip(user.document(), privateInfo, Single.zip(documents))
+            .flatMap { (user, privateInfo, friendDocuments) -> Single<[Document<Debt>]> in
+                self.debtDataStore.create(owner: user, privateUserInformation: privateInfo, money: money, friends: friendDocuments, paymentDate: paymentDate, memo: memo, type: type)
         }.map { $0.extractData() }
     }
 

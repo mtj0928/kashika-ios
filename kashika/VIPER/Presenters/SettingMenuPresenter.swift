@@ -15,7 +15,7 @@ class SettingMenuPresenter: SettingMenuPresenterProtocol {
 
     private let rows: [SettingMenuSection: [SettingMenuItem]] = [
         .about: [.about, .inquiry, .copyright],
-        .debug: [.deleteFriends, .signout]
+        .debug: [.deleteFriends, .signout, .resetUserDefaults]
     ]
     private let interactor: SettingMenuInteractorProtocol
     private let router: SettingMenuRouterProtocol
@@ -50,6 +50,8 @@ class SettingMenuPresenter: SettingMenuPresenterProtocol {
         } else if item == .deleteFriends {
             interactor.deleteFriends()
                 .subscribe().disposed(by: disposeBag)
+        } else if item == .resetUserDefaults {
+            interactor.resetUserDefaults()
         }
 
         if section == .about {

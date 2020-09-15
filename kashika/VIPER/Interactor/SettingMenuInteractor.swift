@@ -41,4 +41,10 @@ class SettingMenuInteractor: SettingMenuInteractorProtocol {
             return debtUseCase.delete(debts)
         }
     }
+
+    func resetUserDefaults() {
+        StorageKey.allCases.forEach { key in
+            UserDefaults.standard.set(nil, forKey: key.rawValue)
+        }
+    }
 }

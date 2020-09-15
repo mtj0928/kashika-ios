@@ -13,7 +13,9 @@ class FriendListRouter: FriendListRouterProtocol {
 
     weak var viewController: UIViewController?
 
-    func shoUserDetailView() {
+    func showDetailView(for friend: Friend) {
+        let viewController = FriendDetailViewBuilder.build(friend: friend)
+        self.viewController?.present(viewController, animated: true)
     }
 }
 

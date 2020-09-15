@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SDWebImage
+import SFSafeSymbols
 
 final class FriendTableViewCell: UITableViewCell {
 
@@ -18,9 +19,14 @@ final class FriendTableViewCell: UITableViewCell {
     @IBOutlet private weak var kashiLabel: UILabel!
     @IBOutlet private weak var kariLabel: UILabel!
     @IBOutlet private weak var moneyLabel: UILabel!
-    @IBOutlet private weak var moDebtLabel: UILabel!
+    @IBOutlet private weak var noDebtLabel: UILabel!
+    @IBOutlet private weak var linkButton: UIButton!
 
-    private var disposeBag = DisposeBag()
+    var tappedLinkButton: ControlEvent<Void> {
+        linkButton.rx.tap
+    }
+
+    private(set) var disposeBag = DisposeBag()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,12 +40,35 @@ final class FriendTableViewCell: UITableViewCell {
         disposeBag = DisposeBag()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        updateLayout()
+    }
+
+    func set(_ friend: Friend) {
+        updateLayout()
+
+        nameLabel.text = friend.name
+        iconView.sd_setImage(with: friend.iconFile?.url)
+        let debt = Int(friend.totalDebt.rawValue)
+        moneyLabel.text = (String.convertWithComma(from: abs(debt)) ?? "0") + "円"
+
+        let debtType = DebtType.make(money: debt)
+
+        kashiLabel.isHidden = debtType != .kashi
+        kariLabel.isHidden = debtType != .kari
+        moneyLabel.isHidden = debtType == .none
+        noDebtLabel.isHidden = debtType != .none
+
+        linkButton.setImage(friend.isLinked ? UIImage(systemSymbol: .linkCircleFill) : UIImage(systemSymbol: .linkCircle), for: .normal)
+        linkButton.tintColor = friend.isLinked ? UIColor.app.green : UIColor.systemGray3
+    }
+
     private func setup() {
         iconView.layer.masksToBounds = true
 
-        if #available(iOS 13.0, *) {
-            moDebtLabel.textColor = UIColor.placeholderText
-        }
+        noDebtLabel.textColor = UIColor.placeholderText
 
         kariLabel.backgroundColor = UIColor.app.negativeColor
         kashiLabel.backgroundColor = UIColor.app.positiveColor
@@ -48,41 +77,22 @@ final class FriendTableViewCell: UITableViewCell {
             label?.textColor = UIColor.white
             label?.layer.masksToBounds = true
         }
+
+        setupLinkButton()
         updateLayout()
     }
 
-    func set(presenter: FriendListCellPresenterProtocol) {
-        updateLayout()
-
-        presenter.name.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] name in
-            self?.nameLabel.text = name
-        }).disposed(by: disposeBag)
-
-        Observable.combineLatest(presenter.iconURL, presenter.plaveHolderImage).asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] (url, placeHolderImage) in
-            self?.iconView?.sd_setImage(with: url, placeholderImage: placeHolderImage)
-        }).disposed(by: disposeBag)
-
-        presenter.debt.map { abs($0) }.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] debt in
-            self?.moneyLabel.text = (String.convertWithComma(from: debt) ?? "0") + "円"
-        }).disposed(by: disposeBag)
-
-        presenter.isKashi.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] isKashi in
-            self?.kashiLabel.isHidden = !isKashi
-        }).disposed(by: disposeBag)
-
-        presenter.isKari.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] isKari in
-            self?.kariLabel.isHidden = !isKari
-        }).disposed(by: disposeBag)
-
-        presenter.hasNoDebt.asDriver(onErrorDriveWith: Driver.empty()).drive(onNext: { [weak self] noDebt in
-            self?.moneyLabel.isHidden = noDebt
-            self?.moDebtLabel.isHidden = !noDebt
-        }).disposed(by: disposeBag)
+    private func setupLinkButton() {
+        linkButton.layer.masksToBounds = true
+        linkButton.layer.cornerRadius = 6.0
+        linkButton.imageView?.contentMode = .scaleAspectFit
     }
 
     private func updateLayout() {
         kashiLabel.layer.cornerRadius = kashiLabel.frame.height / 2
         kariLabel.layer.cornerRadius = kariLabel.frame.height / 2
         iconView.layer.cornerRadius = iconView.frame.height / 2
+
+        layoutIfNeeded()
     }
 }

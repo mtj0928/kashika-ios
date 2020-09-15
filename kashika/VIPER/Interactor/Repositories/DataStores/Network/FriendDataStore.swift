@@ -80,6 +80,7 @@ struct FriendRequest: Request {
     typealias Model = Friend
 
     let user: User
+    var isLinked: Bool?
     var debtType: DebtType?
     var orders: [Order] = []
     var limit: Int?
@@ -95,6 +96,10 @@ struct FriendRequest: Request {
 
         orders.forEach { order in
             query = query.order(by: order.key, descending: order.descending)
+        }
+
+        if let isLinked = isLinked {
+            query = query.where("isLinked", isEqualTo: isLinked)
         }
 
         if let limit = limit {

@@ -100,6 +100,7 @@ public extension UIColor {
         private(set) lazy var floatingPanelBackgroundColor = UIColor.app.systemBackground
         let themaColor = UIColor(hex: "00528E")
         let white = UIColor.white
+        let green = UIColor(hex: "149852")
         let positiveColor = UIColor(hex: "027AFF")
         let nonActiveWarikanSwitchColor = UIColor.create(light: UIColor(hex: "F4F4F4"), dark: UIColor(hex: "313131"))
         var activeWarikanSwitchColor: UIColor {

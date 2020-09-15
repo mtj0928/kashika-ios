@@ -12,7 +12,13 @@ import ESTabBarController
 
 struct AppRouter {
 
-    func createRootViewController() -> UIViewController {
+    let window: UIWindow
+
+    init(window: UIWindow) {
+        self.window = window
+    }
+
+    mutating func presentRootViewController() {
         let interactor = RootInteractor()
         let router = RootRouter()
         let presenter = RootPresenter(interactor: interactor, router: router)
@@ -30,7 +36,8 @@ struct AppRouter {
         let button = TabbarButton()
         viewControllers[2].tabBarItem = ESTabBarItem(button, title: nil, image: R.image.plusWhite())
         viewController.setViewControllers(viewControllers, animated: true)
-        return viewController
+
+        window.rootViewController = viewController
     }
 
     private func createHomeViewController(tag: Int) -> UIViewController {

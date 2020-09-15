@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias NumericExpressionToken = String
+
 struct Calculator {
 
     static let operations = [
@@ -17,11 +19,11 @@ struct Calculator {
         TermOperation.multiple.rawValue
     ]
     
-    func performLexicalAnalysis(_ string: String) -> [Token] {
+    func performLexicalAnalysis(_ string: String) -> [NumericExpressionToken] {
         Lexer.analyse(for: string)
     }
 
-    func calculate(_ tokens: [Token]) throws -> NSDecimalNumber {
+    func calculate(_ tokens: [NumericExpressionToken]) throws -> NSDecimalNumber {
         let expresion = try Expression.parse(tokens)
         return try expresion.calculate()
     }
@@ -100,7 +102,7 @@ struct Expression {
         return results
     }
 
-    static func parse(_ tokens: [Token]) throws -> Expression {
+    static func parse(_ tokens: [NumericExpressionToken]) throws -> Expression {
         if tokens.contains("") {
             throw CalculatorError.consecutiveOperators
         }
@@ -108,7 +110,7 @@ struct Expression {
         var expression: Expression?
 
         var operation: ExpressionOperation?
-        var tokensForTerm: [Token] = []
+        var tokensForTerm: [NumericExpressionToken] = []
 
         for token in tokens {
             if let tmpOperation = ExpressionOperation(rawValue: token) {
@@ -163,11 +165,11 @@ struct Term {
         return results
     }
 
-    static func parse(_ tokens: [Token]) throws -> Term {
+    static func parse(_ tokens: [NumericExpressionToken]) throws -> Term {
         var term: Term?
 
         var operation: TermOperation?
-        var tokensForFactor: [Token] = []
+        var tokensForFactor: [NumericExpressionToken] = []
 
         for token in tokens {
             if let tmpOperation = TermOperation(rawValue: token) {
@@ -196,7 +198,7 @@ struct Term {
 struct Factor {
     let value: NSDecimalNumber
 
-    static func parse(_ tokens: [Token]) throws -> Factor {
+    static func parse(_ tokens: [NumericExpressionToken]) throws -> Factor {
         guard !tokens.isEmpty else {
             throw CalculatorError.insufficientError
         }
@@ -214,10 +216,8 @@ struct Factor {
     }
 }
 
-typealias Token = String
-
 struct Lexer {
-    static func analyse(for string: String) -> [Token] {
+    static func analyse(for string: String) -> [NumericExpressionToken] {
         var results: [String] = []
         var string = string
 

@@ -16,6 +16,7 @@ final class FriendListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var footerButtons: SNSFooterButtons!
     @IBOutlet private weak var bottomConstaraintOfFooter: NSLayoutConstraint!
+    private let popupView = PopupView()
 
     private var presenter: FriendListPresenterProtocol!
     private var footerPresenter: SNSFooterPresenterProtocol!
@@ -27,6 +28,8 @@ final class FriendListViewController: UIViewController {
         setupFooter()
         setupNavigationBar()
         setupTableView()
+        setupPopup()
+        subscribePresenter()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +76,61 @@ extension FriendListViewController {
             self?.tableView.reloadData()
         }).disposed(by: disposeBag)
     }
+
+    private func setupPopup() {
+        tabBarController?.view.addSubview(popupView)
+        popupView.fillSuperview()
+
+        let contenView = LinkPopupView()
+        let width = view.frame.width * 0.8
+        contenView.backgroundColor = UIColor.app.cardViewBackgroundColor
+
+        contenView.tappedCloseButton.asDriver().drive(onNext: { [weak self] _ in
+            TapticEngine.impact.feedback(.light)
+            self?.popupView.dismiss()
+            guard let friend = contenView.friend else {
+                return
+            }
+            self?.presenter.shouldShowPopup = !contenView.isSelectedUnshown
+            self?.presenter.tappedLinkButton(friend: friend)
+        }).disposed(by: disposeBag)
+
+        popupView.contentSize = CGSize(width: width, height: 1.2 * width)
+        popupView.contentView = contenView
+        popupView.isHidden = true
+    }
+
+    private func subscribePresenter() {
+        presenter.action.drive(onNext: { [weak self] action in
+            switch action {
+            case .showInvitationPopup(let itemSource):
+                self?.showShareView(with: itemSource)
+            case .showAlreadyRegisteredPopup:
+                let alertController = UIAlertController(title: nil, message: "すでにリンク済みです", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(alertController, animated: true, completion: nil)
+            }
+        }).disposed(by: disposeBag)
+    }
+}
+
+// MARK: - View
+
+extension FriendListViewController {
+
+    private func showPopupView(friend: Friend) {
+        if presenter.shouldShowPopup {
+            (popupView.contentView as? LinkPopupView)?.set(friend)
+            popupView.presentation()
+        } else {
+            presenter.tappedLinkButton(friend: friend)
+        }
+    }
+
+    private func showShareView(with item: InviteActivityItemSource) {
+        let activityViewController = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+        present(activityViewController, animated: true)
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -86,7 +144,11 @@ extension FriendListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellAndWrap(withReuseIdentifier: R.reuseIdentifier.friendTableViewCell, for: indexPath)
         let friend = presenter.friends.value[indexPath.row]
-        cell.set(presenter: FriendListCellPresenter(friend))
+        cell.set(friend)
+        cell.tappedLinkButton.asDriver().drive(onNext: { [weak self] _ in
+            TapticEngine.impact.feedback(.light)
+            self?.showPopupView(friend: friend)
+        }).disposed(by: cell.disposeBag)
         return cell
     }
 }
@@ -96,13 +158,11 @@ extension FriendListViewController: UITableViewDataSource {
 extension FriendListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        TapticEngine.impact.feedback(.light)
+
         let friend = presenter.friends.value[indexPath.row]
         presenter.tapped(friend: friend)
 
-        TapticEngine.impact.feedback(.light)
-        let viewController = FriendDetailViewBuilder.build(friend: friend)
-        self.present(viewController, animated: true)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

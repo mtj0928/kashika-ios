@@ -16,10 +16,11 @@ extension Document {
 
     func listen() -> Observable<Document<Model>> {
         return Observable<Document<Model>>.create { [weak self] event in
-            guard let id = self?.id else {
+            guard let reference = self?.documentReference else {
                 return Disposables.create()
             }
-            let disposer = Document<Model>.listen(id: id) { (document, error) in
+
+            let disposer = Document<Model>.listen(documentReference: reference) { (document, error) in
                 if let error = error {
                     event.on(.error(error))
                 }

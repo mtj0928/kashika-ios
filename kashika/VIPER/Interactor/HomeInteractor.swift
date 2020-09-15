@@ -11,6 +11,7 @@ import RxCocoa
 
 class HomeInteractor: HomeInteractorProtocol {
     let user: BehaviorRelay<User?>
+    let privateUserInformation: BehaviorRelay<PrivateUserInformation?>
     let scheduledDebts: BehaviorRelay<[Debt]>
     let kashiFriend: BehaviorRelay<[Friend]>
     let kariFriend: BehaviorRelay<[Friend]>
@@ -24,6 +25,11 @@ class HomeInteractor: HomeInteractorProtocol {
         user = BehaviorRelay.create(observable: userUseCase.listen().map { $0 },
                                     initialValue: nil,
                                     disposeBag: disposeBag)
+
+        privateUserInformation = BehaviorRelay.create(observable: userUseCase.listenPrivate().map { $0 },
+                                                      initialValue: nil,
+                                                      disposeBag: disposeBag)
+
         kariFriend = BehaviorRelay.create(observable: friendUseCase.listen({ FriendRequest(user: $0, debtType: .kari) }),
                                           initialValue: [],
                                           disposeBag: disposeBag)

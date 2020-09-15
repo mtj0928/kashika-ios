@@ -8,6 +8,8 @@
 
 import RxSwift
 import RxCocoa
+import SVProgressHUD
+import TapticEngine
 
 class FriendListPresenter: FriendListPresenterProtocol {
 
@@ -16,6 +18,9 @@ class FriendListPresenter: FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }
+
+    @RxDriver var action: Driver<FriendListViewAction>
+    @Storage(.popupLink, defaultValue: true) var shouldShowPopup: Bool
 
     private let isSendingDataSubject = PublishSubject<Bool>()
     private let progressSubject = PublishSubject<Progress?>()
@@ -30,6 +35,25 @@ class FriendListPresenter: FriendListPresenterProtocol {
     }
 
     func tapped(friend: Friend) {
+        router.showDetailView(for: friend)
+    }
+
+    func tappedLinkButton(friend: Friend) {
+        guard !friend.isLinked else {
+            _action.onNext(.showAlreadyRegisteredPopup)
+            return
+        }
+        SVProgressHUD.show(withStatus: "リンクを生成中")
+        interactor.createShardURL(for: friend)
+            .map { InviteActivityItemSource(friend, $0) }
+            .subscribe(onSuccess: { [weak self] itemSource in
+                SVProgressHUD.dismiss()
+                TapticEngine.impact.feedback(.light)
+                self?._action.onNext(.showInvitationPopup(itemSource: itemSource))
+                }, onError: { _ in
+                    TapticEngine.impact.feedback(.light)
+                    SVProgressHUD.dismiss()
+            }).disposed(by: disposeBag)
     }
 }
 

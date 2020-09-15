@@ -46,7 +46,7 @@ extension SettingMenuViewController {
         tableView.register(R.nib.tableViewCell)
 
         tableView.tableFooterView = UIView()
-        tableView.backgroundColor = UIColor.groupTableViewBackground
+        tableView.backgroundColor = UIColor.systemGroupedBackground
     }
 }
 

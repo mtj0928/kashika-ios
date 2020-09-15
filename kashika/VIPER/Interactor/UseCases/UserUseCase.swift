@@ -11,6 +11,7 @@ import RxSwift
 struct UserUseCase {
 
     private let userRepository = UserRepository()
+    private let privateRepository = PrivateUserInformationRepository()
     private let firebaseAuthStore = FirebaseAuthStore()
     private let disposeBag = DisposeBag()
 
@@ -23,18 +24,24 @@ struct UserUseCase {
     }
 
     func listen() -> Observable<User> {
-        return fetchOrCreateUser()
+        fetchOrCreateUser()
             .asObservable()
             .flatMap { self.userRepository.listen(user: $0) }
     }
 
+    func listenPrivate() -> Observable<PrivateUserInformation> {
+        fetchOrCreateUser()
+            .asObservable()
+            .flatMap { self.privateRepository.listen(of: $0) }
+    }
+
     func reset() -> Completable {
-        return fetchOrCreateUser().flatMapCompletable { user in
-            return self.userRepository.reset(user: user)
+        fetchOrCreateUser().flatMapCompletable { user in
+            self.privateRepository.reset(of: user)
         }
     }
 
     func signout() -> Completable {
-        return userRepository.signout()
+        userRepository.signout()
     }
 }
