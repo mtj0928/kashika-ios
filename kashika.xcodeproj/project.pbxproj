@@ -191,6 +191,8 @@
 		90D1610922587CED00AF7934 /* SimpleFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610822587CED00AF7934 /* SimpleFriendCell.swift */; };
 		90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */; };
 		90D1610D2258919600AF7934 /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D1610C2258919600AF7934 /* UICollectionView+extension.swift */; };
+		90D4EFA8250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */; };
+		90D4EFAA2510335300BA90D0 /* SelectLinkFriendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */; };
 		90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */; };
 		90D60B2B23250ECB00717837 /* PaymentScheduleColleionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */; };
 		90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */; };
@@ -204,6 +206,14 @@
 		90D7492724820BDF00F574E3 /* WarikanUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D7492624820BDF00F574E3 /* WarikanUserTableViewCell.xib */; };
 		90D74929248225B900F574E3 /* WarikanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D74928248225B900F574E3 /* WarikanHeaderView.swift */; };
 		90D7492B248225C500F574E3 /* WarikanHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D7492A248225C500F574E3 /* WarikanHeaderView.xib */; };
+		90DAFD9F25036F02003C3954 /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */; };
+		90DAFDA325048197003C3954 /* SimpleFriendListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */; };
+		90DAFDA425048197003C3954 /* SimpleFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */; };
+		90DAFDA625048330003C3954 /* SimpleFriendListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */; };
+		90DAFDA8250486EA003C3954 /* SimpleFrierndListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */; };
+		90DAFDAA2504875F003C3954 /* SimpleFriendListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */; };
+		90DAFDAC25048EB7003C3954 /* SelectLinkFriendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */; };
+		90DAFDAE250490A4003C3954 /* SelectLinkFriendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */; };
 		90DDEE184D130EE7563FB8FC /* Pods_kashika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC5B0C1ABCC501AD4EF5950 /* Pods_kashika.framework */; };
 		90E1E95D2453ECE10068DF64 /* FriendDetailLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E95C2453ECE10068DF64 /* FriendDetailLayout.swift */; };
 		90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E309E123153DEA0097104C /* SettingMenuInteractor.swift */; };
@@ -500,6 +510,8 @@
 		90D1610822587CED00AF7934 /* SimpleFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendCell.swift; sourceTree = "<group>"; };
 		90D1610A22587D1D00AF7934 /* SimpleFriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendCell.xib; sourceTree = "<group>"; };
 		90D1610C2258919600AF7934 /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendViewBuilder.swift; sourceTree = "<group>"; };
+		90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendRouter.swift; sourceTree = "<group>"; };
 		90D60B2823250EA600717837 /* PaymentScheduleColleionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleColleionViewCell.swift; sourceTree = "<group>"; };
 		90D60B2A23250ECB00717837 /* PaymentScheduleColleionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentScheduleColleionViewCell.xib; sourceTree = "<group>"; };
 		90D63C35248C95130048C7E6 /* DebtBalanceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtBalanceUseCase.swift; sourceTree = "<group>"; };
@@ -513,6 +525,14 @@
 		90D7492624820BDF00F574E3 /* WarikanUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanUserTableViewCell.xib; sourceTree = "<group>"; };
 		90D74928248225B900F574E3 /* WarikanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarikanHeaderView.swift; sourceTree = "<group>"; };
 		90D7492A248225C500F574E3 /* WarikanHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarikanHeaderView.xib; sourceTree = "<group>"; };
+		90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleFriendListViewController.storyboard; sourceTree = "<group>"; };
+		90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendListViewController.swift; sourceTree = "<group>"; };
+		90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFriendListContracts.swift; sourceTree = "<group>"; };
+		90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFrierndListCell.swift; sourceTree = "<group>"; };
+		90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleFriendListCell.xib; sourceTree = "<group>"; };
+		90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendPresenter.swift; sourceTree = "<group>"; };
+		90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLinkFriendInteractor.swift; sourceTree = "<group>"; };
 		90E1E95C2453ECE10068DF64 /* FriendDetailLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailLayout.swift; sourceTree = "<group>"; };
 		90E309E123153DEA0097104C /* SettingMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuInteractor.swift; sourceTree = "<group>"; };
 		90E309E323153FFA0097104C /* SettingMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuRouter.swift; sourceTree = "<group>"; };
@@ -658,6 +678,7 @@
 				909FFDBA230660670017EB56 /* StorageReference+extension.swift */,
 				90FB187822DEE37100092BB3 /* String+extension.swift */,
 				90E309E5231606520097104C /* TargetedExtension.swift */,
+				90DAFD9E25036F02003C3954 /* UIApplication+extension.swift */,
 				90D1610C2258919600AF7934 /* UICollectionView+extension.swift */,
 				905D83192250F46300EB20AC /* UIColor+extension.swift */,
 				90A57823230BF55400BBADDA /* UIImage+extension.swift */,
@@ -710,6 +731,7 @@
 				90E309E323153FFA0097104C /* SettingMenuRouter.swift */,
 				903FC2AD2485CDA100FBBC68 /* WarikanRouter.swift */,
 				90FF920924CD0B1C00DE5781 /* ConfirmationInviteRouter.swift */,
+				90D4EFA92510335300BA90D0 /* SelectLinkFriendRouter.swift */,
 			);
 			path = Routers;
 			sourceTree = "<group>";
@@ -866,6 +888,7 @@
 				905C76062256CCC50011580B /* AddDebtContracts.swift */,
 				90364D7622ED8736000DCFA7 /* AddUserManuallyContracts.swift */,
 				9039C3CC231FA14E009B0A83 /* BuilderOutput.swift */,
+				90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */,
 				9021816922DDF01D00ED6E74 /* EditMoneyContracts.swift */,
 				90364D8122EE5D33000DCFA7 /* EditUsernameContracts.swift */,
 				90F0E9792451D9210013056B /* FriendDetailContracts.swift */,
@@ -875,9 +898,9 @@
 				90E6F2EF2304E3340009430D /* PhotoLibraryPickerContracts.swift */,
 				909D6AAF224E0CC800FE7218 /* RootContracts.swift */,
 				90FD9FE1231251AB002D214B /* SettingMenuContracts.swift */,
+				90DAFDA525048330003C3954 /* SimpleFriendListContracts.swift */,
 				90714ADE230C12C400610109 /* SNSFooterContracts.swift */,
 				90D749202482041B00F574E3 /* WarikanSettingContracts.swift */,
-				90FF920624CC756800DE5781 /* ConfirmationInviteContracts.swift */,
 			);
 			path = Contracts;
 			sourceTree = "<group>";
@@ -888,6 +911,7 @@
 				905C760E2256D0B30011580B /* AddDebtViewBuilder.swift */,
 				90D0099D22ED28F800DCDEB6 /* AddUserManualyViewBuilder.swift */,
 				901FCD9224CD7B4800787533 /* ConfirmationInviteViewBuilder.swift */,
+				90D4EFA7250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift */,
 				90FB187422DED92F00092BB3 /* EditMoneyViewBuilder.swift */,
 				907519BD22EF11BA006D2894 /* EditUsernameViewBuilder.swift */,
 				90D0099F22ED29A700DCDEB6 /* FloatingPanelBuilder.swift */,
@@ -992,6 +1016,8 @@
 				90D7492A248225C500F574E3 /* WarikanHeaderView.xib */,
 				90F89CF7248D111C00225CB1 /* WarikanFlowCell.swift */,
 				90F89CF9248D113000225CB1 /* WarikanFlowCell.xib */,
+				90DAFDA7250486EA003C3954 /* SimpleFrierndListCell.swift */,
+				90DAFDA92504875F003C3954 /* SimpleFriendListCell.xib */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1110,6 +1136,7 @@
 				90E309E123153DEA0097104C /* SettingMenuInteractor.swift */,
 				903FC2AF2485D50A00FBBC68 /* WarikanInteractor.swift */,
 				90FF920B24CD0BE900DE5781 /* ConfirmationInviteInteractor.swift */,
+				90DAFDAD250490A4003C3954 /* SelectLinkFriendInteractor.swift */,
 			);
 			name = Interactors;
 			path = Interactor;
@@ -1180,6 +1207,7 @@
 				90FD9FE3231255A2002D214B /* SettingMenuPresenter.swift */,
 				90D749222482079D00F574E3 /* WarikanSettingPresenter.swift */,
 				901FCD8B24CD685600787533 /* ConfirmationInvitePresenter.swift */,
+				90DAFDAB25048EB7003C3954 /* SelectLinkFriendPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1196,6 +1224,7 @@
 				909EF938231A116900DA5F0D /* Home */,
 				909D6ADA224E48BC00FE7218 /* Root */,
 				90FD9FCF23121D30002D214B /* SettingMenu */,
+				90DAFDA025048179003C3954 /* SimpleFriendList */,
 				90D749192481E51700F574E3 /* Warikan */,
 			);
 			path = ViewControllers;
@@ -1276,6 +1305,15 @@
 				90D7491C2481E57000F574E3 /* WarikanViewController.storyboard */,
 			);
 			path = Warikan;
+			sourceTree = "<group>";
+		};
+		90DAFDA025048179003C3954 /* SimpleFriendList */ = {
+			isa = PBXGroup;
+			children = (
+				90DAFDA125048197003C3954 /* SimpleFriendListViewController.storyboard */,
+				90DAFDA225048197003C3954 /* SimpleFriendListViewController.swift */,
+			);
+			path = SimpleFriendList;
 			sourceTree = "<group>";
 		};
 		90E3CFD12449F393003269DC /* FriendDetail */ = {
@@ -1497,10 +1535,12 @@
 				90D1610B22587D1D00AF7934 /* SimpleFriendCell.xib in Resources */,
 				90FD9FD223121D4E002D214B /* SettingMenuViewController.storyboard in Resources */,
 				907552F82458730A00F91459 /* DebtLogCell.xib in Resources */,
+				90DAFDA325048197003C3954 /* SimpleFriendListViewController.storyboard in Resources */,
 				905C75FF2255F09D0011580B /* AddDebtViewController.storyboard in Resources */,
 				90A5782A230C0DD900BBADDA /* SNSFooterButtons.xib in Resources */,
 				906FE6A723053E5100EBC043 /* FriendTableViewCell.xib in Resources */,
 				901AC75F22D9B138002B3C17 /* EditMoneyViewController.storyboard in Resources */,
+				90DAFDAA2504875F003C3954 /* SimpleFriendListCell.xib in Resources */,
 				9044AB1022ED417B00877E7F /* ModalTextField.xib in Resources */,
 				90D7492B248225C500F574E3 /* WarikanHeaderView.xib in Resources */,
 				901EF386231938B5001BA56C /* CardView.xib in Resources */,
@@ -1653,7 +1693,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		905D830E2250562700EB20AC /* [Run Script] R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1741,6 +1781,7 @@
 				9039C3C5231E8050009B0A83 /* CalendarViewCell.swift in Sources */,
 				9042782723052B10009480CA /* AddUserManuallyInteractor.swift in Sources */,
 				90E1E95D2453ECE10068DF64 /* FriendDetailLayout.swift in Sources */,
+				90DAFDAC25048EB7003C3954 /* SelectLinkFriendPresenter.swift in Sources */,
 				900AD3EC22E08CA2004500BE /* UserIconCollectionViewCell.swift in Sources */,
 				90FF920324CBD57900DE5781 /* PrivateUserInformationDataStore.swift in Sources */,
 				906C18A7247C992500047744 /* HomeRouter.swift in Sources */,
@@ -1756,6 +1797,7 @@
 				904D74C6231B5F610002CDAA /* UserPool.swift in Sources */,
 				909D6AA7224DEA4C00FE7218 /* UserDataStore.swift in Sources */,
 				901EF37C2319123A001BA56C /* AddDebtOutput.swift in Sources */,
+				90DAFDA625048330003C3954 /* SimpleFriendListContracts.swift in Sources */,
 				90037D1B231B9DAA00C8C125 /* HomeTitleHeader.swift in Sources */,
 				905E4881224C403D00BDC321 /* UIViewController+extension.swift in Sources */,
 				90F89CFC248DB4B600225CB1 /* ArrowView.swift in Sources */,
@@ -1772,6 +1814,7 @@
 				90F4FF6C22E88E400029990C /* FriendListContracts.swift in Sources */,
 				907519BE22EF11BA006D2894 /* EditUsernameViewBuilder.swift in Sources */,
 				90418A51235F0760003D66CF /* ListenerDisposer.swift in Sources */,
+				90DAFDAE250490A4003C3954 /* SelectLinkFriendInteractor.swift in Sources */,
 				90F8840424C97C620078E639 /* DeeplinkType.swift in Sources */,
 				90F8840B24CACA9A0078E639 /* FetchFriendWithToken.swift in Sources */,
 				90FD9FCE23114592002D214B /* AddDebtInteractor.swift in Sources */,
@@ -1819,6 +1862,7 @@
 				90D7491B2481E53900F574E3 /* WarikanViewController.swift in Sources */,
 				905D831A2250F46300EB20AC /* UIColor+extension.swift in Sources */,
 				908825F02365CAB500DD254A /* Date+extension.swift in Sources */,
+				90DAFD9F25036F02003C3954 /* UIApplication+extension.swift in Sources */,
 				900C1A0B22E42EEC00576AEC /* RootRouter.swift in Sources */,
 				906CA7EC2252D0C60092E796 /* EditDebtLayout.swift in Sources */,
 				90299FE22325D6E100CBF7BA /* ScheduledPresenter.swift in Sources */,
@@ -1853,6 +1897,7 @@
 				909EF942231A18B400DA5F0D /* HomeInteractor.swift in Sources */,
 				903FC2B22489BB0A00FBBC68 /* WarikanUser.swift in Sources */,
 				90FF920A24CD0B1C00DE5781 /* ConfirmationInviteRouter.swift in Sources */,
+				90DAFDA425048197003C3954 /* SimpleFriendListViewController.swift in Sources */,
 				90FF920724CC756800DE5781 /* ConfirmationInviteContracts.swift in Sources */,
 				909D6AD7224E465400FE7218 /* RootPresenter.swift in Sources */,
 				90D60B2923250EA600717837 /* PaymentScheduleColleionViewCell.swift in Sources */,
@@ -1863,6 +1908,7 @@
 				90364D7722ED8736000DCFA7 /* AddUserManuallyContracts.swift in Sources */,
 				90364D8022ED97D6000DCFA7 /* EditUsernameViewController.swift in Sources */,
 				904D74C8231B731A0002CDAA /* FriendsTableViewCell.swift in Sources */,
+				90D4EFA8250E643F00BA90D0 /* SelectLinkFriendViewBuilder.swift in Sources */,
 				90E6F2F02304E3340009430D /* PhotoLibraryPickerContracts.swift in Sources */,
 				909D6AB7224E1E3100FE7218 /* UserUseCase.swift in Sources */,
 				906FE6AD230643FA00EBC043 /* FriendUseCase.swift in Sources */,
@@ -1885,6 +1931,7 @@
 				907FAD062325064900F15F61 /* ScheduledsTableViewCell.swift in Sources */,
 				905C76092256CE6C0011580B /* AddDebtPresenter.swift in Sources */,
 				90E309E223153DEA0097104C /* SettingMenuInteractor.swift in Sources */,
+				90DAFDA8250486EA003C3954 /* SimpleFrierndListCell.swift in Sources */,
 				90D63C36248C95130048C7E6 /* DebtBalanceUseCase.swift in Sources */,
 				90A57824230BF55400BBADDA /* UIImage+extension.swift in Sources */,
 				90F8840224C97BC30078E639 /* AppRouter+URL.swift in Sources */,
@@ -1907,6 +1954,7 @@
 				907552EF2453F28A00F91459 /* FriendDetailRouter.swift in Sources */,
 				90364D7B22ED8D02000DCFA7 /* AddUserManuallyRouter.swift in Sources */,
 				909D6AB2224E0EAB00FE7218 /* FirebaseAuthStore.swift in Sources */,
+				90D4EFAA2510335300BA90D0 /* SelectLinkFriendRouter.swift in Sources */,
 				9076C6632451E118005BA3B4 /* FriendDetailPresenter.swift in Sources */,
 				903FC2AE2485CDA100FBBC68 /* WarikanRouter.swift in Sources */,
 				90E309E423153FFA0097104C /* SettingMenuRouter.swift in Sources */,

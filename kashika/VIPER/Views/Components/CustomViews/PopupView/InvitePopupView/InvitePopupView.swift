@@ -57,6 +57,10 @@ class InvitePopupView: UIView {
     @IBAction private func tappedAcceptButton() {
         presenter.tappedAccept()
     }
+
+    @IBAction func tappedLinkExistFriendButton(_ sender: Any) {
+        presenter.tappedLink()
+    }
 }
 
 // MARK: - View

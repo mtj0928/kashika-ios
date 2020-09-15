@@ -14,6 +14,7 @@ protocol ConfirmationInvitePresenterProtocol {
 
     func tappedAccept()
     func tappedDeny()
+    func tappedLink()
 }
 
 protocol ConfirmationInviteInteractorProtocol {
@@ -23,4 +24,5 @@ protocol ConfirmationInviteInteractorProtocol {
 
 protocol ConfirmationInviteRouterProtocol {
     func dismiss()
+    func presentFriendList(for friend: FetchFriendWithToken.FetchedFriend)
 }

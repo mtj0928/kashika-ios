@@ -101,10 +101,16 @@ extension FriendListViewController {
     }
 
     private func subscribePresenter() {
-        presenter.sharedItem.asDriver(onErrorDriveWith: .empty())
-            .drive(onNext: { [weak self] item in
-                self?.showShareView(with: item)
-            }).disposed(by: disposeBag)
+        presenter.action.drive(onNext: { [weak self] action in
+            switch action {
+            case .showInvitationPopup(let itemSource):
+                self?.showShareView(with: itemSource)
+            case .showAlreadyRegisteredPopup:
+                let alertController = UIAlertController(title: nil, message: "すでにリンク済みです", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(alertController, animated: true, completion: nil)
+            }
+        }).disposed(by: disposeBag)
     }
 }
 

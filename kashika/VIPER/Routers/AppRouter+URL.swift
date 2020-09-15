@@ -39,7 +39,8 @@ extension AppRouter {
                 }
 
                 SVProgressHUD.dismiss()
-                let popupView = ConfirmationInviteViewBuilder.build(friend: friend, userId: request.userId, friendId: request.friendId, token: request.token, view: nowViewController.view)
+                let popupView = ConfirmationInviteViewBuilder(from: nowViewController)
+                    .build(friend: friend, userId: request.userId, friendId: request.friendId, token: request.token, view: nowViewController.view)
                 popupView.presentation()
             }, onError: { error in
                 SVProgressHUD.dismiss()

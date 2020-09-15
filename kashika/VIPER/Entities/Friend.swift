@@ -19,11 +19,12 @@ struct Friend: Codable, Equatable, Modelable, UserObject {
     var iconFile: File?
     var totalDebt: IncrementableInt = 0
     var token: String?
-    var linkedUserId: String?
-
-    var isLinked: Bool {
-        return linkedUserId != nil
+    var linkedUserId: String? {
+        didSet {
+            isLinked = linkedUserId != nil
+        }
     }
+    private(set) var isLinked: Bool = false
 }
 
 enum FriendError: Error {

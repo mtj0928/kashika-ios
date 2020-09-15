@@ -30,6 +30,10 @@ class ConfirmationInvitePresenter: ConfirmationInvitePresenterProtocol {
         reaction(interactor.deny())
     }
 
+    func tappedLink() {
+        router.presentFriendList(for: friend)
+    }
+
     private func reaction(_ actionCompleatable: Completable) {
         SVProgressHUD.show()
         actionCompleatable.subscribe(onCompleted: { [weak self] in

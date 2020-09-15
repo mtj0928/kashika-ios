@@ -11,11 +11,13 @@ import UIKit
 
 struct ConfirmationInviteViewBuilder {
 
-    static func build(friend: FetchFriendWithToken.FetchedFriend, userId: String, friendId: String, token: String, view: UIView) -> PopupView {
+    let from: UIViewController
 
+    func build(friend: FetchFriendWithToken.FetchedFriend, userId: String, friendId: String, token: String, view: UIView) -> PopupView {
         let contentView = InvitePopupView()
         contentView.backgroundColor = UIColor.app.cardViewBackgroundColor
-        let router = ConfirmationInviteRouter()
+        let router = ConfirmationInviteRouter(userId: userId, friendId: friendId, token: token)
+        router.viewController = from
         let interactor = ConfirmationInviteInteractor(userId: userId, friendId: friendId, token: token)
         let presenter = ConfirmationInvitePresenter(friend, interactor: interactor, router: router)
         contentView.presenter = presenter

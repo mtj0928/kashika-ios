@@ -18,15 +18,16 @@ struct ReactionForInvitation: CallableFunctions {
 }
 
 extension ReactionForInvitation {
+    enum ActionType: String, Codable {
+        case deny, accept
+    }
+
     struct Request: Encodable {
         let token: String
         let userId: String
         let friendId: String
+        var linkedUserId: String? 
         let action: ActionType
-
-        enum ActionType: String, Codable {
-            case deny, accept
-        }
     }
 
     struct Response: Decodable {

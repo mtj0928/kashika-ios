@@ -42,6 +42,23 @@ struct RxBehavior<Value>: RxSubject {
     }
 }
 
+@propertyWrapper
+struct RxDriver<Value>: RxSubject {
+
+    let wrappedValue: Driver<Value> 
+
+    private let publishedSubject = PublishSubject<Value>()
+
+    init() {
+        wrappedValue = publishedSubject.asDriver(onErrorDriveWith: .empty())
+    }
+
+    func on(_ event: Event<Value>) {
+        publishedSubject.on(event)
+    }
+}
+
+
 // MARK: - Protocol
 
 protocol RxSubject {

@@ -10,13 +10,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum FriendListViewState {
-    case normal, showIndicartor
+enum FriendListViewAction {
+    case showAlreadyRegisteredPopup
+    case showInvitationPopup(itemSource: InviteActivityItemSource)
 }
 
 protocol FriendListPresenterProtocol {
+    var action: Driver<FriendListViewAction> { get }
     var friends: BehaviorRelay<[Friend]> { get }
-    var sharedItem: Observable<InviteActivityItemSource> { get }
     var shouldShowPopup: Bool { get set }
 
     func tapped(friend: Friend)

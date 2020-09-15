@@ -68,7 +68,6 @@ extension RootViewController {
                 TapticEngine.impact.feedback(.medium)
                 SwiftMessages.show(config: config, view: view)
             }).disposed(by: disposeBag)
-
     }
 
     private func setupTabbar() {

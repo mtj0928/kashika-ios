@@ -31,7 +31,6 @@ class FriendListInteractor: FriendListInteractorProtocol {
     }
 }
 
-
 extension FriendListInteractor {
 
     private static func generateSharedURL(for friend: Friend, token: Token) -> Single<URL> {

@@ -60,6 +60,7 @@ class LinkPopupView: UIView {
         iconImageView.sd_setImage(with: friend.iconFile?.url)
         updateCornerRadius()
     }
+
     @IBAction func tappedUnshowButton() {
         TapticEngine.impact.feedback(.light)
         isSelectedUnshown.toggle()

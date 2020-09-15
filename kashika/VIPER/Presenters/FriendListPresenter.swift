@@ -18,7 +18,8 @@ class FriendListPresenter: FriendListPresenterProtocol {
     var friends: BehaviorRelay<[Friend]> {
         return interactor.friends
     }
-    @RxPublished var sharedItem: Observable<InviteActivityItemSource>
+
+    @RxDriver var action: Driver<FriendListViewAction>
     @Storage(.popupLink, defaultValue: true) var shouldShowPopup: Bool
 
     private let isSendingDataSubject = PublishSubject<Bool>()
@@ -38,13 +39,17 @@ class FriendListPresenter: FriendListPresenterProtocol {
     }
 
     func tappedLinkButton(friend: Friend) {
+        guard !friend.isLinked else {
+            _action.onNext(.showAlreadyRegisteredPopup)
+            return
+        }
         SVProgressHUD.show(withStatus: "リンクを生成中")
         interactor.createShardURL(for: friend)
             .map { InviteActivityItemSource(friend, $0) }
             .subscribe(onSuccess: { [weak self] itemSource in
                 SVProgressHUD.dismiss()
                 TapticEngine.impact.feedback(.light)
-                self?._sharedItem.onNext(itemSource)
+                self?._action.onNext(.showInvitationPopup(itemSource: itemSource))
                 }, onError: { _ in
                     TapticEngine.impact.feedback(.light)
                     SVProgressHUD.dismiss()
